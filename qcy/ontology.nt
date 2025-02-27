@@ -1,0 +1,209 @@
+<https://qaecy.com/dev/ont#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionIRI> <https://qaecy.com/dev/ont/qcy-0.0.1> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Christian Frausing" .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Agyris" .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-02-26T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
+<https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://qaecy.com/dev/ont#about
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#CanonicalEntity> .
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://qaecy.com/dev/ont#resolvesTo> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://qaecy.com/dev/ont#mentions> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity." .
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#label> "about"@en .
+# 
+# https://qaecy.com/dev/ont#containsFragment
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and one of its qcy:Fragments" .
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#label> "contains fragment"@en .
+# 
+# https://qaecy.com/dev/ont#hasFileLocation
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#FileLocation> .
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:FileContent object and one of its qcy:FileLocations" .
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has file location"@en .
+# 
+# https://qaecy.com/dev/ont#hasProperty
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#ProjectEntity> .
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#Property> .
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties." .
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
+# 
+# https://qaecy.com/dev/ont#mentions
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityMention> .
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector." .
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentions"@en .
+# 
+# https://qaecy.com/dev/ont#relatedEntity
+<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#ProjectEntity> .
+<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#ProjectEntity> .
+<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties." .
+<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "related entity"@en .
+# 
+# https://qaecy.com/dev/ont#resolvesTo
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityMention> .
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#CanonicalEntity> .
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity." .
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#label> "resolves to"@en .
+# 
+# https://qaecy.com/dev/ont#selectorObject
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityMention> .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector object and the qcy:EntityMention it specifies." .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#label> "selector object"@en .
+# 
+# https://qaecy.com/dev/ont#selectorSubject
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector object and the qcy:InformationObject it specifies." .
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#label> "selector subject"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://qaecy.com/dev/ont#explicit
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://qaecy.com/dev/ont#explicit> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#CanonicalEntity> .
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."@en .
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#label> "explicit"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://qaecy.com/dev/ont#CanonicalEntity
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#ProjectEntity> .
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#EntityMention> .
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."@en .
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Canonical Entity"@en .
+# 
+# https://qaecy.com/dev/ont#EntityMention
+<https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#ProjectEntity> .
+# 
+# https://qaecy.com/dev/ont#FileContent
+<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#comment> "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."@en .
+<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#label> "File Content"@en .
+# 
+# https://qaecy.com/dev/ont#FileLocation
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#ProjectEntity> .
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud."@en .
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "File Location"@en .
+# 
+# https://qaecy.com/dev/ont#Fragment
+<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#comment> "A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."@en .
+<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#label> "Fragment"@en .
+# 
+# https://qaecy.com/dev/ont#InformationObject
+<https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#ProjectEntity> .
+<https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
+<https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes."@en .
+<https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "Information Object"@en .
+# 
+# https://qaecy.com/dev/ont#ProjectEntity
+<https://qaecy.com/dev/ont#ProjectEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#ProjectEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
+<https://qaecy.com/dev/ont#ProjectEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#ProjectEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "This abstract class captures all features of interest in a project like a building element, a zone, a person, material etc. The class is not supposed to be assigned directly, so instead use one the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalised entity."@en .
+<https://qaecy.com/dev/ont#ProjectEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Project Entity"@en .
+# 
+# https://qaecy.com/dev/ont#Property
+<https://qaecy.com/dev/ont#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Any quantitative or qualitative property of an entity."@en .
+<https://qaecy.com/dev/ont#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
+# 
+# https://qaecy.com/dev/ont#Selector
+<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#comment> "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."@en .
+<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#label> "Selector"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://qaecy.com/dev/ont#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A named entity is an occurrence of a specific entity within a qcy:FileContent object. Each occurrence is unique, meaning that two mentions of \"Albert Einstein\" in the same fragment are considered two distinct named entities. Named entities can include mentionings of persons, organizations, locations, dates, and other proper nouns."@en .
+<https://qaecy.com/dev/ont#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Named Entity"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,512 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://qaecy.com/dev/ont", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "The QAECY Ontology"
+    },
+    "iri" : "https://qaecy.com/dev/ont#",
+    "version" : "0.0.1",
+    "author" : [ "Mads Holten Rasmussen", "Manos Agyris", "Christian Frausing" ],
+    "description" : {
+      "undefined" : "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Mads Holten Rasmussen",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Christian Frausing",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Manos Agyris",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-02-26T12:00:00",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The QAECY Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://qaecy.com/dev/ont#InformationObject",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationObject",
+      "en" : "Information Object"
+    },
+    "subClasses" : [ "15", "16" ],
+    "comment" : {
+      "en" : "An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#EntityMention",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntityMention"
+    },
+    "id" : "4",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#FileContent",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FileContent",
+      "en" : "File Content"
+    },
+    "comment" : {
+      "en" : "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."
+    },
+    "id" : "15",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#ProjectEntity",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProjectEntity",
+      "en" : "Project Entity"
+    },
+    "subClasses" : [ "4", "6" ],
+    "comment" : {
+      "en" : "This abstract class captures all features of interest in a project like a building element, a zone, a person, material etc. The class is not supposed to be assigned directly, so instead use one the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalised entity."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#FileLocation",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FileLocation",
+      "en" : "File Location"
+    },
+    "comment" : {
+      "en" : "A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud."
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#CanonicalEntity",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CanonicalEntity",
+      "en" : "Canonical Entity"
+    },
+    "comment" : {
+      "en" : "These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."
+    },
+    "id" : "6",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#Fragment",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fragment",
+      "en" : "Fragment"
+    },
+    "comment" : {
+      "en" : "A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."
+    },
+    "id" : "16",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#Property",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property",
+      "en" : "Property"
+    },
+    "comment" : {
+      "en" : "Any quantitative or qualitative property of an entity."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "25",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#Selector",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Selector",
+      "en" : "Selector"
+    },
+    "comment" : {
+      "en" : "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "12",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "14",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "17",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "18",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "19",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "20",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "21",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "owl:disjointWith"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://qaecy.com/dev/ont#selectorSubject",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "selectorSubject",
+      "en" : "selector subject"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:Selector object and the qcy:InformationObject it specifies."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#mentions",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "mentions",
+      "en" : "mentions"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#about",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "about",
+      "en" : "about"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "5"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#selectorObject",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "selectorObject",
+      "en" : "selector object"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:Selector object and the qcy:EntityMention it specifies."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "range" : "11",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "13",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "1",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "11",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "13",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "13",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "1",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#relatedEntity",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "relatedEntity",
+      "en" : "related entity"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#explicit",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "26",
+    "annotations" : {
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://qaecy.com/dev/ont#CanonicalEntity",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "explicit",
+      "en" : "explicit"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#containsFragment",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "containsFragment",
+      "en" : "contains fragment"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:InformationObject and one of its qcy:Fragments"
+    },
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#resolvesTo",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "resolvesTo",
+      "en" : "resolves to"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#hasProperty",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasProperty",
+      "en" : "has property"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties."
+    },
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#hasFileLocation",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasFileLocation",
+      "en" : "has file location"
+    },
+    "domain" : "15",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:FileContent object and one of its qcy:FileLocations"
+    },
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "range" : "2",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "2",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "range" : "11",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "11",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "1",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  } ]
+}

@@ -1,0 +1,517 @@
+<h2 id="crossreference" class="list">Cross-reference for The QAECY Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The QAECY Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#CanonicalEntity" title="https://qaecy.com/dev/ont#CanonicalEntity">Canonical Entity</a></li>
+  <li><a href="#EntityMention" title="https://qaecy.com/dev/ont#EntityMention"> <span>Entity Mention</span> </a></li>
+  <li><a href="#FileContent" title="https://qaecy.com/dev/ont#FileContent">File Content</a></li>
+  <li><a href="#FileLocation" title="https://qaecy.com/dev/ont#FileLocation">File Location</a></li>
+  <li><a href="#Fragment" title="https://qaecy.com/dev/ont#Fragment">Fragment</a></li>
+  <li><a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a></li>
+  <li><a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a></li>
+  <li><a href="#Property" title="https://qaecy.com/dev/ont#Property">Property</a></li>
+  <li><a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a></li>
+ </ul>
+ <div class="entity" id="CanonicalEntity">
+  <h3>Canonical Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#CanonicalEntity</p>
+  <div class="comment">
+   <span class="markdown">These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#explicit" title="https://qaecy.com/dev/ont#explicit">explicit</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#about" title="https://qaecy.com/dev/ont#about">about</a> <sup class="type-op" title="object property">op</sup>, <a href="#resolvesTo" title="https://qaecy.com/dev/ont#resolvesTo">resolves to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#EntityMention" title="https://qaecy.com/dev/ont#EntityMention">Entity Mention</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EntityMention">
+  <h3>Entity Mention<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#EntityMention</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#resolvesTo" title="https://qaecy.com/dev/ont#resolvesTo">resolves to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CanonicalEntity" title="https://qaecy.com/dev/ont#CanonicalEntity">Canonical Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FileContent">
+  <h3>File Content<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#FileContent</p>
+  <div class="comment">
+   <span class="markdown">A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasFileLocation" title="https://qaecy.com/dev/ont#hasFileLocation">has file location</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FileLocation">
+  <h3>File Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#FileLocation</p>
+  <div class="comment">
+   <span class="markdown">A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasFileLocation" title="https://qaecy.com/dev/ont#hasFileLocation">has file location</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>, <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://qaecy.com/dev/ont#Property">Property</a> <sup class="type-c" title="class">c</sup>, <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Fragment">
+  <h3>Fragment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#Fragment</p>
+  <div class="comment">
+   <span class="markdown">A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#containsFragment" title="https://qaecy.com/dev/ont#containsFragment">contains fragment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InformationObject">
+  <h3>Information Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#InformationObject</p>
+  <div class="comment">
+   <span class="markdown">An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FileContent" title="https://qaecy.com/dev/ont#FileContent">File Content</a> <sup class="type-c" title="class">c</sup>, <a href="#Fragment" title="https://qaecy.com/dev/ont#Fragment">Fragment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#about" title="https://qaecy.com/dev/ont#about">about</a> <sup class="type-op" title="object property">op</sup>, <a href="#containsFragment" title="https://qaecy.com/dev/ont#containsFragment">contains fragment</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#selectorSubject" title="https://qaecy.com/dev/ont#selectorSubject">selector subject</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#FileLocation" title="https://qaecy.com/dev/ont#FileLocation">File Location</a> <sup class="type-c" title="class">c</sup>, <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://qaecy.com/dev/ont#Property">Property</a> <sup class="type-c" title="class">c</sup>, <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProjectEntity">
+  <h3>Project Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#ProjectEntity</p>
+  <div class="comment">
+   <span class="markdown">This abstract class captures all features of interest in a project like a building element, a zone, a person, material etc. The class is not supposed to be assigned directly, so instead use one the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalised entity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CanonicalEntity" title="https://qaecy.com/dev/ont#CanonicalEntity">Canonical Entity</a> <sup class="type-c" title="class">c</sup>, <a href="#EntityMention" title="https://qaecy.com/dev/ont#EntityMention">Entity Mention</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasProperty" title="https://qaecy.com/dev/ont#hasProperty">has property</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedEntity" title="https://qaecy.com/dev/ont#relatedEntity">related entity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#relatedEntity" title="https://qaecy.com/dev/ont#relatedEntity">related entity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#FileLocation" title="https://qaecy.com/dev/ont#FileLocation">File Location</a> <sup class="type-c" title="class">c</sup>, <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://qaecy.com/dev/ont#Property">Property</a> <sup class="type-c" title="class">c</sup>, <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Property">
+  <h3>Property<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#Property</p>
+  <div class="comment">
+   <span class="markdown">Any quantitative or qualitative property of an entity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasProperty" title="https://qaecy.com/dev/ont#hasProperty">has property</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#FileLocation" title="https://qaecy.com/dev/ont#FileLocation">File Location</a> <sup class="type-c" title="class">c</sup>, <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>, <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Selector">
+  <h3>Selector<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#Selector</p>
+  <div class="comment">
+   <span class="markdown">A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a> <sup class="type-op" title="object property">op</sup>, <a href="#selectorSubject" title="https://qaecy.com/dev/ont#selectorSubject">selector subject</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#FileLocation" title="https://qaecy.com/dev/ont#FileLocation">File Location</a> <sup class="type-c" title="class">c</sup>, <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>, <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://qaecy.com/dev/ont#Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#about" title="https://qaecy.com/dev/ont#about">about</a></li>
+  <li><a href="#containsFragment" title="https://qaecy.com/dev/ont#containsFragment">contains fragment</a></li>
+  <li><a href="#hasFileLocation" title="https://qaecy.com/dev/ont#hasFileLocation">has file location</a></li>
+  <li><a href="#hasProperty" title="https://qaecy.com/dev/ont#hasProperty">has property</a></li>
+  <li><a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a></li>
+  <li><a href="#relatedEntity" title="https://qaecy.com/dev/ont#relatedEntity">related entity</a></li>
+  <li><a href="#resolvesTo" title="https://qaecy.com/dev/ont#resolvesTo">resolves to</a></li>
+  <li><a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a></li>
+  <li><a href="#selectorSubject" title="https://qaecy.com/dev/ont#selectorSubject">selector subject</a></li>
+ </ul>
+ <div class="entity" id="about">
+  <h3>about<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#about</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CanonicalEntity" title="https://qaecy.com/dev/ont#CanonicalEntity">Canonical Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has sub-property chains
+    </dt>
+    <dd>
+     <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup> <span class="logic">o</span> <a href="#resolvesTo" title="https://qaecy.com/dev/ont#resolvesTo">resolves to</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="containsFragment">
+  <h3>contains fragment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#containsFragment</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:InformationObject and one of its qcy:Fragments</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Fragment" title="https://qaecy.com/dev/ont#Fragment">Fragment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFileLocation">
+  <h3>has file location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#hasFileLocation</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:FileContent object and one of its qcy:FileLocations</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#FileContent" title="https://qaecy.com/dev/ont#FileContent">File Content</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#FileLocation" title="https://qaecy.com/dev/ont#FileLocation">File Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProperty">
+  <h3>has property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#hasProperty</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Property" title="https://qaecy.com/dev/ont#Property">Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="mentions">
+  <h3>mentions<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#mentions</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EntityMention" title="https://qaecy.com/dev/ont#EntityMention">Entity Mention</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="relatedEntity">
+  <h3>related entity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#relatedEntity</p>
+  <div class="comment">
+   <span class="markdown">Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ProjectEntity" title="https://qaecy.com/dev/ont#ProjectEntity">Project Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolvesTo">
+  <h3>resolves to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#resolvesTo</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EntityMention" title="https://qaecy.com/dev/ont#EntityMention">Entity Mention</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CanonicalEntity" title="https://qaecy.com/dev/ont#CanonicalEntity">Canonical Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="selectorObject">
+  <h3>selector object<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#selectorObject</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:Selector object and the qcy:EntityMention it specifies.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EntityMention" title="https://qaecy.com/dev/ont#EntityMention">Entity Mention</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="selectorSubject">
+  <h3>selector subject<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#selectorSubject</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a qcy:Selector object and the qcy:InformationObject it specifies.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#explicit" title="https://qaecy.com/dev/ont#explicit">explicit</a></li>
+ </ul>
+ <div class="entity" id="explicit">
+  <h3>explicit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#explicit</p>
+  <div class="comment">
+   <span class="markdown">A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     domain includes
+    </dt>
+    <dd>
+     <a href="#CanonicalEntity" title="https://qaecy.com/dev/ont#CanonicalEntity">Canonical Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
