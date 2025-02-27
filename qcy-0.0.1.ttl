@@ -84,7 +84,7 @@ qcy:selectorSubject a owl:ObjectProperty ;
 qcy:selectorObject a owl:ObjectProperty ;
     rdfs:domain qcy:Selector ;
     schema:domainIncludes qcy:EntityMention , qcy:InformationObject ;
-    rdfs:domain owl:Thing ;
+    rdfs:domain owl:Thing .
 
 qcy:hasProperty a owl:ObjectProperty ;
     rdfs:domain qcy:ProjectEntity ;
@@ -103,7 +103,7 @@ qcy:resolvesTo a owl:ObjectProperty ;
 ####################
 qcy:explicit a owl:DatatypeProperty ;
     schema:domainIncludes qcy:CanonicalEntity ;
-    rdfs:domain owl:Thing ;
+    rdfs:domain qcy:CanonicalEntity ;
     rdfs:range xsd:boolean .
 
 ####################

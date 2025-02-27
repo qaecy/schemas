@@ -16,7 +16,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Mads Holten Rasmussen",
+        "value" : "Manos Agyris",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -26,7 +26,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Manos Agyris",
+        "value" : "Mads Holten Rasmussen",
         "type" : "label"
       } ],
       "modified" : [ {
@@ -54,13 +54,13 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "8",
@@ -72,10 +72,10 @@
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "11",
     "type" : "owl:Thing"
   }, {
     "id" : "1",
@@ -98,15 +98,6 @@
     },
     "id" : "2"
   }, {
-    "iri" : "https://qaecy.com/dev/ont#EntityMention",
-    "baseIri" : "https://qaecy.com/dev/ont",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "EntityMention"
-    },
-    "id" : "4",
-    "superClasses" : [ "11" ]
-  }, {
     "iri" : "https://qaecy.com/dev/ont#FileContent",
     "baseIri" : "https://qaecy.com/dev/ont",
     "instances" : 0,
@@ -120,6 +111,15 @@
     "id" : "15",
     "superClasses" : [ "2" ]
   }, {
+    "iri" : "https://qaecy.com/dev/ont#EntityMention",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntityMention"
+    },
+    "id" : "4",
+    "superClasses" : [ "9" ]
+  }, {
     "iri" : "https://qaecy.com/dev/ont#ProjectEntity",
     "baseIri" : "https://qaecy.com/dev/ont",
     "instances" : 0,
@@ -131,7 +131,7 @@
     "comment" : {
       "en" : "This abstract class captures all features of interest in a project like a building element, a zone, a person, material etc. The class is not supposed to be assigned directly, so instead use one the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalised entity."
     },
-    "id" : "11"
+    "id" : "9"
   }, {
     "iri" : "https://qaecy.com/dev/ont#FileLocation",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -156,7 +156,7 @@
       "en" : "These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."
     },
     "id" : "6",
-    "superClasses" : [ "11" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#Fragment",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -181,11 +181,11 @@
     "comment" : {
       "en" : "Any quantitative or qualitative property of an entity."
     },
-    "id" : "13"
+    "id" : "19"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "25",
+    "id" : "11",
     "label" : {
       "undefined" : "Thing"
     }
@@ -222,13 +222,13 @@
     "id" : "7",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "9",
+    "id" : "10",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
+    "id" : "12",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "12",
+    "id" : "13",
     "type" : "owl:disjointWith"
   }, {
     "id" : "14",
@@ -240,9 +240,6 @@
     "id" : "18",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "19",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "20",
     "type" : "owl:disjointWith"
   }, {
@@ -250,12 +247,15 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "22",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "23",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "24",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "25",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "27",
@@ -295,7 +295,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "undefined" : "Relationship between a qcy:Selector object and the qcy:InformationObject it specifies."
+      "undefined" : "Relationship between a qcy:Selector and the qcy:InformationObject it specifies."
     },
     "attributes" : [ "object" ],
     "id" : "0"
@@ -328,83 +328,96 @@
     "attributes" : [ "object" ],
     "id" : "5"
   }, {
-    "range" : "2",
+    "range" : "9",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "7"
   }, {
     "iri" : "https://qaecy.com/dev/ont#selectorObject",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "4",
+    "range" : "11",
+    "annotations" : {
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://qaecy.com/dev/ont#EntityMention",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://qaecy.com/dev/ont#InformationObject",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "selectorObject",
       "en" : "selector object"
     },
     "domain" : "1",
     "comment" : {
-      "undefined" : "Relationship between a qcy:Selector object and the qcy:EntityMention it specifies."
+      "undefined" : "Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)"
     },
     "attributes" : [ "object" ],
-    "id" : "9"
-  }, {
-    "range" : "11",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "10"
   }, {
-    "range" : "13",
+    "range" : "1",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "12"
   }, {
-    "range" : "1",
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "9",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
-    "range" : "11",
+    "range" : "1",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
-    "range" : "13",
+    "range" : "19",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "18"
   }, {
-    "range" : "13",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "19"
+    "range" : "19",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
   }, {
     "range" : "1",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "20"
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
   }, {
     "range" : "4",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "21"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
   }, {
     "iri" : "https://qaecy.com/dev/ont#relatedEntity",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "11",
+    "range" : "9",
     "label" : {
       "IRI-based" : "relatedEntity",
       "en" : "related entity"
     },
-    "domain" : "11",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties."
     },
     "attributes" : [ "object" ],
-    "id" : "22"
-  }, {
-    "range" : "1",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "23"
+  }, {
+    "range" : "19",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
   }, {
     "iri" : "https://qaecy.com/dev/ont#explicit",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -421,12 +434,12 @@
       "IRI-based" : "explicit",
       "en" : "explicit"
     },
-    "domain" : "25",
+    "domain" : "6",
     "comment" : {
-      "en" : "A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."
+      "en" : "A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."
     },
     "attributes" : [ "datatype" ],
-    "id" : "24"
+    "id" : "25"
   }, {
     "iri" : "https://qaecy.com/dev/ont#containsFragment",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -458,12 +471,12 @@
   }, {
     "iri" : "https://qaecy.com/dev/ont#hasProperty",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "13",
+    "range" : "19",
     "label" : {
       "IRI-based" : "hasProperty",
       "en" : "has property"
     },
-    "domain" : "11",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties."
     },
@@ -486,27 +499,27 @@
   }, {
     "range" : "2",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
     "range" : "2",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
-    "range" : "11",
+    "range" : "9",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
-    "range" : "11",
+    "range" : "9",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "range" : "1",
-    "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   } ]
 }

@@ -107,9 +107,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://qaecy.com/dev/ont#selectorObject
 :selectorObject rdf:type owl:ObjectProperty ;
-                rdfs:domain :Selector ;
-                rdfs:range :EntityMention ;
-                rdfs:comment "Relationship between a qcy:Selector object and the qcy:EntityMention it specifies." ;
+                rdfs:domain owl:Thing ,
+                            :Selector ;
+                <http://schema.org/domainIncludes> :EntityMention ,
+                                                   :InformationObject ;
+                rdfs:comment "Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)" ;
                 rdfs:label "selector object"@en .
 
 
@@ -117,7 +119,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 :selectorSubject rdf:type owl:ObjectProperty ;
                  rdfs:domain :Selector ;
                  rdfs:range :InformationObject ;
-                 rdfs:comment "Relationship between a qcy:Selector object and the qcy:InformationObject it specifies." ;
+                 rdfs:comment "Relationship between a qcy:Selector and the qcy:InformationObject it specifies." ;
                  rdfs:label "selector subject"@en .
 
 
@@ -127,10 +129,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://qaecy.com/dev/ont#explicit
 :explicit rdf:type owl:DatatypeProperty ;
-          rdfs:domain owl:Thing ;
+          rdfs:domain :CanonicalEntity ;
           rdfs:range xsd:boolean ;
           <http://schema.org/domainIncludes> :CanonicalEntity ;
-          rdfs:comment "A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."@en ;
+          rdfs:comment "A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."@en ;
           rdfs:label "explicit"@en .
 
 

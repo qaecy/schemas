@@ -60,13 +60,13 @@ This section provides details for each class and property defined by The QAECY O
     is in domain of
    </dt>
    <dd>
-    <a href="#resolvesTo" title="https://qaecy.com/dev/ont#resolvesTo">resolves to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#resolvesTo" title="https://qaecy.com/dev/ont#resolvesTo">resolves to</a> <sup class="type-op" title="object property">op</sup>, <a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -156,7 +156,7 @@ This section provides details for each class and property defined by The QAECY O
     is in domain of
    </dt>
    <dd>
-    <a href="#about" title="https://qaecy.com/dev/ont#about">about</a> <sup class="type-op" title="object property">op</sup>, <a href="#containsFragment" title="https://qaecy.com/dev/ont#containsFragment">contains fragment</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#about" title="https://qaecy.com/dev/ont#about">about</a> <sup class="type-op" title="object property">op</sup>, <a href="#containsFragment" title="https://qaecy.com/dev/ont#containsFragment">contains fragment</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -431,7 +431,7 @@ This section provides details for each class and property defined by The QAECY O
   <h3>selector object<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://qaecy.com/dev/ont#selectorObject</p>
   <div class="comment">
-   <span class="markdown">Relationship between a qcy:Selector object and the qcy:EntityMention it specifies.</span>
+   <span class="markdown">Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)</span>
   </div>
   <div class="description">
    <dl>
@@ -439,13 +439,19 @@ This section provides details for each class and property defined by The QAECY O
      has domain
     </dt>
     <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
      <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
-     has range
+     domain includes
     </dt>
     <dd>
      <a href="#EntityMention" title="https://qaecy.com/dev/ont#EntityMention">Entity Mention</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -454,7 +460,7 @@ This section provides details for each class and property defined by The QAECY O
   <h3>selector subject<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://qaecy.com/dev/ont#selectorSubject</p>
   <div class="comment">
-   <span class="markdown">Relationship between a qcy:Selector object and the qcy:InformationObject it specifies.</span>
+   <span class="markdown">Relationship between a qcy:Selector and the qcy:InformationObject it specifies.</span>
   </div>
   <div class="description">
    <dl>
@@ -482,7 +488,7 @@ This section provides details for each class and property defined by The QAECY O
   <h3>explicit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://qaecy.com/dev/ont#explicit</p>
   <div class="comment">
-   <span class="markdown">A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist.</span>
+   <span class="markdown">A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist.</span>
   </div>
   <div class="description">
    <dl>
@@ -490,7 +496,7 @@ This section provides details for each class and property defined by The QAECY O
      has domain
     </dt>
     <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+     <a href="#CanonicalEntity" title="https://qaecy.com/dev/ont#CanonicalEntity">Canonical Entity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      domain includes

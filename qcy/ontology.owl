@@ -174,9 +174,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://qaecy.com/dev/ont#selectorObject">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#Selector"/>
-        <rdfs:range rdf:resource="https://qaecy.com/dev/ont#EntityMention"/>
-        <rdfs:comment>Relationship between a qcy:Selector object and the qcy:EntityMention it specifies.</rdfs:comment>
+        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#EntityMention"/>
+        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
+        <rdfs:comment>Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)</rdfs:comment>
         <rdfs:label xml:lang="en">selector object</rdfs:label>
     </owl:ObjectProperty>
     
@@ -188,7 +190,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     <owl:ObjectProperty rdf:about="https://qaecy.com/dev/ont#selectorSubject">
         <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#Selector"/>
         <rdfs:range rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
-        <rdfs:comment>Relationship between a qcy:Selector object and the qcy:InformationObject it specifies.</rdfs:comment>
+        <rdfs:comment>Relationship between a qcy:Selector and the qcy:InformationObject it specifies.</rdfs:comment>
         <rdfs:label xml:lang="en">selector subject</rdfs:label>
     </owl:ObjectProperty>
     
@@ -210,10 +212,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:DatatypeProperty rdf:about="https://qaecy.com/dev/ont#explicit">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#CanonicalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#CanonicalEntity"/>
-        <rdfs:comment xml:lang="en">A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist.</rdfs:comment>
         <rdfs:label xml:lang="en">explicit</rdfs:label>
     </owl:DatatypeProperty>
     

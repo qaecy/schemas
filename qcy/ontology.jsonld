@@ -227,10 +227,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."
+    "@value" : "A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "https://qaecy.com/dev/ont#CanonicalEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -322,24 +322,28 @@
 }, {
   "@id" : "https://qaecy.com/dev/ont#selectorObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://qaecy.com/dev/ont#EntityMention"
+  }, {
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a qcy:Selector object and the qcy:EntityMention it specifies."
+    "@value" : "Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
     "@id" : "https://qaecy.com/dev/ont#Selector"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "selector object"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://qaecy.com/dev/ont#EntityMention"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/ont#selectorSubject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a qcy:Selector object and the qcy:InformationObject it specifies."
+    "@value" : "Relationship between a qcy:Selector and the qcy:InformationObject it specifies."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://qaecy.com/dev/ont#Selector"

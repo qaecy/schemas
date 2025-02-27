@@ -98,16 +98,18 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # https://qaecy.com/dev/ont#selectorObject
 <https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityMention> .
-<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector object and the qcy:EntityMention it specifies." .
+<https://qaecy.com/dev/ont#selectorObject> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#EntityMention> .
+<https://qaecy.com/dev/ont#selectorObject> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)" .
 <https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#label> "selector object"@en .
 # 
 # https://qaecy.com/dev/ont#selectorSubject
 <https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Selector> .
 <https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#InformationObject> .
-<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector object and the qcy:InformationObject it specifies." .
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector and the qcy:InformationObject it specifies." .
 <https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#label> "selector subject"@en .
 # 
 # 
@@ -121,10 +123,10 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # https://qaecy.com/dev/ont#explicit
 <https://qaecy.com/dev/ont#explicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#CanonicalEntity> .
 <https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://qaecy.com/dev/ont#explicit> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#CanonicalEntity> .
-<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean property indicating whether something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."@en .
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."@en .
 <https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#label> "explicit"@en .
 # 
 # 
