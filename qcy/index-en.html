@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://qaecy.com/dev/ont#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://qaecy.com/dev/ont#","name":"The QAECY Ontology", "headline":"Document describing the ontology https://qaecy.com/dev/ont#", "dateReleased":"Thu Feb 27 11:34:07 CET 2025", "dateModified":"2025-02-26T12:00:00", "version":"0.0.1", "author":[{"@type":"Person","name":"Christian Frausing"},{"@type":"Person","name":"Mads Holten Rasmussen"},{"@type":"Person","name":"Manos Agyris"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://qaecy.com/dev/ont#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://qaecy.com/dev/ont#","name":"The QAECY Ontology", "headline":"Document describing the ontology https://qaecy.com/dev/ont#", "dateReleased":"Fri Feb 28 13:45:06 CET 2025", "dateModified":"2025-02-28T12:45:04Z", "version":"0.0.1", "author":[{"@type":"Person","name":"Christian Frausing"},{"@type":"Person","name":"Mads Holten Rasmussen"},{"@type":"Person","name":"Manos Agyris"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -56,12 +56,8 @@ function loadTOC(){
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#nstable").load("sections/ns-en.html"); 
       $("#overview").load("sections/overview-en.html"); 
       $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
       $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
     </script> 
@@ -75,7 +71,7 @@ function loadTOC(){
 
 
 <dl>
-<dt>Modified on: 2025-02-26T12:00:00</dt>
+<dt>Modified on: 2025-02-28T12:45:04Z</dt>
 <dt>This version:</dt>
 <dd><a href="https://qaecy.com/dev/ont/qcy-0.0.1">https://qaecy.com/dev/ont/qcy-0.0.1</a></dd>
 <dt>Revision:</dt>
@@ -95,13 +91,9 @@ function loadTOC(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div>     <div id="abstract"></div>
-<div id="toc"></div>     <div id="introduction"></div>
-	  <div id="nstable"></div>
-     <div id="overview"></div>
+</div><div id="toc"></div>     <div id="overview"></div>
      <div id="description"></div>
      <div id="crossref"></div>
-     <div id="references"></div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>

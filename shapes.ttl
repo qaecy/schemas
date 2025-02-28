@@ -1,0 +1,168 @@
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix qcy: <https://qaecy.com/dev/ont#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+@prefix qce: <https://qaecy.com/dev/enum#> .
+
+####################
+# SELECTORS, GENERAL
+####################
+qcy:SelectorShape1
+    a sh:NodeShape ;
+    sh:targetClass qcy:Selector ;
+    sh:property [
+        sh:path qcy:selectorSubject ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "A Selector must specify exactly one subject" ;
+    ] .
+
+qcy:SelectorShape2
+    a sh:NodeShape ;
+    sh:targetClass qcy:Selector ;
+    sh:property [
+        sh:path qcy:selectorObject ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "A Selector must specify exactly one object" ;
+    ] .
+
+qcy:SelectorShape3
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qcy:selectorSubject ;
+    sh:nodeKind sh:IRI ;
+    sh:class qcy:Selector ;
+    sh:severity sh:Violation ;
+    sh:message "The domain of a selector subject must be a qcy:Selector" .
+
+qcy:SelectorShape4
+    a sh:NodeShape ;
+    sh:targetObjectsOf qcy:selectorSubject ;
+    sh:nodeKind sh:IRI ;
+    sh:class qcy:InformationObject ;
+    sh:severity sh:Violation ;
+    sh:message "The range of a selector subject must be a qcy:InformationObject" .
+
+qcy:SelectorShape5
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qcy:selectorObject ;
+    sh:nodeKind sh:IRI ;
+    sh:class qcy:Selector ;
+    sh:severity sh:Violation ;
+    sh:message "The domain of a selector object must be a qcy:Selector" .
+
+qcy:SelectorShape6
+    a sh:NodeShape ;
+    sh:targetObjectsOf qcy:selectorObject ;
+    sh:nodeKind sh:IRI ;
+    sh:or (
+        [ sh:class qcy:InformationObject ]
+        [ sh:class qcy:EntityReference ]
+    ) ;
+    sh:severity sh:Violation ;
+    sh:message "The range of a selector object must be either a qcy:InformationObject or a qcy:EntityReference" .
+
+qcy:SelectorShape7
+    a sh:NodeShape ;
+    sh:targetClass qcy:Selector ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedValueShape [
+            sh:node [
+                sh:property [
+                    sh:path rdfs:subClassOf ;
+                    sh:hasValue qcy:Selector ;
+                ]
+            ]
+        ] ;
+        sh:message "A qcy:Selector must have at least one more specific subclass of qcy:Selector assigned." ;
+    ] .
+
+qcy:SelectorShape8
+    a sh:NodeShape ;
+    sh:targetClass qcy:Selector ;
+    sh:property [
+        sh:path qcy:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "A Selector must specify exactly one value" ;
+    ] .
+
+##############
+# BBoxSelector
+##############
+# MISSING!
+
+##############
+# TimeRangeSelector
+##############
+# MISSING!
+
+##############
+# IDSelector
+##############
+# MISSING!
+
+##############
+# TextDirectiveSelector
+##############
+# MISSING!
+
+##############
+# TextIndexSelector
+##############
+# MISSING!
+
+##############
+# PageSelector
+##############
+qcy:PageSelectorShape1
+    a sh:NodeShape ;
+    sh:targetClass qcy:PageSelector ;
+    sh:property [
+        sh:path qcy:value ;
+        sh:pattern "^[1-9][0-9]*$" ;
+        sh:severity sh:Violation ;
+        sh:message "A page selector value can only consist of digits and cannot be 0 since page numbering starts at 1" ;
+    ] .
+
+qcy:PageSelectorShape2
+    a sh:NodeShape ;
+    sh:targetClass qcy:PageSelector ;
+    sh:property [
+        sh:path qcy:selectorObject ;
+        sh:nodeKind sh:IRI ;
+    sh:class qcy:InformationObject ;
+    sh:severity sh:Violation ;
+    sh:message "The range of a page selector object must be a qcy:InformationObject"
+    ] .
+
+######################
+# IFCExpressIDSelector
+######################
+qcy:IFCExpressIDSelectorShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:IFCExpressIDSelector ;
+    sh:property [
+        sh:path qcy:value ;
+        sh:pattern "^[0-9]+$" ;
+        sh:severity sh:Violation ;
+        sh:message "An express ID cannot be 0" ;
+    ] .
+
+######################
+# IFCGlobalIDSelector
+######################
+qcy:IFCGlobalIDSelectorShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:IFCGlobalIDSelector ;
+    sh:property [
+        sh:path qcy:value ;
+        sh:pattern "^[0-9A-Za-z_$]{22}$" ;
+        sh:severity sh:Warning ;
+        sh:message "Invalid GlobalID" ;
+    ] .

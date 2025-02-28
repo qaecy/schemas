@@ -16,7 +16,7 @@
         <terms:description>The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-26T12:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-28T12:45:04Z</terms:modified>
         <terms:title xml:lang="en">The QAECY Ontology</terms:title>
         <owl:versionInfo>0.0.1</owl:versionInfo>
     </owl:Ontology>
@@ -32,6 +32,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/conformsTo"/>
     
 
 
@@ -126,7 +133,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://qaecy.com/dev/ont#hasProperty">
-        <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#ProjectEntity"/>
+        <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://qaecy.com/dev/ont#Property"/>
         <rdfs:comment>Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties.</rdfs:comment>
         <rdfs:label xml:lang="en">has property</rdfs:label>
@@ -150,8 +157,8 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://qaecy.com/dev/ont#relatedEntity">
-        <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#ProjectEntity"/>
-        <rdfs:range rdf:resource="https://qaecy.com/dev/ont#ProjectEntity"/>
+        <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
         <rdfs:comment>Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties.</rdfs:comment>
         <rdfs:label xml:lang="en">related entity</rdfs:label>
     </owl:ObjectProperty>
@@ -214,9 +221,73 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     <owl:DatatypeProperty rdf:about="https://qaecy.com/dev/ont#explicit">
         <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#CanonicalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#CanonicalEntity"/>
         <rdfs:comment xml:lang="en">A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist.</rdfs:comment>
         <rdfs:label xml:lang="en">explicit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#filePath -->
+
+
+    <owl:DatatypeProperty rdf:about="https://qaecy.com/dev/ont#filePath">
+        <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#FileLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The file path property specifies the location of a file on a storage system. This is always a relative path in relation to the project directory on a cloud storage provider.</rdfs:comment>
+        <rdfs:label xml:lang="en">file path</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#label -->
+
+
+    <owl:DatatypeProperty rdf:about="https://qaecy.com/dev/ont#label">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#CanonicalEntity"/>
+        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#EntityMention"/>
+        <rdfs:comment xml:lang="en">A label is a human-readable name for the resource. Each resource should have only one preferred label in english that specifies the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#tag -->
+
+
+    <owl:DatatypeProperty rdf:about="https://qaecy.com/dev/ont#tag">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
+        <rdfs:comment xml:lang="en">A tag is a keyword or term assigned to a piece of information, such as a qcy:InformationObject, to describe and categorize it. Tags are typically used to facilitate searching and organizing information. An information object can have multiple tags.</rdfs:comment>
+        <rdfs:label xml:lang="en">tag</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#textSummary -->
+
+
+    <owl:DatatypeProperty rdf:about="https://qaecy.com/dev/ont#textSummary">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
+        <rdfs:comment xml:lang="en">A short text that summarizes all information about the thing. This is typically generated by a Large Language model from provided context any form.</rdfs:comment>
+        <rdfs:label xml:lang="en">text summary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#value -->
+
+
+    <owl:DatatypeProperty rdf:about="https://qaecy.com/dev/ont#value">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <schema:domainIncludes rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">A value is a text string that holds the value. How to interpret this value depends on what the value is assigned to.</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -233,14 +304,52 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://qaecy.com/dev/ont#BBoxSelector -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#BBoxSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <terms:conformsTo rdf:resource="http://www.w3.org/TR/media-frags/"/>
+        <rdfs:comment xml:lang="en">The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The BBox Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bounding Box Selector</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://qaecy.com/dev/ont#CanonicalEntity -->
 
 
     <owl:Class rdf:about="https://qaecy.com/dev/ont#CanonicalEntity">
-        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#ProjectEntity"/>
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#EntityMention"/>
         <rdfs:comment xml:lang="en">These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept.</rdfs:comment>
         <rdfs:label xml:lang="en">Canonical Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#Category -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#Category">
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#FileLocation"/>
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Property"/>
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">A Category is an abstract class that holds specific categories/types used to describe any resource. The qcy:Category should not be used directly as there are specific categories defined for specific scopes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#DocumentPage -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#DocumentPage">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Fragment"/>
+        <rdfs:comment xml:lang="en">This special fragment constitutes a page in a paginated document.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document Page</rdfs:label>
     </owl:Class>
     
 
@@ -249,7 +358,23 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:Class rdf:about="https://qaecy.com/dev/ont#EntityMention">
-        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#ProjectEntity"/>
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
+        <rdfs:comment xml:lang="en">An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of &quot;Albert Einstein&quot; in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity Mention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#EntityReference -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#EntityReference">
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#FileLocation"/>
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Property"/>
+        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">This abstract class captures reference points for all features of interest in a project, such as a building element, a zone, a person, or material. These references can be either explicit or potential occurrences of the entity. This class should not be assigned directly; instead, use the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalized entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity Reference</rdfs:label>
     </owl:Class>
     
 
@@ -270,7 +395,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
     <owl:Class rdf:about="https://qaecy.com/dev/ont#FileLocation">
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
-        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#ProjectEntity"/>
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Property"/>
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Selector"/>
         <rdfs:comment xml:lang="en">A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud.</rdfs:comment>
@@ -290,11 +414,43 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://qaecy.com/dev/ont#IDSelector -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#IDSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID.</rdfs:comment>
+        <rdfs:label xml:lang="en">ID Selector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#IFCExpressIDSelector -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#IFCExpressIDSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model.</rdfs:comment>
+        <rdfs:label xml:lang="en">IFC Express ID Selector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#IFCGlobalIDSelector -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#IFCGlobalIDSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document.</rdfs:comment>
+        <rdfs:label xml:lang="en">IFC Global ID Selector</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://qaecy.com/dev/ont#InformationObject -->
 
 
     <owl:Class rdf:about="https://qaecy.com/dev/ont#InformationObject">
-        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#ProjectEntity"/>
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Property"/>
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Selector"/>
         <rdfs:comment xml:lang="en">An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes.</rdfs:comment>
@@ -303,14 +459,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
-    <!-- https://qaecy.com/dev/ont#ProjectEntity -->
+    <!-- https://qaecy.com/dev/ont#PageSelector -->
 
 
-    <owl:Class rdf:about="https://qaecy.com/dev/ont#ProjectEntity">
-        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Property"/>
-        <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Selector"/>
-        <rdfs:comment xml:lang="en">This abstract class captures all features of interest in a project like a building element, a zone, a person, material etc. The class is not supposed to be assigned directly, so instead use one the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalised entity.</rdfs:comment>
-        <rdfs:label xml:lang="en">Project Entity</rdfs:label>
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#PageSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">A page selector specifies a particular page within a document. This special selector always always connects a qcy:FileContent object with a qcy:DocumentPage. The value is the page number starting from 1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Page Selector</rdfs:label>
     </owl:Class>
     
 
@@ -336,19 +491,38 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- https://qaecy.com/dev/ont#TextDirectiveSelector -->
 
 
-    <rdf:Description rdf:about="https://qaecy.com/dev/ont#NamedEntity">
-        <rdfs:comment xml:lang="en">A named entity is an occurrence of a specific entity within a qcy:FileContent object. Each occurrence is unique, meaning that two mentions of &quot;Albert Einstein&quot; in the same fragment are considered two distinct named entities. Named entities can include mentionings of persons, organizations, locations, dates, and other proper nouns.</rdfs:comment>
-        <rdfs:label xml:lang="en">Named Entity</rdfs:label>
-    </rdf:Description>
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#TextDirectiveSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <terms:conformsTo rdf:resource="https://wicg.github.io/scroll-to-text-fragment/"/>
+        <rdfs:comment xml:lang="en">A text directive selector specifies a range within a text using the syntax &quot;#:~:text=[prefix-,]start[,end][,-suffix]&quot;. For example, &quot;#:~:text=example,fragment&quot; would indicate a range from the first occurrence of &quot;example&quot; to the next occurrence of &quot;fragment&quot;. This is used to identify the exact location of a qcy:EntityMention within a text fragment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Text Directive Selector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#TextIndexSelector -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#TextIndexSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <rdfs:comment xml:lang="en">A text index selector specifies a range within a text using start and end separated by a comma (&quot;start,end&quot;). For example &quot;6,11&quot; on the text string &quot;Hello World&quot; would specify the subset &quot;World&quot;. This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Text Index Selector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#TimeRangeSelector -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#TimeRangeSelector">
+        <rdfs:subClassOf rdf:resource="https://qaecy.com/dev/ont#Selector"/>
+        <terms:conformsTo rdf:resource="http://www.w3.org/TR/media-frags/"/>
+        <rdfs:comment xml:lang="en">The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Range Selector</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
