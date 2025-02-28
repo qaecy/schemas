@@ -16,12 +16,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Mads Holten Rasmussen",
+        "value" : "Manos Agyris",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Manos Agyris",
+        "value" : "Mads Holten Rasmussen",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -32,7 +32,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2025-02-28T12:45:04Z",
+        "value" : "2025-02-28T15:12:55Z",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -117,10 +117,10 @@
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "50",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "50",
     "type" : "owl:Class"
   }, {
     "id" : "12",
@@ -129,7 +129,7 @@
     "id" : "40",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "33",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -365,11 +365,7 @@
     "baseIri" : "https://qaecy.com/dev/ont",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Category",
-      "en" : "Category"
-    },
-    "comment" : {
-      "en" : "A Category is an abstract class that holds specific categories/types used to describe any resource. The qcy:Category should not be used directly as there are specific categories defined for specific scopes."
+      "IRI-based" : "Category"
     },
     "id" : "45"
   }, {
@@ -394,19 +390,6 @@
     "id" : "39",
     "superClasses" : [ "2" ]
   }, {
-    "iri" : "https://qaecy.com/dev/ont#FileContent",
-    "baseIri" : "https://qaecy.com/dev/ont",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "FileContent",
-      "en" : "File Content"
-    },
-    "comment" : {
-      "en" : "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."
-    },
-    "id" : "50",
-    "superClasses" : [ "4" ]
-  }, {
     "iri" : "https://qaecy.com/dev/ont#EntityMention",
     "baseIri" : "https://qaecy.com/dev/ont",
     "instances" : 0,
@@ -419,6 +402,19 @@
     },
     "id" : "17",
     "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#FileContent",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FileContent",
+      "en" : "File Content"
+    },
+    "comment" : {
+      "en" : "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."
+    },
+    "id" : "50",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#IDSelector",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -456,7 +452,7 @@
     "comment" : {
       "en" : "Any quantitative or qualitative property of an entity."
     },
-    "id" : "32"
+    "id" : "33"
   } ],
   "property" : [ {
     "id" : "0",
@@ -495,7 +491,7 @@
     "id" : "31",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "33",
+    "id" : "32",
     "type" : "owl:disjointWith"
   }, {
     "id" : "35",
@@ -594,7 +590,7 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
     "iri" : "https://qaecy.com/dev/ont#about",
@@ -618,12 +614,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#EntityMention",
+        "value" : "https://qaecy.com/dev/ont#InformationObject",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#InformationObject",
+        "value" : "https://qaecy.com/dev/ont#EntityMention",
         "type" : "iri"
       } ]
     },
@@ -662,32 +658,32 @@
   }, {
     "range" : "2",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "11"
   }, {
     "range" : "2",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
     "range" : "18",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "21",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "range" : "2",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "22"
   }, {
     "range" : "18",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "24"
   }, {
     "iri" : "https://qaecy.com/dev/ont#filePath",
@@ -704,34 +700,34 @@
     "attributes" : [ "datatype" ],
     "id" : "29"
   }, {
-    "range" : "32",
+    "range" : "2",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
-    "range" : "2",
+    "range" : "33",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "33"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
   }, {
     "range" : "2",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "35"
   }, {
-    "range" : "32",
+    "range" : "33",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
     "range" : "2",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
     "range" : "4",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
     "iri" : "https://qaecy.com/dev/ont#selectorSubject",
@@ -762,19 +758,19 @@
     "attributes" : [ "object" ],
     "id" : "43"
   }, {
-    "range" : "32",
+    "range" : "33",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "44"
-  }, {
-    "range" : "18",
-    "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "46"
   }, {
     "range" : "2",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "26",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "47"
   }, {
     "iri" : "https://qaecy.com/dev/ont#label",
@@ -784,12 +780,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#CanonicalEntity",
+        "value" : "https://qaecy.com/dev/ont#EntityMention",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#EntityMention",
+        "value" : "https://qaecy.com/dev/ont#CanonicalEntity",
         "type" : "iri"
       } ]
     },
@@ -804,34 +800,34 @@
     "attributes" : [ "datatype" ],
     "id" : "48"
   }, {
-    "range" : "26",
+    "range" : "4",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "49"
+  }, {
+    "range" : "33",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "26",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
   }, {
     "range" : "2",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "51"
-  }, {
-    "range" : "32",
-    "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "52"
-  }, {
-    "range" : "26",
-    "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "53"
   }, {
     "range" : "4",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "54"
   }, {
     "range" : "17",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "55"
   }, {
     "iri" : "https://qaecy.com/dev/ont#relatedEntity",
@@ -848,9 +844,9 @@
     "attributes" : [ "object" ],
     "id" : "56"
   }, {
-    "range" : "4",
+    "range" : "18",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "57"
   }, {
     "iri" : "https://qaecy.com/dev/ont#explicit",
@@ -897,7 +893,7 @@
   }, {
     "iri" : "https://qaecy.com/dev/ont#hasProperty",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "32",
+    "range" : "33",
     "label" : {
       "IRI-based" : "hasProperty",
       "en" : "has property"
@@ -947,17 +943,17 @@
   }, {
     "range" : "4",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "64"
   }, {
     "range" : "4",
     "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "65"
   }, {
     "range" : "2",
     "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "66"
   }, {
     "iri" : "https://qaecy.com/dev/ont#value",
@@ -984,17 +980,17 @@
   }, {
     "range" : "2",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "68"
   }, {
     "range" : "2",
     "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "69"
   }, {
     "range" : "2",
     "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "70"
   } ]
 }

@@ -16,7 +16,7 @@
         <terms:description>The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-28T12:45:04Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-28T15:12:55Z</terms:modified>
         <terms:title xml:lang="en">The QAECY Ontology</terms:title>
         <owl:versionInfo>0.0.1</owl:versionInfo>
     </owl:Ontology>
@@ -337,8 +337,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#InformationObject"/>
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Property"/>
         <owl:disjointWith rdf:resource="https://qaecy.com/dev/ont#Selector"/>
-        <rdfs:comment xml:lang="en">A Category is an abstract class that holds specific categories/types used to describe any resource. The qcy:Category should not be used directly as there are specific categories defined for specific scopes.</rdfs:comment>
-        <rdfs:label xml:lang="en">Category</rdfs:label>
     </owl:Class>
     
 

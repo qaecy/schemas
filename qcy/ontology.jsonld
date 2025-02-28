@@ -31,7 +31,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-02-28T12:45:04Z"
+    "@value" : "2025-02-28T15:12:55Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -80,14 +80,6 @@
 }, {
   "@id" : "https://qaecy.com/dev/ont#Category",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Category is an abstract class that holds specific categories/types used to describe any resource. The qcy:Category should not be used directly as there are specific categories defined for specific scopes."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Category"
-  } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://qaecy.com/dev/ont#EntityReference"
   }, {

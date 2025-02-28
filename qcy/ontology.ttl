@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-02-28T12:45:04Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2025-02-28T15:12:55Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               owl:versionInfo "0.0.1" .
 
@@ -210,9 +210,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                            :FileLocation ,
                            :InformationObject ,
                            :Property ,
-                           :Selector ;
-          rdfs:comment "A Category is an abstract class that holds specific categories/types used to describe any resource. The qcy:Category should not be used directly as there are specific categories defined for specific scopes."@en ;
-          rdfs:label "Category"@en .
+                           :Selector .
 
 
 ###  https://qaecy.com/dev/ont#DocumentPage
