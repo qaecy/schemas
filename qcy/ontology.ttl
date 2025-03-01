@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-02-28T15:12:55Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2025-03-01T10:58:53Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               owl:versionInfo "0.0.1" .
 
@@ -71,9 +71,9 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://qaecy.com/dev/ont#hasFileLocation
 :hasFileLocation rdf:type owl:ObjectProperty ;
-                 rdfs:domain :FileContent ;
+                 rdfs:domain :InformationObject ;
                  rdfs:range :FileLocation ;
-                 rdfs:comment "Relationship between a qcy:FileContent object and one of its qcy:FileLocations" ;
+                 rdfs:comment "Relationship between a qcy:InformationObject and one of its qcy:FileLocations. All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location" ;
                  rdfs:label "has file location"@en .
 
 
@@ -157,6 +157,22 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
        rdfs:label "label"@en .
 
 
+###  https://qaecy.com/dev/ont#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Fragment ;
+          rdfs:range xsd:string ;
+          rdfs:comment "ISO 639 two letter language code"@en ;
+          rdfs:label "language"@en .
+
+
+###  https://qaecy.com/dev/ont#tableGrid
+:tableGrid rdf:type owl:DatatypeProperty ;
+           rdfs:domain :TableFragment ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Processed table output."@en ;
+           rdfs:label "table grid"@en .
+
+
 ###  https://qaecy.com/dev/ont#tag
 :tag rdf:type owl:DatatypeProperty ;
      rdfs:domain owl:Thing ;
@@ -164,6 +180,22 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
      <http://schema.org/domainIncludes> :InformationObject ;
      rdfs:comment "A tag is a keyword or term assigned to a piece of information, such as a qcy:InformationObject, to describe and categorize it. Tags are typically used to facilitate searching and organizing information. An information object can have multiple tags."@en ;
      rdfs:label "tag"@en .
+
+
+###  https://qaecy.com/dev/ont#textFormatted
+:textFormatted rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Fragment ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Formatted text in either markdown or HTML."@en ;
+               rdfs:label "text formatted"@en .
+
+
+###  https://qaecy.com/dev/ont#textRaw
+:textRaw rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Fragment ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Raw text as extracted from the fragment."@en ;
+         rdfs:label "text raw"@en .
 
 
 ###  https://qaecy.com/dev/ont#textSummary
@@ -188,14 +220,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 #    Classes
 #################################################################
 
-###  https://qaecy.com/dev/ont#BBoxSelector
-:BBoxSelector rdf:type owl:Class ;
-              rdfs:subClassOf :Selector ;
-              <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> ;
-              rdfs:comment "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The BBox Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en ;
-              rdfs:label "Bounding Box Selector"@en .
-
-
 ###  https://qaecy.com/dev/ont#CanonicalEntity
 :CanonicalEntity rdf:type owl:Class ;
                  rdfs:subClassOf :EntityReference ;
@@ -213,11 +237,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                            :Selector .
 
 
-###  https://qaecy.com/dev/ont#DocumentPage
-:DocumentPage rdf:type owl:Class ;
-              rdfs:subClassOf :Fragment ;
-              rdfs:comment "This special fragment constitutes a page in a paginated document."@en ;
-              rdfs:label "Document Page"@en .
+###  https://qaecy.com/dev/ont#DocumentPageFragment
+:DocumentPageFragment rdf:type owl:Class ;
+                      rdfs:subClassOf :Fragment ;
+                      rdfs:comment "This special fragment constitutes a page in a paginated document."@en ;
+                      rdfs:label "Document Page Fragment"@en .
 
 
 ###  https://qaecy.com/dev/ont#EntityMention
@@ -281,6 +305,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                      rdfs:label "IFC Global ID Selector"@en .
 
 
+###  https://qaecy.com/dev/ont#ImageFragment
+:ImageFragment rdf:type owl:Class ;
+               rdfs:subClassOf :Fragment ;
+               rdfs:comment "This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."@en ;
+               rdfs:label "Image Fragment"@en .
+
+
 ###  https://qaecy.com/dev/ont#InformationObject
 :InformationObject rdf:type owl:Class ;
                    owl:disjointWith :Property ,
@@ -309,12 +340,26 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           rdfs:label "Selector"@en .
 
 
+###  https://qaecy.com/dev/ont#TableFragment
+:TableFragment rdf:type owl:Class ;
+               rdfs:subClassOf :Fragment ;
+               rdfs:comment "This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."@en ;
+               rdfs:label "Table Fragment"@en .
+
+
 ###  https://qaecy.com/dev/ont#TextDirectiveSelector
 :TextDirectiveSelector rdf:type owl:Class ;
                        rdfs:subClassOf :Selector ;
                        <http://purl.org/dc/terms/conformsTo> <https://wicg.github.io/scroll-to-text-fragment/> ;
                        rdfs:comment "A text directive selector specifies a range within a text using the syntax \"#:~:text=[prefix-,]start[,end][,-suffix]\". For example, \"#:~:text=example,fragment\" would indicate a range from the first occurrence of \"example\" to the next occurrence of \"fragment\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en ;
                        rdfs:label "Text Directive Selector"@en .
+
+
+###  https://qaecy.com/dev/ont#TextFragment
+:TextFragment rdf:type owl:Class ;
+              rdfs:subClassOf :Fragment ;
+              rdfs:comment "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en ;
+              rdfs:label "Text Fragment"@en .
 
 
 ###  https://qaecy.com/dev/ont#TextIndexSelector
@@ -330,6 +375,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                    <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> ;
                    rdfs:comment "The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/"@en ;
                    rdfs:label "Time Range Selector"@en .
+
+
+###  https://qaecy.com/dev/ont#XYWHSelector
+:XYWHSelector rdf:type owl:Class ;
+              rdfs:subClassOf :Selector ;
+              <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> ;
+              rdfs:comment "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en ;
+              rdfs:label "XYWH Selector"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

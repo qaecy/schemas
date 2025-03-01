@@ -4,7 +4,7 @@
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Agyris" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-02-28T15:12:55Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-01T10:58:53Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 # 
@@ -66,9 +66,9 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # https://qaecy.com/dev/ont#hasFileLocation
 <https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#FileLocation> .
-<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:FileContent object and one of its qcy:FileLocations" .
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and one of its qcy:FileLocations. All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location" .
 <https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has file location"@en .
 # 
 # https://qaecy.com/dev/ont#hasProperty
@@ -147,6 +147,20 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#comment> "A label is a human-readable name for the resource. Each resource should have only one preferred label in english that specifies the resource."@en .
 <https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#label> "label"@en .
 # 
+# https://qaecy.com/dev/ont#language
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO 639 two letter language code"@en .
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
+# 
+# https://qaecy.com/dev/ont#tableGrid
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#TableFragment> .
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Processed table output."@en .
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#label> "table grid"@en .
+# 
 # https://qaecy.com/dev/ont#tag
 <https://qaecy.com/dev/ont#tag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
@@ -154,6 +168,20 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#tag> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#comment> "A tag is a keyword or term assigned to a piece of information, such as a qcy:InformationObject, to describe and categorize it. Tags are typically used to facilitate searching and organizing information. An information object can have multiple tags."@en .
 <https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#label> "tag"@en .
+# 
+# https://qaecy.com/dev/ont#textFormatted
+<https://qaecy.com/dev/ont#textFormatted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#textFormatted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#textFormatted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://qaecy.com/dev/ont#textFormatted> <http://www.w3.org/2000/01/rdf-schema#comment> "Formatted text in either markdown or HTML."@en .
+<https://qaecy.com/dev/ont#textFormatted> <http://www.w3.org/2000/01/rdf-schema#label> "text formatted"@en .
+# 
+# https://qaecy.com/dev/ont#textRaw
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Raw text as extracted from the fragment."@en .
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#label> "text raw"@en .
 # 
 # https://qaecy.com/dev/ont#textSummary
 <https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -180,13 +208,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-# https://qaecy.com/dev/ont#BBoxSelector
-<https://qaecy.com/dev/ont#BBoxSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://qaecy.com/dev/ont#BBoxSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#BBoxSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
-<https://qaecy.com/dev/ont#BBoxSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The BBox Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
-<https://qaecy.com/dev/ont#BBoxSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Bounding Box Selector"@en .
-# 
 # https://qaecy.com/dev/ont#CanonicalEntity
 <https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#EntityReference> .
@@ -202,11 +223,11 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
 <https://qaecy.com/dev/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
 # 
-# https://qaecy.com/dev/ont#DocumentPage
-<https://qaecy.com/dev/ont#DocumentPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://qaecy.com/dev/ont#DocumentPage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
-<https://qaecy.com/dev/ont#DocumentPage> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a page in a paginated document."@en .
-<https://qaecy.com/dev/ont#DocumentPage> <http://www.w3.org/2000/01/rdf-schema#label> "Document Page"@en .
+# https://qaecy.com/dev/ont#DocumentPageFragment
+<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a page in a paginated document."@en .
+<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Document Page Fragment"@en .
 # 
 # https://qaecy.com/dev/ont#EntityMention
 <https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -261,6 +282,12 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."@en .
 <https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Global ID Selector"@en .
 # 
+# https://qaecy.com/dev/ont#ImageFragment
+<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."@en .
+<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Image Fragment"@en .
+# 
 # https://qaecy.com/dev/ont#InformationObject
 <https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
@@ -285,12 +312,24 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#comment> "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."@en .
 <https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#label> "Selector"@en .
 # 
+# https://qaecy.com/dev/ont#TableFragment
+<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."@en .
+<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Table Fragment"@en .
+# 
 # https://qaecy.com/dev/ont#TextDirectiveSelector
 <https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
 <https://qaecy.com/dev/ont#TextDirectiveSelector> <http://purl.org/dc/terms/conformsTo> <https://wicg.github.io/scroll-to-text-fragment/> .
 <https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A text directive selector specifies a range within a text using the syntax \"#:~:text=[prefix-,]start[,end][,-suffix]\". For example, \"#:~:text=example,fragment\" would indicate a range from the first occurrence of \"example\" to the next occurrence of \"fragment\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
 <https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Text Directive Selector"@en .
+# 
+# https://qaecy.com/dev/ont#TextFragment
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en .
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Text Fragment"@en .
 # 
 # https://qaecy.com/dev/ont#TextIndexSelector
 <https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -304,5 +343,12 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#TimeRangeSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
 <https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/"@en .
 <https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Time Range Selector"@en .
+# 
+# https://qaecy.com/dev/ont#XYWHSelector
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#label> "XYWH Selector"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
