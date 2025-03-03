@@ -1,0 +1,112 @@
+## To be tested with corresponding shapes (eg. https://shacl.org/playground/)
+
+@base <https://qaecy.com/r/> .
+@prefix qcy:     <https://qaecy.com/dev/ont#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+
+# NECESSARY TBOX
+qcy:IFCExpressIDSelector rdfs:subClassOf qcy:Selector .
+qcy:IFCGlobalIDSelector rdfs:subClassOf qcy:Selector .
+qcy:PageSelector rdfs:subClassOf qcy:Selector .
+qcy:TextIndexSelector rdfs:subClassOf qcy:Selector .
+qcy:XYWHSelector rdfs:subClassOf qcy:Selector .
+qcy:TimeRangeSelector rdfs:subClassOf qcy:Selector .
+qcy:TextDirectiveSelectorShape rdfs:subClassOf qcy:Selector .
+
+#######
+# PAGES
+#######
+<doc1> a qcy:InformationObject , qcy:FileContent .
+<page1> a qcy:InformationObject , qcy:DocumentPageFragment , qcy:Fragment .
+
+<pageSelector1> a qcy:Selector , qcy:PageSelector ;
+    qcy:value "1" ;
+    qcy:selectorSubject <doc1> ;
+    qcy:selectorObject <page1> .
+
+#######
+# TEXT
+#######
+<paragraph1> a qcy:InformationObject , qcy:FileContent .
+<person1> a qcy:EntityReference .
+
+<textSelector1> a qcy:Selector , qcy:TextIndexSelector ;
+    qcy:value "0,10" ;
+    qcy:selectorSubject <paragraph1> ;
+    qcy:selectorObject <person1> .
+
+<textSelector2> a qcy:Selector , qcy:TextDirectiveSelectorShape ;
+    qcy:value "#:~:text=an%20example%20text%20fragment" ;
+    rdfs:comment "indicates that the exact text \"an example text fragment\" is the target text." ;
+    qcy:selectorSubject <paragraph1> ;
+    qcy:selectorObject <person1> .
+
+<textSelector3> a qcy:Selector , qcy:TextDirectiveSelectorShape ;
+    qcy:value "#:~:text=an%20example,text%20fragment" ;
+    rdfs:comment "indicates that the first instance of \"an example\" until the following first instance of \"text fragment\" is the target text." ;
+    qcy:selectorSubject <paragraph1> ;
+    qcy:selectorObject <person1> .
+
+<textSelector4> a qcy:Selector , qcy:TextDirectiveSelectorShape ;
+    qcy:value "#:~:text=this%20is-,an%20example,-text%20fragment" ;
+    rdfs:comment "would match to \"an example\" in \"this is an example text fragment\", but not match to \"an example\" in \"here is an example text\"." ;
+    qcy:selectorSubject <paragraph1> ;
+    qcy:selectorObject <person1> .
+
+######
+# XYWH
+######
+<page2> a qcy:InformationObject , qcy:DocumentPageFragment , qcy:Fragment .
+<img1> a qcy:InformationObject , qcy:ImageFragment , qcy:Fragment .
+
+<xywhSelector1> a qcy:Selector , qcy:XYWHSelector ;
+    qcy:value "xywh=10,10,10,10" ;
+    qcy:selectorSubject <page2> ;
+    qcy:selectorObject <img1> .
+
+<xywhSelector2> a qcy:Selector , qcy:XYWHSelector ;
+    qcy:value "xywh=percent:0.15,0.1,0.15,0.1" ;
+    qcy:selectorSubject <page2> ;
+    qcy:selectorObject <img1> .
+
+<xywhSelector3> a qcy:Selector , qcy:XYWHSelector ;
+    qcy:value "xywh=pixel:10,10,10,10" ;
+    qcy:selectorSubject <page2> ;
+    qcy:selectorObject <img1> .
+
+#############
+# BIM OBJECTS
+#############
+<model1> a qcy:InformationObject , qcy:FileContent .
+<door1> a qcy:EntityReference .
+
+<bimSelector1> a qcy:Selector , qcy:IFCExpressIDSelector ;
+    qcy:value "29740" ;
+    qcy:selectorSubject <model1> ;
+    qcy:selectorObject <door1> .
+
+<bimSelector2> a qcy:Selector , qcy:IFCGlobalIDSelector ;
+    qcy:value "1aj$VJZFn2TxepZUBcKpvt" ;
+    qcy:selectorSubject <model1> ;
+    qcy:selectorObject <door1> .
+
+#############
+# TIME RANGE
+#############
+<video1> a qcy:InformationObject , qcy:FileContent .
+<person2> a qcy:EntityReference .
+
+<video1> a qcy:Selector , qcy:TimeRangeSelector ;
+    qcy:value "t=10,20" ;
+    qcy:selectorSubject <video1> ;
+    qcy:selectorObject <person2> .
+
+<video2> a qcy:Selector , qcy:TimeRangeSelector ;
+    qcy:value "t=,20" ;
+    qcy:selectorSubject <video1> ;
+    qcy:selectorObject <person2> .
+
+<video3> a qcy:Selector , qcy:TimeRangeSelector ;
+    qcy:value "t=10" ;
+    qcy:selectorSubject <video1> ;
+    qcy:selectorObject <person2> .

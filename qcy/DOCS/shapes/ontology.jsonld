@@ -1,0 +1,1067 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "_:genid10",
+  "http://www.w3.org/ns/shacl#node" : [ {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "http://www.w3.org/ns/shacl#hasValue" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Fragment"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "An express ID cannot be 0"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^[0-9]+$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "Invalid GlobalID"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^[0-9A-Za-z_$]{22}$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The Image Fragment doesn't specify a qcy:textSummary. This value should hold the summary/description of the image."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#textSummary"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Info"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The Image Fragment doesn't specify a qcy:value. This value should hold the ocr content of the image."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Info"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#FileLocation"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "An Image Fragment must specify the location of the file"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#hasFileLocation"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#XYWHSelector"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "An Image Fragment's location relative to the parent fragment should be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "http://www.w3.org/ns/shacl#inversePath" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#PageSelector"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Document Page Fragment's location relative to the document should be specified by exactly one qcy:PageSelector"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A qcy:InformationObject should have at least one more specific subclass of qcy:InformationObject assigned."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedMinCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedValueShape" : [ {
+    "@id" : "_:genid21"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "http://www.w3.org/ns/shacl#node" : [ {
+    "@id" : "_:genid22"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid23"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "http://www.w3.org/ns/shacl#hasValue" : [ {
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A page selector value can only consist of digits and cannot be 0 since page numbering starts at 1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^[1-9][0-9]*$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The range of a page selector object must be a qcy:InformationObject"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Selector must specify exactly one subject"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorSubject"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Selector must specify exactly one object"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A qcy:Selector must have at least one more specific subclass of qcy:Selector assigned."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedMinCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedValueShape" : [ {
+    "@id" : "_:genid30"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "http://www.w3.org/ns/shacl#inversePath" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "http://www.w3.org/ns/shacl#node" : [ {
+    "@id" : "_:genid31"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid32"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "http://www.w3.org/ns/shacl#hasValue" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Selector must specify exactly one value"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Table Fragment must specify a table grid holding the grid of the table serialized as a json string"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#tableGrid"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^(\\{.*\\}|\\[.*\\])$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#XYWHSelector"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Table Fragment's location relative to the parent fragment should be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "_:genid36"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "http://www.w3.org/ns/shacl#inversePath" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Table Fragment should specify a summary/description of the content of the table"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#textSummary"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Table Fragment must specify a value which holds the table as a HTML string"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "<([a-z]+)([^<]+)*(?:>(.*?)<\\/\\1>|\\s+\\/>)"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A text directive selector value must conform with the URL Fragment Text Directives specification"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^#:~:text=(?:([^,]+)-,)?([^,]+)(?:,([^,]+))?(?:,-([^,]+))?$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The Page Fragment doesn't specify a qcy:textSummary. This value should hold the summary/description of the page."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#textSummary"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#XYWHSelector"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Text Fragment's location relative to the parent fragment can be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "_:genid41"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Info"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "http://www.w3.org/ns/shacl#inversePath" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Text Fragment must specify a raw text"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#textRaw"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Text Fragment should specify a value that holds the cleaned/usable text"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A page selector value must consist of two digits separated by a comma"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^[0-9]+,[0-9]+$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A time range selector value must conform with the media frags specification"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^t=\\d*,?\\d+$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "An XYWH bounding box selector value must conform with the media frags specification"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^xywh=(percent:|pixel:)?((-?\\d*\\.?\\d*),){3}(-?\\d*\\.?\\d*)$"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#EntityReference"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Page Fragment must have a qcy:value that holds the full extracted text content of the page."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Fragment must have a qcy:value that holds the processed content of the fragment."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://qaecy.com/dev/ont#value"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A Fragment must be contained inside another information object"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "http://www.w3.org/ns/shacl#inversePath" : [ {
+    "@id" : "https://qaecy.com/dev/ont#containsFragment"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A qcy:Fragment should have at least one more specific subclass of qcy:Fragment assigned."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedMinCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedValueShape" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Warning"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#NodeShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#datatype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#inversePath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#maxCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#message",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#minCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#node",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#nodeKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#or",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#path",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#pattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#qualifiedMinCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#qualifiedValueShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#severity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#targetClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#targetObjectsOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#targetSubjectsOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#DocumentPageFragmentShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#DocumentPageFragment"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#FragmentShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid9"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Fragment"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#IFCExpressIDSelectorShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#IFCExpressIDSelector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#IFCGlobalIDSelectorShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#IFCGlobalIDSelector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#ImageFragmentShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#ImageFragment"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#InformationObjectShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid20"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#PageSelectorShape1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid24"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#PageSelector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#PageSelectorShape2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid25"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#PageSelector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid26"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid27"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The domain of a selector subject must be a qcy:Selector"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ],
+  "http://www.w3.org/ns/shacl#targetSubjectsOf" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorSubject"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The range of a selector subject must be a qcy:InformationObject"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ],
+  "http://www.w3.org/ns/shacl#targetObjectsOf" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorSubject"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The domain of a selector object must be a qcy:Selector"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ],
+  "http://www.w3.org/ns/shacl#targetSubjectsOf" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The range of a selector object must be either a qcy:InformationObject or a qcy:EntityReference"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#or" : [ {
+    "@id" : "_:genid28"
+  } ],
+  "http://www.w3.org/ns/shacl#severity" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Violation"
+  } ],
+  "http://www.w3.org/ns/shacl#targetObjectsOf" : [ {
+    "@id" : "https://qaecy.com/dev/ont#selectorObject"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid29"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#SelectorShape8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid33"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#TableFragmentShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid37"
+  }, {
+    "@id" : "_:genid38"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#TableFragment"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#TextDirectiveSelectorShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid39"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#TextDirectiveSelector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#TextFragmentShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid42"
+  }, {
+    "@id" : "_:genid43"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#TextFragment"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#TextIndexSelectorShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid44"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#TextIndexSelector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#TimeRangeSelectorShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid45"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#TimeRangeSelector"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#XYWHSelectorShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid46"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://qaecy.com/dev/ont#XYWHSelector"
+  } ]
+} ]

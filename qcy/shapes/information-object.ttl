@@ -1,0 +1,21 @@
+
+##############################
+# INFORMATION OBJECTS, GENERAL
+##############################
+qcy:InformationObjectShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:InformationObject ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedValueShape [
+            sh:node [
+                sh:property [
+                    sh:path rdfs:subClassOf ;
+                    sh:hasValue qcy:InformationObject ;
+                ]
+            ]
+        ] ;
+        sh:severity sh:Violation ;
+        sh:message "A qcy:InformationObject should have at least one more specific subclass of qcy:InformationObject assigned." ;
+    ] .

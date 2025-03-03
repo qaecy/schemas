@@ -1,0 +1,381 @@
+@prefix : <https://qaecy.com/dev/enum#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://qaecy.com/dev/enum#> .
+
+<https://qaecy.com/dev/enum#> rdf:type owl:Ontology ;
+                               <http://purl.org/dc/terms/creator> "Christian Frausing" ,
+                                                                  "Mads Holten Rasmussen" ,
+                                                                  "Manos Agyris" ;
+                               <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." ;
+                               <http://purl.org/dc/terms/modified> "2025-03-03T10:38:22Z"^^xsd:dateTime ;
+                               <http://purl.org/dc/terms/title> "QAECY Enumerations"@en ;
+                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
+
+
+###  https://qaecy.com/dev/ont#relatedFormalClass
+<https://qaecy.com/dev/ont#relatedFormalClass> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  https://qaecy.com/dev/ont#ContentCategory
+<https://qaecy.com/dev/ont#ContentCategory> rdf:type owl:Class .
+
+
+###  https://qaecy.com/dev/ont#EntityCategory
+<https://qaecy.com/dev/ont#EntityCategory> rdf:type owl:Class .
+
+
+###  https://qaecy.com/dev/ont#MimeCategory
+<https://qaecy.com/dev/ont#MimeCategory> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://qaecy.com/dev/enum#Activity
+:Activity rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   <https://qaecy.com/dev/ont#EntityCategory> ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Activity"@en .
+
+
+###  https://qaecy.com/dev/enum#BIMFileContent
+:BIMFileContent rdf:type owl:NamedIndividual ,
+                         <https://qaecy.com/dev/ont#MimeCategory> ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Category for BIM file content"@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "BIM File Content"@en .
+
+
+###  https://qaecy.com/dev/enum#Balcony
+:Balcony rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                  <https://qaecy.com/dev/ont#EntityCategory> ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "Balcony"@en ;
+         <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/rec#Balcony> .
+
+
+###  https://qaecy.com/dev/enum#Beam
+:Beam rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos/core#Concept> ,
+               <https://qaecy.com/dev/ont#EntityCategory> ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Beam"@en ;
+      <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/beo#Beam> .
+
+
+###  https://qaecy.com/dev/enum#Building
+:Building rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   <https://qaecy.com/dev/ont#EntityCategory> ;
+          <http://www.w3.org/2004/02/skos/core#broader> :Site ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Building"@en ;
+          <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/bot#Building> .
+
+
+###  https://qaecy.com/dev/enum#BuildingElement
+:BuildingElement rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                          <https://qaecy.com/dev/ont#EntityCategory> ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Any tangible part of a building"@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Building Element"@en ;
+                 <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/bot#Element> ,
+                                                                <https://w3id.org/rec#BuildingElement> .
+
+
+###  https://qaecy.com/dev/enum#CADFileContent
+:CADFileContent rdf:type owl:NamedIndividual ,
+                         <https://qaecy.com/dev/ont#MimeCategory> ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Category for CAD file content"@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "CAD File Content"@en .
+
+
+###  https://qaecy.com/dev/enum#ChangeOrder
+:ChangeOrder rdf:type owl:NamedIndividual ,
+                      <https://qaecy.com/dev/ont#MimeCategory> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A change order document."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Change Order"@en .
+
+
+###  https://qaecy.com/dev/enum#Column
+:Column rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                 <https://qaecy.com/dev/ont#EntityCategory> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Column"@en ;
+        <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/beo#Column> .
+
+
+###  https://qaecy.com/dev/enum#Contract
+:Contract rdf:type owl:NamedIndividual ,
+                   <https://qaecy.com/dev/ont#MimeCategory> ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A formal contract."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en .
+
+
+###  https://qaecy.com/dev/enum#Date
+:Date rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos/core#Concept> ,
+               <https://qaecy.com/dev/ont#EntityCategory> ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Date"@en .
+
+
+###  https://qaecy.com/dev/enum#Drawing
+:Drawing rdf:type owl:NamedIndividual ,
+                  <https://qaecy.com/dev/ont#ContentCategory> ;
+         <http://www.w3.org/2004/02/skos/core#definition> "A drawing or sketch."@en ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing"@en .
+
+
+###  https://qaecy.com/dev/enum#Email
+:Email rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                <https://qaecy.com/dev/ont#EntityCategory> ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Email"@en .
+
+
+###  https://qaecy.com/dev/enum#Equipment
+:Equipment rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                    <https://qaecy.com/dev/ont#EntityCategory> ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Equipment"@en ;
+           <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/rec#Equipment> .
+
+
+###  https://qaecy.com/dev/enum#Facade
+:Facade rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                 <https://qaecy.com/dev/ont#EntityCategory> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Facade"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> :Wall ;
+        <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/rec#Facade> .
+
+
+###  https://qaecy.com/dev/enum#Floor
+:Floor rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                <https://qaecy.com/dev/ont#EntityCategory> ;
+       <http://www.w3.org/2004/02/skos/core#broader> :Building ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Floor in a building"@en ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Floor"@en ;
+       <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/bot#Storey> .
+
+
+###  https://qaecy.com/dev/enum#Location
+:Location rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   <https://qaecy.com/dev/ont#EntityCategory> ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en ;
+          <https://qaecy.com/dev/ont#relatedFormalClass> <http://schema.org/Place> .
+
+
+###  https://qaecy.com/dev/enum#Material
+:Material rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   <https://qaecy.com/dev/ont#EntityCategory> ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Material"@en .
+
+
+###  https://qaecy.com/dev/enum#ObjectId
+:ObjectId rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   <https://qaecy.com/dev/ont#EntityCategory> ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "ObjectId"@en .
+
+
+###  https://qaecy.com/dev/enum#Organization
+:Organization rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                       <https://qaecy.com/dev/ont#EntityCategory> ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Organization"@en ;
+              <https://qaecy.com/dev/ont#relatedFormalClass> <http://schema.org/Organization> .
+
+
+###  https://qaecy.com/dev/enum#OtherContent
+:OtherContent rdf:type owl:NamedIndividual ,
+                       <https://qaecy.com/dev/ont#MimeCategory> ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Other types of documents."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Other content"@en .
+
+
+###  https://qaecy.com/dev/enum#Person
+:Person rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                 <https://qaecy.com/dev/ont#EntityCategory> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@en ;
+        <https://qaecy.com/dev/ont#relatedFormalClass> <http://schema.org/Person> .
+
+
+###  https://qaecy.com/dev/enum#Project
+:Project rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                  <https://qaecy.com/dev/ont#EntityCategory> ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "Project"@en .
+
+
+###  https://qaecy.com/dev/enum#Regulation
+:Regulation rdf:type owl:NamedIndividual ,
+                     <https://qaecy.com/dev/ont#MimeCategory> ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A regulation document."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulation"@en .
+
+
+###  https://qaecy.com/dev/enum#Report
+:Report rdf:type owl:NamedIndividual ,
+                 <https://qaecy.com/dev/ont#MimeCategory> ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A detailed report."@en ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Report"@en .
+
+
+###  https://qaecy.com/dev/enum#Requirement
+:Requirement rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      <https://qaecy.com/dev/ont#EntityCategory> ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Requirement"@en .
+
+
+###  https://qaecy.com/dev/enum#Roof
+:Roof rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos/core#Concept> ,
+               <https://qaecy.com/dev/ont#EntityCategory> ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Roof"@en ;
+      <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/beo#Roof> ,
+                                                     <https://w3id.org/rec#Roof> .
+
+
+###  https://qaecy.com/dev/enum#Site
+:Site rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos/core#Concept> ,
+               <https://qaecy.com/dev/ont#EntityCategory> ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Site"@en ;
+      <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/bot#Site> .
+
+
+###  https://qaecy.com/dev/enum#Slab
+:Slab rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos/core#Concept> ,
+               <https://qaecy.com/dev/ont#EntityCategory> ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Slab"@en ;
+      <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/beo#Slab> ,
+                                                     <https://w3id.org/rec#Slab> .
+
+
+###  https://qaecy.com/dev/enum#Space
+:Space rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                <https://qaecy.com/dev/ont#EntityCategory> ;
+       <http://www.w3.org/2004/02/skos/core#broader> :Floor ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Space in a building"@en ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Space"@en ;
+       <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/bot#Space> .
+
+
+###  https://qaecy.com/dev/enum#Specification
+:Specification rdf:type owl:NamedIndividual ,
+                        <https://qaecy.com/dev/ont#MimeCategory> ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A detailed specification."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Specification"@en .
+
+
+###  https://qaecy.com/dev/enum#Stair
+:Stair rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                <https://qaecy.com/dev/ont#EntityCategory> ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Stair"@en ;
+       <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/beo#Stair> .
+
+
+###  https://qaecy.com/dev/enum#Standard
+:Standard rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   <https://qaecy.com/dev/ont#EntityCategory> ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard"@en .
+
+
+###  https://qaecy.com/dev/enum#Tender
+:Tender rdf:type owl:NamedIndividual ,
+                 <https://qaecy.com/dev/ont#MimeCategory> ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A tender document."@en ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Tender"@en .
+
+
+###  https://qaecy.com/dev/enum#TextFileContent
+:TextFileContent rdf:type owl:NamedIndividual ,
+                          <https://qaecy.com/dev/ont#MimeCategory> ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Category for text file content"@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Text File Content"@en .
+
+
+###  https://qaecy.com/dev/enum#Wall
+:Wall rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos/core#Concept> ,
+               <https://qaecy.com/dev/ont#EntityCategory> ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Wall"@en ;
+      <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/beo#Wall> ,
+                                                     <https://w3id.org/rec#Wall> .
+
+
+###  https://qaecy.com/dev/enum#Window
+:Window rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                 <https://qaecy.com/dev/ont#EntityCategory> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Window"@en ;
+        <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/beo#Window> .
+
+
+###  https://qaecy.com/dev/enum#3DModel
+<https://qaecy.com/dev/enum#3DModel> rdf:type owl:NamedIndividual ,
+                                              <https://qaecy.com/dev/ont#MimeCategory> ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "A three-dimensional model."@en ;
+                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "3D Model"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

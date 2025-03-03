@@ -1,0 +1,86 @@
+
+#################
+# MIME CATEGORIES
+#################
+qcy-e:Person a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass schema:Person ;
+    skos:prefLabel "Person"@en .
+qcy-e:Organization a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass schema:Organization ;
+    skos:prefLabel "Organization"@en .
+qcy-e:Location a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass schema:Place ;
+    skos:prefLabel "Location"@en .
+qcy-e:Email a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Email"@en .
+qcy-e:Date a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Date"@en .
+qcy-e:Project a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Project"@en .
+qcy-e:Standard a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Standard"@en .
+qcy-e:Requirement a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Requirement"@en .
+qcy-e:ObjectId a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "ObjectId"@en .
+qcy-e:Material a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Material"@en .
+qcy-e:Activity a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Activity"@en .
+
+qcy-e:Equipment a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass rec:Equipment ;
+    skos:prefLabel "Equipment"@en .
+qcy-e:Site a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Site"@en ;
+    qcy:relatedFormalClass bot:Site .
+qcy-e:Building a qcy:EntityCategory , skos:Concept ;
+    skos:broader qcy-e:Site ;
+    skos:prefLabel "Building"@en ;
+    qcy:relatedFormalClass bot:Building .
+qcy-e:Floor a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Floor"@en ;
+    skos:broader qcy-e:Building ;
+    skos:definition "Floor in a building"@en ;
+    qcy:relatedFormalClass bot:Storey .
+qcy-e:Space a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Space"@en ;
+    skos:broader qcy-e:Floor ;
+    skos:definition "Space in a building"@en ;
+    qcy:relatedFormalClass bot:Space .
+
+###################
+# BUILDING ELEMENTS
+###################
+qcy-e:BuildingElement a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Building Element"@en ;
+    skos:definition "Any tangible part of a building"@en ;
+    qcy:relatedFormalClass bot:Element , rec:BuildingElement .
+qcy-e:Wall a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Wall"@en ;
+    qcy:relatedFormalClass rec:Wall , beo:Wall .
+qcy-e:Slab a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Slab"@en ;
+    qcy:relatedFormalClass rec:Slab , beo:Slab .
+qcy-e:Beam a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Beam"@en ;
+    qcy:relatedFormalClass beo:Beam .
+qcy-e:Column a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Column"@en ;
+    qcy:relatedFormalClass beo:Column .
+qcy-e:Window a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Window"@en ;
+    qcy:relatedFormalClass beo:Window .
+qcy-e:Stair a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Stair"@en ;
+    qcy:relatedFormalClass beo:Stair .
+qcy-e:Roof a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Roof"@en ;
+    qcy:relatedFormalClass rec:Roof , beo:Roof .
+qcy-e:Balcony a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Balcony"@en ;
+    qcy:relatedFormalClass rec:Balcony .
+qcy-e:Facade a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Facade"@en ;
+    skos:related qcy-e:Wall ;
+    qcy:relatedFormalClass rec:Facade .

@@ -1,0 +1,170 @@
+
+####################
+# FRAGMENTS, GENERAL
+####################
+qcy:FragmentShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:Fragment ;
+    sh:property [
+        sh:path [ sh:inversePath qcy:containsFragment ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class qcy:InformationObject ;
+        sh:severity sh:Violation ;
+        sh:message "A Fragment must be contained inside another information object" ;
+    ] , [
+        sh:path rdf:type ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedValueShape [
+            sh:node [
+                sh:property [
+                    sh:path rdfs:subClassOf ;
+                    sh:hasValue qcy:Fragment ;
+                ]
+            ]
+        ] ;
+        sh:severity sh:Warning ;
+        sh:message "A qcy:Fragment should have at least one more specific subclass of qcy:Fragment assigned." ;
+    ] , [
+        sh:path qcy:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "A Fragment must have a qcy:value that holds the processed content of the fragment." ;
+    ] .
+
+################
+# PAGE FRAGMENTS
+################
+qcy:DocumentPageFragmentShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:DocumentPageFragment ;
+    sh:property [
+        sh:path [ sh:inversePath qcy:selectorObject ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class qcy:PageSelector ;
+        sh:severity sh:Warning ;
+        sh:message "A Document Page Fragment's location relative to the document should be specified by exactly one qcy:PageSelector" ;
+    ] , [
+        sh:path qcy:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message "A Page Fragment must have a qcy:value that holds the full extracted text content of the page." ;
+    ] , [
+        sh:path qcy:textSummary ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "The Page Fragment doesn't specify a qcy:textSummary. This value should hold the summary/description of the page." ;
+    ].
+
+#################
+# IMAGE FRAGMENTS
+#################
+qcy:ImageFragmentShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:ImageFragment ;
+    sh:property [
+        sh:path [ sh:inversePath qcy:selectorObject ] ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class qcy:XYWHSelector ;
+        sh:severity sh:Warning ;
+        sh:message "An Image Fragment's location relative to the parent fragment should be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)" ;
+    ] , [
+        sh:path qcy:hasFileLocation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class qcy:FileLocation ;
+        sh:severity sh:Violation ;
+        sh:message "An Image Fragment must specify the location of the file" ;
+    ] , [
+        sh:path qcy:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "The Image Fragment doesn't specify a qcy:value. This value should hold the ocr content of the image." ;
+    ] , [
+        sh:path qcy:textSummary ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "The Image Fragment doesn't specify a qcy:textSummary. This value should hold the summary/description of the image." ;
+    ] .
+
+#################
+# TABLE FRAGMENTS
+#################
+qcy:TableFragmentShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:TableFragment ;
+    sh:property [
+        sh:path [ sh:inversePath qcy:selectorObject ] ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class qcy:XYWHSelector ;
+        sh:severity sh:Warning ;
+        sh:message "A Table Fragment's location relative to the parent fragment should be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)" ;
+    ] , [
+        sh:path qcy:tableGrid ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^(\\{.*\\}|\\[.*\\])$" ; # Simple regex. Starts and ends with [] or {}
+        sh:severity sh:Warning ;
+        sh:message "A Table Fragment must specify a table grid holding the grid of the table serialized as a json string" ;
+    ] , [
+        sh:path qcy:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "<([a-z]+)([^<]+)*(?:>(.*?)<\\/\\1>|\\s+\\/>)" ;
+        sh:severity sh:Warning ;
+        sh:message "A Table Fragment must specify a value which holds the table as a HTML string" ;
+    ] , [
+        sh:path qcy:textSummary ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "A Table Fragment should specify a summary/description of the content of the table" ;
+    ] .
+
+################
+# TEXT FRAGMENTS
+################
+qcy:TextFragmentShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:TextFragment ;
+    sh:property [
+        sh:path [ sh:inversePath qcy:selectorObject ] ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class qcy:XYWHSelector ;
+        sh:severity sh:Info ;
+        sh:message "A Text Fragment's location relative to the parent fragment can be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)" ;
+    ] , [
+        sh:path qcy:textRaw ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message "A Text Fragment must specify a raw text" ;
+    ] , [
+        sh:path qcy:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "A Text Fragment should specify a value that holds the cleaned/usable text" ;
+    ] .

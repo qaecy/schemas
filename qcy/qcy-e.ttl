@@ -1,0 +1,150 @@
+@prefix qcy-e:   <https://qaecy.com/dev/enum#> .
+@prefix qcy:     <https://qaecy.com/dev/ont#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix bot:     <https://w3id.org/bot#> .
+@prefix rec:     <https://w3id.org/rec#> .
+@prefix beo:     <https://w3id.org/beo#> .
+@prefix schema:  <http://schema.org/> .
+
+####################
+## METADATA
+####################
+<https://qaecy.com/dev/enum#> a owl:Ontology ;
+    dcterms:title       "QAECY Enumerations"@en ;
+    dcterms:modified "2025-03-03T10:38:22Z"^^xsd:dateTime ;
+    dcterms:description """This document describes special enumerations to be used with the QAECY Ontology.""" ;
+    dcterms:creator "Mads Holten Rasmussen" , "Manos Agyris" , "Christian Frausing" ;
+    vann:preferredNamespacePrefix    "qcy-e" .
+
+#################
+# MIME CATEGORIES
+#################
+qcy-e:Person a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass schema:Person ;
+    skos:prefLabel "Person"@en .
+qcy-e:Organization a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass schema:Organization ;
+    skos:prefLabel "Organization"@en .
+qcy-e:Location a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass schema:Place ;
+    skos:prefLabel "Location"@en .
+qcy-e:Email a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Email"@en .
+qcy-e:Date a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Date"@en .
+qcy-e:Project a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Project"@en .
+qcy-e:Standard a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Standard"@en .
+qcy-e:Requirement a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Requirement"@en .
+qcy-e:ObjectId a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "ObjectId"@en .
+qcy-e:Material a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Material"@en .
+qcy-e:Activity a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Activity"@en .
+
+qcy-e:Equipment a qcy:EntityCategory , skos:Concept ;
+    qcy:relatedFormalClass rec:Equipment ;
+    skos:prefLabel "Equipment"@en .
+qcy-e:Site a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Site"@en ;
+    qcy:relatedFormalClass bot:Site .
+qcy-e:Building a qcy:EntityCategory , skos:Concept ;
+    skos:broader qcy-e:Site ;
+    skos:prefLabel "Building"@en ;
+    qcy:relatedFormalClass bot:Building .
+qcy-e:Floor a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Floor"@en ;
+    skos:broader qcy-e:Building ;
+    skos:definition "Floor in a building"@en ;
+    qcy:relatedFormalClass bot:Storey .
+qcy-e:Space a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Space"@en ;
+    skos:broader qcy-e:Floor ;
+    skos:definition "Space in a building"@en ;
+    qcy:relatedFormalClass bot:Space .
+
+###################
+# BUILDING ELEMENTS
+###################
+qcy-e:BuildingElement a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Building Element"@en ;
+    skos:definition "Any tangible part of a building"@en ;
+    qcy:relatedFormalClass bot:Element , rec:BuildingElement .
+qcy-e:Wall a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Wall"@en ;
+    qcy:relatedFormalClass rec:Wall , beo:Wall .
+qcy-e:Slab a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Slab"@en ;
+    qcy:relatedFormalClass rec:Slab , beo:Slab .
+qcy-e:Beam a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Beam"@en ;
+    qcy:relatedFormalClass beo:Beam .
+qcy-e:Column a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Column"@en ;
+    qcy:relatedFormalClass beo:Column .
+qcy-e:Window a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Window"@en ;
+    qcy:relatedFormalClass beo:Window .
+qcy-e:Stair a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Stair"@en ;
+    qcy:relatedFormalClass beo:Stair .
+qcy-e:Roof a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Roof"@en ;
+    qcy:relatedFormalClass rec:Roof , beo:Roof .
+qcy-e:Balcony a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Balcony"@en ;
+    qcy:relatedFormalClass rec:Balcony .
+qcy-e:Facade a qcy:EntityCategory , skos:Concept ;
+    skos:prefLabel "Facade"@en ;
+    skos:related qcy-e:Wall ;
+    qcy:relatedFormalClass rec:Facade .
+#################
+# CONTENT CATEGORIES
+#################
+qcy-e:Drawing a qcy:ContentCategory ;
+    skos:prefLabel "Drawing"@en ;
+    skos:definition "A drawing or sketch."@en .
+qcy-e:3DModel a qcy:MimeCategory ;
+    skos:prefLabel "3D Model"@en ;
+    skos:definition "A three-dimensional model."@en .
+qcy-e:Report a qcy:MimeCategory ;
+    skos:prefLabel "Report"@en ;
+    skos:definition "A detailed report."@en .
+qcy-e:Contract a qcy:MimeCategory ;
+    skos:prefLabel "Contract"@en ;
+    skos:definition "A formal contract."@en .
+qcy-e:Specification a qcy:MimeCategory ;
+    skos:prefLabel "Specification"@en ;
+    skos:definition "A detailed specification."@en .
+qcy-e:Regulation a qcy:MimeCategory ;
+    skos:prefLabel "Regulation"@en ;
+    skos:definition "A regulation document."@en .
+qcy-e:Tender a qcy:MimeCategory ;
+    skos:prefLabel "Tender"@en ;
+    skos:definition "A tender document."@en .
+qcy-e:ChangeOrder a qcy:MimeCategory ;
+    skos:prefLabel "Change Order"@en ;
+    skos:definition "A change order document."@en .
+qcy-e:OtherContent a qcy:MimeCategory ;
+    skos:prefLabel "Other content"@en ;
+    skos:definition "Other types of documents."@en .
+#################
+# MIME CATEGORIES
+#################
+qcy-e:TextFileContent a qcy:MimeCategory ;
+    skos:prefLabel "Text File Content"@en ;
+    skos:definition "Category for text file content"@en .
+qcy-e:BIMFileContent a qcy:MimeCategory ;
+    skos:prefLabel "BIM File Content"@en ;
+    skos:definition "Category for BIM file content"@en .
+qcy-e:CADFileContent a qcy:MimeCategory ;
+    skos:prefLabel "CAD File Content"@en ;
+    skos:definition "Category for CAD file content"@en .

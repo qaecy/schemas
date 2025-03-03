@@ -1,0 +1,74 @@
+## To be tested with corresponding shapes (eg. https://shacl.org/playground/)
+
+@base <https://qaecy.com/r/> .
+@prefix qcy:     <https://qaecy.com/dev/ont#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+
+# NECESSARY TBOX
+qcy:DocumentPageFragment rdfs:subClassOf qcy:Fragment .
+qcy:ImageFragment rdfs:subClassOf qcy:Fragment .
+qcy:TableFragment rdfs:subClassOf qcy:Fragment .
+qcy:TextFragment rdfs:subClassOf qcy:Fragment .
+
+#######
+# PAGES
+#######
+<doc1> a qcy:InformationObject , qcy:FileContent .
+<page1> a qcy:InformationObject , qcy:DocumentPageFragment , qcy:Fragment .
+
+<doc1> qcy:containsFragment <page1> .
+# A value is recommended for a page fragment
+<page1> qcy:value "This is the full text content of the page" .
+# A PageSelector is required for a page fragment
+<sel1> a qcy:PageSelector ; qcy:selectorObject <page1> .
+# Should specify a text summary (must be there if processed)
+<page1> qcy:textSummary "The page shows XX" .
+
+########
+# IMAGES
+########
+<img1> a qcy:InformationObject , qcy:ImageFragment , qcy:Fragment .
+
+<page1> qcy:containsFragment <img1> .
+# An XYWHSelector is required for a page fragment
+<sel2> a qcy:XYWHSelector ; qcy:selectorObject <img1> .
+# A file location is required for a page fragment
+<img1> qcy:hasFileLocation <img1file> .
+<img1file> a qcy:FileLocation .
+# A value is recommended for an image fragment
+<img1> qcy:value "This is the OCR content of the image" .
+# Should specify a text summary (must be there if processed)
+<img1> qcy:textSummary "The image shows XX" .
+
+########
+# TABLES
+########
+<table1> a qcy:InformationObject , qcy:TableFragment , qcy:Fragment .
+
+<page1> qcy:containsFragment <table1> .
+# An XYWHSelector is recommended for a table fragment
+<sel3> a qcy:XYWHSelector ; qcy:selectorObject <table1> .
+# Should specify a table grid (must be there if processed)
+<table1> qcy:tableGrid """{"cols": {"foo": 22}}""" .
+# A value is recommended for a table fragment (must be there if processed)
+<table1> qcy:value """<table>
+    <tr>
+        <th>Company</th>
+    </tr>
+    <tr>
+        <td>https://example.com</td>
+    </tr>
+</table>""" .
+# Should specify a text summary (must be there if processed)
+<table1> qcy:textSummary "The table shows XX" .
+
+########
+# TEXT
+########
+<text1> a qcy:InformationObject , qcy:TextFragment , qcy:Fragment .
+
+<page1> qcy:containsFragment <text1> .
+# An XYWHSelector is recommended for a text fragment
+<sel4> a qcy:XYWHSelector ; qcy:selectorObject <text1> .
+# Should have both raw and formatted text
+<text1> qcy:textRaw "Hello World" ; qcy:value "**Hello World**" .

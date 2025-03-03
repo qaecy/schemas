@@ -1,0 +1,17 @@
+## To be tested with corresponding shapes (eg. https://shacl.org/playground/)
+
+@base <https://qaecy.com/r/> .
+@prefix qcy:     <https://qaecy.com/dev/ont#> .
+@prefix qcy-e:  <https://qaecy.com/dev/enum#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+
+# NECESSARY TBOX
+qcy:FileContent rdfs:subClassOf qcy:InformationObject .
+
+##############
+# FILE CONTENT
+##############
+<doc1> a qcy:InformationObject , qcy:FileContent .
+
+# Should have a mime category
+<doc1> qcy:mimeCategory

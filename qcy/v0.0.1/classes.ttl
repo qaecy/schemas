@@ -1,0 +1,151 @@
+
+####################
+## CLASSES
+####################
+qcy:FileLocation a owl:Class ;
+    owl:disjointWith qcy:InformationObject , qcy:EntityReference , 
+        qcy:Property , qcy:Selector , qcy:Category ;
+    rdfs:label "File Location"@en ;
+    rdfs:comment "A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud."@en .
+
+qcy:InformationObject a owl:Class ;
+    owl:disjointWith qcy:FileLocation , qcy:EntityReference , 
+        qcy:Property , qcy:Selector , qcy:Category ;
+    rdfs:label "Information Object"@en ;
+    rdfs:comment """An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes."""@en .
+
+qcy:FileContent a owl:Class ;
+    rdfs:subClassOf qcy:InformationObject ;
+    rdfs:label "File Content"@en ;
+    rdfs:comment """A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."""@en .
+
+qcy:Fragment a owl:Class ;
+    rdfs:subClassOf qcy:InformationObject ;
+    rdfs:label "Fragment"@en ;
+    rdfs:comment """A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."""@en .
+
+qcy:EntityReference a owl:Class ;
+    owl:disjointWith qcy:FileLocation , qcy:InformationObject , 
+        qcy:Property , qcy:Selector , qcy:Category ;
+    rdfs:label "Entity Reference"@en ;
+    rdfs:comment """This abstract class captures reference points for all features of interest in a project, such as a building element, a zone, a person, or material. These references can be either explicit or potential occurrences of the entity. This class should not be assigned directly; instead, use the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalized entity."""@en .
+
+qcy:EntityMention a owl:Class ;
+    rdfs:subClassOf qcy:EntityReference ;
+    owl:disjointWith qcy:CanonicalEntity ;
+    rdfs:label "Entity Mention"@en ;
+    rdfs:comment """An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of "Albert Einstein" in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns."""@en .
+
+qcy:CanonicalEntity a owl:Class ;
+    rdfs:subClassOf qcy:EntityReference ;
+    owl:disjointWith qcy:EntityMention ;
+    rdfs:label "Canonical Entity"@en ;
+    rdfs:comment """These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."""@en .
+
+qcy:Property a owl:Class ;
+    owl:disjointWith qcy:FileLocation , qcy:InformationObject , 
+        qcy:EntityReference , qcy:Selector , qcy:Category ;
+    rdfs:label "Property"@en ;
+    rdfs:comment """Any quantitative or qualitative property of an entity."""@en .
+
+qcy:Selector a owl:Class ;
+    owl:disjointWith qcy:FileLocation , qcy:InformationObject , 
+        qcy:EntityReference , qcy:Property , qcy:Category ;
+    rdfs:label "Selector"@en ;
+    rdfs:comment """A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."""@en .
+
+qcy:Category a owl:Class ;
+    owl:disjointWith qcy:FileLocation , qcy:InformationObject , 
+        qcy:EntityReference , qcy:Property , qcy:Selector ;
+    rdfs:label "Category"@en ;
+    rdfs:comment """Abstract class for specific categories that each hold enumerations used for specification of information objects and entity references. It is recommended to use SKOS to establish more context between the Category entities."""@en .
+
+####################
+# SPECIFIC SELECTORS
+####################
+
+qcy:IFCGlobalIDSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "IFC Global ID Selector"@en ;
+    rdfs:comment "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."@en .
+
+qcy:IFCExpressIDSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "IFC Express ID Selector"@en ;
+    rdfs:comment "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en .
+
+qcy:XYWHSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "XYWH Selector"@en ;
+    dcterms:conformsTo <http://www.w3.org/TR/media-frags/> ;
+    rdfs:comment "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
+
+qcy:TimeRangeSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "Time Range Selector"@en ;
+    dcterms:conformsTo <http://www.w3.org/TR/media-frags/> ;
+    rdfs:comment "The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/"@en .
+
+qcy:IDSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "ID Selector"@en ;
+    rdfs:comment "The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID."@en .
+
+qcy:TextDirectiveSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "Text Directive Selector"@en ;
+    dcterms:conformsTo <https://wicg.github.io/scroll-to-text-fragment/> ;
+    rdfs:comment "A text directive selector specifies a range within a text using the syntax \"#:~:text=[prefix-,]start[,end][,-suffix]\". For example, \"#:~:text=example,fragment\" would indicate a range from the first occurrence of \"example\" to the next occurrence of \"fragment\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
+
+qcy:TextIndexSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "Text Index Selector"@en ;
+    rdfs:comment "A text index selector specifies a range within a text using start and end separated by a comma (\"start,end\"). For example \"6,11\" on the text string \"Hello World\" would specify the subset \"World\". This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
+
+qcy:PageSelector a owl:Class ;
+    rdfs:subClassOf qcy:Selector ;
+    rdfs:label "Page Selector"@en ;
+    rdfs:comment "A page selector specifies a particular page within a document. This special selector always always connects a qcy:FileContent object with a qcy:DocumentPage. The value is the page number starting from 1."@en .
+
+####################
+# SPECIFIC FRAGMENTS
+####################
+
+qcy:DocumentPageFragment a owl:Class ;
+    rdfs:subClassOf qcy:Fragment ;
+    rdfs:label "Document Page Fragment"@en ;
+    rdfs:comment """This special fragment constitutes a page in a paginated document."""@en .
+
+qcy:ImageFragment a owl:Class ;
+    rdfs:subClassOf qcy:Fragment ;
+    rdfs:label "Image Fragment"@en ;
+    rdfs:comment """This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."""@en .
+
+qcy:TableFragment a owl:Class ;
+    rdfs:subClassOf qcy:Fragment ;
+    rdfs:label "Table Fragment"@en ;
+    rdfs:comment """This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."""@en .
+
+qcy:TextFragment a owl:Class ;
+    rdfs:subClassOf qcy:Fragment ;
+    rdfs:label "Text Fragment"@en ;
+    rdfs:comment """This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."""@en .
+
+#####################
+# Specific categories
+#####################
+
+qcy:MimeCategory a owl:Class ;
+    rdfs:subClassOf qcy:Category ;
+    rdfs:label "Mime Category"@en ;
+    rdfs:comment "Category derived from the mimetype of the file content" .
+
+qcy:ContentCategory a owl:Class ;
+    rdfs:subClassOf qcy:Category ;
+    rdfs:label "Content Category"@en ;
+    rdfs:comment "Category derived from the content of the file" .
+
+qcy:EntityCategory a owl:Class ;
+    rdfs:subClassOf qcy:Category ;
+    rdfs:label "Entity Category"@en ;
+    rdfs:comment "Category that specifies the categories of an entity reference" .

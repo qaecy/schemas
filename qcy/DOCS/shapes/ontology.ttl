@@ -1,0 +1,501 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/shacl#class
+<http://www.w3.org/ns/shacl#class> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#datatype
+<http://www.w3.org/ns/shacl#datatype> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#hasValue
+<http://www.w3.org/ns/shacl#hasValue> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#inversePath
+<http://www.w3.org/ns/shacl#inversePath> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#maxCount
+<http://www.w3.org/ns/shacl#maxCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#message
+<http://www.w3.org/ns/shacl#message> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#minCount
+<http://www.w3.org/ns/shacl#minCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#node
+<http://www.w3.org/ns/shacl#node> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#nodeKind
+<http://www.w3.org/ns/shacl#nodeKind> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#or
+<http://www.w3.org/ns/shacl#or> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#path
+<http://www.w3.org/ns/shacl#path> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#pattern
+<http://www.w3.org/ns/shacl#pattern> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#property
+<http://www.w3.org/ns/shacl#property> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#qualifiedMinCount
+<http://www.w3.org/ns/shacl#qualifiedMinCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#qualifiedValueShape
+<http://www.w3.org/ns/shacl#qualifiedValueShape> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#severity
+<http://www.w3.org/ns/shacl#severity> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#targetObjectsOf
+<http://www.w3.org/ns/shacl#targetObjectsOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#targetSubjectsOf
+<http://www.w3.org/ns/shacl#targetSubjectsOf> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://qaecy.com/dev/ont#DocumentPageFragmentShape
+<https://qaecy.com/dev/ont#DocumentPageFragmentShape> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                      <http://www.w3.org/ns/shacl#property> _:genid2 ,
+                                                                                            _:genid4 ,
+                                                                                            _:genid5 ;
+                                                      <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#DocumentPageFragment> .
+
+_:genid2 <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#PageSelector> ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#message> "A Document Page Fragment's location relative to the document should be specified by exactly one qcy:PageSelector" ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+          <http://www.w3.org/ns/shacl#path> [ <http://www.w3.org/ns/shacl#inversePath> <https://qaecy.com/dev/ont#selectorObject>
+                                            ] ;
+          <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+_:genid4 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#message> "The Page Fragment doesn't specify a qcy:textSummary. This value should hold the summary/description of the page." ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#textSummary> ;
+          <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+_:genid5 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#message> "A Page Fragment must have a qcy:value that holds the full extracted text content of the page." ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+          <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#FragmentShape
+<https://qaecy.com/dev/ont#FragmentShape> rdf:type owl:NamedIndividual ,
+                                                   <http://www.w3.org/ns/shacl#NodeShape> ;
+                                          <http://www.w3.org/ns/shacl#property> _:genid6 ,
+                                                                                _:genid7 ,
+                                                                                _:genid9 ;
+                                          <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#Fragment> .
+
+_:genid6 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#message> "A Fragment must have a qcy:value that holds the processed content of the fragment." ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+          <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+_:genid7 <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#InformationObject> ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#message> "A Fragment must be contained inside another information object" ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+          <http://www.w3.org/ns/shacl#path> [ <http://www.w3.org/ns/shacl#inversePath> <https://qaecy.com/dev/ont#containsFragment>
+                                            ] ;
+          <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+_:genid9 <http://www.w3.org/ns/shacl#message> "A qcy:Fragment should have at least one more specific subclass of qcy:Fragment assigned." ;
+          <http://www.w3.org/ns/shacl#path> rdf:type ;
+          <http://www.w3.org/ns/shacl#qualifiedMinCount> 1 ;
+          <http://www.w3.org/ns/shacl#qualifiedValueShape> [ <http://www.w3.org/ns/shacl#node> [ <http://www.w3.org/ns/shacl#property> _:genid12
+                                                                                               ]
+                                                           ] ;
+          <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+_:genid12 <http://www.w3.org/ns/shacl#hasValue> <https://qaecy.com/dev/ont#Fragment> ;
+           <http://www.w3.org/ns/shacl#path> rdfs:subClassOf .
+
+
+###  https://qaecy.com/dev/ont#IFCExpressIDSelectorShape
+<https://qaecy.com/dev/ont#IFCExpressIDSelectorShape> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                      <http://www.w3.org/ns/shacl#property> _:genid13 ;
+                                                      <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#IFCExpressIDSelector> .
+
+_:genid13 <http://www.w3.org/ns/shacl#message> "An express ID cannot be 0" ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "^[0-9]+$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#IFCGlobalIDSelectorShape
+<https://qaecy.com/dev/ont#IFCGlobalIDSelectorShape> rdf:type owl:NamedIndividual ,
+                                                              <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                     <http://www.w3.org/ns/shacl#property> _:genid14 ;
+                                                     <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#IFCGlobalIDSelector> .
+
+_:genid14 <http://www.w3.org/ns/shacl#message> "Invalid GlobalID" ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "^[0-9A-Za-z_$]{22}$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+
+###  https://qaecy.com/dev/ont#ImageFragmentShape
+<https://qaecy.com/dev/ont#ImageFragmentShape> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/shacl#NodeShape> ;
+                                               <http://www.w3.org/ns/shacl#property> _:genid15 ,
+                                                                                     _:genid16 ,
+                                                                                     _:genid17 ,
+                                                                                     _:genid18 ;
+                                               <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#ImageFragment> .
+
+_:genid15 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "The Image Fragment doesn't specify a qcy:textSummary. This value should hold the summary/description of the image." ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#textSummary> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+
+_:genid16 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "The Image Fragment doesn't specify a qcy:value. This value should hold the ocr content of the image." ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+
+_:genid17 <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#FileLocation> ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "An Image Fragment must specify the location of the file" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#hasFileLocation> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+_:genid18 <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#XYWHSelector> ;
+           <http://www.w3.org/ns/shacl#message> "An Image Fragment's location relative to the parent fragment should be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> [ <http://www.w3.org/ns/shacl#inversePath> <https://qaecy.com/dev/ont#selectorObject>
+                                             ] ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+
+###  https://qaecy.com/dev/ont#InformationObjectShape
+<https://qaecy.com/dev/ont#InformationObjectShape> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                   <http://www.w3.org/ns/shacl#property> _:genid20 ;
+                                                   <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#InformationObject> .
+
+_:genid20 <http://www.w3.org/ns/shacl#message> "A qcy:InformationObject should have at least one more specific subclass of qcy:InformationObject assigned." ;
+           <http://www.w3.org/ns/shacl#path> rdf:type ;
+           <http://www.w3.org/ns/shacl#qualifiedMinCount> 1 ;
+           <http://www.w3.org/ns/shacl#qualifiedValueShape> [ <http://www.w3.org/ns/shacl#node> [ <http://www.w3.org/ns/shacl#property> _:genid23
+                                                                                                ]
+                                                            ] ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+_:genid23 <http://www.w3.org/ns/shacl#hasValue> <https://qaecy.com/dev/ont#InformationObject> ;
+           <http://www.w3.org/ns/shacl#path> rdfs:subClassOf .
+
+
+###  https://qaecy.com/dev/ont#PageSelectorShape1
+<https://qaecy.com/dev/ont#PageSelectorShape1> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/shacl#NodeShape> ;
+                                               <http://www.w3.org/ns/shacl#property> _:genid24 ;
+                                               <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#PageSelector> .
+
+_:genid24 <http://www.w3.org/ns/shacl#message> "A page selector value can only consist of digits and cannot be 0 since page numbering starts at 1" ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "^[1-9][0-9]*$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#PageSelectorShape2
+<https://qaecy.com/dev/ont#PageSelectorShape2> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/shacl#NodeShape> ;
+                                               <http://www.w3.org/ns/shacl#property> _:genid25 ;
+                                               <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#PageSelector> .
+
+_:genid25 <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#InformationObject> ;
+           <http://www.w3.org/ns/shacl#message> "The range of a page selector object must be a qcy:InformationObject" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#selectorObject> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape1
+<https://qaecy.com/dev/ont#SelectorShape1> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#property> _:genid26 ;
+                                           <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#Selector> .
+
+_:genid26 <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Selector must specify exactly one subject" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#selectorSubject> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape2
+<https://qaecy.com/dev/ont#SelectorShape2> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#property> _:genid27 ;
+                                           <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#Selector> .
+
+_:genid27 <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Selector must specify exactly one object" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#selectorObject> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape3
+<https://qaecy.com/dev/ont#SelectorShape3> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#Selector> ;
+                                           <http://www.w3.org/ns/shacl#message> "The domain of a selector subject must be a qcy:Selector" ;
+                                           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> ;
+                                           <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://qaecy.com/dev/ont#selectorSubject> .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape4
+<https://qaecy.com/dev/ont#SelectorShape4> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#InformationObject> ;
+                                           <http://www.w3.org/ns/shacl#message> "The range of a selector subject must be a qcy:InformationObject" ;
+                                           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> ;
+                                           <http://www.w3.org/ns/shacl#targetObjectsOf> <https://qaecy.com/dev/ont#selectorSubject> .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape5
+<https://qaecy.com/dev/ont#SelectorShape5> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#Selector> ;
+                                           <http://www.w3.org/ns/shacl#message> "The domain of a selector object must be a qcy:Selector" ;
+                                           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> ;
+                                           <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://qaecy.com/dev/ont#selectorObject> .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape6
+<https://qaecy.com/dev/ont#SelectorShape6> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#message> "The range of a selector object must be either a qcy:InformationObject or a qcy:EntityReference" ;
+                                           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                           <http://www.w3.org/ns/shacl#or> [ ] ;
+<http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> ;
+<http://www.w3.org/ns/shacl#targetObjectsOf> <https://qaecy.com/dev/ont#selectorObject> .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape7
+<https://qaecy.com/dev/ont#SelectorShape7> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#property> _:genid29 ;
+                                           <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#Selector> .
+
+_:genid29 <http://www.w3.org/ns/shacl#message> "A qcy:Selector must have at least one more specific subclass of qcy:Selector assigned." ;
+           <http://www.w3.org/ns/shacl#path> rdf:type ;
+           <http://www.w3.org/ns/shacl#qualifiedMinCount> 1 ;
+           <http://www.w3.org/ns/shacl#qualifiedValueShape> [ <http://www.w3.org/ns/shacl#node> [ <http://www.w3.org/ns/shacl#property> _:genid32
+                                                                                                ]
+                                                            ] ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+_:genid32 <http://www.w3.org/ns/shacl#hasValue> <https://qaecy.com/dev/ont#Selector> ;
+           <http://www.w3.org/ns/shacl#path> rdfs:subClassOf .
+
+
+###  https://qaecy.com/dev/ont#SelectorShape8
+<https://qaecy.com/dev/ont#SelectorShape8> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/shacl#NodeShape> ;
+                                           <http://www.w3.org/ns/shacl#property> _:genid33 ;
+                                           <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#Selector> .
+
+_:genid33 <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Selector must specify exactly one value" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#TableFragmentShape
+<https://qaecy.com/dev/ont#TableFragmentShape> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/shacl#NodeShape> ;
+                                               <http://www.w3.org/ns/shacl#property> _:genid34 ,
+                                                                                     _:genid35 ,
+                                                                                     _:genid37 ,
+                                                                                     _:genid38 ;
+                                               <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#TableFragment> .
+
+_:genid34 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Table Fragment must specify a table grid holding the grid of the table serialized as a json string" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#tableGrid> ;
+           <http://www.w3.org/ns/shacl#pattern> "^(\\{.*\\}|\\[.*\\])$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+_:genid35 <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#XYWHSelector> ;
+           <http://www.w3.org/ns/shacl#message> "A Table Fragment's location relative to the parent fragment should be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> [ <http://www.w3.org/ns/shacl#inversePath> <https://qaecy.com/dev/ont#selectorObject>
+                                             ] ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+_:genid37 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Table Fragment should specify a summary/description of the content of the table" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#textSummary> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+_:genid38 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Table Fragment must specify a value which holds the table as a HTML string" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "<([a-z]+)([^<]+)*(?:>(.*?)<\\/\\1>|\\s+\\/>)" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+
+###  https://qaecy.com/dev/ont#TextDirectiveSelectorShape
+<https://qaecy.com/dev/ont#TextDirectiveSelectorShape> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                       <http://www.w3.org/ns/shacl#property> _:genid39 ;
+                                                       <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#TextDirectiveSelector> .
+
+_:genid39 <http://www.w3.org/ns/shacl#message> "A text directive selector value must conform with the URL Fragment Text Directives specification" ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "^#:~:text=(?:([^,]+)-,)?([^,]+)(?:,([^,]+))?(?:,-([^,]+))?$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#TextFragmentShape
+<https://qaecy.com/dev/ont#TextFragmentShape> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/shacl#NodeShape> ;
+                                              <http://www.w3.org/ns/shacl#property> _:genid40 ,
+                                                                                    _:genid42 ,
+                                                                                    _:genid43 ;
+                                              <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#TextFragment> .
+
+_:genid40 <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#XYWHSelector> ;
+           <http://www.w3.org/ns/shacl#message> "A Text Fragment's location relative to the parent fragment can be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> [ <http://www.w3.org/ns/shacl#inversePath> <https://qaecy.com/dev/ont#selectorObject>
+                                             ] ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+
+_:genid42 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Text Fragment must specify a raw text" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#textRaw> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+_:genid43 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#message> "A Text Fragment should specify a value that holds the cleaned/usable text" ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+
+
+###  https://qaecy.com/dev/ont#TextIndexSelectorShape
+<https://qaecy.com/dev/ont#TextIndexSelectorShape> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                   <http://www.w3.org/ns/shacl#property> _:genid44 ;
+                                                   <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#TextIndexSelector> .
+
+_:genid44 <http://www.w3.org/ns/shacl#message> "A page selector value must consist of two digits separated by a comma" ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "^[0-9]+,[0-9]+$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#TimeRangeSelectorShape
+<https://qaecy.com/dev/ont#TimeRangeSelectorShape> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                   <http://www.w3.org/ns/shacl#property> _:genid45 ;
+                                                   <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#TimeRangeSelector> .
+
+_:genid45 <http://www.w3.org/ns/shacl#message> "A time range selector value must conform with the media frags specification" ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "^t=\\d*,?\\d+$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+###  https://qaecy.com/dev/ont#XYWHSelectorShape
+<https://qaecy.com/dev/ont#XYWHSelectorShape> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/shacl#NodeShape> ;
+                                              <http://www.w3.org/ns/shacl#property> _:genid46 ;
+                                              <http://www.w3.org/ns/shacl#targetClass> <https://qaecy.com/dev/ont#XYWHSelector> .
+
+_:genid46 <http://www.w3.org/ns/shacl#message> "An XYWH bounding box selector value must conform with the media frags specification" ;
+           <http://www.w3.org/ns/shacl#path> <https://qaecy.com/dev/ont#value> ;
+           <http://www.w3.org/ns/shacl#pattern> "^xywh=(percent:|pixel:)?((-?\\d*\\.?\\d*),){3}(-?\\d*\\.?\\d*)$" ;
+           <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+
+
+[ <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#EntityReference>
+] .
+
+[ <http://www.w3.org/ns/shacl#class> <https://qaecy.com/dev/ont#InformationObject>
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
