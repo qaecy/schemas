@@ -43,7 +43,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-03-03T10:38:22Z"
+    "@value" : "2025-03-03T20:32:43Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -56,7 +56,7 @@
   "@id" : "https://qaecy.com/dev/enum#3DModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -179,7 +179,7 @@
   "@id" : "https://qaecy.com/dev/enum#ChangeOrder",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -208,7 +208,7 @@
   "@id" : "https://qaecy.com/dev/enum#Contract",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -245,7 +245,7 @@
     "@value" : "Drawing"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Email",
+  "@id" : "https://qaecy.com/dev/enum#EmailAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
@@ -254,7 +254,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Email"
+    "@value" : "Email Address"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/enum#Equipment",
@@ -369,7 +369,7 @@
   "@id" : "https://qaecy.com/dev/enum#OtherContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -410,7 +410,7 @@
   "@id" : "https://qaecy.com/dev/enum#Regulation",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -424,7 +424,7 @@
   "@id" : "https://qaecy.com/dev/enum#Report",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -521,7 +521,7 @@
   "@id" : "https://qaecy.com/dev/enum#Specification",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -562,7 +562,7 @@
   "@id" : "https://qaecy.com/dev/enum#Tender",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",

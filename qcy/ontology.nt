@@ -4,7 +4,7 @@
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Agyris" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-03T16:02:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-03T20:32:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://qaecy.com/dev/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -60,6 +60,12 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://qaecy.com/d
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity." .
 <https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#label> "about"@en .
+# 
+# https://qaecy.com/dev/ont#adjacentElement
+<https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
 # 
 # https://qaecy.com/dev/ont#alternativeRepresentation
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -222,10 +228,24 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # https://qaecy.com/dev/ont#language
 <https://qaecy.com/dev/ont#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO 639 two letter language code"@en .
 <https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
+# 
+# https://qaecy.com/dev/ont#mime
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#comment> "The mimetype of the file content"@en .
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#label> "mime"@en .
+# 
+# https://qaecy.com/dev/ont#openFormat
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Is the file content readable without proprietary software tools?"@en .
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#label> "open format"@en .
 # 
 # https://qaecy.com/dev/ont#tableGrid
 <https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -448,6 +468,11 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # #################################################################
 # 
 # 
+# https://qaecy.com/dev/ont#adjacentElement
+<https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#adjacentElement> .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
 # https://qaecy.com/dev/ont#containsElement
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#containsElement> .
@@ -462,6 +487,8 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#containsSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://qaecy.com/dev/ont#containsSpace> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#hasSpace> .
 <https://w3id.org/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/bot#adjacentElement
 # 
 # https://w3id.org/bot#containsElement
 # 
@@ -478,8 +505,11 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-<https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and an element." .
-<https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "has floor"@en .
+<https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone/element and an adjacent element." .
+<https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent element"@en .
+# 
+<https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and a contained element." .
+<https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "contains element"@en .
 # 
 <https://qaecy.com/dev/ont#containsFloor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and a floor." .
 <https://qaecy.com/dev/ont#containsFloor> <http://www.w3.org/2000/01/rdf-schema#label> "contains floor"@en .

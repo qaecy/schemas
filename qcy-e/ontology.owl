@@ -15,7 +15,7 @@
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Agyris</terms:creator>
         <terms:description>This document describes special enumerations to be used with the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-03T10:38:22Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-03T20:32:43Z</terms:modified>
         <terms:title xml:lang="en">QAECY Enumerations</terms:title>
         <vann:preferredNamespacePrefix>qcy-e</vann:preferredNamespacePrefix>
     </owl:Ontology>
@@ -244,7 +244,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#ChangeOrder">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">A change order document.</skos:definition>
         <skos:prefLabel xml:lang="en">Change Order</skos:prefLabel>
     </owl:NamedIndividual>
@@ -267,7 +267,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#Contract">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">A formal contract.</skos:definition>
         <skos:prefLabel xml:lang="en">Contract</skos:prefLabel>
     </owl:NamedIndividual>
@@ -296,13 +296,13 @@
     
 
 
-    <!-- https://qaecy.com/dev/enum#Email -->
+    <!-- https://qaecy.com/dev/enum#EmailAddress -->
 
 
-    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#Email">
+    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#EmailAddress">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://qaecy.com/dev/ont#EntityCategory"/>
-        <skos:prefLabel xml:lang="en">Email</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Email Address</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -396,7 +396,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#OtherContent">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">Other types of documents.</skos:definition>
         <skos:prefLabel xml:lang="en">Other content</skos:prefLabel>
     </owl:NamedIndividual>
@@ -430,7 +430,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#Regulation">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">A regulation document.</skos:definition>
         <skos:prefLabel xml:lang="en">Regulation</skos:prefLabel>
     </owl:NamedIndividual>
@@ -441,7 +441,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#Report">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">A detailed report.</skos:definition>
         <skos:prefLabel xml:lang="en">Report</skos:prefLabel>
     </owl:NamedIndividual>
@@ -515,7 +515,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#Specification">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">A detailed specification.</skos:definition>
         <skos:prefLabel xml:lang="en">Specification</skos:prefLabel>
     </owl:NamedIndividual>
@@ -549,7 +549,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#Tender">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">A tender document.</skos:definition>
         <skos:prefLabel xml:lang="en">Tender</skos:prefLabel>
     </owl:NamedIndividual>
@@ -596,7 +596,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#3DModel">
-        <rdf:type rdf:resource="https://qaecy.com/dev/ont#MimeCategory"/>
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
         <skos:definition xml:lang="en">A three-dimensional model.</skos:definition>
         <skos:prefLabel xml:lang="en">3D Model</skos:prefLabel>
     </owl:NamedIndividual>

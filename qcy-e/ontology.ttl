@@ -11,7 +11,7 @@
                                                                   "Mads Holten Rasmussen" ,
                                                                   "Manos Agyris" ;
                                <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." ;
-                               <http://purl.org/dc/terms/modified> "2025-03-03T10:38:22Z"^^xsd:dateTime ;
+                               <http://purl.org/dc/terms/modified> "2025-03-03T20:32:43Z"^^xsd:dateTime ;
                                <http://purl.org/dc/terms/title> "QAECY Enumerations"@en ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 
@@ -141,7 +141,7 @@
 
 ###  https://qaecy.com/dev/enum#ChangeOrder
 :ChangeOrder rdf:type owl:NamedIndividual ,
-                      <https://qaecy.com/dev/ont#MimeCategory> ;
+                      <https://qaecy.com/dev/ont#ContentCategory> ;
              <http://www.w3.org/2004/02/skos/core#definition> "A change order document."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Change Order"@en .
 
@@ -156,7 +156,7 @@
 
 ###  https://qaecy.com/dev/enum#Contract
 :Contract rdf:type owl:NamedIndividual ,
-                   <https://qaecy.com/dev/ont#MimeCategory> ;
+                   <https://qaecy.com/dev/ont#ContentCategory> ;
           <http://www.w3.org/2004/02/skos/core#definition> "A formal contract."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en .
 
@@ -175,11 +175,11 @@
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing"@en .
 
 
-###  https://qaecy.com/dev/enum#Email
-:Email rdf:type owl:NamedIndividual ,
-                <http://www.w3.org/2004/02/skos/core#Concept> ,
-                <https://qaecy.com/dev/ont#EntityCategory> ;
-       <http://www.w3.org/2004/02/skos/core#prefLabel> "Email"@en .
+###  https://qaecy.com/dev/enum#EmailAddress
+:EmailAddress rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                       <https://qaecy.com/dev/ont#EntityCategory> ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Address"@en .
 
 
 ###  https://qaecy.com/dev/enum#Equipment
@@ -241,7 +241,7 @@
 
 ###  https://qaecy.com/dev/enum#OtherContent
 :OtherContent rdf:type owl:NamedIndividual ,
-                       <https://qaecy.com/dev/ont#MimeCategory> ;
+                       <https://qaecy.com/dev/ont#ContentCategory> ;
               <http://www.w3.org/2004/02/skos/core#definition> "Other types of documents."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Other content"@en .
 
@@ -263,14 +263,14 @@
 
 ###  https://qaecy.com/dev/enum#Regulation
 :Regulation rdf:type owl:NamedIndividual ,
-                     <https://qaecy.com/dev/ont#MimeCategory> ;
+                     <https://qaecy.com/dev/ont#ContentCategory> ;
             <http://www.w3.org/2004/02/skos/core#definition> "A regulation document."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulation"@en .
 
 
 ###  https://qaecy.com/dev/enum#Report
 :Report rdf:type owl:NamedIndividual ,
-                 <https://qaecy.com/dev/ont#MimeCategory> ;
+                 <https://qaecy.com/dev/ont#ContentCategory> ;
         <http://www.w3.org/2004/02/skos/core#definition> "A detailed report."@en ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "Report"@en .
 
@@ -320,7 +320,7 @@
 
 ###  https://qaecy.com/dev/enum#Specification
 :Specification rdf:type owl:NamedIndividual ,
-                        <https://qaecy.com/dev/ont#MimeCategory> ;
+                        <https://qaecy.com/dev/ont#ContentCategory> ;
                <http://www.w3.org/2004/02/skos/core#definition> "A detailed specification."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Specification"@en .
 
@@ -342,7 +342,7 @@
 
 ###  https://qaecy.com/dev/enum#Tender
 :Tender rdf:type owl:NamedIndividual ,
-                 <https://qaecy.com/dev/ont#MimeCategory> ;
+                 <https://qaecy.com/dev/ont#ContentCategory> ;
         <http://www.w3.org/2004/02/skos/core#definition> "A tender document."@en ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "Tender"@en .
 
@@ -373,7 +373,7 @@
 
 ###  https://qaecy.com/dev/enum#3DModel
 <https://qaecy.com/dev/enum#3DModel> rdf:type owl:NamedIndividual ,
-                                              <https://qaecy.com/dev/ont#MimeCategory> ;
+                                              <https://qaecy.com/dev/ont#ContentCategory> ;
                                      <http://www.w3.org/2004/02/skos/core#definition> "A three-dimensional model."@en ;
                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "3D Model"@en .
 

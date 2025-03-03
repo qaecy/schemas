@@ -16,17 +16,17 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
+        "value" : "Manos Agyris",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
         "value" : "Christian Frausing",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "Mads Holten Rasmussen",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Manos Agyris",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -38,7 +38,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2025-03-03T16:02:39Z",
+        "value" : "2025-03-03T20:32:39Z",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -60,8 +60,11 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "11",
     "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Thing"
   }, {
     "id" : "17",
     "type" : "owl:Thing"
@@ -70,7 +73,7 @@
     "type" : "rdfs:Datatype"
   }, {
     "id" : "19",
-    "type" : "owl:Thing"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "20",
     "type" : "owl:Thing"
@@ -88,84 +91,87 @@
     "type" : "rdfs:Datatype"
   }, {
     "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "28",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "29",
+    "id" : "30",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "42",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
-    "type" : "owl:Class"
-  }, {
-    "id" : "55",
-    "type" : "owl:Class"
-  }, {
     "id" : "34",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "7",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
     "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "46",
     "type" : "owl:Class"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
     "type" : "owl:Class"
   }, {
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "57",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -192,8 +198,15 @@
     "comment" : {
       "undefined" : "Category derived from the mimetype of the file content"
     },
-    "id" : "8",
-    "superClasses" : [ "9" ]
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "16",
+    "label" : {
+      "undefined" : "Thing"
+    }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -209,11 +222,11 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "19",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -230,11 +243,11 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "22",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -251,6 +264,13 @@
       "IRI-based" : "string"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "https://qaecy.com/dev/ont#FileLocation",
     "baseIri" : "https://qaecy.com/dev/ont",
     "instances" : 0,
@@ -261,7 +281,7 @@
     "comment" : {
       "en" : "A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud."
     },
-    "id" : "25"
+    "id" : "26"
   }, {
     "iri" : "https://qaecy.com/dev/ont#Fragment",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -270,30 +290,30 @@
       "IRI-based" : "Fragment",
       "en" : "Fragment"
     },
-    "subClasses" : [ "16", "14", "1", "26" ],
+    "subClasses" : [ "1", "27", "28", "29" ],
     "comment" : {
       "en" : "A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."
     },
     "id" : "2",
-    "superClasses" : [ "6" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "27",
+    "id" : "30",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "28",
+    "id" : "31",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "29",
+    "id" : "34",
     "label" : {
       "IRI-based" : "string"
     }
@@ -305,11 +325,11 @@
       "IRI-based" : "EntityReference",
       "en" : "Entity Reference"
     },
-    "subClasses" : [ "32", "7" ],
+    "subClasses" : [ "37", "10" ],
     "comment" : {
       "en" : "This abstract class captures reference points for all features of interest in a project, such as a building element, a zone, a person, or material. These references can be either explicit or potential occurrences of the entity. This class should not be assigned directly; instead, use the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalized entity."
     },
-    "id" : "31"
+    "id" : "6"
   }, {
     "iri" : "https://qaecy.com/dev/ont#ImageFragment",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -321,12 +341,12 @@
     "comment" : {
       "en" : "This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."
     },
-    "id" : "16",
+    "id" : "1",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "35",
+    "id" : "39",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -338,7 +358,7 @@
       "IRI-based" : "Selector",
       "en" : "Selector"
     },
-    "subClasses" : [ "39", "40", "41", "3", "42", "43", "44", "45" ],
+    "subClasses" : [ "43", "44", "45", "3", "46", "47", "48", "49" ],
     "comment" : {
       "en" : "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."
     },
@@ -354,7 +374,7 @@
     "comment" : {
       "en" : "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."
     },
-    "id" : "40",
+    "id" : "44",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#TableFragment",
@@ -367,7 +387,7 @@
     "comment" : {
       "en" : "This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."
     },
-    "id" : "26",
+    "id" : "29",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#TimeRangeSelector",
@@ -388,7 +408,7 @@
     "comment" : {
       "en" : "The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/"
     },
-    "id" : "42",
+    "id" : "46",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#ContentCategory",
@@ -401,8 +421,8 @@
     "comment" : {
       "undefined" : "Category derived from the content of the file"
     },
-    "id" : "11",
-    "superClasses" : [ "9" ]
+    "id" : "14",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#FileContent",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -414,8 +434,8 @@
     "comment" : {
       "en" : "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."
     },
-    "id" : "55",
-    "superClasses" : [ "6" ]
+    "id" : "33",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#Property",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -427,7 +447,7 @@
     "comment" : {
       "en" : "Any quantitative or qualitative property of an entity."
     },
-    "id" : "34"
+    "id" : "36"
   }, {
     "iri" : "https://qaecy.com/dev/ont#CanonicalEntity",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -439,8 +459,8 @@
     "comment" : {
       "en" : "These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."
     },
-    "id" : "7",
-    "superClasses" : [ "31" ]
+    "id" : "10",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#DocumentPageFragment",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -452,7 +472,7 @@
     "comment" : {
       "en" : "This special fragment constitutes a page in a paginated document."
     },
-    "id" : "1",
+    "id" : "28",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#TextDirectiveSelector",
@@ -473,7 +493,7 @@
     "comment" : {
       "en" : "A text directive selector specifies a range within a text using the syntax \"#:~:text=[prefix-,]start[,end][,-suffix]\". For example, \"#:~:text=example,fragment\" would indicate a range from the first occurrence of \"example\" to the next occurrence of \"fragment\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."
     },
-    "id" : "44",
+    "id" : "48",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#IFCGlobalIDSelector",
@@ -486,7 +506,7 @@
     "comment" : {
       "en" : "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."
     },
-    "id" : "39",
+    "id" : "43",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#InformationObject",
@@ -496,11 +516,11 @@
       "IRI-based" : "InformationObject",
       "en" : "Information Object"
     },
-    "subClasses" : [ "55", "2" ],
+    "subClasses" : [ "33", "2" ],
     "comment" : {
       "en" : "An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes."
     },
-    "id" : "6"
+    "id" : "9"
   }, {
     "iri" : "https://qaecy.com/dev/ont#TextFragment",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -512,7 +532,7 @@
     "comment" : {
       "en" : "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."
     },
-    "id" : "14",
+    "id" : "27",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#Category",
@@ -522,11 +542,11 @@
       "IRI-based" : "Category",
       "en" : "Category"
     },
-    "subClasses" : [ "11", "57", "8" ],
+    "subClasses" : [ "14", "56", "11" ],
     "comment" : {
       "en" : "Abstract class for specific categories that each hold enumerations used for specification of information objects and entity references. It is recommended to use SKOS to establish more context between the Category entities."
     },
-    "id" : "9"
+    "id" : "12"
   }, {
     "iri" : "https://qaecy.com/dev/ont#XYWHSelector",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -546,7 +566,7 @@
     "comment" : {
       "en" : "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."
     },
-    "id" : "43",
+    "id" : "47",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#EntityCategory",
@@ -559,8 +579,8 @@
     "comment" : {
       "undefined" : "Category that specifies the categories of an entity reference"
     },
-    "id" : "57",
-    "superClasses" : [ "9" ]
+    "id" : "56",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#EntityMention",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -572,8 +592,8 @@
     "comment" : {
       "en" : "An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of \"Albert Einstein\" in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns."
     },
-    "id" : "32",
-    "superClasses" : [ "31" ]
+    "id" : "37",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#IDSelector",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -585,7 +605,7 @@
     "comment" : {
       "en" : "The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID."
     },
-    "id" : "41",
+    "id" : "45",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://qaecy.com/dev/ont#TextIndexSelector",
@@ -598,7 +618,7 @@
     "comment" : {
       "en" : "A text index selector specifies a range within a text using start and end separated by a comma (\"start,end\"). For example \"6,11\" on the text string \"Hello World\" would specify the subset \"World\". This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment."
     },
-    "id" : "45",
+    "id" : "49",
     "superClasses" : [ "4" ]
   } ],
   "property" : [ {
@@ -608,56 +628,50 @@
     "id" : "5",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
+    "id" : "8",
     "type" : "owl:objectProperty"
   }, {
     "id" : "13",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "15",
-    "type" : "rdfs:SubClassOf"
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "30",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "33",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "36",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "37",
+    "id" : "35",
     "type" : "owl:disjointWith"
   }, {
     "id" : "38",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "46",
+    "id" : "40",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "47",
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "42",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "50",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "48",
+    "id" : "7",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "52",
+    "id" : "55",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "53",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "54",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "56",
+    "id" : "57",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "58",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "59",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "60",
     "type" : "rdfs:SubClassOf"
@@ -666,37 +680,37 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "62",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "63",
     "type" : "owl:objectProperty"
   }, {
     "id" : "64",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "65",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "66",
     "type" : "owl:objectProperty"
   }, {
     "id" : "67",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "68",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "69",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "70",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "71",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "72",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "73",
     "type" : "rdfs:SubClassOf"
@@ -707,26 +721,23 @@
     "id" : "75",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "51",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "76",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "77",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "78",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "79",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "49",
+    "id" : "54",
     "type" : "owl:objectProperty"
   }, {
     "id" : "80",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "81",
     "type" : "owl:datatypeProperty"
@@ -735,19 +746,22 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "83",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "84",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "85",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "86",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "87",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "88",
     "type" : "owl:disjointWith"
@@ -759,10 +773,10 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "91",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "92",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "93",
     "type" : "owl:disjointWith"
@@ -771,21 +785,36 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "95",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "96",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "12",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "97",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "98",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "50",
+    "id" : "98",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "99",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -794,128 +823,157 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
-    "iri" : "https://qaecy.com/dev/ont#about",
+    "iri" : "https://qaecy.com/dev/ont#adjacentElement",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "7",
+    "range" : "6",
     "label" : {
-      "IRI-based" : "about",
-      "en" : "about"
+      "IRI-based" : "adjacentElement",
+      "en" : "adjacent element"
     },
+    "superproperty" : [ "7" ],
     "domain" : "6",
     "comment" : {
-      "undefined" : "Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity."
+      "undefined" : "Relationship between a zone/element and an adjacent element."
     },
     "attributes" : [ "object" ],
     "id" : "5"
   }, {
+    "iri" : "https://qaecy.com/dev/ont#about",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "about",
+      "en" : "about"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
     "iri" : "https://qaecy.com/dev/ont#contentCategory",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "11",
+    "range" : "14",
     "label" : {
       "IRI-based" : "contentCategory",
       "en" : "content category"
     },
-    "superproperty" : [ "12" ],
-    "domain" : "6",
+    "superproperty" : [ "15" ],
+    "domain" : "9",
     "comment" : {
       "undefined" : "Relationship between a qcy:InformationObject (typically a whole document or a page in a document) and its qcy:ContentCategory derived from its content."
     },
     "attributes" : [ "object" ],
-    "id" : "10"
-  }, {
-    "range" : "2",
-    "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
-    "range" : "2",
-    "domain" : "16",
+    "iri" : "https://qaecy.com/dev/ont#mime",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "mime",
+      "en" : "mime"
+    },
+    "domain" : "33",
+    "comment" : {
+      "en" : "The mimetype of the file content"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "32"
+  }, {
+    "range" : "36",
+    "domain" : "9",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "15"
+    "id" : "35"
   }, {
     "range" : "4",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "30"
-  }, {
-    "range" : "34",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "33"
-  }, {
-    "range" : "4",
-    "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "36"
-  }, {
-    "range" : "4",
-    "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "37"
-  }, {
-    "range" : "6",
-    "domain" : "25",
+    "domain" : "9",
     "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
-    "range" : "34",
-    "domain" : "25",
+    "range" : "4",
+    "domain" : "36",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "46"
+    "id" : "40"
+  }, {
+    "range" : "36",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "9",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "4",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
   }, {
     "iri" : "https://qaecy.com/dev/ont#mentions",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "32",
+    "range" : "37",
     "label" : {
       "IRI-based" : "mentions",
       "en" : "mentions"
     },
-    "domain" : "6",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector."
     },
     "attributes" : [ "object" ],
-    "id" : "47"
+    "id" : "51"
   }, {
     "iri" : "https://qaecy.com/dev/ont#relatedEntity",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "31",
+    "range" : "6",
     "label" : {
       "IRI-based" : "relatedEntity",
       "en" : "related entity"
     },
-    "domain" : "31",
-    "subproperty" : [ "49", "50", "51" ],
+    "domain" : "6",
+    "subproperty" : [ "5", "52", "53", "54" ],
     "comment" : {
       "undefined" : "Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties."
     },
     "attributes" : [ "object" ],
-    "id" : "48"
+    "id" : "7"
   }, {
-    "range" : "9",
-    "domain" : "8",
+    "range" : "12",
+    "domain" : "56",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "52"
+    "id" : "55"
   }, {
-    "range" : "6",
-    "domain" : "2",
+    "range" : "12",
+    "domain" : "14",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "53"
+    "id" : "57"
   }, {
-    "range" : "6",
-    "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "54"
-  }, {
-    "range" : "9",
-    "domain" : "57",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "56"
-  }, {
-    "range" : "9",
+    "range" : "12",
     "domain" : "11",
     "attributes" : [ "anonymous", "object" ],
     "id" : "58"
+  }, {
+    "range" : "4",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "4",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "range" : "9",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "9",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
   }, {
     "iri" : "https://qaecy.com/dev/ont#containsFragment",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -924,102 +982,102 @@
       "IRI-based" : "containsFragment",
       "en" : "contains fragment"
     },
-    "domain" : "6",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Relationship between a qcy:InformationObject and one of its qcy:Fragments"
     },
     "attributes" : [ "object" ],
-    "id" : "59"
+    "id" : "63"
   }, {
     "range" : "4",
-    "domain" : "45",
+    "domain" : "47",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "60"
+    "id" : "64"
   }, {
     "range" : "4",
-    "domain" : "44",
+    "domain" : "46",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "61"
+    "id" : "65"
   }, {
     "iri" : "https://qaecy.com/dev/ont#entityCategory",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "57",
+    "range" : "56",
     "label" : {
       "IRI-based" : "entityCategory",
       "en" : "entity category"
     },
-    "superproperty" : [ "12" ],
-    "domain" : "31",
+    "superproperty" : [ "15" ],
+    "domain" : "6",
     "comment" : {
       "undefined" : "Relationship between a qcy:EntityReference and one or more qcy:EntityCategory."
     },
     "attributes" : [ "object" ],
-    "id" : "62"
+    "id" : "66"
   }, {
     "iri" : "https://qaecy.com/dev/ont#resolvesTo",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "7",
+    "range" : "10",
     "label" : {
       "IRI-based" : "resolvesTo",
       "en" : "resolves to"
     },
-    "domain" : "32",
+    "domain" : "37",
     "comment" : {
       "undefined" : "Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity."
     },
     "attributes" : [ "object" ],
-    "id" : "63"
+    "id" : "67"
   }, {
     "iri" : "https://qaecy.com/dev/ont#hasProperty",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "34",
+    "range" : "36",
     "label" : {
       "IRI-based" : "hasProperty",
       "en" : "has property"
     },
-    "domain" : "31",
+    "domain" : "6",
     "comment" : {
       "undefined" : "Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties."
     },
     "attributes" : [ "object" ],
-    "id" : "64"
+    "id" : "68"
   }, {
     "iri" : "https://qaecy.com/dev/ont#tableGrid",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "22",
+    "range" : "25",
     "label" : {
       "IRI-based" : "tableGrid",
       "en" : "table grid"
     },
-    "domain" : "26",
+    "domain" : "29",
     "comment" : {
       "en" : "Processed table output."
     },
     "attributes" : [ "datatype" ],
-    "id" : "65"
+    "id" : "69"
   }, {
     "iri" : "https://qaecy.com/dev/ont#hasFileLocation",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "25",
+    "range" : "26",
     "label" : {
       "IRI-based" : "hasFileLocation",
       "en" : "has file location"
     },
-    "domain" : "55",
+    "domain" : "33",
     "comment" : {
       "undefined" : "Relationship between a qcy:InformationObject and one of its qcy:FileLocations. All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location"
     },
     "attributes" : [ "object" ],
-    "id" : "66"
+    "id" : "70"
   }, {
     "range" : "4",
-    "domain" : "43",
+    "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "67"
+    "id" : "71"
   }, {
     "iri" : "https://qaecy.com/dev/ont#tag",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "21",
+    "range" : "24",
     "annotations" : {
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
@@ -1032,81 +1090,95 @@
       "IRI-based" : "tag",
       "en" : "tag"
     },
-    "domain" : "20",
+    "domain" : "17",
     "comment" : {
       "en" : "A tag is a keyword or term assigned to a piece of information, such as a qcy:InformationObject, to describe and categorize it. Tags are typically used to facilitate searching and organizing information. An information object can have multiple tags."
     },
     "attributes" : [ "datatype" ],
-    "id" : "68"
-  }, {
-    "range" : "4",
-    "domain" : "41",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "69"
-  }, {
-    "range" : "4",
-    "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "70"
-  }, {
-    "range" : "4",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "71"
-  }, {
-    "range" : "4",
-    "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "72"
   }, {
-    "range" : "31",
-    "domain" : "32",
+    "range" : "4",
+    "domain" : "43",
     "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
-    "range" : "2",
-    "domain" : "26",
+    "range" : "6",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "74"
   }, {
     "range" : "4",
-    "domain" : "39",
+    "domain" : "45",
     "attributes" : [ "anonymous", "object" ],
     "id" : "75"
   }, {
+    "range" : "4",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "range" : "2",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
+  }, {
+    "range" : "2",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "78"
+  }, {
+    "range" : "6",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
     "iri" : "https://qaecy.com/dev/ont#containsSpace",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "31",
+    "range" : "6",
     "label" : {
       "IRI-based" : "containsSpace",
       "en" : "contains space"
     },
-    "superproperty" : [ "48" ],
-    "domain" : "31",
+    "superproperty" : [ "7" ],
+    "domain" : "6",
     "comment" : {
       "undefined" : "Relationship between a zone and a space."
     },
     "attributes" : [ "object" ],
-    "id" : "51"
+    "id" : "54"
   }, {
-    "range" : "31",
-    "domain" : "7",
+    "range" : "2",
+    "domain" : "29",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "76"
+    "id" : "80"
+  }, {
+    "iri" : "https://qaecy.com/dev/ont#openFormat",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "openFormat",
+      "en" : "open format"
+    },
+    "domain" : "33",
+    "comment" : {
+      "en" : "Is the file content readable without proprietary software tools?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
   }, {
     "iri" : "https://qaecy.com/dev/ont#selectorObject",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "17",
+    "range" : "20",
     "annotations" : {
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#InformationObject",
+        "value" : "https://qaecy.com/dev/ont#EntityMention",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#EntityMention",
+        "value" : "https://qaecy.com/dev/ont#InformationObject",
         "type" : "iri"
       } ]
     },
@@ -1119,25 +1191,25 @@
       "undefined" : "Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)"
     },
     "attributes" : [ "object" ],
-    "id" : "77"
+    "id" : "82"
   }, {
     "iri" : "https://qaecy.com/dev/ont#language",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "29",
+    "range" : "34",
     "label" : {
       "IRI-based" : "language",
       "en" : "language"
     },
-    "domain" : "2",
+    "domain" : "9",
     "comment" : {
       "en" : "ISO 639 two letter language code"
     },
     "attributes" : [ "datatype" ],
-    "id" : "78"
+    "id" : "83"
   }, {
     "iri" : "https://qaecy.com/dev/ont#textSummary",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "23",
+    "range" : "18",
     "annotations" : {
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
@@ -1150,60 +1222,60 @@
       "IRI-based" : "textSummary",
       "en" : "text summary"
     },
-    "domain" : "20",
+    "domain" : "17",
     "comment" : {
       "en" : "A short text that summarizes all information about the thing. This is typically generated by a Large Language model from provided context any form."
     },
     "attributes" : [ "datatype" ],
-    "id" : "79"
+    "id" : "84"
   }, {
     "iri" : "https://qaecy.com/dev/ont#containsFloor",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "31",
+    "range" : "6",
     "label" : {
       "IRI-based" : "containsFloor",
       "en" : "contains floor"
     },
-    "superproperty" : [ "48" ],
-    "domain" : "31",
+    "superproperty" : [ "7" ],
+    "domain" : "6",
     "comment" : {
       "undefined" : "Relationship between a zone and a floor."
     },
     "attributes" : [ "object" ],
-    "id" : "49"
+    "id" : "52"
   }, {
     "iri" : "https://qaecy.com/dev/ont#mimeCategory",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "8",
+    "range" : "11",
     "label" : {
       "IRI-based" : "mimeCategory",
       "en" : "mime category"
     },
-    "superproperty" : [ "12" ],
-    "domain" : "55",
+    "superproperty" : [ "15" ],
+    "domain" : "33",
     "comment" : {
       "undefined" : "Relationship between a qcy:FileContent object and its qcy:MimeCategory derived from its mimetype."
     },
     "attributes" : [ "object" ],
-    "id" : "80"
+    "id" : "85"
   }, {
     "iri" : "https://qaecy.com/dev/ont#filePath",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "28",
+    "range" : "31",
     "label" : {
       "IRI-based" : "filePath",
       "en" : "file path"
     },
-    "domain" : "25",
+    "domain" : "26",
     "comment" : {
       "en" : "The file path property specifies the location of a file on a storage system. This is always a relative path in relation to the project directory on a cloud storage provider."
     },
     "attributes" : [ "datatype" ],
-    "id" : "81"
+    "id" : "86"
   }, {
     "iri" : "https://qaecy.com/dev/ont#selectorSubject",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "6",
+    "range" : "9",
     "label" : {
       "IRI-based" : "selectorSubject",
       "en" : "selector subject"
@@ -1213,26 +1285,26 @@
       "undefined" : "Relationship between a qcy:Selector and the qcy:InformationObject it specifies."
     },
     "attributes" : [ "object" ],
-    "id" : "82"
+    "id" : "87"
   }, {
     "range" : "6",
-    "domain" : "9",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "83"
+    "id" : "88"
+  }, {
+    "range" : "36",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
   }, {
     "range" : "4",
-    "domain" : "9",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "84"
-  }, {
-    "range" : "25",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "85"
+    "id" : "90"
   }, {
     "iri" : "https://qaecy.com/dev/ont#label",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "27",
+    "range" : "30",
     "annotations" : {
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
@@ -1250,41 +1322,41 @@
       "IRI-based" : "label",
       "en" : "label"
     },
-    "domain" : "20",
+    "domain" : "17",
     "comment" : {
       "en" : "A label is a human-readable name for the resource. Each resource should have only one preferred label in english that specifies the resource."
     },
     "attributes" : [ "datatype" ],
-    "id" : "86"
+    "id" : "91"
   }, {
-    "range" : "34",
-    "domain" : "9",
+    "range" : "26",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "87"
-  }, {
-    "range" : "6",
-    "domain" : "31",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "88"
-  }, {
-    "range" : "34",
-    "domain" : "31",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "89"
+    "id" : "92"
   }, {
     "range" : "4",
-    "domain" : "31",
+    "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "90"
+    "id" : "93"
   }, {
-    "range" : "25",
-    "domain" : "31",
+    "range" : "26",
+    "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "91"
+    "id" : "94"
+  }, {
+    "range" : "36",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "range" : "9",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "96"
   }, {
     "iri" : "https://qaecy.com/dev/ont#textRaw",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "24",
+    "range" : "19",
     "label" : {
       "IRI-based" : "textRaw",
       "en" : "text raw"
@@ -1294,64 +1366,64 @@
       "en" : "Raw text as extracted from the fragment."
     },
     "attributes" : [ "datatype" ],
-    "id" : "92"
+    "id" : "97"
   }, {
-    "range" : "32",
-    "domain" : "7",
+    "range" : "37",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "93"
+    "id" : "98"
   }, {
-    "range" : "31",
-    "domain" : "9",
+    "range" : "9",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "94"
+    "id" : "99"
   }, {
     "iri" : "https://qaecy.com/dev/ont#relatedFormalClass",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "19",
+    "range" : "16",
     "label" : {
       "IRI-based" : "relatedFormalClass",
       "en" : "related formal class"
     },
-    "domain" : "9",
+    "domain" : "12",
     "comment" : {
       "undefined" : "Relationship between a qcy:Category and one or more formal classes in external ontologies (Ex: qcy-e:Space qcy:relatedFormalClass bot:Space)."
     },
     "attributes" : [ "object" ],
-    "id" : "95"
+    "id" : "100"
   }, {
     "iri" : "https://qaecy.com/dev/ont#explicit",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "explicit",
       "en" : "explicit"
     },
-    "domain" : "7",
+    "domain" : "10",
     "comment" : {
       "en" : "A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."
     },
     "attributes" : [ "datatype" ],
-    "id" : "96"
+    "id" : "101"
   }, {
     "iri" : "https://qaecy.com/dev/ont#hasCategory",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "9",
+    "range" : "12",
     "label" : {
       "IRI-based" : "hasCategory",
       "en" : "has category"
     },
-    "domain" : "19",
-    "subproperty" : [ "80", "62", "10" ],
+    "domain" : "16",
+    "subproperty" : [ "85", "66", "13" ],
     "comment" : {
       "undefined" : "Abstract property that connects something with its categories. Use one of the more specific sub-properties to assign categories."
     },
     "attributes" : [ "object" ],
-    "id" : "12"
+    "id" : "15"
   }, {
     "iri" : "https://qaecy.com/dev/ont#alternativeRepresentation",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "25",
+    "range" : "26",
     "label" : {
       "IRI-based" : "alternativeRepresentation",
       "en" : "alternative representation"
@@ -1361,11 +1433,11 @@
       "undefined" : "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content."
     },
     "attributes" : [ "object" ],
-    "id" : "97"
+    "id" : "102"
   }, {
     "iri" : "https://qaecy.com/dev/ont#value",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "18",
+    "range" : "21",
     "annotations" : {
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
@@ -1378,26 +1450,26 @@
       "IRI-based" : "value",
       "en" : "value"
     },
-    "domain" : "20",
+    "domain" : "17",
     "comment" : {
       "en" : "A value is a text string that holds the value. How to interpret this value depends on what the value is assigned to."
     },
     "attributes" : [ "datatype" ],
-    "id" : "98"
+    "id" : "103"
   }, {
     "iri" : "https://qaecy.com/dev/ont#containsElement",
     "baseIri" : "https://qaecy.com/dev/ont",
-    "range" : "31",
+    "range" : "6",
     "label" : {
       "IRI-based" : "containsElement",
-      "en" : "has floor"
+      "en" : "contains element"
     },
-    "superproperty" : [ "48" ],
-    "domain" : "31",
+    "superproperty" : [ "7" ],
+    "domain" : "6",
     "comment" : {
-      "undefined" : "Relationship between a zone and an element."
+      "undefined" : "Relationship between a zone and a contained element."
     },
     "attributes" : [ "object" ],
-    "id" : "50"
+    "id" : "53"
   } ]
 }

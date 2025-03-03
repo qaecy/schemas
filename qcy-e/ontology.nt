@@ -3,7 +3,7 @@
 <https://qaecy.com/dev/enum#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://qaecy.com/dev/enum#> <http://purl.org/dc/terms/creator> "Manos Agyris" .
 <https://qaecy.com/dev/enum#> <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." .
-<https://qaecy.com/dev/enum#> <http://purl.org/dc/terms/modified> "2025-03-03T10:38:22Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/enum#> <http://purl.org/dc/terms/modified> "2025-03-03T20:32:43Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://qaecy.com/dev/enum#> <http://purl.org/dc/terms/title> "QAECY Enumerations"@en .
 <https://qaecy.com/dev/enum#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 # 
@@ -126,7 +126,7 @@
 # 
 # https://qaecy.com/dev/enum#ChangeOrder
 <https://qaecy.com/dev/enum#ChangeOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#ChangeOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#ChangeOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#ChangeOrder> <http://www.w3.org/2004/02/skos/core#definition> "A change order document."@en .
 <https://qaecy.com/dev/enum#ChangeOrder> <http://www.w3.org/2004/02/skos/core#prefLabel> "Change Order"@en .
 # 
@@ -139,7 +139,7 @@
 # 
 # https://qaecy.com/dev/enum#Contract
 <https://qaecy.com/dev/enum#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#Contract> <http://www.w3.org/2004/02/skos/core#definition> "A formal contract."@en .
 <https://qaecy.com/dev/enum#Contract> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en .
 # 
@@ -155,11 +155,11 @@
 <https://qaecy.com/dev/enum#Drawing> <http://www.w3.org/2004/02/skos/core#definition> "A drawing or sketch."@en .
 <https://qaecy.com/dev/enum#Drawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing"@en .
 # 
-# https://qaecy.com/dev/enum#Email
-<https://qaecy.com/dev/enum#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://qaecy.com/dev/enum#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#EntityCategory> .
-<https://qaecy.com/dev/enum#Email> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email"@en .
+# https://qaecy.com/dev/enum#EmailAddress
+<https://qaecy.com/dev/enum#EmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/enum#EmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://qaecy.com/dev/enum#EmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#EntityCategory> .
+<https://qaecy.com/dev/enum#EmailAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Address"@en .
 # 
 # https://qaecy.com/dev/enum#Equipment
 <https://qaecy.com/dev/enum#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -213,7 +213,7 @@
 # 
 # https://qaecy.com/dev/enum#OtherContent
 <https://qaecy.com/dev/enum#OtherContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#OtherContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#OtherContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#OtherContent> <http://www.w3.org/2004/02/skos/core#definition> "Other types of documents."@en .
 <https://qaecy.com/dev/enum#OtherContent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other content"@en .
 # 
@@ -232,13 +232,13 @@
 # 
 # https://qaecy.com/dev/enum#Regulation
 <https://qaecy.com/dev/enum#Regulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#Regulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#Regulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#Regulation> <http://www.w3.org/2004/02/skos/core#definition> "A regulation document."@en .
 <https://qaecy.com/dev/enum#Regulation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulation"@en .
 # 
 # https://qaecy.com/dev/enum#Report
 <https://qaecy.com/dev/enum#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#Report> <http://www.w3.org/2004/02/skos/core#definition> "A detailed report."@en .
 <https://qaecy.com/dev/enum#Report> <http://www.w3.org/2004/02/skos/core#prefLabel> "Report"@en .
 # 
@@ -282,7 +282,7 @@
 # 
 # https://qaecy.com/dev/enum#Specification
 <https://qaecy.com/dev/enum#Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#Specification> <http://www.w3.org/2004/02/skos/core#definition> "A detailed specification."@en .
 <https://qaecy.com/dev/enum#Specification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Specification"@en .
 # 
@@ -301,7 +301,7 @@
 # 
 # https://qaecy.com/dev/enum#Tender
 <https://qaecy.com/dev/enum#Tender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#Tender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#Tender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#Tender> <http://www.w3.org/2004/02/skos/core#definition> "A tender document."@en .
 <https://qaecy.com/dev/enum#Tender> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tender"@en .
 # 
@@ -328,7 +328,7 @@
 # 
 # https://qaecy.com/dev/enum#3DModel
 <https://qaecy.com/dev/enum#3DModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://qaecy.com/dev/enum#3DModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#MimeCategory> .
+<https://qaecy.com/dev/enum#3DModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://qaecy.com/dev/ont#ContentCategory> .
 <https://qaecy.com/dev/enum#3DModel> <http://www.w3.org/2004/02/skos/core#definition> "A three-dimensional model."@en .
 <https://qaecy.com/dev/enum#3DModel> <http://www.w3.org/2004/02/skos/core#prefLabel> "3D Model"@en .
 # 
