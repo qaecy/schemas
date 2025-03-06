@@ -2,9 +2,9 @@
 <https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionIRI> <https://qaecy.com/dev/ont/qcy-0.0.1> .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Christian Frausing" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
-<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Agyris" .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-03T20:32:39Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-06T14:23:08Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://qaecy.com/dev/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -51,15 +51,6 @@
 <https://qaecy.com/dev/ont#about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#CanonicalEntity> .
-<https://qaecy.com/dev/ont#about> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://qaecy.com/dev/ont#resolvesTo> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://qaecy.com/dev/ont#mentions> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity." .
-<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#label> "about"@en .
 # 
 # https://qaecy.com/dev/ont#adjacentElement
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -71,8 +62,17 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#FileLocation> .
-<https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content." .
-<https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "alternative representation"@en .
+# 
+# https://qaecy.com/dev/ont#applicableObjectCategories
+<https://qaecy.com/dev/ont#applicableObjectCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#applicableObjectCategories> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#applicableObjectCategories> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityCategory> .
+# 
+# https://qaecy.com/dev/ont#applicableSubjectCategories
+<https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityCategory> .
 # 
 # https://qaecy.com/dev/ont#containsElement
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -90,8 +90,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#Fragment> .
-<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and one of its qcy:Fragments" .
-<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#label> "contains fragment"@en .
 # 
 # https://qaecy.com/dev/ont#containsSpace
 <https://qaecy.com/dev/ont#containsSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -104,52 +102,56 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#hasCategory> .
 <https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#ContentCategory> .
-<https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject (typically a whole document or a page in a document) and its qcy:ContentCategory derived from its content." .
-<https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/2000/01/rdf-schema#label> "content category"@en .
+# 
+# https://qaecy.com/dev/ont#endDate
+<https://qaecy.com/dev/ont#endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#endDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#endDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
 # 
 # https://qaecy.com/dev/ont#entityCategory
 <https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#hasCategory> .
 <https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
 <https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityCategory> .
-<https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityReference and one or more qcy:EntityCategory." .
-<https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/2000/01/rdf-schema#label> "entity category"@en .
 # 
 # https://qaecy.com/dev/ont#hasCategory
 <https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#Category> .
-<https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract property that connects something with its categories. Use one of the more specific sub-properties to assign categories." .
-<https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has category"@en .
+# 
+# https://qaecy.com/dev/ont#hasEmailAddress
+<https://qaecy.com/dev/ont#hasEmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
 # 
 # https://qaecy.com/dev/ont#hasFileLocation
 <https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
 <https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#FileLocation> .
-<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and one of its qcy:FileLocations. All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location" .
-<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has file location"@en .
+# 
+# https://qaecy.com/dev/ont#hasMaterial
+<https://qaecy.com/dev/ont#hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
 # 
 # https://qaecy.com/dev/ont#hasProperty
 <https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
 <https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#Property> .
-<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties." .
-<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
 # 
 # https://qaecy.com/dev/ont#mentions
 <https://qaecy.com/dev/ont#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityMention> .
-<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector." .
-<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentions"@en .
 # 
 # https://qaecy.com/dev/ont#mimeCategory
 <https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#hasCategory> .
 <https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
 <https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#MimeCategory> .
-<https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:FileContent object and its qcy:MimeCategory derived from its mimetype." .
-<https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/2000/01/rdf-schema#label> "mime category"@en .
 # 
 # https://qaecy.com/dev/ont#relatedEntity
 <https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -160,39 +162,49 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Category> .
 <https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Category and one or more formal classes in external ontologies (Ex: qcy-e:Space qcy:relatedFormalClass bot:Space)." .
-<https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/2000/01/rdf-schema#label> "related formal class"@en .
 # 
 # https://qaecy.com/dev/ont#relatedFormalProperty
 <https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#relatedEntity> .
-<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:containsFloor qcy:relatedFormalClass bot:hasStorey)." .
-<https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "related formal property"@en .
+# 
+# https://qaecy.com/dev/ont#remoteProviderType
+<https://qaecy.com/dev/ont#remoteProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#remoteProviderType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileLocation> .
+<https://qaecy.com/dev/ont#remoteProviderType> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#ProviderType> .
+# 
+# https://qaecy.com/dev/ont#requiresEquipment
+<https://qaecy.com/dev/ont#requiresEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#requiresEquipment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#requiresEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#requiresEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
+# 
+# https://qaecy.com/dev/ont#requiresMaterial
+<https://qaecy.com/dev/ont#requiresMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#requiresMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#requiresMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#requiresMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
 # 
 # https://qaecy.com/dev/ont#resolvesTo
 <https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityMention> .
 <https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#CanonicalEntity> .
-<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity." .
-<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#label> "resolves to"@en .
 # 
 # https://qaecy.com/dev/ont#selectorObject
 <https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Selector> .
 <https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<https://qaecy.com/dev/ont#selectorObject> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#EntityMention> .
-<https://qaecy.com/dev/ont#selectorObject> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
-<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)" .
-<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#label> "selector object"@en .
 # 
 # https://qaecy.com/dev/ont#selectorSubject
 <https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Selector> .
 <https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#InformationObject> .
-<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector and the qcy:InformationObject it specifies." .
-<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#label> "selector subject"@en .
+# 
+# https://qaecy.com/dev/ont#startDate
+<https://qaecy.com/dev/ont#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#startDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#startDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
 # 
 # 
 # 
@@ -203,87 +215,123 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # #################################################################
 # 
 # 
+# https://qaecy.com/dev/ont#dateCreated
+<https://qaecy.com/dev/ont#dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://qaecy.com/dev/ont#dateDeleted
+<https://qaecy.com/dev/ont#dateDeleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#dateDeleted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#dateDeleted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://qaecy.com/dev/ont#dateModified
+<https://qaecy.com/dev/ont#dateModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#dateModified> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#dateModified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
 # https://qaecy.com/dev/ont#explicit
 <https://qaecy.com/dev/ont#explicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#CanonicalEntity> .
 <https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."@en .
-<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#label> "explicit"@en .
 # 
 # https://qaecy.com/dev/ont#filePath
 <https://qaecy.com/dev/ont#filePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileLocation> .
 <https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#comment> "The file path property specifies the location of a file on a storage system. This is always a relative path in relation to the project directory on a cloud storage provider."@en .
-<https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#label> "file path"@en .
 # 
 # https://qaecy.com/dev/ont#label
 <https://qaecy.com/dev/ont#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#label> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#CanonicalEntity> .
-<https://qaecy.com/dev/ont#label> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#EntityMention> .
-<https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#comment> "A label is a human-readable name for the resource. Each resource should have only one preferred label in english that specifies the resource."@en .
-<https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#label> "label"@en .
 # 
 # https://qaecy.com/dev/ont#language
 <https://qaecy.com/dev/ont#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO 639 two letter language code"@en .
-<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
+# 
+# https://qaecy.com/dev/ont#md5Hash
+<https://qaecy.com/dev/ont#md5Hash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#md5Hash> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#md5Hash> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://qaecy.com/dev/ont#md5HashBase64
+<https://qaecy.com/dev/ont#md5HashBase64> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#md5HashBase64> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#md5HashBase64> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # https://qaecy.com/dev/ont#mime
 <https://qaecy.com/dev/ont#mime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
 <https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#comment> "The mimetype of the file content"@en .
-<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#label> "mime"@en .
 # 
 # https://qaecy.com/dev/ont#openFormat
 <https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
 <https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Is the file content readable without proprietary software tools?"@en .
-<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#label> "open format"@en .
+# 
+# https://qaecy.com/dev/ont#regex
+<https://qaecy.com/dev/ont#regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#regex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#regex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://qaecy.com/dev/ont#remoteProviderId
+<https://qaecy.com/dev/ont#remoteProviderId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#remoteProviderId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#remoteProviderId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://qaecy.com/dev/ont#remoteProviderType
+<https://qaecy.com/dev/ont#remoteProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://qaecy.com/dev/ont#remoteRelativePath
+<https://qaecy.com/dev/ont#remoteRelativePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#remoteRelativePath> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileLocation> .
+<https://qaecy.com/dev/ont#remoteRelativePath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://qaecy.com/dev/ont#sizeBytes
+<https://qaecy.com/dev/ont#sizeBytes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#sizeBytes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#sizeBytes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://qaecy.com/dev/ont#suffix
+<https://qaecy.com/dev/ont#suffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#FileContent> .
+<https://qaecy.com/dev/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://qaecy.com/dev/ont#tableGrid
 <https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#TableFragment> .
 <https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Processed table output."@en .
-<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#label> "table grid"@en .
 # 
 # https://qaecy.com/dev/ont#tag
 <https://qaecy.com/dev/ont#tag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#tag> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
-<https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#comment> "A tag is a keyword or term assigned to a piece of information, such as a qcy:InformationObject, to describe and categorize it. Tags are typically used to facilitate searching and organizing information. An information object can have multiple tags."@en .
-<https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#label> "tag"@en .
 # 
 # https://qaecy.com/dev/ont#textRaw
 <https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
 <https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Raw text as extracted from the fragment."@en .
-<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#label> "text raw"@en .
 # 
 # https://qaecy.com/dev/ont#textSummary
 <https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#textSummary> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
-<https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "A short text that summarizes all information about the thing. This is typically generated by a Large Language model from provided context any form."@en .
-<https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/2000/01/rdf-schema#label> "text summary"@en .
 # 
 # https://qaecy.com/dev/ont#value
 <https://qaecy.com/dev/ont#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://qaecy.com/dev/ont#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://qaecy.com/dev/ont#value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://qaecy.com/dev/ont#value> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#value> <http://www.w3.org/2000/01/rdf-schema#comment> "A value is a text string that holds the value. How to interpret this value depends on what the value is assigned to."@en .
-<https://qaecy.com/dev/ont#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+# https://qaecy.com/dev/ont#visibleForAgent
+<https://qaecy.com/dev/ont#visibleForAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#visibleForAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#visibleForAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#visibleForExtraction
+<https://qaecy.com/dev/ont#visibleForExtraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#visibleForExtraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#visibleForExtraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # 
 # 
@@ -298,8 +346,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#EntityReference> .
 <https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#EntityMention> .
-<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."@en .
-<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Canonical Entity"@en .
 # 
 # https://qaecy.com/dev/ont#Category
 <https://qaecy.com/dev/ont#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -308,32 +354,22 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
 <https://qaecy.com/dev/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#Category> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class for specific categories that each hold enumerations used for specification of information objects and entity references. It is recommended to use SKOS to establish more context between the Category entities."@en .
-<https://qaecy.com/dev/ont#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en .
 # 
 # https://qaecy.com/dev/ont#ContentCategory
 <https://qaecy.com/dev/ont#ContentCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Category> .
-<https://qaecy.com/dev/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category derived from the content of the file" .
-<https://qaecy.com/dev/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Content Category"@en .
 # 
 # https://qaecy.com/dev/ont#DocumentPageFragment
 <https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
-<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a page in a paginated document."@en .
-<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Document Page Fragment"@en .
 # 
 # https://qaecy.com/dev/ont#EntityCategory
 <https://qaecy.com/dev/ont#EntityCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Category> .
-<https://qaecy.com/dev/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category that specifies the categories of an entity reference" .
-<https://qaecy.com/dev/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Category"@en .
 # 
 # https://qaecy.com/dev/ont#EntityMention
 <https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#EntityReference> .
-<https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of \"Albert Einstein\" in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns."@en .
-<https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Mention"@en .
 # 
 # https://qaecy.com/dev/ont#EntityReference
 <https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -341,52 +377,36 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
 <https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/2000/01/rdf-schema#comment> "This abstract class captures reference points for all features of interest in a project, such as a building element, a zone, a person, or material. These references can be either explicit or potential occurrences of the entity. This class should not be assigned directly; instead, use the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalized entity."@en .
-<https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Reference"@en .
 # 
 # https://qaecy.com/dev/ont#FileContent
 <https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#InformationObject> .
-<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#comment> "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."@en .
-<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#label> "File Content"@en .
 # 
 # https://qaecy.com/dev/ont#FileLocation
 <https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Property> .
 <https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud."@en .
-<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "File Location"@en .
 # 
 # https://qaecy.com/dev/ont#Fragment
 <https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#InformationObject> .
-<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#comment> "A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."@en .
-<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#label> "Fragment"@en .
 # 
 # https://qaecy.com/dev/ont#IDSelector
 <https://qaecy.com/dev/ont#IDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID."@en .
-<https://qaecy.com/dev/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "ID Selector"@en .
 # 
 # https://qaecy.com/dev/ont#IFCExpressIDSelector
 <https://qaecy.com/dev/ont#IFCExpressIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en .
-<https://qaecy.com/dev/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Express ID Selector"@en .
 # 
 # https://qaecy.com/dev/ont#IFCGlobalIDSelector
 <https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."@en .
-<https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Global ID Selector"@en .
 # 
 # https://qaecy.com/dev/ont#ImageFragment
 <https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
-<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."@en .
-<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Image Fragment"@en .
 # 
 # https://qaecy.com/dev/ont#InformationObject
 <https://qaecy.com/dev/ont#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -398,64 +418,45 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://qaecy.com/dev/ont#MimeCategory
 <https://qaecy.com/dev/ont#MimeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Category> .
-<https://qaecy.com/dev/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category derived from the mimetype of the file content" .
-<https://qaecy.com/dev/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Mime Category"@en .
 # 
 # https://qaecy.com/dev/ont#PageSelector
 <https://qaecy.com/dev/ont#PageSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A page selector specifies a particular page within a document. This special selector always always connects a qcy:FileContent object with a qcy:DocumentPage. The value is the page number starting from 1."@en .
-<https://qaecy.com/dev/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Page Selector"@en .
 # 
 # https://qaecy.com/dev/ont#Property
 <https://qaecy.com/dev/ont#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Any quantitative or qualitative property of an entity."@en .
-<https://qaecy.com/dev/ont#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
+# 
+# https://qaecy.com/dev/ont#ProviderType
+<https://qaecy.com/dev/ont#ProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://qaecy.com/dev/ont#ProviderType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Category> .
 # 
 # https://qaecy.com/dev/ont#Selector
 <https://qaecy.com/dev/ont#Selector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#comment> "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."@en .
-<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#label> "Selector"@en .
 # 
 # https://qaecy.com/dev/ont#TableFragment
 <https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
-<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."@en .
-<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Table Fragment"@en .
 # 
 # https://qaecy.com/dev/ont#TextDirectiveSelector
 <https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#TextDirectiveSelector> <http://purl.org/dc/terms/conformsTo> <https://wicg.github.io/scroll-to-text-fragment/> .
-<https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A text directive selector specifies a range within a text using the syntax \"#:~:text=[prefix-,]start[,end][,-suffix]\". For example, \"#:~:text=example,fragment\" would indicate a range from the first occurrence of \"example\" to the next occurrence of \"fragment\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
-<https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Text Directive Selector"@en .
 # 
 # https://qaecy.com/dev/ont#TextFragment
 <https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
-<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en .
-<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Text Fragment"@en .
 # 
 # https://qaecy.com/dev/ont#TextIndexSelector
 <https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A text index selector specifies a range within a text using start and end separated by a comma (\"start,end\"). For example \"6,11\" on the text string \"Hello World\" would specify the subset \"World\". This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
-<https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Text Index Selector"@en .
 # 
 # https://qaecy.com/dev/ont#TimeRangeSelector
 <https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#TimeRangeSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
-<https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/"@en .
-<https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Time Range Selector"@en .
 # 
 # https://qaecy.com/dev/ont#XYWHSelector
 <https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#XYWHSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
-<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
-<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#label> "XYWH Selector"@en .
 # 
 # https://qaecy.com/dev/ont#relatedEntity
 # 
@@ -468,25 +469,415 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # #################################################################
 # 
 # 
+# http://schema.org/email
+<http://schema.org/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://schema.org/endDate
+<http://schema.org/endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://schema.org/material
+<http://schema.org/material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://schema.org/requiresEquipment
+<http://schema.org/requiresEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://schema.org/requiresMaterial
+<http://schema.org/requiresMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://schema.org/startDate
+<http://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Activity
+<https://qaecy.com/dev/enum#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Building
+<https://qaecy.com/dev/enum#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#BuildingElement
+<https://qaecy.com/dev/enum#BuildingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Date
+<https://qaecy.com/dev/enum#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#EmailAddress
+<https://qaecy.com/dev/enum#EmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Equipment
+<https://qaecy.com/dev/enum#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Floor
+<https://qaecy.com/dev/enum#Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Material
+<https://qaecy.com/dev/enum#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Organization
+<https://qaecy.com/dev/enum#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Person
+<https://qaecy.com/dev/enum#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Site
+<https://qaecy.com/dev/enum#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/enum#Space
+<https://qaecy.com/dev/enum#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/ont#CanonicalEntity
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#CanonicalEntity> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#Category
+<https://qaecy.com/dev/ont#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#Category> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#ContentCategory
+<https://qaecy.com/dev/ont#ContentCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#ContentCategory> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#DocumentPageFragment
+<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#DocumentPageFragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#EntityCategory
+<https://qaecy.com/dev/ont#EntityCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#EntityCategory> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#EntityMention
+<https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#EntityMention> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#EntityReference
+<https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#EntityReference> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#FileContent
+<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#FileContent> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#FileLocation
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#FileLocation> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#Fragment
+<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#Fragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#IDSelector
+<https://qaecy.com/dev/ont#IDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#IDSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#IFCExpressIDSelector
+<https://qaecy.com/dev/ont#IFCExpressIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#IFCExpressIDSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#IFCGlobalIDSelector
+<https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#IFCGlobalIDSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#ImageFragment
+<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#ImageFragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#MimeCategory
+<https://qaecy.com/dev/ont#MimeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#MimeCategory> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#PageSelector
+<https://qaecy.com/dev/ont#PageSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#PageSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#Property
+<https://qaecy.com/dev/ont#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#Property> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#ProviderType
+<https://qaecy.com/dev/ont#ProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#ProviderType> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#Selector
+<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#Selector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#TableFragment
+<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#TableFragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#TextDirectiveSelector
+<https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#TextDirectiveSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#TextFragment
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#TextFragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#TextIndexSelector
+<https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#TextIndexSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#TimeRangeSelector
+<https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#TimeRangeSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#XYWHSelector
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#XYWHSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#about
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#about> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 # https://qaecy.com/dev/ont#adjacentElement
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#BuildingElement> .
+<https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Building> .
+<https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Floor> .
+<https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Space> .
 <https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#adjacentElement> .
 <https://w3id.org/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#alternativeRepresentation
+<https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#alternativeRepresentation> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#applicableObjectCategories
+<https://qaecy.com/dev/ont#applicableObjectCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#applicableSubjectCategories
+<https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://qaecy.com/dev/ont#containsElement
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#BuildingElement> .
+<https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Building> .
+<https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Floor> .
+<https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Site> .
+<https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Space> .
 <https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#containsElement> .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://qaecy.com/dev/ont#containsFloor
 <https://qaecy.com/dev/ont#containsFloor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#containsFloor> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Floor> .
+<https://qaecy.com/dev/ont#containsFloor> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Building> .
+<https://qaecy.com/dev/ont#containsFloor> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Site> .
 <https://qaecy.com/dev/ont#containsFloor> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#hasStorey> .
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#containsFloor> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#containsFragment
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#containsFragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://qaecy.com/dev/ont#containsSpace
 <https://qaecy.com/dev/ont#containsSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#containsSpace> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Space> .
+<https://qaecy.com/dev/ont#containsSpace> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Building> .
+<https://qaecy.com/dev/ont#containsSpace> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Floor> .
+<https://qaecy.com/dev/ont#containsSpace> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Site> .
 <https://qaecy.com/dev/ont#containsSpace> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#hasSpace> .
 <https://w3id.org/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#containsSpace> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#contentCategory
+<https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#contentCategory> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#dateCreated
+<https://qaecy.com/dev/ont#dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#dateCreated> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#dateDeleted
+<https://qaecy.com/dev/ont#dateDeleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#dateDeleted> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#dateModified
+<https://qaecy.com/dev/ont#dateModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#dateModified> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#endDate
+<https://qaecy.com/dev/ont#endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#endDate> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Date> .
+<https://qaecy.com/dev/ont#endDate> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Activity> .
+<https://qaecy.com/dev/ont#endDate> <https://qaecy.com/dev/ont#relatedFormalProperty> <http://schema.org/endDate> .
+<https://qaecy.com/dev/ont#endDate> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#entityCategory
+<https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#entityCategory> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#explicit
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#explicit> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#filePath
+<https://qaecy.com/dev/ont#filePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#filePath> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#hasCategory
+<https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#hasCategory> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#hasEmailAddress
+<https://qaecy.com/dev/ont#hasEmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#EmailAddress> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Organization> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Person> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <https://qaecy.com/dev/ont#relatedFormalProperty> <http://schema.org/email> .
+<https://qaecy.com/dev/ont#hasEmailAddress> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#hasFileLocation
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#hasFileLocation> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#hasMaterial
+<https://qaecy.com/dev/ont#hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#hasMaterial> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Material> .
+<https://qaecy.com/dev/ont#hasMaterial> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#BuildingElement> .
+<https://qaecy.com/dev/ont#hasMaterial> <https://qaecy.com/dev/ont#relatedFormalProperty> <http://schema.org/material> .
+<https://qaecy.com/dev/ont#hasMaterial> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#hasProperty
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#hasProperty> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#label
+<https://qaecy.com/dev/ont#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#label> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#language
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#language> <https://qaecy.com/dev/ont#regex> "^[a-z]{2}$" .
+<https://qaecy.com/dev/ont#language> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#md5Hash
+<https://qaecy.com/dev/ont#md5Hash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#md5Hash> <https://qaecy.com/dev/ont#regex> "^[a-f0-9]{32}$" .
+<https://qaecy.com/dev/ont#md5Hash> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#md5HashBase64
+<https://qaecy.com/dev/ont#md5HashBase64> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#md5HashBase64> <https://qaecy.com/dev/ont#regex> "^[a-zA-Z0-9+/=]{24}$" .
+<https://qaecy.com/dev/ont#md5HashBase64> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#mentions
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#mentions> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#mime
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#mime> <https://qaecy.com/dev/ont#regex> "^[a-z]+/[a-z0-9-]+$" .
+<https://qaecy.com/dev/ont#mime> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#mimeCategory
+<https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#mimeCategory> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#openFormat
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#openFormat> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#regex
+<https://qaecy.com/dev/ont#regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#regex> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#relatedEntity
+<https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#relatedEntity> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#relatedFormalClass
+<https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#relatedFormalClass> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#relatedFormalProperty
+<https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#relatedFormalProperty> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#remoteProviderId
+<https://qaecy.com/dev/ont#remoteProviderId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#remoteProviderId> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#remoteProviderType
+<https://qaecy.com/dev/ont#remoteProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#remoteProviderType> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#remoteRelativePath
+<https://qaecy.com/dev/ont#remoteRelativePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#remoteRelativePath> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#requiresEquipment
+<https://qaecy.com/dev/ont#requiresEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#requiresEquipment> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Equipment> .
+<https://qaecy.com/dev/ont#requiresEquipment> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Activity> .
+<https://qaecy.com/dev/ont#requiresEquipment> <https://qaecy.com/dev/ont#relatedFormalProperty> <http://schema.org/requiresEquipment> .
+<https://qaecy.com/dev/ont#requiresEquipment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#requiresMaterial
+<https://qaecy.com/dev/ont#requiresMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#requiresMaterial> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Material> .
+<https://qaecy.com/dev/ont#requiresMaterial> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Activity> .
+<https://qaecy.com/dev/ont#requiresMaterial> <https://qaecy.com/dev/ont#relatedFormalProperty> <http://schema.org/requiresMaterial> .
+<https://qaecy.com/dev/ont#requiresMaterial> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#resolvesTo
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#resolvesTo> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#selectorObject
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#selectorObject> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#selectorSubject
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#selectorSubject> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#sizeBytes
+<https://qaecy.com/dev/ont#sizeBytes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#sizeBytes> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#startDate
+<https://qaecy.com/dev/ont#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#startDate> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Date> .
+<https://qaecy.com/dev/ont#startDate> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Activity> .
+<https://qaecy.com/dev/ont#startDate> <https://qaecy.com/dev/ont#relatedFormalProperty> <http://schema.org/startDate> .
+<https://qaecy.com/dev/ont#startDate> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#suffix
+<https://qaecy.com/dev/ont#suffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#suffix> <https://qaecy.com/dev/ont#regex> "^\\.[a-z0-9]+$" .
+<https://qaecy.com/dev/ont#suffix> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#tableGrid
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#tableGrid> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#tag
+<https://qaecy.com/dev/ont#tag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#tag> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#textRaw
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#textRaw> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#textSummary
+<https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#textSummary> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#value
+<https://qaecy.com/dev/ont#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#value> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#visibleForAgent
+<https://qaecy.com/dev/ont#visibleForAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#visibleForAgent> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#visibleForExtraction
+<https://qaecy.com/dev/ont#visibleForExtraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#visibleForExtraction> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://w3id.org/bot#adjacentElement
 # 
@@ -505,8 +896,98 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # #################################################################
 # 
 # 
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."@en .
+<https://qaecy.com/dev/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Canonical Entity"@en .
+# 
+<https://qaecy.com/dev/ont#Category> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class for specific categories that each hold enumerations used for specification of information objects and entity references. It is recommended to use SKOS to establish more context between the Category entities."@en .
+<https://qaecy.com/dev/ont#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en .
+# 
+<https://qaecy.com/dev/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category derived from the content of the file" .
+<https://qaecy.com/dev/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Content Category"@en .
+# 
+<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a page in a paginated document."@en .
+<https://qaecy.com/dev/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Document Page Fragment"@en .
+# 
+<https://qaecy.com/dev/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category that specifies the categories of an entity reference" .
+<https://qaecy.com/dev/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Category"@en .
+# 
+<https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of \"Albert Einstein\" in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns."@en .
+<https://qaecy.com/dev/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Mention"@en .
+# 
+<https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/2000/01/rdf-schema#comment> "This abstract class captures reference points for all features of interest in a project, such as a building element, a zone, a person, or material. These references can be either explicit or potential occurrences of the entity. This class should not be assigned directly; instead, use the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalized entity."@en .
+<https://qaecy.com/dev/ont#EntityReference> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Reference"@en .
+# 
+<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#comment> "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."@en .
+<https://qaecy.com/dev/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#label> "File Content"@en .
+# 
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud."@en .
+<https://qaecy.com/dev/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "File Location"@en .
+# 
+<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#comment> "A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."@en .
+<https://qaecy.com/dev/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#label> "Fragment"@en .
+# 
+<https://qaecy.com/dev/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID."@en .
+<https://qaecy.com/dev/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "ID Selector"@en .
+# 
+<https://qaecy.com/dev/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en .
+<https://qaecy.com/dev/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Express ID Selector"@en .
+# 
+<https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."@en .
+<https://qaecy.com/dev/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Global ID Selector"@en .
+# 
+<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."@en .
+<https://qaecy.com/dev/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Image Fragment"@en .
+# 
+<https://qaecy.com/dev/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category derived from the mimetype of the file content" .
+<https://qaecy.com/dev/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Mime Category"@en .
+# 
+<https://qaecy.com/dev/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A page selector specifies a particular page within a document. This special selector always always connects a qcy:FileContent object with a qcy:DocumentPage. The value is the page number starting from 1."@en .
+<https://qaecy.com/dev/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Page Selector"@en .
+# 
+<https://qaecy.com/dev/ont#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Any quantitative or qualitative property of an entity."@en .
+<https://qaecy.com/dev/ont#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
+# 
+<https://qaecy.com/dev/ont#ProviderType> <http://www.w3.org/2000/01/rdf-schema#comment> "Category that specifies the type of provider" .
+<https://qaecy.com/dev/ont#ProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "Provider Type"@en .
+# 
+<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#comment> "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."@en .
+<https://qaecy.com/dev/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#label> "Selector"@en .
+# 
+<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."@en .
+<https://qaecy.com/dev/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Table Fragment"@en .
+# 
+<https://qaecy.com/dev/ont#TextDirectiveSelector> <http://purl.org/dc/terms/conformsTo> <https://wicg.github.io/scroll-to-text-fragment/> .
+<https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A text directive selector specifies a range within a text using the syntax \"#:~:text=[prefix-,]start[,end][,-suffix]\". For example, \"#:~:text=example,fragment\" would indicate a range from the first occurrence of \"example\" to the next occurrence of \"fragment\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
+<https://qaecy.com/dev/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Text Directive Selector"@en .
+# 
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en .
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Text Fragment"@en .
+# 
+<https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A text index selector specifies a range within a text using start and end separated by a comma (\"start,end\"). For example \"6,11\" on the text string \"Hello World\" would specify the subset \"World\". This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
+<https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Text Index Selector"@en .
+# 
+<https://qaecy.com/dev/ont#TimeRangeSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
+<https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/"@en .
+<https://qaecy.com/dev/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Time Range Selector"@en .
+# 
+<https://qaecy.com/dev/ont#XYWHSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#label> "XYWH Selector"@en .
+# 
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:CanonicalEntity. This property indicates that a file content or fragment is about a specific canonical entity. It can be implicitly derived that if a file content or fragment mentions the occurrence of a named entity, and that named entity resolves to a canonical entity, then the file content or fragment is about the canonical entity." .
+<https://qaecy.com/dev/ont#about> <http://www.w3.org/2000/01/rdf-schema#label> "about"@en .
+# 
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone/element and an adjacent element." .
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent element"@en .
+# 
+<https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content." .
+<https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "alternative representation"@en .
+# 
+<https://qaecy.com/dev/ont#applicableObjectCategories> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:relatedEntity sub-property and one or more qcy:EntityCategory. This property is used to specify the categories that are applicable to the object of the relationship." .
+<https://qaecy.com/dev/ont#applicableObjectCategories> <http://www.w3.org/2000/01/rdf-schema#label> "applicable object categories"@en .
+# 
+<https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:relatedEntity sub-property and one or more qcy:EntityCategory. This property is used to specify the categories that are applicable to the subject of the relationship." .
+<https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/2000/01/rdf-schema#label> "applicable subject categories"@en .
 # 
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and a contained element." .
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "contains element"@en .
@@ -514,10 +995,147 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <https://qaecy.com/dev/ont#containsFloor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and a floor." .
 <https://qaecy.com/dev/ont#containsFloor> <http://www.w3.org/2000/01/rdf-schema#label> "contains floor"@en .
 # 
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and one of its qcy:Fragments" .
+<https://qaecy.com/dev/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#label> "contains fragment"@en .
+# 
 <https://qaecy.com/dev/ont#containsSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and a space." .
 <https://qaecy.com/dev/ont#containsSpace> <http://www.w3.org/2000/01/rdf-schema#label> "contains space"@en .
 # 
+<https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject (typically a whole document or a page in a document) and its qcy:ContentCategory derived from its content." .
+<https://qaecy.com/dev/ont#contentCategory> <http://www.w3.org/2000/01/rdf-schema#label> "content category"@en .
+# 
+<https://qaecy.com/dev/ont#dateCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time when the resource was created. This is typically the time when the resource was first stored in the database or in the source system."@en .
+<https://qaecy.com/dev/ont#dateCreated> <http://www.w3.org/2000/01/rdf-schema#label> "date created"@en .
+# 
+<https://qaecy.com/dev/ont#dateDeleted> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time when the resource was deleted. This is typically the time when the resource was removed from the database or in the source system."@en .
+<https://qaecy.com/dev/ont#dateDeleted> <http://www.w3.org/2000/01/rdf-schema#label> "date deleted"@en .
+# 
+<https://qaecy.com/dev/ont#dateModified> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time when the resource was last modified. This is typically the time when the resource was last updated in the database or in the source system."@en .
+<https://qaecy.com/dev/ont#dateModified> <http://www.w3.org/2000/01/rdf-schema#label> "date modified"@en .
+# 
+<https://qaecy.com/dev/ont#endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a some activity and an end date." .
+<https://qaecy.com/dev/ont#endDate> <http://www.w3.org/2000/01/rdf-schema#label> "end date"@en .
+# 
+<https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityReference and one or more qcy:EntityCategory." .
+<https://qaecy.com/dev/ont#entityCategory> <http://www.w3.org/2000/01/rdf-schema#label> "entity category"@en .
+# 
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean property specifying that something is explicit. It is specifically used to indicate that a qcy:CanonicalEntity has been confirmed by an authorized project practitioner or other specialist."@en .
+<https://qaecy.com/dev/ont#explicit> <http://www.w3.org/2000/01/rdf-schema#label> "explicit"@en .
+# 
+<https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#comment> "The file path property specifies the location of a file on a storage system. This is always a relative path in relation to the project directory on a cloud storage provider."@en .
+<https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#label> "file path"@en .
+# 
+<https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract property that connects something with its categories. Use one of the more specific sub-properties to assign categories." .
+<https://qaecy.com/dev/ont#hasCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has category"@en .
+# 
+<https://qaecy.com/dev/ont#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a person and an email address." .
+<https://qaecy.com/dev/ont#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#label> "has email address"@en .
+# 
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and one of its qcy:FileLocations. All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location" .
+<https://qaecy.com/dev/ont#hasFileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has file location"@en .
+# 
+<https://qaecy.com/dev/ont#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a building element and a material." .
+<https://qaecy.com/dev/ont#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "has material"@en .
+# 
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityMention or qcy:CanonicalEntity and one of its qcy:Properties." .
+<https://qaecy.com/dev/ont#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
+# 
+<https://qaecy.com/dev/ont#label> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#CanonicalEntity> .
+<https://qaecy.com/dev/ont#label> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#EntityMention> .
+<https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#comment> "A label is a human-readable name for the resource. Each resource should have only one preferred label in english that specifies the resource."@en .
+<https://qaecy.com/dev/ont#label> <http://www.w3.org/2000/01/rdf-schema#label> "label"@en .
+# 
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO 639 two letter language code"@en .
+<https://qaecy.com/dev/ont#language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
+# 
+<https://qaecy.com/dev/ont#md5Hash> <http://www.w3.org/2000/01/rdf-schema#comment> "The 32 character MD5 hash in lower case hexadecimals (empty string = d41d8cd98f00b204e9800998ecf8427e)"@en .
+<https://qaecy.com/dev/ont#md5Hash> <http://www.w3.org/2000/01/rdf-schema#label> "MD5 hash"@en .
+# 
+<https://qaecy.com/dev/ont#md5HashBase64> <http://www.w3.org/2000/01/rdf-schema#comment> "The 24 character MD5 hash in Base64 encoding (empty string = 1B2M2Y8AsgTpgAmY7PhCfg==)"@en .
+<https://qaecy.com/dev/ont#md5HashBase64> <http://www.w3.org/2000/01/rdf-schema#label> "MD5 hash Base 64"@en .
+# 
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector." .
+<https://qaecy.com/dev/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentions"@en .
+# 
+<https://qaecy.com/dev/ont#mime> <http://purl.org/dc/terms/conformsTo> <https://www.iana.org/assignments/media-types/media-types.xhtml> .
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#comment> "The mimetype of the file content preferably in accordance with IANA but also commonly used mimetypes in the AEC industry are accepted (eg. application/x-step for an IFC in STEP format)"@en .
+<https://qaecy.com/dev/ont#mime> <http://www.w3.org/2000/01/rdf-schema#label> "mime"@en .
+# 
+<https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:FileContent object and its qcy:MimeCategory derived from its mimetype." .
+<https://qaecy.com/dev/ont#mimeCategory> <http://www.w3.org/2000/01/rdf-schema#label> "mime category"@en .
+# 
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Is the file content readable without proprietary software tools?"@en .
+<https://qaecy.com/dev/ont#openFormat> <http://www.w3.org/2000/01/rdf-schema#label> "open format"@en .
+# 
+<https://qaecy.com/dev/ont#regex> <http://www.w3.org/2000/01/rdf-schema#comment> "A regular expression (regex) is a sequence of characters that defines a search pattern. This pattern is used by string searching algorithms for \"find\" or \"find and replace\" operations on strings. Often used to annotate the QAECY schemas."@en .
+<https://qaecy.com/dev/ont#regex> <http://www.w3.org/2000/01/rdf-schema#label> "regex"@en .
+# 
 <https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties." .
 <https://qaecy.com/dev/ont#relatedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "related entity"@en .
+# 
+<https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Category and one or more formal classes in external ontologies (Ex: qcy-e:Space qcy:relatedFormalClass bot:Space)." .
+<https://qaecy.com/dev/ont#relatedFormalClass> <http://www.w3.org/2000/01/rdf-schema#label> "related formal class"@en .
+# 
+<https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:containsFloor qcy:relatedFormalClass bot:hasStorey)." .
+<https://qaecy.com/dev/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "related formal property"@en .
+# 
+<https://qaecy.com/dev/ont#remoteProviderId> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier used to identify the remote provider. This is part of the fileUUID and is used uniquely identify a resource in relation to the remote system."@en .
+<https://qaecy.com/dev/ont#remoteProviderId> <http://www.w3.org/2000/01/rdf-schema#label> "remote provider id"@en .
+# 
+<https://qaecy.com/dev/ont#remoteProviderType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of remote provider (ex: gcp, azure, aws, local)"@en .
+<https://qaecy.com/dev/ont#remoteProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "remote provider type"@en .
+# 
+<https://qaecy.com/dev/ont#remoteRelativePath> <http://www.w3.org/2000/01/rdf-schema#comment> "The remote relative path specifies the location of a file on a storage system. This is always a relative path in relation to the project directory on a cloud storage provider."@en .
+<https://qaecy.com/dev/ont#remoteRelativePath> <http://www.w3.org/2000/01/rdf-schema#label> "remote relative path"@en .
+# 
+<https://qaecy.com/dev/ont#requiresEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a some activity and required equipment." .
+<https://qaecy.com/dev/ont#requiresEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "requires equipment"@en .
+# 
+<https://qaecy.com/dev/ont#requiresMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a some activity and required material." .
+<https://qaecy.com/dev/ont#requiresMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "requires material"@en .
+# 
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity." .
+<https://qaecy.com/dev/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#label> "resolves to"@en .
+# 
+<https://qaecy.com/dev/ont#selectorObject> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#EntityMention> .
+<https://qaecy.com/dev/ont#selectorObject> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector and the thing it specifies. This is typically either a qcy:EntityMention (eg this part of the text mentions the entity) or a qcy:InformationObject (eg this picture is placed here on the page)" .
+<https://qaecy.com/dev/ont#selectorObject> <http://www.w3.org/2000/01/rdf-schema#label> "selector object"@en .
+# 
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Selector and the qcy:InformationObject it specifies." .
+<https://qaecy.com/dev/ont#selectorSubject> <http://www.w3.org/2000/01/rdf-schema#label> "selector subject"@en .
+# 
+<https://qaecy.com/dev/ont#sizeBytes> <http://www.w3.org/2000/01/rdf-schema#comment> "The size of the file content in bytes"@en .
+<https://qaecy.com/dev/ont#sizeBytes> <http://www.w3.org/2000/01/rdf-schema#label> "size bytes"@en .
+# 
+<https://qaecy.com/dev/ont#startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a some activity and a start date." .
+<https://qaecy.com/dev/ont#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "start date"@en .
+# 
+<https://qaecy.com/dev/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#comment> "The file suffix including dot (ex: \".pdf\")"@en .
+<https://qaecy.com/dev/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#label> "file suffix"@en .
+# 
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Processed table output."@en .
+<https://qaecy.com/dev/ont#tableGrid> <http://www.w3.org/2000/01/rdf-schema#label> "table grid"@en .
+# 
+<https://qaecy.com/dev/ont#tag> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#comment> "A tag is a keyword or term assigned to a piece of information, such as a qcy:InformationObject, to describe and categorize it. Tags are typically used to facilitate searching and organizing information. An information object can have multiple tags."@en .
+<https://qaecy.com/dev/ont#tag> <http://www.w3.org/2000/01/rdf-schema#label> "tag"@en .
+# 
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Raw text as extracted from the fragment."@en .
+<https://qaecy.com/dev/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#label> "text raw"@en .
+# 
+<https://qaecy.com/dev/ont#textSummary> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#InformationObject> .
+<https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "A short text that summarizes all information about the thing. This is typically generated by a Large Language model from provided context any form."@en .
+<https://qaecy.com/dev/ont#textSummary> <http://www.w3.org/2000/01/rdf-schema#label> "text summary"@en .
+# 
+<https://qaecy.com/dev/ont#value> <http://schema.org/domainIncludes> <https://qaecy.com/dev/ont#Selector> .
+<https://qaecy.com/dev/ont#value> <http://www.w3.org/2000/01/rdf-schema#comment> "A value is a text string that holds the value. How to interpret this value depends on what the value is assigned to."@en .
+<https://qaecy.com/dev/ont#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+<https://qaecy.com/dev/ont#visibleForAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean property specifying if the property or class is visible for the natural language to SPARQL translation. This is used to hide properties that are not relevant for the translation."@en .
+<https://qaecy.com/dev/ont#visibleForAgent> <http://www.w3.org/2000/01/rdf-schema#label> "visible for agent"@en .
+# 
+<https://qaecy.com/dev/ont#visibleForExtraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean property specifying if the property or class is visible for the semantic extraction process. This is used to hide properties that are not relevant for the extraction."@en .
+<https://qaecy.com/dev/ont#visibleForExtraction> <http://www.w3.org/2000/01/rdf-schema#label> "visible for extraction"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

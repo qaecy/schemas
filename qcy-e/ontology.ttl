@@ -9,9 +9,9 @@
 <https://qaecy.com/dev/enum#> rdf:type owl:Ontology ;
                                <http://purl.org/dc/terms/creator> "Christian Frausing" ,
                                                                   "Mads Holten Rasmussen" ,
-                                                                  "Manos Agyris" ;
+                                                                  "Manos Argyris" ;
                                <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." ;
-                               <http://purl.org/dc/terms/modified> "2025-03-03T20:32:43Z"^^xsd:dateTime ;
+                               <http://purl.org/dc/terms/modified> "2025-03-06T14:23:11Z"^^xsd:dateTime ;
                                <http://purl.org/dc/terms/title> "QAECY Enumerations"@en ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 
@@ -55,6 +55,10 @@
 <http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
 
 
+###  https://qaecy.com/dev/ont#regex
+<https://qaecy.com/dev/ont#regex> rdf:type owl:AnnotationProperty .
+
+
 ###  https://qaecy.com/dev/ont#relatedFormalClass
 <https://qaecy.com/dev/ont#relatedFormalClass> rdf:type owl:AnnotationProperty .
 
@@ -79,15 +83,33 @@
 <https://qaecy.com/dev/ont#MimeCategory> rdf:type owl:Class .
 
 
+###  https://qaecy.com/dev/ont#ProviderType
+<https://qaecy.com/dev/ont#ProviderType> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://qaecy.com/dev/enum#AWS
+:AWS rdf:type owl:NamedIndividual ,
+              <https://qaecy.com/dev/ont#ProviderType> ;
+     <http://www.w3.org/2004/02/skos/core#definition> "Amazon Web Services provider type"@en ;
+     <http://www.w3.org/2004/02/skos/core#prefLabel> "Amazon Web Services"@en .
+
 
 ###  https://qaecy.com/dev/enum#Activity
 :Activity rdf:type owl:NamedIndividual ,
                    <http://www.w3.org/2004/02/skos/core#Concept> ,
                    <https://qaecy.com/dev/ont#EntityCategory> ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Activity"@en .
+
+
+###  https://qaecy.com/dev/enum#Azure
+:Azure rdf:type owl:NamedIndividual ,
+                <https://qaecy.com/dev/ont#ProviderType> ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Azure provider type"@en ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Azure"@en .
 
 
 ###  https://qaecy.com/dev/enum#BIMFileContent
@@ -132,6 +154,13 @@
                                                                 <https://w3id.org/rec#BuildingElement> .
 
 
+###  https://qaecy.com/dev/enum#BuildingPermit
+:BuildingPermit rdf:type owl:NamedIndividual ,
+                         <https://qaecy.com/dev/ont#ContentCategory> ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A permit for building the construction issued by a legal authority."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Building Permit"@en .
+
+
 ###  https://qaecy.com/dev/enum#CADFileContent
 :CADFileContent rdf:type owl:NamedIndividual ,
                          <https://qaecy.com/dev/ont#MimeCategory> ;
@@ -165,7 +194,9 @@
 :Date rdf:type owl:NamedIndividual ,
                <http://www.w3.org/2004/02/skos/core#Concept> ,
                <https://qaecy.com/dev/ont#EntityCategory> ;
-      <http://www.w3.org/2004/02/skos/core#prefLabel> "Date"@en .
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Date"@en ;
+      <https://qaecy.com/dev/ont#regex> "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" ;
+      <https://qaecy.com/dev/ont#relatedFormalClass> <http://schema.org/Date> .
 
 
 ###  https://qaecy.com/dev/enum#Drawing
@@ -179,7 +210,8 @@
 :EmailAddress rdf:type owl:NamedIndividual ,
                        <http://www.w3.org/2004/02/skos/core#Concept> ,
                        <https://qaecy.com/dev/ont#EntityCategory> ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Address"@en .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Address"@en ;
+              <https://qaecy.com/dev/ont#regex> "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" .
 
 
 ###  https://qaecy.com/dev/enum#Equipment
@@ -207,6 +239,20 @@
        <http://www.w3.org/2004/02/skos/core#definition> "Floor in a building"@en ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "Floor"@en ;
        <https://qaecy.com/dev/ont#relatedFormalClass> <https://w3id.org/bot#Storey> .
+
+
+###  https://qaecy.com/dev/enum#GCP
+:GCP rdf:type owl:NamedIndividual ,
+              <https://qaecy.com/dev/ont#ProviderType> ;
+     <http://www.w3.org/2004/02/skos/core#definition> "Google Cloud Platform provider type"@en ;
+     <http://www.w3.org/2004/02/skos/core#prefLabel> "Google Cloud Platform"@en .
+
+
+###  https://qaecy.com/dev/enum#LocalProvider
+:LocalProvider rdf:type owl:NamedIndividual ,
+                        <https://qaecy.com/dev/ont#ProviderType> ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Local provider type"@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Local provider"@en .
 
 
 ###  https://qaecy.com/dev/enum#Location

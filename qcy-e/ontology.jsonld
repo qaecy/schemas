@@ -36,14 +36,14 @@
   }, {
     "@value" : "Mads Holten Rasmussen"
   }, {
-    "@value" : "Manos Agyris"
+    "@value" : "Manos Argyris"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "This document describes special enumerations to be used with the QAECY Ontology."
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-03-03T20:32:43Z"
+    "@value" : "2025-03-06T14:23:11Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -67,6 +67,20 @@
     "@value" : "3D Model"
   } ]
 }, {
+  "@id" : "https://qaecy.com/dev/enum#AWS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Amazon Web Services provider type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Amazon Web Services"
+  } ]
+}, {
   "@id" : "https://qaecy.com/dev/enum#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -77,6 +91,20 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Activity"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/enum#Azure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Azure provider type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Azure"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/enum#BIMFileContent",
@@ -162,6 +190,20 @@
     "@id" : "https://w3id.org/rec#BuildingElement"
   } ]
 }, {
+  "@id" : "https://qaecy.com/dev/enum#BuildingPermit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A permit for building the construction issued by a legal authority."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Building Permit"
+  } ]
+}, {
   "@id" : "https://qaecy.com/dev/enum#CADFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -229,6 +271,12 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Date"
+  } ],
+  "https://qaecy.com/dev/ont#regex" : [ {
+    "@value" : "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+  } ],
+  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+    "@id" : "http://schema.org/Date"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/enum#Drawing",
@@ -255,6 +303,9 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Email Address"
+  } ],
+  "https://qaecy.com/dev/ont#regex" : [ {
+    "@value" : "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/enum#Equipment",
@@ -310,6 +361,34 @@
   } ],
   "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/bot#Storey"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/enum#GCP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Google Cloud Platform provider type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Google Cloud Platform"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/enum#LocalProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Local provider type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Local provider"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/enum#Location",
@@ -627,6 +706,12 @@
 }, {
   "@id" : "https://qaecy.com/dev/ont#MimeCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#ProviderType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#regex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://qaecy.com/dev/ont#relatedFormalClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

@@ -11,4 +11,4 @@
 .
 :agent0 a prov:Agent; foaf:name "Christian Frausing".
 :agent1 a prov:Agent; foaf:name "Mads Holten Rasmussen".
-:agent2 a prov:Agent; foaf:name "Manos Agyris".
+:agent2 a prov:Agent; foaf:name "Manos Argyris".

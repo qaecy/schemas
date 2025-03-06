@@ -13,9 +13,9 @@
     <owl:Ontology rdf:about="https://qaecy.com/dev/enum#">
         <terms:creator>Christian Frausing</terms:creator>
         <terms:creator>Mads Holten Rasmussen</terms:creator>
-        <terms:creator>Manos Agyris</terms:creator>
+        <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes special enumerations to be used with the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-03T20:32:43Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-06T14:23:11Z</terms:modified>
         <terms:title xml:lang="en">QAECY Enumerations</terms:title>
         <vann:preferredNamespacePrefix>qcy-e</vann:preferredNamespacePrefix>
     </owl:Ontology>
@@ -97,6 +97,13 @@
     
 
 
+    <!-- https://qaecy.com/dev/ont#regex -->
+
+
+    <owl:AnnotationProperty rdf:about="https://qaecy.com/dev/ont#regex"/>
+    
+
+
     <!-- https://qaecy.com/dev/ont#relatedFormalClass -->
 
 
@@ -144,6 +151,13 @@
     
 
 
+    <!-- https://qaecy.com/dev/ont#ProviderType -->
+
+
+    <owl:Class rdf:about="https://qaecy.com/dev/ont#ProviderType"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -156,6 +170,17 @@
     
 
 
+    <!-- https://qaecy.com/dev/enum#AWS -->
+
+
+    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#AWS">
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ProviderType"/>
+        <skos:definition xml:lang="en">Amazon Web Services provider type</skos:definition>
+        <skos:prefLabel xml:lang="en">Amazon Web Services</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://qaecy.com/dev/enum#Activity -->
 
 
@@ -163,6 +188,17 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://qaecy.com/dev/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Activity</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://qaecy.com/dev/enum#Azure -->
+
+
+    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#Azure">
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ProviderType"/>
+        <skos:definition xml:lang="en">Azure provider type</skos:definition>
+        <skos:prefLabel xml:lang="en">Azure</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -229,6 +265,17 @@
     
 
 
+    <!-- https://qaecy.com/dev/enum#BuildingPermit -->
+
+
+    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#BuildingPermit">
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">A permit for building the construction issued by a legal authority.</skos:definition>
+        <skos:prefLabel xml:lang="en">Building Permit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://qaecy.com/dev/enum#CADFileContent -->
 
 
@@ -281,6 +328,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://qaecy.com/dev/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Date</skos:prefLabel>
+        <ont:regex>^[0-9]{4}-[0-9]{2}-[0-9]{2}$</ont:regex>
+        <ont:relatedFormalClass rdf:resource="http://schema.org/Date"/>
     </owl:NamedIndividual>
     
 
@@ -303,6 +352,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://qaecy.com/dev/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Email Address</skos:prefLabel>
+        <ont:regex>^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$</ont:regex>
     </owl:NamedIndividual>
     
 
@@ -342,6 +392,28 @@
         <skos:definition xml:lang="en">Floor in a building</skos:definition>
         <skos:prefLabel xml:lang="en">Floor</skos:prefLabel>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Storey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://qaecy.com/dev/enum#GCP -->
+
+
+    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#GCP">
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ProviderType"/>
+        <skos:definition xml:lang="en">Google Cloud Platform provider type</skos:definition>
+        <skos:prefLabel xml:lang="en">Google Cloud Platform</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://qaecy.com/dev/enum#LocalProvider -->
+
+
+    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/enum#LocalProvider">
+        <rdf:type rdf:resource="https://qaecy.com/dev/ont#ProviderType"/>
+        <skos:definition xml:lang="en">Local provider type</skos:definition>
+        <skos:prefLabel xml:lang="en">Local provider</skos:prefLabel>
     </owl:NamedIndividual>
     
 
