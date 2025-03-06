@@ -18,7 +18,7 @@
         <terms:description>The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-06T14:23:08Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-06T14:28:42Z</terms:modified>
         <terms:title xml:lang="en">The QAECY Ontology</terms:title>
         <vann:preferredNamespacePrefix>qcy</vann:preferredNamespacePrefix>
         <owl:versionInfo>0.0.1</owl:versionInfo>

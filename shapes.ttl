@@ -2,9 +2,180 @@
 @prefix qcy:  <https://qaecy.com/dev/ont#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
-@prefix qce:  <https://qaecy.com/dev/enum#> .
+@prefix qcy-e:  <https://qaecy.com/dev/enum#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
+#########################
+# RELATED ENTITY, GENERAL
+#########################
+qcy:RelatedEntityShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qcy:relatedEntity ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "qcy:relatedEntity should not be used directly. A more specific sub-property of qcy:relatedEntity must also be present." ;
+        sh:severity sh:Violation ;
+        sh:prefixes qcy:, rdfs: ;
+        sh:select """
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX qcy:  <https://qaecy.com/dev/ont#>
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?this ?subProperty ?value .
+                    ?subProperty rdfs:subPropertyOf qcy:relatedEntity .
+                }
+            }
+        """ ;
+    ] .
+
+####################
+# CONTAINS FLOOR
+####################
+qcy:ContainsFloorSubjectsShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qcy:containsFloor ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:in ( qcy-e:Site qcy-e:Building ) ;
+        sh:severity sh:Violation ;
+        sh:message "The subject of qcy:containsFloor must be of category qcy-e:Site or qcy-e:Building" ;
+    ] .
+qcy:ContainsFloorObjectsShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf qcy:containsFloor ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:hasValue qcy-e:Floor ;
+        sh:severity sh:Violation ;
+        sh:message "The object of qcy:containsFloor must be of category qcy-e:Floor" ;
+    ] .
+
+####################
+# CONTAINS SPACE
+####################
+qcy:ContainsSpaceSubjectsShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qcy:containsSpace ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:in ( qcy-e:Site qcy-e:Building qcy-e:Floor ) ;
+        sh:severity sh:Violation ;
+        sh:message "The subject of qcy:containsSpace must be of category qcy-e:Site, qcy-e:Building or qcy-e:Floor" ;
+    ] .
+qcy:ContainsSpaceObjectsShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf qcy:containsSpace ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:hasValue qcy-e:Space ;
+        sh:severity sh:Violation ;
+        sh:message "The object of qcy:containsSpace must be of category qcy-e:Space" ;
+    ] .
+
+####################
+# CONTAINS ELEMENT
+####################
+qcy:ContainsElementSubjectsShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qcy:containsElement ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:in ( qcy-e:Site qcy-e:Building qcy-e:Floor qcy-e:Space ) ;
+        sh:severity sh:Violation ;
+        sh:message "The subject of qcy:containsElement must be of category qcy-e:Site, qcy-e:Building, qcy-e:Floor or qcy-e:Space" ;
+    ] .
+qcy:ContainsElementObjectsShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf qcy:containsElement ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:hasValue qcy-e:BuildingElement ;
+        sh:severity sh:Violation ;
+        sh:message "The object of qcy:containsElement must be of category qcy-e:BuildingElement" ;
+    ] .
+
+##################
+# ADJACENT ELEMENT
+##################
+qcy:AdjacentElementSubjectsShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qcy:adjacentElement ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:in ( qcy-e:Site qcy-e:Building qcy-e:Floor qcy-e:Space qcy-e:BuildingElement ) ;
+        sh:severity sh:Violation ;
+        sh:message "The subject of qcy:adjacentElement must be of category qcy-e:Site, qcy-e:Building, qcy-e:Floor, qcy-e:Space or qcy-e:BuildingElement" ;
+    ] .
+qcy:AdjacentElementObjectsShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf qcy:adjacentElement ;
+    sh:property [
+        sh:path qcy:entityCategory ;
+        sh:hasValue qcy-e:BuildingElement ;
+        sh:severity sh:Violation ;
+        sh:message "The object of qcy:adjacentElement must be of category qcy-e:BuildingElement" ;
+    ] .
+##############################
+# INFORMATION OBJECTS, GENERAL
+##############################
+qcy:InformationObjectShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:InformationObject ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedValueShape [
+            sh:property [
+                sh:path rdfs:subClassOf ;
+                sh:hasValue qcy:InformationObject ;
+            ]
+        ] ;
+        sh:severity sh:Violation ;
+        sh:message "A qcy:InformationObject should have at least one more specific subclass of qcy:InformationObject assigned." ;
+    ] .
+
+##############
+# FILE CONTENT
+##############
+qcy:FileContentShape
+    a sh:NodeShape ;
+    sh:targetClass qcy:FileContent ;
+    sh:property [
+        sh:path qcy:mimeCategory ;
+        sh:class qcy:MimeCategory ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "A qcy:FileContent object should have exactly one qcy:mimeCategory assigned." ;
+    ] , [
+        sh:path qcy:contentCategory ;
+        sh:class qcy:ContentCategory ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "A qcy:FileContent object should have at least one qcy:contentCategory assigned." ;
+    ] , [
+        sh:path qcy:textSummary ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "The qcy:FileContent should have a qcy:textSummary." ;
+    ] , [
+        sh:path qcy:openFormat ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:severity sh:Info ;
+        sh:message "The qcy:FileContent should specify whether it's in a qcy:openFormat." ;
+    ] , [
+        sh:path qcy:mime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "The qcy:FileContent should specify exactly one mimetype." ;
+    ].
 ####################
 # SELECTORS, GENERAL
 ####################
@@ -200,26 +371,6 @@ qcy:IFCGlobalIDSelectorShape
         sh:severity sh:Warning ;
         sh:message "Invalid GlobalID" ;
     ] .
-##############################
-# INFORMATION OBJECTS, GENERAL
-##############################
-qcy:InformationObjectShape
-    a sh:NodeShape ;
-    sh:targetClass qcy:InformationObject ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedValueShape [
-            sh:node [
-                sh:property [
-                    sh:path rdfs:subClassOf ;
-                    sh:hasValue qcy:InformationObject ;
-                ]
-            ]
-        ] ;
-        sh:severity sh:Violation ;
-        sh:message "A qcy:InformationObject should have at least one more specific subclass of qcy:InformationObject assigned." ;
-    ] .
 ####################
 # FRAGMENTS, GENERAL
 ####################
@@ -271,6 +422,14 @@ qcy:DocumentPageFragmentShape
         sh:severity sh:Warning ;
         sh:message "A Document Page Fragment's location relative to the document should be specified by exactly one qcy:PageSelector" ;
     ] , [
+        sh:path qcy:alternativeRepresentation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class qcy:FileLocation ;
+        sh:severity sh:Warning ;
+        sh:message "A Page Fragment should specify the location of the image file representation using qcy:alternativeRepresentation" ;
+    ] , [
         sh:path qcy:value ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -300,13 +459,13 @@ qcy:ImageFragmentShape
         sh:severity sh:Warning ;
         sh:message "An Image Fragment's location relative to the parent fragment should be specified by at least one qcy:XYWHSelector (possible to add alternative selectors in the future)" ;
     ] , [
-        sh:path qcy:hasFileLocation ;
+        sh:path qcy:alternativeRepresentation ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
         sh:class qcy:FileLocation ;
         sh:severity sh:Violation ;
-        sh:message "An Image Fragment must specify the location of the file" ;
+        sh:message "An Image Fragment must specify the location of the file using qcy:alternativeRepresentation" ;
     ] , [
         sh:path qcy:value ;
         sh:minCount 1 ;
