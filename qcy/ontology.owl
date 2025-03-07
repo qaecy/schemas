@@ -18,7 +18,7 @@
         <terms:description>The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-06T16:43:49Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-07T12:08:41Z</terms:modified>
         <terms:title xml:lang="en">The QAECY Ontology</terms:title>
         <vann:preferredNamespacePrefix>qcy</vann:preferredNamespacePrefix>
         <owl:versionInfo>0.0.1</owl:versionInfo>
@@ -165,6 +165,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:comment>Relationship between a qcy:relatedEntity sub-property and one or more qcy:EntityCategory. This property is used to specify the categories that are applicable to the subject of the relationship.</rdfs:comment>
         <rdfs:label xml:lang="en">applicable subject categories</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://qaecy.com/dev/ont#associatedWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://qaecy.com/dev/ont#associatedWith">
+        <rdfs:subPropertyOf rdf:resource="https://qaecy.com/dev/ont#relatedEntity"/>
+        <rdfs:domain rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://qaecy.com/dev/ont#EntityReference"/>
     </owl:ObjectProperty>
     
 
@@ -1251,6 +1262,18 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://qaecy.com/dev/ont#associatedWith -->
+
+
+    <owl:NamedIndividual rdf:about="https://qaecy.com/dev/ont#associatedWith">
+        <applicableObjectCategories rdf:resource="https://qaecy.com/dev/enum#Organization"/>
+        <applicableObjectCategories rdf:resource="https://qaecy.com/dev/enum#Person"/>
+        <applicableSubjectCategories rdf:resource="https://qaecy.com/dev/enum#Activity"/>
+        <applicableSubjectCategories rdf:resource="https://qaecy.com/dev/enum#Person"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://qaecy.com/dev/ont#containsElement -->
 
 
@@ -1442,6 +1465,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     <rdf:Description rdf:about="https://qaecy.com/dev/ont#adjacentElement">
         <rdfs:comment>Relationship between a zone/element and an adjacent element.</rdfs:comment>
         <rdfs:label xml:lang="en">adjacent element</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://qaecy.com/dev/ont#associatedWith">
+        <rdfs:comment>Relationship typically between some activity and an agent (Person, Organization) but could also be used between a Person and an Organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">assosiated with</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://qaecy.com/dev/ont#containsElement">

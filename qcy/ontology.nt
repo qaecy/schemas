@@ -4,7 +4,7 @@
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-06T16:43:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-07T12:08:41Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://qaecy.com/dev/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -88,6 +88,12 @@
 <https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:relatedEntity sub-property and one or more qcy:EntityCategory. This property is used to specify the categories that are applicable to the subject of the relationship." .
 <https://qaecy.com/dev/ont#applicableSubjectCategories> <http://www.w3.org/2000/01/rdf-schema#label> "applicable subject categories"@en .
 <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#associatedWith
+<https://qaecy.com/dev/ont#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
+<https://qaecy.com/dev/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
+<https://qaecy.com/dev/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
 # 
 # https://qaecy.com/dev/ont#containsElement
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -717,6 +723,13 @@
 <https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#relatedFormalProperty> <https://w3id.org/bot#adjacentElement> .
 <https://w3id.org/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
+# https://qaecy.com/dev/ont#associatedWith
+<https://qaecy.com/dev/ont#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#associatedWith> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Organization> .
+<https://qaecy.com/dev/ont#associatedWith> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#Person> .
+<https://qaecy.com/dev/ont#associatedWith> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Activity> .
+<https://qaecy.com/dev/ont#associatedWith> <https://qaecy.com/dev/ont#applicableSubjectCategories> <https://qaecy.com/dev/enum#Person> .
+# 
 # https://qaecy.com/dev/ont#containsElement
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://qaecy.com/dev/ont#containsElement> <https://qaecy.com/dev/ont#applicableObjectCategories> <https://qaecy.com/dev/enum#BuildingElement> .
@@ -821,6 +834,10 @@
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone/element and an adjacent element." .
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent element"@en .
 <https://qaecy.com/dev/ont#adjacentElement> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://qaecy.com/dev/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship typically between some activity and an agent (Person, Organization) but could also be used between a Person and an Organization." .
+<https://qaecy.com/dev/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "assosiated with"@en .
+<https://qaecy.com/dev/ont#associatedWith> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and a contained element." .
 <https://qaecy.com/dev/ont#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "contains element"@en .

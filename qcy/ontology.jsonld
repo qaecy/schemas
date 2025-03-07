@@ -88,7 +88,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-03-06T16:43:49Z"
+    "@value" : "2025-03-07T12:08:41Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -707,6 +707,39 @@
   "https://qaecy.com/dev/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#associatedWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship typically between some activity and an agent (Person, Organization) but could also be used between a Person and an Organization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://qaecy.com/dev/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "assosiated with"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://qaecy.com/dev/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://qaecy.com/dev/ont#relatedEntity"
+  } ],
+  "https://qaecy.com/dev/ont#applicableObjectCategories" : [ {
+    "@id" : "https://qaecy.com/dev/enum#Organization"
+  }, {
+    "@id" : "https://qaecy.com/dev/enum#Person"
+  } ],
+  "https://qaecy.com/dev/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://qaecy.com/dev/enum#Activity"
+  }, {
+    "@id" : "https://qaecy.com/dev/enum#Person"
+  } ],
+  "https://qaecy.com/dev/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/ont#containsElement",
