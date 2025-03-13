@@ -38,7 +38,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2025-03-13T15:04:46Z",
+        "value" : "2025-03-13T15:44:43Z",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -1234,6 +1234,9 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "142",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "76",
@@ -1539,37 +1542,37 @@
   }, {
     "range" : "5",
     "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "48"
   }, {
     "range" : "51",
     "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "50"
   }, {
     "range" : "5",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "53"
   }, {
     "range" : "10",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "54"
-  }, {
-    "range" : "5",
-    "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "55"
   }, {
     "range" : "51",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "5",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "63"
   }, {
     "range" : "5",
     "domain" : "56",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "64"
   }, {
     "iri" : "https://qaecy.com/dev/ont#regex",
@@ -1618,12 +1621,12 @@
   }, {
     "range" : "5",
     "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "68"
   }, {
     "range" : "5",
     "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "69"
   }, {
     "iri" : "https://qaecy.com/dev/ont#mentions",
@@ -1673,32 +1676,32 @@
   }, {
     "range" : "36",
     "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "78"
   }, {
     "range" : "36",
     "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "79"
   }, {
     "range" : "7",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "80"
   }, {
     "range" : "7",
     "domain" : "49",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "81"
   }, {
     "range" : "36",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "83"
   }, {
     "range" : "36",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "84"
   }, {
     "iri" : "https://qaecy.com/dev/ont#containsFragment",
@@ -2060,22 +2063,22 @@
   }, {
     "range" : "15",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "106"
   }, {
     "range" : "15",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "107"
   }, {
     "range" : "15",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "108"
   }, {
     "range" : "15",
     "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "109"
   }, {
     "iri" : "https://qaecy.com/dev/ont#remoteRelativePath",
@@ -2193,37 +2196,37 @@
   }, {
     "range" : "10",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "113"
   }, {
     "range" : "5",
     "domain" : "62",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "114"
   }, {
     "range" : "10",
     "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "115"
   }, {
     "range" : "5",
     "domain" : "59",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "116"
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
     "range" : "5",
     "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
     "range" : "5",
     "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "119"
   }, {
     "iri" : "https://qaecy.com/dev/ont#dateCreated",
@@ -2292,19 +2295,19 @@
     "attributes" : [ "datatype" ],
     "id" : "122"
   }, {
-    "range" : "7",
+    "range" : "51",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "123"
   }, {
-    "range" : "10",
+    "range" : "33",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "124"
   }, {
     "range" : "5",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "125"
   }, {
     "iri" : "https://qaecy.com/dev/ont#label",
@@ -2320,12 +2323,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#CanonicalEntity",
+        "value" : "https://qaecy.com/dev/ont#EntityMention",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://qaecy.com/dev/ont#EntityMention",
+        "value" : "https://qaecy.com/dev/ont#CanonicalEntity",
         "type" : "iri"
       } ]
     },
@@ -2340,29 +2343,29 @@
     "attributes" : [ "datatype" ],
     "id" : "126"
   }, {
-    "range" : "33",
+    "range" : "10",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "127"
   }, {
     "range" : "33",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "128"
   }, {
     "range" : "10",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "129"
-  }, {
-    "range" : "5",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "130"
   }, {
     "range" : "51",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "131"
   }, {
     "iri" : "https://qaecy.com/dev/ont#applicableSubjectCategories",
@@ -2411,12 +2414,12 @@
   }, {
     "range" : "49",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "134"
   }, {
-    "range" : "51",
+    "range" : "7",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "135"
   }, {
     "iri" : "https://qaecy.com/dev/ont#relatedFormalClass",
@@ -2575,6 +2578,28 @@
     "attributes" : [ "datatype" ],
     "id" : "140"
   }, {
+    "iri" : "https://qaecy.com/dev/ont#adjacentFragment",
+    "baseIri" : "https://qaecy.com/dev/ont",
+    "range" : "36",
+    "annotations" : {
+      "visibleForAgent" : [ {
+        "identifier" : "visibleForAgent",
+        "language" : "undefined",
+        "value" : "false",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "adjacentFragment",
+      "en" : "adjacent fragment"
+    },
+    "domain" : "36",
+    "comment" : {
+      "undefined" : "Relationship between two fragments that are adjacent within the shared parent information object."
+    },
+    "attributes" : [ "object" ],
+    "id" : "141"
+  }, {
     "iri" : "https://qaecy.com/dev/ont#alternativeRepresentation",
     "baseIri" : "https://qaecy.com/dev/ont",
     "range" : "33",
@@ -2595,7 +2620,7 @@
       "undefined" : "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content."
     },
     "attributes" : [ "object" ],
-    "id" : "141"
+    "id" : "142"
   }, {
     "iri" : "https://qaecy.com/dev/ont#value",
     "baseIri" : "https://qaecy.com/dev/ont",
@@ -2623,7 +2648,7 @@
       "en" : "A value is a text string that holds the value. How to interpret this value depends on what the value is assigned to."
     },
     "attributes" : [ "datatype" ],
-    "id" : "142"
+    "id" : "143"
   }, {
     "iri" : "https://qaecy.com/dev/ont#containsElement",
     "baseIri" : "https://qaecy.com/dev/ont",

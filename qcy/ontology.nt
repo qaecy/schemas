@@ -4,7 +4,7 @@
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-13T15:04:46Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-13T15:44:43Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://qaecy.com/dev/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -63,6 +63,14 @@
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://qaecy.com/dev/ont#relatedEntity> .
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#EntityReference> .
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#EntityReference> .
+# 
+# https://qaecy.com/dev/ont#adjacentFragment
+<https://qaecy.com/dev/ont#adjacentFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://qaecy.com/dev/ont#adjacentFragment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#adjacentFragment> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#adjacentFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between two fragments that are adjacent within the shared parent information object." .
+<https://qaecy.com/dev/ont#adjacentFragment> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent fragment"@en .
+<https://qaecy.com/dev/ont#adjacentFragment> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://qaecy.com/dev/ont#alternativeRepresentation
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
