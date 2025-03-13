@@ -25,10 +25,10 @@ This section provides details for each class and property defined by The QAECY O
   <li><a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a></li>
   <li><a href="#TableFragment" title="https://qaecy.com/dev/ont#TableFragment">Table Fragment</a></li>
   <li><a href="#TextDirectiveSelector" title="https://qaecy.com/dev/ont#TextDirectiveSelector">Text Directive Selector</a></li>
-  <li><a href="#TextFragment" title="https://qaecy.com/dev/ont#TextFragment">Text Fragment</a></li>
+  <li><a href="#TextFragment" title="https://qaecy.com/dev/ont#TextFragment"> <span>Text Fragment</span> </a></li>
   <li><a href="#TextIndexSelector" title="https://qaecy.com/dev/ont#TextIndexSelector">Text Index Selector</a></li>
   <li><a href="#TimeRangeSelector" title="https://qaecy.com/dev/ont#TimeRangeSelector">Time Range Selector</a></li>
-  <li><a href="#XYWHSelector" title="https://qaecy.com/dev/ont#XYWHSelector">XYWH Selector</a></li>
+  <li><a href="#XYWHSelector" title="https://qaecy.com/dev/ont#XYWHSelector"> <span>XYWH Selector</span> </a></li>
  </ul>
  <div class="entity" id="CanonicalEntity">
   <h3>Canonical Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -290,7 +290,7 @@ This section provides details for each class and property defined by The QAECY O
     is in domain of
    </dt>
    <dd>
-    <a href="#alternativeRepresentation" title="https://qaecy.com/dev/ont#alternativeRepresentation">alternative representation</a> <sup class="type-op" title="object property">op</sup>, <a href="#textRaw" title="https://qaecy.com/dev/ont#textRaw">text raw</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#inferredFragmentType" title="https://qaecy.com/dev/ont#inferredFragmentType">inferred fragment type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#textRaw" title="https://qaecy.com/dev/ont#textRaw">text raw</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -377,7 +377,7 @@ This section provides details for each class and property defined by The QAECY O
     is in domain of
    </dt>
    <dd>
-    <a href="#about" title="https://qaecy.com/dev/ont#about">about</a> <sup class="type-op" title="object property">op</sup>, <a href="#containsFragment" title="https://qaecy.com/dev/ont#containsFragment">contains fragment</a> <sup class="type-op" title="object property">op</sup>, <a href="#contentCategory" title="https://qaecy.com/dev/ont#contentCategory">content category</a> <sup class="type-op" title="object property">op</sup>, <a href="#language" title="https://qaecy.com/dev/ont#language">language</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a> <sup class="type-op" title="object property">op</sup>, <a href="#tag" title="https://qaecy.com/dev/ont#tag">tag</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#textSummary" title="https://qaecy.com/dev/ont#textSummary">text summary</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#about" title="https://qaecy.com/dev/ont#about">about</a> <sup class="type-op" title="object property">op</sup>, <a href="#alternativeRepresentation" title="https://qaecy.com/dev/ont#alternativeRepresentation">alternative representation</a> <sup class="type-op" title="object property">op</sup>, <a href="#containsFragment" title="https://qaecy.com/dev/ont#containsFragment">contains fragment</a> <sup class="type-op" title="object property">op</sup>, <a href="#contentCategory" title="https://qaecy.com/dev/ont#contentCategory">content category</a> <sup class="type-op" title="object property">op</sup>, <a href="#language" title="https://qaecy.com/dev/ont#language">language</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#mentions" title="https://qaecy.com/dev/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#selectorObject" title="https://qaecy.com/dev/ont#selectorObject">selector object</a> <sup class="type-op" title="object property">op</sup>, <a href="#tag" title="https://qaecy.com/dev/ont#tag">tag</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#textSummary" title="https://qaecy.com/dev/ont#textSummary">text summary</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -537,15 +537,18 @@ This section provides details for each class and property defined by The QAECY O
  <div class="entity" id="TextFragment">
   <h3>Text Fragment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://qaecy.com/dev/ont#TextFragment</p>
-  <div class="comment">
-   <span class="markdown">This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted.</span>
-  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
     <a href="#Fragment" title="https://qaecy.com/dev/ont#Fragment">Fragment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#TextFragment">named individual</a>
    </dd>
   </dl>
  </div>
@@ -582,15 +585,18 @@ This section provides details for each class and property defined by The QAECY O
  <div class="entity" id="XYWHSelector">
   <h3>XYWH Selector<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://qaecy.com/dev/ont#XYWHSelector</p>
-  <div class="comment">
-   <span class="markdown">The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document.</span>
-  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
     <a href="#Selector" title="https://qaecy.com/dev/ont#Selector">Selector</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#XYWHSelector">named individual</a>
    </dd>
   </dl>
  </div>
@@ -695,7 +701,7 @@ This section provides details for each class and property defined by The QAECY O
      has domain
     </dt>
     <dd>
-     <a href="#Fragment" title="https://qaecy.com/dev/ont#Fragment">Fragment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#InformationObject" title="https://qaecy.com/dev/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1471,6 +1477,8 @@ This section provides details for each class and property defined by The QAECY O
   <li><a href="#explicit" title="https://qaecy.com/dev/ont#explicit">explicit</a></li>
   <li><a href="#filePath" title="https://qaecy.com/dev/ont#filePath">file path</a></li>
   <li><a href="#suffix" title="https://qaecy.com/dev/ont#suffix"> <span>file suffix</span> </a></li>
+  <li><a href="#inferredFragmentType" title="https://qaecy.com/dev/ont#inferredFragmentType">inferred fragment type</a></li>
+  <li><a href="#iriPattern" title="https://qaecy.com/dev/ont#iriPattern">IRI pattern</a></li>
   <li><a href="#label" title="https://qaecy.com/dev/ont#label">label</a></li>
   <li><a href="#language" title="https://qaecy.com/dev/ont#language"> <span>language</span> </a></li>
   <li><a href="#md5Hash" title="https://qaecy.com/dev/ont#md5Hash"> <span>MD5 hash</span> </a></li>
@@ -1625,6 +1633,52 @@ This section provides details for each class and property defined by The QAECY O
     </dt>
     <dd>
      <a href="#suffix">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="inferredFragmentType">
+  <h3>inferred fragment type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#inferredFragmentType</p>
+  <div class="comment">
+   <span class="markdown">Text value that provides more information about what type of fragment. Typically inferred by libraries like Unstructured.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Fragment" title="https://qaecy.com/dev/ont#Fragment">Fragment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="iriPattern">
+  <h3>IRI pattern<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://qaecy.com/dev/ont#iriPattern</p>
+  <div class="comment">
+   <span class="markdown">The IRI pattern is what is fed to the contextBasedIRI function described in pseudo code. For example "&lt;parentUUID&gt;_g" which for t parent UUID "d1d55833-bc18-443f-959d-b692c696c29a" would translate to "d1d55833-bc18-443f-959d-b692c696c29a_g" which would ultimately result in the final QAECY UUID &lt;e162fc83-71fb-5085-a201-650e131a3b9c&gt;.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>

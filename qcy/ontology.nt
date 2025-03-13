@@ -4,7 +4,7 @@
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-07T12:08:41Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/modified> "2025-03-13T15:04:46Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://qaecy.com/dev/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://qaecy.com/dev/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://qaecy.com/dev/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -66,7 +66,7 @@
 # 
 # https://qaecy.com/dev/ont#alternativeRepresentation
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#InformationObject> .
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://qaecy.com/dev/ont#FileLocation> .
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content." .
 <https://qaecy.com/dev/ont#alternativeRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "alternative representation"@en .
@@ -316,6 +316,22 @@
 <https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#comment> "The file path property specifies the location of a file on a storage system. This is always a relative path in relation to the project directory on a cloud storage provider."@en .
 <https://qaecy.com/dev/ont#filePath> <http://www.w3.org/2000/01/rdf-schema#label> "file path"@en .
 <https://qaecy.com/dev/ont#filePath> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#inferredFragmentType
+<https://qaecy.com/dev/ont#inferredFragmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#inferredFragmentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://qaecy.com/dev/ont#Fragment> .
+<https://qaecy.com/dev/ont#inferredFragmentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://qaecy.com/dev/ont#inferredFragmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Text value that provides more information about what type of fragment. Typically inferred by libraries like Unstructured."@en .
+<https://qaecy.com/dev/ont#inferredFragmentType> <http://www.w3.org/2000/01/rdf-schema#label> "inferred fragment type"@en .
+<https://qaecy.com/dev/ont#inferredFragmentType> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://qaecy.com/dev/ont#iriPattern
+<https://qaecy.com/dev/ont#iriPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://qaecy.com/dev/ont#iriPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://qaecy.com/dev/ont#iriPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://qaecy.com/dev/ont#iriPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "The IRI pattern is what is fed to the contextBasedIRI function described in pseudo code. For example \"<parentUUID>_g\" which for t parent UUID \"d1d55833-bc18-443f-959d-b692c696c29a\" would translate to \"d1d55833-bc18-443f-959d-b692c696c29a_g\" which would ultimately result in the final QAECY UUID <e162fc83-71fb-5085-a201-650e131a3b9c>."@en .
+<https://qaecy.com/dev/ont#iriPattern> <http://www.w3.org/2000/01/rdf-schema#label> "IRI pattern"@en .
+<https://qaecy.com/dev/ont#iriPattern> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://qaecy.com/dev/ont#label
 <https://qaecy.com/dev/ont#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -622,9 +638,6 @@
 # https://qaecy.com/dev/ont#TextFragment
 <https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Fragment> .
-<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en .
-<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Text Fragment"@en .
-<https://qaecy.com/dev/ont#TextFragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://qaecy.com/dev/ont#TextIndexSelector
 <https://qaecy.com/dev/ont#TextIndexSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -644,10 +657,6 @@
 # https://qaecy.com/dev/ont#XYWHSelector
 <https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://qaecy.com/dev/ont#Selector> .
-<https://qaecy.com/dev/ont#XYWHSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
-<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
-<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#label> "XYWH Selector"@en .
-<https://qaecy.com/dev/ont#XYWHSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://qaecy.com/dev/ont#relatedEntity
 # 
@@ -713,6 +722,14 @@
 # 
 # https://qaecy.com/dev/enum#Space
 <https://qaecy.com/dev/enum#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://qaecy.com/dev/ont#TextFragment
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#TextFragment> <https://qaecy.com/dev/ont#iriPattern> "<parentUUID><selectorUUID>"@en .
+# 
+# https://qaecy.com/dev/ont#XYWHSelector
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://qaecy.com/dev/ont#XYWHSelector> <https://qaecy.com/dev/ont#iriPattern> "<parentUUID><xywhString>" .
 # 
 # https://qaecy.com/dev/ont#adjacentElement
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -830,6 +847,15 @@
 # #
 # #################################################################
 # 
+# 
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en .
+<https://qaecy.com/dev/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Text Fragment"@en .
+<https://qaecy.com/dev/ont#TextFragment> <https://qaecy.com/dev/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://qaecy.com/dev/ont#XYWHSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
+<https://qaecy.com/dev/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#label> "XYWH Selector"@en .
+<https://qaecy.com/dev/ont#XYWHSelector> <https://qaecy.com/dev/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone/element and an adjacent element." .
 <https://qaecy.com/dev/ont#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent element"@en .

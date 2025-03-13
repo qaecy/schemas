@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-03-07T12:08:41Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2025-03-13T15:04:46Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.1" .
@@ -77,7 +77,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://qaecy.com/dev/ont#alternativeRepresentation
 :alternativeRepresentation rdf:type owl:ObjectProperty ;
-                           rdfs:domain :Fragment ;
+                           rdfs:domain :InformationObject ;
                            rdfs:range :FileLocation ;
                            rdfs:comment "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content." ;
                            rdfs:label "alternative representation"@en ;
@@ -353,6 +353,24 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           rdfs:comment "The file path property specifies the location of a file on a storage system. This is always a relative path in relation to the project directory on a cloud storage provider."@en ;
           rdfs:label "file path"@en ;
           :visibleForAgent "true"^^xsd:boolean .
+
+
+###  https://qaecy.com/dev/ont#inferredFragmentType
+:inferredFragmentType rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Fragment ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Text value that provides more information about what type of fragment. Typically inferred by libraries like Unstructured."@en ;
+                      rdfs:label "inferred fragment type"@en ;
+                      :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://qaecy.com/dev/ont#iriPattern
+:iriPattern rdf:type owl:DatatypeProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The IRI pattern is what is fed to the contextBasedIRI function described in pseudo code. For example \"<parentUUID>_g\" which for t parent UUID \"d1d55833-bc18-443f-959d-b692c696c29a\" would translate to \"d1d55833-bc18-443f-959d-b692c696c29a_g\" which would ultimately result in the final QAECY UUID <e162fc83-71fb-5085-a201-650e131a3b9c>."@en ;
+            rdfs:label "IRI pattern"@en ;
+            :visibleForAgent "false"^^xsd:boolean .
 
 
 ###  https://qaecy.com/dev/ont#label
@@ -694,10 +712,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://qaecy.com/dev/ont#TextFragment
 :TextFragment rdf:type owl:Class ;
-              rdfs:subClassOf :Fragment ;
-              rdfs:comment "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en ;
-              rdfs:label "Text Fragment"@en ;
-              :visibleForAgent "true"^^xsd:boolean .
+              rdfs:subClassOf :Fragment .
 
 
 ###  https://qaecy.com/dev/ont#TextIndexSelector
@@ -719,11 +734,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://qaecy.com/dev/ont#XYWHSelector
 :XYWHSelector rdf:type owl:Class ;
-              rdfs:subClassOf :Selector ;
-              <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> ;
-              rdfs:comment "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en ;
-              rdfs:label "XYWH Selector"@en ;
-              :visibleForAgent "false"^^xsd:boolean .
+              rdfs:subClassOf :Selector .
 
 
 ###  https://qaecy.com/dev/ont#relatedEntity
@@ -804,6 +815,16 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://qaecy.com/dev/enum#Space
 <https://qaecy.com/dev/enum#Space> rdf:type owl:NamedIndividual .
+
+
+###  https://qaecy.com/dev/ont#TextFragment
+:TextFragment rdf:type owl:NamedIndividual ;
+              :iriPattern "<parentUUID><selectorUUID>"@en .
+
+
+###  https://qaecy.com/dev/ont#XYWHSelector
+:XYWHSelector rdf:type owl:NamedIndividual ;
+              :iriPattern "<parentUUID><xywhString>" .
 
 
 ###  https://qaecy.com/dev/ont#adjacentElement
@@ -937,6 +958,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 #################################################################
 #    Annotations
 #################################################################
+
+:TextFragment rdfs:comment "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en ;
+              rdfs:label "Text Fragment"@en ;
+              :visibleForAgent "true"^^xsd:boolean .
+
+
+:XYWHSelector <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> ;
+              rdfs:comment "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en ;
+              rdfs:label "XYWH Selector"@en ;
+              :visibleForAgent "false"^^xsd:boolean .
+
 
 :adjacentElement rdfs:comment "Relationship between a zone/element and an adjacent element." ;
                  rdfs:label "adjacent element"@en ;

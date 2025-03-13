@@ -88,7 +88,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-03-07T12:08:41Z"
+    "@value" : "2025-03-13T15:04:46Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -516,7 +516,7 @@
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/ont#TextFragment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."
@@ -527,6 +527,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://qaecy.com/dev/ont#Fragment"
+  } ],
+  "https://qaecy.com/dev/ont#iriPattern" : [ {
+    "@language" : "en",
+    "@value" : "<parentUUID><selectorUUID>"
   } ],
   "https://qaecy.com/dev/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -573,7 +577,7 @@
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/ont#XYWHSelector",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/conformsTo" : [ {
     "@id" : "http://www.w3.org/TR/media-frags/"
   } ],
@@ -587,6 +591,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://qaecy.com/dev/ont#Selector"
+  } ],
+  "https://qaecy.com/dev/ont#iriPattern" : [ {
+    "@value" : "<parentUUID><xywhString>"
   } ],
   "https://qaecy.com/dev/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -655,7 +662,7 @@
     "@value" : "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://qaecy.com/dev/ont#Fragment"
+    "@id" : "https://qaecy.com/dev/ont#InformationObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1177,6 +1184,48 @@
   "https://qaecy.com/dev/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#inferredFragmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Text value that provides more information about what type of fragment. Typically inferred by libraries like Unstructured."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://qaecy.com/dev/ont#Fragment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "inferred fragment type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "https://qaecy.com/dev/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ]
+}, {
+  "@id" : "https://qaecy.com/dev/ont#iriPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The IRI pattern is what is fed to the contextBasedIRI function described in pseudo code. For example \"<parentUUID>_g\" which for t parent UUID \"d1d55833-bc18-443f-959d-b692c696c29a\" would translate to \"d1d55833-bc18-443f-959d-b692c696c29a_g\" which would ultimately result in the final QAECY UUID <e162fc83-71fb-5085-a201-650e131a3b9c>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "IRI pattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "https://qaecy.com/dev/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://qaecy.com/dev/ont#label",
