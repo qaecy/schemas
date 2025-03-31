@@ -23,13 +23,16 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#definition",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#extractionPrompt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#related",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#",
+  "@id" : "https://dev.qaecy.com/enum#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Christian Frausing"
@@ -43,7 +46,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-03-06T14:23:11Z"
+    "@value" : "2025-03-27T08:30:24Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -53,24 +56,12 @@
     "@value" : "qcy-e"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#3DModel",
+  "@id" : "https://dev.qaecy.com/enum#AWS",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A three-dimensional model."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "3D Model"
-  } ]
-}, {
-  "@id" : "https://qaecy.com/dev/enum#AWS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ProviderType"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -81,22 +72,76 @@
     "@value" : "Amazon Web Services"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Activity",
+  "@id" : "https://dev.qaecy.com/enum#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Activity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "An activity or process related to the construction or maintenance of a building or infrastructure."
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Azure",
+  "@id" : "https://dev.qaecy.com/enum#ArchiveFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for archive file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Archive File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#AudioFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for audio file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Audio File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#AutomationFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for automation file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Automation File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Azure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ProviderType"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -107,10 +152,12 @@
     "@value" : "Azure"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#BIMFileContent",
+  "@id" : "https://dev.qaecy.com/enum#BIMFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -121,60 +168,100 @@
     "@value" : "BIM File Content"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Balcony",
+  "@id" : "https://dev.qaecy.com/enum#BackupFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for backup file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Backup File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Balcony",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Balcony"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/rec#Balcony"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Beam",
+  "@id" : "https://dev.qaecy.com/enum#Beam",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Beam"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Beam"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Building",
+  "@id" : "https://dev.qaecy.com/enum#BinaryFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for binary file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Binary File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Building",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://qaecy.com/dev/enum#Site"
+    "@id" : "https://dev.qaecy.com/enum#BuildingZone"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Site"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Building"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/bot#Building"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#BuildingElement",
+  "@id" : "https://dev.qaecy.com/enum#BuildingElement",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -184,16 +271,22 @@
     "@language" : "en",
     "@value" : "Building Element"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "Any tangible part of a building, identified by a name or an id."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/bot#Element"
   }, {
     "@id" : "https://w3id.org/rec#BuildingElement"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#BuildingPermit",
+  "@id" : "https://dev.qaecy.com/enum#BuildingPermit",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -204,10 +297,46 @@
     "@value" : "Building Permit"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#CADFileContent",
+  "@id" : "https://dev.qaecy.com/enum#BuildingStoreyInterface",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Building/Storey Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#BuildingZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Building Zone"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "Any spatial decomposition of a building project, identified by name or id."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#CADFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -218,10 +347,12 @@
     "@value" : "CAD File Content"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#ChangeOrder",
+  "@id" : "https://dev.qaecy.com/enum#ChangeOrder",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -232,25 +363,30 @@
     "@value" : "Change Order"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Column",
+  "@id" : "https://dev.qaecy.com/enum#Column",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Column"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Column"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Contract",
+  "@id" : "https://dev.qaecy.com/enum#Contract",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -261,28 +397,68 @@
     "@value" : "Contract"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Date",
+  "@id" : "https://dev.qaecy.com/enum#DataFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for data file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Data File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Date"
   } ],
-  "https://qaecy.com/dev/ont#regex" : [ {
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A date, transformed to YYYY-MM-DD format."
+  } ],
+  "https://dev.qaecy.com/ont#regex" : [ {
     "@value" : "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "http://schema.org/Date"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Drawing",
+  "@id" : "https://dev.qaecy.com/enum#Door",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Door"
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/beo#Door"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Drawing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -293,80 +469,118 @@
     "@value" : "Drawing"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#EmailAddress",
+  "@id" : "https://dev.qaecy.com/enum#ElementAdjacentElementInterface",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Element/Adjacent element Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#EmailAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Email Address"
   } ],
-  "https://qaecy.com/dev/ont#regex" : [ {
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "An email address."
+  } ],
+  "https://dev.qaecy.com/ont#regex" : [ {
     "@value" : "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Equipment",
+  "@id" : "https://dev.qaecy.com/enum#EmailFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for email file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Email File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Equipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Equipment"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A piece of equipment, a device, a tool or a machine used in construction or maintenance."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/rec#Equipment"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Facade",
+  "@id" : "https://dev.qaecy.com/enum#Facade",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Facade"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
-    "@id" : "https://qaecy.com/dev/enum#Wall"
+    "@id" : "https://dev.qaecy.com/enum#Wall"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/rec#Facade"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Floor",
+  "@id" : "https://dev.qaecy.com/enum#FontFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://qaecy.com/dev/enum#Building"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Floor in a building"
+    "@value" : "Category for font file content"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Floor"
-  } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/bot#Storey"
+    "@value" : "Font File Content"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#GCP",
+  "@id" : "https://dev.qaecy.com/enum#GCP",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ProviderType"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -377,10 +591,83 @@
     "@value" : "Google Cloud Platform"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#LocalProvider",
+  "@id" : "https://dev.qaecy.com/enum#GeospatialFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ProviderType"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for geospatial file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Geospatial File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ImageFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for image file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Image File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#InstallerFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for installer file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Installer File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Interface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Abstract category for some interface used to quantify the relationship between two entities"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "An interface that quantifies the relationship between two building entities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Interface"
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#LocalProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ProviderType"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -391,64 +678,133 @@
     "@value" : "Local provider"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Location",
+  "@id" : "https://dev.qaecy.com/enum#Location",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Location"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A physical location, place or postal code."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "http://schema.org/Place"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Material",
+  "@id" : "https://dev.qaecy.com/enum#MarkupFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for markup file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Markup File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Material"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A mention of some material."
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#ObjectId",
+  "@id" : "https://dev.qaecy.com/enum#MultimediaFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for multimedia file content"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "ObjectId"
+    "@value" : "Multimedia File Content"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Organization",
+  "@id" : "https://dev.qaecy.com/enum#ObjectId",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Object Id"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A special coding, classification or identifier for some physical or virtual object used in a building project."
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#OpeningElementInterface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The void of the parent element which is filled by the child element"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Opening Element Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Organization"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A company, organization, corporation or institution, identified by name/title."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "http://schema.org/Organization"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#OtherContent",
+  "@id" : "https://dev.qaecy.com/enum#OtherContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -459,37 +815,79 @@
     "@value" : "Other content"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Person",
+  "@id" : "https://dev.qaecy.com/enum#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Person"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A person, identified by name or abreviation."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "http://schema.org/Person"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Project",
+  "@id" : "https://dev.qaecy.com/enum#PlanningFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for planning file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Planning File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#PresentationFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for presentation file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Presentation File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Project"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A building project, identified by its title, name or id."
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Regulation",
+  "@id" : "https://dev.qaecy.com/enum#Regulation",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -500,10 +898,12 @@
     "@value" : "Regulation"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Report",
+  "@id" : "https://dev.qaecy.com/enum#Report",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -514,76 +914,136 @@
     "@value" : "Report"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Requirement",
+  "@id" : "https://dev.qaecy.com/enum#Roof",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Requirement"
-  } ]
-}, {
-  "@id" : "https://qaecy.com/dev/enum#Roof",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Roof"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Roof"
   }, {
     "@id" : "https://w3id.org/rec#Roof"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Site",
+  "@id" : "https://dev.qaecy.com/enum#SafetyDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A document regaring safety measures."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Safety Document"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Schedule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A construction schedule."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Schedule"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ScriptFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for script file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Script File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingZone"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Site"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/bot#Site"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Slab",
+  "@id" : "https://dev.qaecy.com/enum#SiteBuildingInterface",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Site/Building Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Slab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Slab"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Slab"
   }, {
     "@id" : "https://w3id.org/rec#Slab"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Space",
+  "@id" : "https://dev.qaecy.com/enum#Space",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://qaecy.com/dev/enum#Floor"
+    "@id" : "https://dev.qaecy.com/enum#BuildingZone"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -593,14 +1053,46 @@
     "@language" : "en",
     "@value" : "Space"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/bot#Space"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Specification",
+  "@id" : "https://dev.qaecy.com/enum#SpaceAdjacentElementInterface",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Space/Adjacent element Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#SpaceContainedElementInterface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Space/Contained element Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Specification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -611,37 +1103,110 @@
     "@value" : "Specification"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Stair",
+  "@id" : "https://dev.qaecy.com/enum#SpreadsheetFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for spreadsheet file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Spreadsheet File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Stair",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Stair"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Stair"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Standard",
+  "@id" : "https://dev.qaecy.com/enum#Standard",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Standard"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A reference of a standard or iso, by name/code."
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Tender",
+  "@id" : "https://dev.qaecy.com/enum#Storey",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#ContentCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingZone"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Storey"
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Storey"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#StoreyElementInterface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Storey/Element Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#StoreySpaceInterface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Interface"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Storey/Space Interface"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Tender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -652,10 +1217,12 @@
     "@value" : "Tender"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#TextFileContent",
+  "@id" : "https://dev.qaecy.com/enum#TextFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://qaecy.com/dev/ont#MimeCategory"
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -666,53 +1233,110 @@
     "@value" : "Text File Content"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Wall",
+  "@id" : "https://dev.qaecy.com/enum#ThreeDFileContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for 3D file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "3D File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#UnknownFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for unknown file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Unknown File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#VideoFileContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#MimeCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category for video file content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Video File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Wall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Wall"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Wall"
   }, {
     "@id" : "https://w3id.org/rec#Wall"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/enum#Window",
+  "@id" : "https://dev.qaecy.com/enum#Window",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   }, {
-    "@id" : "https://qaecy.com/dev/ont#EntityCategory"
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Window"
   } ],
-  "https://qaecy.com/dev/ont#relatedFormalClass" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Window"
   } ]
 }, {
-  "@id" : "https://qaecy.com/dev/ont#ContentCategory",
+  "@id" : "https://dev.qaecy.com/ont#ContentCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://qaecy.com/dev/ont#EntityCategory",
+  "@id" : "https://dev.qaecy.com/ont#EntityCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://qaecy.com/dev/ont#MimeCategory",
+  "@id" : "https://dev.qaecy.com/ont#MimeCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://qaecy.com/dev/ont#ProviderType",
+  "@id" : "https://dev.qaecy.com/ont#ProviderType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://qaecy.com/dev/ont#regex",
+  "@id" : "https://dev.qaecy.com/ont#extractionPrompt",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://qaecy.com/dev/ont#relatedFormalClass",
+  "@id" : "https://dev.qaecy.com/ont#regex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#relatedFormalClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

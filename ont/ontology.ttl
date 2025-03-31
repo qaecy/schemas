@@ -1,12 +1,12 @@
-@prefix : <https://qaecy.com/dev/ont#> .
+@prefix : <https://dev.qaecy.com/ont#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://qaecy.com/dev/ont#> .
+@base <https://dev.qaecy.com/ont#> .
 
-<https://qaecy.com/dev/ont#> rdf:type owl:Ontology ;
+<https://dev.qaecy.com/ont#> rdf:type owl:Ontology ;
                               owl:versionIRI <https://qaecy.com/dev/ont/qcy-0.0.1> ;
                               <http://purl.org/dc/terms/creator> "Christian Frausing" ,
                                                                  "Mads Holten Rasmussen" ,
@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-03-13T15:44:43Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2025-03-31T10:42:36Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.1" .
@@ -51,7 +51,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
 
 
-###  https://qaecy.com/dev/ont#visibleForAgent
+###  https://dev.qaecy.com/ont#visibleForAgent
 :visibleForAgent rdf:type owl:AnnotationProperty .
 
 
@@ -59,7 +59,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 #    Object Properties
 #################################################################
 
-###  https://qaecy.com/dev/ont#about
+###  https://dev.qaecy.com/ont#about
 :about rdf:type owl:ObjectProperty ;
        rdfs:domain :InformationObject ;
        rdfs:range :CanonicalEntity ;
@@ -68,14 +68,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
        :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#adjacentElement
+###  https://dev.qaecy.com/ont#adjacentElement
 :adjacentElement rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :relatedEntity ;
+                 rdfs:subPropertyOf :hasElement ;
                  rdfs:domain :EntityReference ;
                  rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#adjacentFragment
+###  https://dev.qaecy.com/ont#adjacentFragment
 :adjacentFragment rdf:type owl:ObjectProperty ;
                   rdfs:domain :Fragment ;
                   rdfs:range :Fragment ;
@@ -84,7 +84,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#alternativeRepresentation
+###  https://dev.qaecy.com/ont#alternativeRepresentation
 :alternativeRepresentation rdf:type owl:ObjectProperty ;
                            rdfs:domain :InformationObject ;
                            rdfs:range :FileLocation ;
@@ -93,7 +93,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                            :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#applicableObjectCategories
+###  https://dev.qaecy.com/ont#applicableObjectCategories
 :applicableObjectCategories rdf:type owl:ObjectProperty ;
                             rdfs:domain :relatedEntity ;
                             rdfs:range :EntityCategory ;
@@ -102,7 +102,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                             :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#applicableSubjectCategories
+###  https://dev.qaecy.com/ont#applicableSubjectCategories
 :applicableSubjectCategories rdf:type owl:ObjectProperty ;
                              rdfs:domain :relatedEntity ;
                              rdfs:range :EntityCategory ;
@@ -111,28 +111,28 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                              :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#associatedWith
+###  https://dev.qaecy.com/ont#associatedWith
 :associatedWith rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :relatedEntity ;
                 rdfs:domain :EntityReference ;
                 rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#containsElement
+###  https://dev.qaecy.com/ont#containsBuilding
+:containsBuilding rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relatedEntity ;
+                  rdfs:domain :EntityReference ;
+                  rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#containsElement
 :containsElement rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :relatedEntity ;
+                 rdfs:subPropertyOf :hasElement ;
                  rdfs:domain :EntityReference ;
                  rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#containsFloor
-:containsFloor rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :relatedEntity ;
-               rdfs:domain :EntityReference ;
-               rdfs:range :EntityReference .
-
-
-###  https://qaecy.com/dev/ont#containsFragment
+###  https://dev.qaecy.com/ont#containsFragment
 :containsFragment rdf:type owl:ObjectProperty ;
                   rdfs:domain :InformationObject ;
                   rdfs:range :Fragment ;
@@ -141,41 +141,35 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#containsSpace
+###  https://dev.qaecy.com/ont#containsSpace
 :containsSpace rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :relatedEntity ;
                rdfs:domain :EntityReference ;
                rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#contentCategory
-:contentCategory rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :hasCategory ;
-                 rdfs:domain :InformationObject ;
-                 rdfs:range :ContentCategory ;
-                 rdfs:comment "Relationship between a qcy:InformationObject (typically a whole document or a page in a document) and its qcy:ContentCategory derived from its content." ;
-                 rdfs:label "content category"@en ;
-                 :visibleForAgent "true"^^xsd:boolean .
+###  https://dev.qaecy.com/ont#containsStorey
+:containsStorey rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatedEntity ;
+                rdfs:domain :EntityReference ;
+                rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#endDate
+###  https://dev.qaecy.com/ont#endDate
 :endDate rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :relatedEntity ;
          rdfs:domain :EntityReference ;
          rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#entityCategory
-:entityCategory rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :hasCategory ;
-                rdfs:domain :EntityReference ;
-                rdfs:range :EntityCategory ;
-                rdfs:comment "Relationship between a qcy:EntityReference and one or more qcy:EntityCategory." ;
-                rdfs:label "entity category"@en ;
-                :visibleForAgent "true"^^xsd:boolean .
+###  https://dev.qaecy.com/ont#hasAgent
+:hasAgent rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :relatedEntity ;
+          rdfs:domain :EntityReference ;
+          rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#hasCategory
+###  https://dev.qaecy.com/ont#hasCategory
 :hasCategory rdf:type owl:ObjectProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range :Category ;
@@ -184,14 +178,55 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#hasEmailAddress
+###  https://dev.qaecy.com/ont#hasContentCategory
+:hasContentCategory rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasCategory ;
+                    rdfs:domain :InformationObject ;
+                    rdfs:range :ContentCategory ;
+                    rdfs:comment "Relationship between a qcy:InformationObject (typically a whole document or a page in a document) and its qcy:ContentCategory derived from its content." ;
+                    rdfs:label "has content category"@en ;
+                    :visibleForAgent "true"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#hasElement
+:hasElement rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :relatedEntity ;
+            rdfs:domain :EntityReference ;
+            rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasEmailAddress
 :hasEmailAddress rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :relatedEntity ;
                  rdfs:domain :EntityReference ;
                  rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#hasFileLocation
+###  https://dev.qaecy.com/ont#hasEmailReceiver
+:hasEmailReceiver rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relatedEntity ;
+                  rdfs:domain :EntityReference ;
+                  rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasEmailSender
+:hasEmailSender rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatedEntity ;
+                rdfs:domain :EntityReference ;
+                rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasEntityCategory
+:hasEntityCategory rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasCategory ;
+                   rdfs:domain :EntityReference ;
+                   rdfs:range :EntityCategory ;
+                   rdfs:comment "Relationship between a qcy:EntityReference and one or more qcy:EntityCategory." ;
+                   rdfs:label "has entity category"@en ;
+                   :visibleForAgent "true"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#hasFileLocation
 :hasFileLocation rdf:type owl:ObjectProperty ;
                  rdfs:domain :FileContent ;
                  rdfs:range :FileLocation ;
@@ -200,14 +235,24 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#hasMaterial
+###  https://dev.qaecy.com/ont#hasMaterial
 :hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :relatedEntity ;
              rdfs:domain :EntityReference ;
              rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#hasProperty
+###  https://dev.qaecy.com/ont#hasMimeCategory
+:hasMimeCategory rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasCategory ;
+                 rdfs:domain :FileContent ;
+                 rdfs:range :MimeCategory ;
+                 rdfs:comment "Relationship between a qcy:FileContent object and its qcy:MimeCategory derived from its mimetype." ;
+                 rdfs:label "has mime category"@en ;
+                 :visibleForAgent "true"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#hasProperty
 :hasProperty rdf:type owl:ObjectProperty ;
              rdfs:domain :EntityReference ;
              rdfs:range :Property ;
@@ -216,7 +261,21 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#mentions
+###  https://dev.qaecy.com/ont#hasSubElement
+:hasSubElement rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasSubElement ;
+               rdfs:domain :EntityReference ;
+               rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#interfaceOf
+:interfaceOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :relatedEntity ;
+             rdfs:domain :EntityReference ;
+             rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#mentions
 :mentions rdf:type owl:ObjectProperty ;
           rdfs:domain :InformationObject ;
           rdfs:range :EntityMention ;
@@ -225,23 +284,29 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#mimeCategory
-:mimeCategory rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasCategory ;
-              rdfs:domain :FileContent ;
-              rdfs:range :MimeCategory ;
-              rdfs:comment "Relationship between a qcy:FileContent object and its qcy:MimeCategory derived from its mimetype." ;
-              rdfs:label "mime category"@en ;
-              :visibleForAgent "true"^^xsd:boolean .
+###  https://dev.qaecy.com/ont#parentFragment
+:parentFragment rdf:type owl:ObjectProperty ;
+                rdfs:domain :Fragment ;
+                rdfs:range :Fragment ;
+                rdfs:comment "Relationship between a parent fragments (eg a title) and a child fragment (eg a paragraph)." ;
+                rdfs:label "parent fragment"@en ;
+                :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#relatedEntity
+###  https://dev.qaecy.com/ont#precedesActivity
+:precedesActivity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relatedEntity ;
+                  rdfs:domain :EntityReference ;
+                  rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#relatedEntity
 :relatedEntity rdf:type owl:ObjectProperty ;
                rdfs:domain :EntityReference ;
                rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#relatedFormalClass
+###  https://dev.qaecy.com/ont#relatedFormalClass
 :relatedFormalClass rdf:type owl:ObjectProperty ;
                     rdfs:domain :Category ;
                     rdfs:range owl:Thing ;
@@ -250,36 +315,36 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                     :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#relatedFormalProperty
+###  https://dev.qaecy.com/ont#relatedFormalProperty
 :relatedFormalProperty rdf:type owl:ObjectProperty ;
                        rdfs:domain :relatedEntity ;
                        rdfs:range owl:Thing ;
-                       rdfs:comment "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:containsFloor qcy:relatedFormalClass bot:hasStorey)." ;
+                       rdfs:comment "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:containsStorey qcy:relatedFormalClass bot:hasStorey)." ;
                        rdfs:label "related formal property"@en ;
                        :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#remoteProviderType
+###  https://dev.qaecy.com/ont#remoteProviderType
 :remoteProviderType rdf:type owl:ObjectProperty ;
                     rdfs:domain :FileLocation ;
                     rdfs:range :ProviderType .
 
 
-###  https://qaecy.com/dev/ont#requiresEquipment
+###  https://dev.qaecy.com/ont#requiresEquipment
 :requiresEquipment rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :relatedEntity ;
                    rdfs:domain :EntityReference ;
                    rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#requiresMaterial
+###  https://dev.qaecy.com/ont#requiresMaterial
 :requiresMaterial rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :relatedEntity ;
                   rdfs:domain :EntityReference ;
                   rdfs:range :EntityReference .
 
 
-###  https://qaecy.com/dev/ont#resolvesTo
+###  https://dev.qaecy.com/ont#resolvesTo
 :resolvesTo rdf:type owl:ObjectProperty ;
             rdfs:domain :EntityMention ;
             rdfs:range :CanonicalEntity ;
@@ -288,7 +353,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
             :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#selectorObject
+###  https://dev.qaecy.com/ont#selectorObject
 :selectorObject rdf:type owl:ObjectProperty ;
                 rdfs:domain :Selector ;
                 rdfs:range owl:Thing ;
@@ -299,7 +364,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                 :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#selectorSubject
+###  https://dev.qaecy.com/ont#selectorSubject
 :selectorSubject rdf:type owl:ObjectProperty ;
                  rdfs:domain :Selector ;
                  rdfs:range :InformationObject ;
@@ -308,7 +373,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#startDate
+###  https://dev.qaecy.com/ont#startDate
 :startDate rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :relatedEntity ;
            rdfs:domain :EntityReference ;
@@ -319,7 +384,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 #    Data properties
 #################################################################
 
-###  https://qaecy.com/dev/ont#dateCreated
+###  https://dev.qaecy.com/ont#dateCreated
 :dateCreated rdf:type owl:DatatypeProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range xsd:dateTime ;
@@ -328,7 +393,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#dateDeleted
+###  https://dev.qaecy.com/ont#dateDeleted
 :dateDeleted rdf:type owl:DatatypeProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range xsd:dateTime ;
@@ -337,7 +402,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#dateModified
+###  https://dev.qaecy.com/ont#dateModified
 :dateModified rdf:type owl:DatatypeProperty ;
               rdfs:domain owl:Thing ;
               rdfs:range xsd:dateTime ;
@@ -346,7 +411,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
               :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#explicit
+###  https://dev.qaecy.com/ont#explicit
 :explicit rdf:type owl:DatatypeProperty ;
           rdfs:domain :CanonicalEntity ;
           rdfs:range xsd:boolean ;
@@ -355,7 +420,16 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#filePath
+###  https://dev.qaecy.com/ont#extractionPrompt
+:extractionPrompt rdf:type owl:DatatypeProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "A property specifying the prompt used to extract a certain kind of entity or relation by a LLM."@en ;
+                  rdfs:label "extraction prompt"@en ;
+                  :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#filePath
 :filePath rdf:type owl:DatatypeProperty ;
           rdfs:domain :FileLocation ;
           rdfs:range xsd:string ;
@@ -364,7 +438,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#inferredFragmentType
+###  https://dev.qaecy.com/ont#ifcPSet
+:ifcPSet rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Property ;
+         rdfs:range xsd:string .
+
+
+###  https://dev.qaecy.com/ont#inferredFragmentType
 :inferredFragmentType rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Fragment ;
                       rdfs:range xsd:string ;
@@ -373,7 +453,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#iriPattern
+###  https://dev.qaecy.com/ont#iriPattern
 :iriPattern rdf:type owl:DatatypeProperty ;
             rdfs:domain owl:Thing ;
             rdfs:range xsd:string ;
@@ -382,7 +462,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
             :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#label
+###  https://dev.qaecy.com/ont#label
 :label rdf:type owl:DatatypeProperty ;
        rdfs:domain owl:Thing ;
        rdfs:range xsd:string ;
@@ -393,31 +473,31 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
        :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#language
+###  https://dev.qaecy.com/ont#language
 :language rdf:type owl:DatatypeProperty ;
           rdfs:domain :InformationObject ;
           rdfs:range xsd:string .
 
 
-###  https://qaecy.com/dev/ont#md5Hash
+###  https://dev.qaecy.com/ont#md5Hash
 :md5Hash rdf:type owl:DatatypeProperty ;
          rdfs:domain :FileContent ;
          rdfs:range xsd:string .
 
 
-###  https://qaecy.com/dev/ont#md5HashBase64
+###  https://dev.qaecy.com/ont#md5HashBase64
 :md5HashBase64 rdf:type owl:DatatypeProperty ;
                rdfs:domain :FileContent ;
                rdfs:range xsd:string .
 
 
-###  https://qaecy.com/dev/ont#mime
+###  https://dev.qaecy.com/ont#mime
 :mime rdf:type owl:DatatypeProperty ;
       rdfs:domain :FileContent ;
       rdfs:range xsd:string .
 
 
-###  https://qaecy.com/dev/ont#openFormat
+###  https://dev.qaecy.com/ont#openFormat
 :openFormat rdf:type owl:DatatypeProperty ;
             rdfs:domain :FileContent ;
             rdfs:range xsd:boolean ;
@@ -426,7 +506,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
             :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#regex
+###  https://dev.qaecy.com/ont#regex
 :regex rdf:type owl:DatatypeProperty ;
        rdfs:domain owl:Thing ;
        rdfs:range xsd:string ;
@@ -435,7 +515,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
        :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#remoteProviderId
+###  https://dev.qaecy.com/ont#remoteProviderId
 :remoteProviderId rdf:type owl:DatatypeProperty ;
                   rdfs:domain owl:Thing ;
                   rdfs:range xsd:string ;
@@ -444,11 +524,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#remoteProviderType
+###  https://dev.qaecy.com/ont#remoteProviderType
 :remoteProviderType rdf:type owl:DatatypeProperty .
 
 
-###  https://qaecy.com/dev/ont#remoteRelativePath
+###  https://dev.qaecy.com/ont#remoteRelativePath
 :remoteRelativePath rdf:type owl:DatatypeProperty ;
                     rdfs:domain :FileLocation ;
                     rdfs:range xsd:string ;
@@ -457,31 +537,40 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                     :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#sizeBytes
+###  https://dev.qaecy.com/ont#sizeBytes
 :sizeBytes rdf:type owl:DatatypeProperty ;
            rdfs:domain :FileContent ;
            rdfs:range xsd:integer ;
            rdfs:comment "The size of the file content in bytes"@en ;
            rdfs:label "size bytes"@en ;
-           :visibleForAgent "false"^^xsd:boolean .
+           :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#suffix
+###  https://dev.qaecy.com/ont#suffix
 :suffix rdf:type owl:DatatypeProperty ;
         rdfs:domain :FileContent ;
         rdfs:range xsd:integer .
 
 
-###  https://qaecy.com/dev/ont#tableGrid
+###  https://dev.qaecy.com/ont#tableContent
+:tableContent rdf:type owl:DatatypeProperty ;
+              rdfs:domain :TableFragment ;
+              rdfs:range xsd:string ;
+              rdfs:comment "\"Processed table output, which contains a json string with the content assigned to the cells, as extracted from the input.."@en ;
+              rdfs:label "table grid content"@en ;
+              :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#tableGrid
 :tableGrid rdf:type owl:DatatypeProperty ;
            rdfs:domain :TableFragment ;
            rdfs:range xsd:string ;
-           rdfs:comment "Processed table output."@en ;
+           rdfs:comment "Processed table output, which contains a json string with a grid of cells, as extracted from the input."@en ;
            rdfs:label "table grid"@en ;
            :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#tag
+###  https://dev.qaecy.com/ont#tag
 :tag rdf:type owl:DatatypeProperty ;
      rdfs:domain owl:Thing ;
      rdfs:range xsd:string ;
@@ -491,7 +580,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
      :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#textRaw
+###  https://dev.qaecy.com/ont#textRaw
 :textRaw rdf:type owl:DatatypeProperty ;
          rdfs:domain :Fragment ;
          rdfs:range xsd:string ;
@@ -500,7 +589,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
          :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#textSummary
+###  https://dev.qaecy.com/ont#textSummary
 :textSummary rdf:type owl:DatatypeProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range xsd:string ;
@@ -510,7 +599,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#value
+###  https://dev.qaecy.com/ont#value
 :value rdf:type owl:DatatypeProperty ;
        rdfs:domain owl:Thing ;
        rdfs:range xsd:string ;
@@ -520,20 +609,16 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
        :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#visibleForExtraction
-:visibleForExtraction rdf:type owl:DatatypeProperty ;
-                      rdfs:domain owl:Thing ;
-                      rdfs:range xsd:boolean ;
-                      rdfs:comment "A boolean property specifying if the property or class is visible for the semantic extraction process. This is used to hide properties that are not relevant for the extraction."@en ;
-                      rdfs:label "visible for extraction"@en ;
-                      :visibleForAgent "false"^^xsd:boolean .
-
-
 #################################################################
 #    Classes
 #################################################################
 
-###  https://qaecy.com/dev/ont#CanonicalEntity
+###  https://dev.qaecy.com/ont#BIMEntity
+:BIMEntity rdf:type owl:Class ;
+           rdfs:subClassOf :EntityMention .
+
+
+###  https://dev.qaecy.com/ont#CanonicalEntity
 :CanonicalEntity rdf:type owl:Class ;
                  rdfs:subClassOf :EntityReference ;
                  owl:disjointWith :EntityMention ;
@@ -542,7 +627,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#Category
+###  https://dev.qaecy.com/ont#Category
 :Category rdf:type owl:Class ;
           owl:disjointWith :EntityReference ,
                            :FileLocation ,
@@ -554,7 +639,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#ContentCategory
+###  https://dev.qaecy.com/ont#ContentCategory
 :ContentCategory rdf:type owl:Class ;
                  rdfs:subClassOf :Category ;
                  rdfs:comment "Category derived from the content of the file" ;
@@ -562,7 +647,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#DocumentPageFragment
+###  https://dev.qaecy.com/ont#DocumentPageFragment
 :DocumentPageFragment rdf:type owl:Class ;
                       rdfs:subClassOf :Fragment ;
                       rdfs:comment "This special fragment constitutes a page in a paginated document."@en ;
@@ -570,7 +655,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#EntityCategory
+###  https://dev.qaecy.com/ont#EntityCategory
 :EntityCategory rdf:type owl:Class ;
                 rdfs:subClassOf :Category ;
                 rdfs:comment "Category that specifies the categories of an entity reference" ;
@@ -578,7 +663,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                 :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#EntityMention
+###  https://dev.qaecy.com/ont#EntityMention
 :EntityMention rdf:type owl:Class ;
                rdfs:subClassOf :EntityReference ;
                rdfs:comment "An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of \"Albert Einstein\" in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns."@en ;
@@ -586,7 +671,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#EntityReference
+###  https://dev.qaecy.com/ont#EntityReference
 :EntityReference rdf:type owl:Class ;
                  owl:disjointWith :FileLocation ,
                                   :InformationObject ,
@@ -597,7 +682,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#FileContent
+###  https://dev.qaecy.com/ont#FileContent
 :FileContent rdf:type owl:Class ;
              rdfs:subClassOf :InformationObject ;
              rdfs:comment "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."@en ;
@@ -605,7 +690,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#FileLocation
+###  https://dev.qaecy.com/ont#FileLocation
 :FileLocation rdf:type owl:Class ;
               owl:disjointWith :InformationObject ,
                                :Property ,
@@ -615,7 +700,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
               :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#Fragment
+###  https://dev.qaecy.com/ont#Fragment
 :Fragment rdf:type owl:Class ;
           rdfs:subClassOf :InformationObject ;
           rdfs:comment "A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."@en ;
@@ -623,7 +708,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#IDSelector
+###  https://dev.qaecy.com/ont#IDSelector
 :IDSelector rdf:type owl:Class ;
             rdfs:subClassOf :Selector ;
             rdfs:comment "The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID."@en ;
@@ -631,23 +716,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
             :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#IFCExpressIDSelector
+###  https://dev.qaecy.com/ont#IFCExpressIDSelector
 :IFCExpressIDSelector rdf:type owl:Class ;
-                      rdfs:subClassOf :Selector ;
-                      rdfs:comment "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en ;
-                      rdfs:label "IFC Express ID Selector"@en ;
-                      :visibleForAgent "false"^^xsd:boolean .
+                      rdfs:subClassOf :Selector .
 
 
-###  https://qaecy.com/dev/ont#IFCGlobalIDSelector
+###  https://dev.qaecy.com/ont#IFCGlobalIDSelector
 :IFCGlobalIDSelector rdf:type owl:Class ;
-                     rdfs:subClassOf :Selector ;
-                     rdfs:comment "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."@en ;
-                     rdfs:label "IFC Global ID Selector"@en ;
-                     :visibleForAgent "false"^^xsd:boolean .
+                     rdfs:subClassOf :Selector .
 
 
-###  https://qaecy.com/dev/ont#ImageFragment
+###  https://dev.qaecy.com/ont#ImageFragment
 :ImageFragment rdf:type owl:Class ;
                rdfs:subClassOf :Fragment ;
                rdfs:comment "This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."@en ;
@@ -655,7 +734,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#InformationObject
+###  https://dev.qaecy.com/ont#InformationObject
 :InformationObject rdf:type owl:Class ;
                    owl:disjointWith :Property ,
                                     :Selector ;
@@ -663,7 +742,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                    rdfs:label "Information Object"@en .
 
 
-###  https://qaecy.com/dev/ont#MimeCategory
+###  https://dev.qaecy.com/ont#MimeCategory
 :MimeCategory rdf:type owl:Class ;
               rdfs:subClassOf :Category ;
               rdfs:comment "Category derived from the mimetype of the file content" ;
@@ -671,7 +750,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
               :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#PageSelector
+###  https://dev.qaecy.com/ont#PageSelector
 :PageSelector rdf:type owl:Class ;
               rdfs:subClassOf :Selector ;
               rdfs:comment "A page selector specifies a particular page within a document. This special selector always always connects a qcy:FileContent object with a qcy:DocumentPage. The value is the page number starting from 1."@en ;
@@ -679,7 +758,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
               :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#Property
+###  https://dev.qaecy.com/ont#Property
 :Property rdf:type owl:Class ;
           owl:disjointWith :Selector ;
           rdfs:comment "Any quantitative or qualitative property of an entity."@en ;
@@ -687,7 +766,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#ProviderType
+###  https://dev.qaecy.com/ont#ProviderType
 :ProviderType rdf:type owl:Class ;
               rdfs:subClassOf :Category ;
               rdfs:comment "Category that specifies the type of provider" ;
@@ -695,14 +774,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
               :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#Selector
+###  https://dev.qaecy.com/ont#Selector
 :Selector rdf:type owl:Class ;
           rdfs:comment "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."@en ;
           rdfs:label "Selector"@en ;
           :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#TableFragment
+###  https://dev.qaecy.com/ont#TableFragment
 :TableFragment rdf:type owl:Class ;
                rdfs:subClassOf :Fragment ;
                rdfs:comment "This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."@en ;
@@ -710,29 +789,29 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#TextDirectiveSelector
+###  https://dev.qaecy.com/ont#TextDirectiveSelector
 :TextDirectiveSelector rdf:type owl:Class ;
                        rdfs:subClassOf :Selector ;
                        <http://purl.org/dc/terms/conformsTo> <https://wicg.github.io/scroll-to-text-fragment/> ;
-                       rdfs:comment "A text directive selector specifies a range within a text using the syntax \"#:~:text=[prefix-,]start[,end][,-suffix]\". For example, \"#:~:text=example,fragment\" would indicate a range from the first occurrence of \"example\" to the next occurrence of \"fragment\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en ;
+                       rdfs:comment "A text directive selector specifies a range within a text using the syntax \\\"#:~:text=[prefix-,]start[,end][,-suffix]\\\". For example, \\\"#:~:text=example,fragment\\\" would indicate a range from the first occurrence of \\\"example\\\" to the next occurrence of \\\"fragment\\\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en ;
                        rdfs:label "Text Directive Selector"@en ;
                        :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#TextFragment
+###  https://dev.qaecy.com/ont#TextFragment
 :TextFragment rdf:type owl:Class ;
               rdfs:subClassOf :Fragment .
 
 
-###  https://qaecy.com/dev/ont#TextIndexSelector
+###  https://dev.qaecy.com/ont#TextIndexSelector
 :TextIndexSelector rdf:type owl:Class ;
                    rdfs:subClassOf :Selector ;
-                   rdfs:comment "A text index selector specifies a range within a text using start and end separated by a comma (\"start,end\"). For example \"6,11\" on the text string \"Hello World\" would specify the subset \"World\". This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment."@en ;
+                   rdfs:comment "A text index selector specifies a range within a text using start and end separated by a comma (\\\"start,end\\\"). For example \\\"6,11\\\" on the text string \\\"Hello World\\\" would specify the subset \\\"World\\\". This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment."@en ;
                    rdfs:label "Text Index Selector"@en ;
                    :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#TimeRangeSelector
+###  https://dev.qaecy.com/ont#TimeRangeSelector
 :TimeRangeSelector rdf:type owl:Class ;
                    rdfs:subClassOf :Selector ;
                    <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> ;
@@ -741,12 +820,12 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                    :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://qaecy.com/dev/ont#XYWHSelector
+###  https://dev.qaecy.com/ont#XYWHSelector
 :XYWHSelector rdf:type owl:Class ;
               rdfs:subClassOf :Selector .
 
 
-###  https://qaecy.com/dev/ont#relatedEntity
+###  https://dev.qaecy.com/ont#relatedEntity
 :relatedEntity rdf:type owl:Class .
 
 
@@ -778,172 +857,268 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <http://schema.org/startDate> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Activity
-<https://qaecy.com/dev/enum#Activity> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Activity
+<https://dev.qaecy.com/enum#Activity> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Building
-<https://qaecy.com/dev/enum#Building> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Building
+<https://dev.qaecy.com/enum#Building> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#BuildingElement
-<https://qaecy.com/dev/enum#BuildingElement> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#BuildingElement
+<https://dev.qaecy.com/enum#BuildingElement> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Date
-<https://qaecy.com/dev/enum#Date> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Date
+<https://dev.qaecy.com/enum#Date> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#EmailAddress
-<https://qaecy.com/dev/enum#EmailAddress> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#EmailAddress
+<https://dev.qaecy.com/enum#EmailAddress> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Equipment
-<https://qaecy.com/dev/enum#Equipment> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#EmailFileContent
+<https://dev.qaecy.com/enum#EmailFileContent> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Floor
-<https://qaecy.com/dev/enum#Floor> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Equipment
+<https://dev.qaecy.com/enum#Equipment> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Material
-<https://qaecy.com/dev/enum#Material> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Material
+<https://dev.qaecy.com/enum#Material> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Organization
-<https://qaecy.com/dev/enum#Organization> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Organization
+<https://dev.qaecy.com/enum#Organization> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Person
-<https://qaecy.com/dev/enum#Person> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Person
+<https://dev.qaecy.com/enum#Person> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Site
-<https://qaecy.com/dev/enum#Site> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Site
+<https://dev.qaecy.com/enum#Site> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/enum#Space
-<https://qaecy.com/dev/enum#Space> rdf:type owl:NamedIndividual .
+###  https://dev.qaecy.com/enum#Space
+<https://dev.qaecy.com/enum#Space> rdf:type owl:NamedIndividual .
 
 
-###  https://qaecy.com/dev/ont#TextFragment
+###  https://dev.qaecy.com/enum#Storey
+<https://dev.qaecy.com/enum#Storey> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/ont#BIMEntity
+:BIMEntity rdf:type owl:NamedIndividual ;
+           :iriPattern "<docUUID><expressID>" .
+
+
+###  https://dev.qaecy.com/ont#IFCExpressIDSelector
+:IFCExpressIDSelector rdf:type owl:NamedIndividual ;
+                      :iriPattern "<objectUUID>_globalID" .
+
+
+###  https://dev.qaecy.com/ont#IFCGlobalIDSelector
+:IFCGlobalIDSelector rdf:type owl:NamedIndividual ;
+                     :iriPattern "<objectUUID>_expressID" .
+
+
+###  https://dev.qaecy.com/ont#TextFragment
 :TextFragment rdf:type owl:NamedIndividual ;
               :iriPattern "<parentUUID><selectorUUID>"@en .
 
 
-###  https://qaecy.com/dev/ont#XYWHSelector
+###  https://dev.qaecy.com/ont#XYWHSelector
 :XYWHSelector rdf:type owl:NamedIndividual ;
               :iriPattern "<parentUUID><xywhString>" .
 
 
-###  https://qaecy.com/dev/ont#adjacentElement
+###  https://dev.qaecy.com/ont#adjacentElement
 :adjacentElement rdf:type owl:NamedIndividual ;
-                 :applicableObjectCategories <https://qaecy.com/dev/enum#BuildingElement> ;
-                 :applicableSubjectCategories <https://qaecy.com/dev/enum#Building> ,
-                                              <https://qaecy.com/dev/enum#Floor> ,
-                                              <https://qaecy.com/dev/enum#Space> ;
-                 :relatedFormalProperty <https://w3id.org/bot#adjacentElement> .
+                 :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+                 :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                              <https://dev.qaecy.com/enum#Space> ,
+                                              <https://dev.qaecy.com/enum#Storey> ;
+                 :relatedFormalProperty <https://w3id.org/bot#adjacentElement> ;
+                 :extractionPrompt "A Zone is adjacent to a BuildingElement (eg a door and a space)." .
 
 
-###  https://qaecy.com/dev/ont#associatedWith
+###  https://dev.qaecy.com/ont#associatedWith
 :associatedWith rdf:type owl:NamedIndividual ;
-                :applicableObjectCategories <https://qaecy.com/dev/enum#Organization> ,
-                                            <https://qaecy.com/dev/enum#Person> ;
-                :applicableSubjectCategories <https://qaecy.com/dev/enum#Activity> ,
-                                             <https://qaecy.com/dev/enum#Person> .
+                :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                            <https://dev.qaecy.com/enum#Person> ;
+                :applicableSubjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                             <https://dev.qaecy.com/enum#Person> ;
+                :extractionPrompt "An agent (Person, Organization) is related to another agent (Person, Organization)." .
 
 
-###  https://qaecy.com/dev/ont#containsElement
+###  https://dev.qaecy.com/ont#containsBuilding
+:containsBuilding rdf:type owl:NamedIndividual ;
+                  :applicableObjectCategories <https://dev.qaecy.com/enum#Building> ;
+                  :applicableSubjectCategories <https://dev.qaecy.com/enum#Site> ;
+                  :relatedFormalProperty <https://w3id.org/bot#hasBuilding> ;
+                  :extractionPrompt "A Site contains a Building." .
+
+
+###  https://dev.qaecy.com/ont#containsElement
 :containsElement rdf:type owl:NamedIndividual ;
-                 :applicableObjectCategories <https://qaecy.com/dev/enum#BuildingElement> ;
-                 :applicableSubjectCategories <https://qaecy.com/dev/enum#Building> ,
-                                              <https://qaecy.com/dev/enum#Floor> ,
-                                              <https://qaecy.com/dev/enum#Site> ,
-                                              <https://qaecy.com/dev/enum#Space> ;
-                 :relatedFormalProperty <https://w3id.org/bot#containsElement> .
+                 :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+                 :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                              <https://dev.qaecy.com/enum#Site> ,
+                                              <https://dev.qaecy.com/enum#Space> ,
+                                              <https://dev.qaecy.com/enum#Storey> ;
+                 :relatedFormalProperty <https://w3id.org/bot#containsElement> ;
+                 :extractionPrompt "A Zone contains a BuildingElement (eg a wall in a building)." .
 
 
-###  https://qaecy.com/dev/ont#containsFloor
-:containsFloor rdf:type owl:NamedIndividual ;
-               :applicableObjectCategories <https://qaecy.com/dev/enum#Floor> ;
-               :applicableSubjectCategories <https://qaecy.com/dev/enum#Building> ,
-                                            <https://qaecy.com/dev/enum#Site> ;
-               :relatedFormalProperty <https://w3id.org/bot#hasStorey> .
-
-
-###  https://qaecy.com/dev/ont#containsSpace
+###  https://dev.qaecy.com/ont#containsSpace
 :containsSpace rdf:type owl:NamedIndividual ;
-               :applicableObjectCategories <https://qaecy.com/dev/enum#Space> ;
-               :applicableSubjectCategories <https://qaecy.com/dev/enum#Building> ,
-                                            <https://qaecy.com/dev/enum#Floor> ,
-                                            <https://qaecy.com/dev/enum#Site> ;
-               :relatedFormalProperty <https://w3id.org/bot#hasSpace> .
+               :applicableObjectCategories <https://dev.qaecy.com/enum#Space> ;
+               :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                            <https://dev.qaecy.com/enum#Site> ,
+                                            <https://dev.qaecy.com/enum#Storey> ;
+               :relatedFormalProperty <https://w3id.org/bot#hasSpace> ;
+               :extractionPrompt "A Zone contains a Space (eg a classroom on a floor)." .
 
 
-###  https://qaecy.com/dev/ont#endDate
+###  https://dev.qaecy.com/ont#containsStorey
+:containsStorey rdf:type owl:NamedIndividual ;
+                :applicableObjectCategories <https://dev.qaecy.com/enum#Storey> ;
+                :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                             <https://dev.qaecy.com/enum#Site> ;
+                :relatedFormalProperty <https://w3id.org/bot#hasStorey> ;
+                :extractionPrompt "A Building contains a Storey." .
+
+
+###  https://dev.qaecy.com/ont#endDate
 :endDate rdf:type owl:NamedIndividual ;
-         :applicableObjectCategories <https://qaecy.com/dev/enum#Date> ;
-         :applicableSubjectCategories <https://qaecy.com/dev/enum#Activity> ;
-         :relatedFormalProperty <http://schema.org/endDate> .
+         :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+         :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+         :relatedFormalProperty <http://schema.org/endDate> ;
+         :extractionPrompt "An Activity has an endDate." .
 
 
-###  https://qaecy.com/dev/ont#hasEmailAddress
+###  https://dev.qaecy.com/ont#hasAgent
+:hasAgent rdf:type owl:NamedIndividual ;
+          :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                      <https://dev.qaecy.com/enum#Person> ;
+          :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+          :extractionPrompt "An Activity that is carried out by an agent (Person, Organization)." .
+
+
+###  https://dev.qaecy.com/ont#hasElement
+:hasElement rdf:type owl:NamedIndividual ;
+            :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+            :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                         <https://dev.qaecy.com/enum#Site> ,
+                                         <https://dev.qaecy.com/enum#Space> ,
+                                         <https://dev.qaecy.com/enum#Storey> ;
+            :relatedFormalProperty <https://w3id.org/bot#hasElement> .
+
+
+###  https://dev.qaecy.com/ont#hasEmailAddress
 :hasEmailAddress rdf:type owl:NamedIndividual ;
-                 :applicableObjectCategories <https://qaecy.com/dev/enum#EmailAddress> ;
-                 :applicableSubjectCategories <https://qaecy.com/dev/enum#Organization> ,
-                                              <https://qaecy.com/dev/enum#Person> ;
-                 :relatedFormalProperty <http://schema.org/email> .
+                 :applicableObjectCategories <https://dev.qaecy.com/enum#EmailAddress> ;
+                 :applicableSubjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                              <https://dev.qaecy.com/enum#Person> ;
+                 :relatedFormalProperty <http://schema.org/email> ;
+                 :extractionPrompt "A Person or an Organization has an EmailAddress." .
 
 
-###  https://qaecy.com/dev/ont#hasMaterial
+###  https://dev.qaecy.com/ont#hasEmailReceiver
+:hasEmailReceiver rdf:type owl:NamedIndividual ;
+                  :applicableObjectCategories <https://dev.qaecy.com/enum#EmailAddress> ;
+                  :applicableSubjectCategories <https://dev.qaecy.com/enum#EmailFileContent> .
+
+
+###  https://dev.qaecy.com/ont#hasEmailSender
+:hasEmailSender rdf:type owl:NamedIndividual ;
+                :applicableObjectCategories <https://dev.qaecy.com/enum#EmailAddress> ;
+                :applicableSubjectCategories <https://dev.qaecy.com/enum#EmailFileContent> .
+
+
+###  https://dev.qaecy.com/ont#hasMaterial
 :hasMaterial rdf:type owl:NamedIndividual ;
-             :applicableObjectCategories <https://qaecy.com/dev/enum#Material> ;
-             :applicableSubjectCategories <https://qaecy.com/dev/enum#BuildingElement> ;
-             :relatedFormalProperty <http://schema.org/material> .
+             :applicableObjectCategories <https://dev.qaecy.com/enum#Material> ;
+             :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+             :relatedFormalProperty <http://schema.org/material> ;
+             :extractionPrompt "A BuildingElement is made of some Material." .
 
 
-###  https://qaecy.com/dev/ont#language
+###  https://dev.qaecy.com/ont#hasSubElement
+:hasSubElement rdf:type owl:NamedIndividual ;
+               :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+               :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+               :relatedFormalProperty <https://w3id.org/bot#hasSubElement> ;
+               :extractionPrompt "A BuildingElement contains another BuildingElement (eg a fan in an air handling unit)." .
+
+
+###  https://dev.qaecy.com/ont#ifcPSet
+:ifcPSet rdf:type owl:NamedIndividual ;
+         :label "IFC Property Set" .
+
+
+###  https://dev.qaecy.com/ont#interfaceOf
+:interfaceOf rdf:type owl:NamedIndividual ;
+             :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+             :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+             :relatedFormalProperty <https://w3id.org/bot#interfaceOf> .
+
+
+###  https://dev.qaecy.com/ont#language
 :language rdf:type owl:NamedIndividual ;
           :regex "^[a-z]{2}$" .
 
 
-###  https://qaecy.com/dev/ont#md5Hash
+###  https://dev.qaecy.com/ont#md5Hash
 :md5Hash rdf:type owl:NamedIndividual ;
          :regex "^[a-f0-9]{32}$" .
 
 
-###  https://qaecy.com/dev/ont#md5HashBase64
+###  https://dev.qaecy.com/ont#md5HashBase64
 :md5HashBase64 rdf:type owl:NamedIndividual ;
                :regex "^[a-zA-Z0-9+/=]{24}$" .
 
 
-###  https://qaecy.com/dev/ont#mime
+###  https://dev.qaecy.com/ont#mime
 :mime rdf:type owl:NamedIndividual ;
       :regex "^[a-z]+/[a-z0-9-]+$" .
 
 
-###  https://qaecy.com/dev/ont#requiresEquipment
+###  https://dev.qaecy.com/ont#precedesActivity
+:precedesActivity rdf:type owl:NamedIndividual ;
+                  :applicableObjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                  :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                  :relatedFormalProperty <http://schema.org/requiresMaterial> ;
+                  :extractionPrompt "An Activity precedes another Activity, forming a dependency." .
+
+
+###  https://dev.qaecy.com/ont#requiresEquipment
 :requiresEquipment rdf:type owl:NamedIndividual ;
-                   :applicableObjectCategories <https://qaecy.com/dev/enum#Equipment> ;
-                   :applicableSubjectCategories <https://qaecy.com/dev/enum#Activity> ;
-                   :relatedFormalProperty <http://schema.org/requiresEquipment> .
+                   :applicableObjectCategories <https://dev.qaecy.com/enum#Equipment> ;
+                   :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                   :relatedFormalProperty <http://schema.org/requiresEquipment> ;
+                   :extractionPrompt "An Activity requires some Equipment." .
 
 
-###  https://qaecy.com/dev/ont#requiresMaterial
+###  https://dev.qaecy.com/ont#requiresMaterial
 :requiresMaterial rdf:type owl:NamedIndividual ;
-                  :applicableObjectCategories <https://qaecy.com/dev/enum#Material> ;
-                  :applicableSubjectCategories <https://qaecy.com/dev/enum#Activity> ;
-                  :relatedFormalProperty <http://schema.org/requiresMaterial> .
+                  :applicableObjectCategories <https://dev.qaecy.com/enum#Material> ;
+                  :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                  :relatedFormalProperty <http://schema.org/requiresMaterial> ;
+                  :extractionPrompt "An Activity requires some Material." .
 
 
-###  https://qaecy.com/dev/ont#startDate
+###  https://dev.qaecy.com/ont#startDate
 :startDate rdf:type owl:NamedIndividual ;
-           :applicableObjectCategories <https://qaecy.com/dev/enum#Date> ;
-           :applicableSubjectCategories <https://qaecy.com/dev/enum#Activity> ;
-           :relatedFormalProperty <http://schema.org/startDate> .
+           :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+           :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+           :relatedFormalProperty <http://schema.org/startDate> ;
+           :extractionPrompt "An Activity has a startDate." .
 
 
-###  https://qaecy.com/dev/ont#suffix
+###  https://dev.qaecy.com/ont#suffix
 :suffix rdf:type owl:NamedIndividual ;
         :regex "^\\.[a-z0-9]+$" .
 
@@ -956,6 +1131,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <https://w3id.org/bot#containsElement> rdf:type owl:NamedIndividual .
 
 
+###  https://w3id.org/bot#hasBuilding
+<https://w3id.org/bot#hasBuilding> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/bot#hasElement
+<https://w3id.org/bot#hasElement> rdf:type owl:NamedIndividual .
+
+
 ###  https://w3id.org/bot#hasSpace
 <https://w3id.org/bot#hasSpace> rdf:type owl:NamedIndividual .
 
@@ -964,9 +1147,32 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <https://w3id.org/bot#hasStorey> rdf:type owl:NamedIndividual .
 
 
+###  https://w3id.org/bot#hasSubElement
+<https://w3id.org/bot#hasSubElement> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/bot#interfaceOf
+<https://w3id.org/bot#interfaceOf> rdf:type owl:NamedIndividual .
+
+
 #################################################################
 #    Annotations
 #################################################################
+
+:BIMEntity rdfs:comment "A BIM entity is a special kind of entity mention. It's an intangible (zone) or tangible (element) part of a BIM model."@en ;
+           rdfs:label "BIM Entity"@en ;
+           :visibleForAgent "false"^^xsd:boolean .
+
+
+:IFCExpressIDSelector rdfs:comment "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en ;
+                      rdfs:label "IFC Express ID Selector"@en ;
+                      :visibleForAgent "false"^^xsd:boolean .
+
+
+:IFCGlobalIDSelector rdfs:comment "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."@en ;
+                     rdfs:label "IFC Global ID Selector"@en ;
+                     :visibleForAgent "false"^^xsd:boolean .
+
 
 :TextFragment rdfs:comment "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en ;
               rdfs:label "Text Fragment"@en ;
@@ -984,9 +1190,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-:associatedWith rdfs:comment "Relationship typically between some activity and an agent (Person, Organization) but could also be used between a Person and an Organization." ;
+:associatedWith rdfs:comment "Relationship between two agents (Person, Organization)." ;
                 rdfs:label "assosiated with"@en ;
                 :visibleForAgent "true"^^xsd:boolean .
+
+
+:containsBuilding rdfs:comment "Relationship between a zone and a building." ;
+                  rdfs:label "contains buidling"@en ;
+                  :visibleForAgent "true"^^xsd:boolean .
 
 
 :containsElement rdfs:comment "Relationship between a zone and a contained element." ;
@@ -994,19 +1205,29 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-:containsFloor rdfs:comment "Relationship between a zone and a floor." ;
-               rdfs:label "contains floor"@en ;
-               :visibleForAgent "true"^^xsd:boolean .
-
-
 :containsSpace rdfs:comment "Relationship between a zone and a space." ;
                rdfs:label "contains space"@en ;
                :visibleForAgent "true"^^xsd:boolean .
 
 
-:endDate rdfs:comment "Relationship between a some activity and an end date." ;
+:containsStorey rdfs:comment "Relationship between a zone and a storey." ;
+                rdfs:label "contains storey"@en ;
+                :visibleForAgent "true"^^xsd:boolean .
+
+
+:endDate rdfs:comment "The end date of an activity." ;
          rdfs:label "end date"@en ;
          :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasAgent rdfs:comment "Relationship between an agent (Person, Organization) and an Activity." ;
+          rdfs:label "has agent"@en ;
+          :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasElement rdfs:comment "Relationship between a zone and a related element." ;
+            rdfs:label "has element"@en ;
+            :visibleForAgent "false"^^xsd:boolean .
 
 
 :hasEmailAddress rdfs:comment "Relationship between a person and an email address." ;
@@ -1014,8 +1235,32 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "true"^^xsd:boolean .
 
 
+:hasEmailReceiver rdfs:comment "Relationship that indicates that an email document has an email address as receiver." ;
+                  rdfs:label "has email receiver"@en ;
+                  :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasEmailSender rdfs:comment "Relationship that indicates that an email document has an email address as sender." ;
+                rdfs:label "has email sender"@en ;
+                :visibleForAgent "true"^^xsd:boolean .
+
+
 :hasMaterial rdfs:comment "Relationship between a building element and a material." ;
              rdfs:label "has material"@en ;
+             :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasSubElement rdfs:comment "Relationship between an element and a sub-element. For example a fan in an air handling unit." ;
+               rdfs:label "has sub-element"@en ;
+               :visibleForAgent "true"^^xsd:boolean .
+
+
+:ifcPSet rdfs:comment "The name of the Property Set in the IFC file. Official PSets are considered higher quality and SHACL shapes can be applied to evaluate the BIM model quality."@en ;
+         :visibleForAgent "false"^^xsd:boolean .
+
+
+:interfaceOf rdfs:comment "Relationship between an interface and the entities (minimum 2) it is an interface of." ;
+             rdfs:label "interface of"@en ;
              :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -1040,12 +1285,18 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
       :visibleForAgent "true"^^xsd:boolean .
 
 
+:precedesActivity rdfs:comment "Relationship between a some activity and a preceding activity." ;
+                  rdfs:label "precedes activity"@en ;
+                  :visibleForAgent "true"^^xsd:boolean .
+
+
 :relatedEntity rdfs:comment "Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties." ;
                rdfs:label "related entity"@en ;
                :visibleForAgent "true"^^xsd:boolean .
 
 
-:remoteProviderType rdfs:comment "The type of remote provider (ex: gcp, azure, aws, local)"@en ;
+:remoteProviderType rdfs:comment "The type of remote provider (ex: gcp, azure, aws, local)"@en ,
+                                 "Relationship that shows in what type of provider is a file stored." ;
                     rdfs:label "remote provider type"@en ;
                     :visibleForAgent "false"^^xsd:boolean .
 
@@ -1060,7 +1311,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:startDate rdfs:comment "Relationship between a some activity and a start date." ;
+:startDate rdfs:comment "The start date of an activity." ;
            rdfs:label "start date"@en ;
            :visibleForAgent "true"^^xsd:boolean .
 
