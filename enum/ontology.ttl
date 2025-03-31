@@ -11,7 +11,7 @@
                                                                   "Mads Holten Rasmussen" ,
                                                                   "Manos Argyris" ;
                                <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." ;
-                               <http://purl.org/dc/terms/modified> "2025-03-27T08:30:24Z"^^xsd:dateTime ;
+                               <http://purl.org/dc/terms/modified> "2025-03-31T11:00:58Z"^^xsd:dateTime ;
                                <http://purl.org/dc/terms/title> "QAECY Enumerations"@en ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 
