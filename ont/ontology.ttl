@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-03-31T10:59:49Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2025-06-26T11:47:07Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.1" .
@@ -68,11 +68,18 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
        :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://dev.qaecy.com/ont#adjacentElement
-:adjacentElement rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :hasElement ;
-                 rdfs:domain :EntityReference ;
-                 rdfs:range :EntityReference .
+###  https://dev.qaecy.com/ont#activityHasEndDate
+:activityHasEndDate rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:domain :EntityReference ;
+                    rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#activityHasStartDate
+:activityHasStartDate rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:domain :EntityReference ;
+                      rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#adjacentFragment
@@ -87,10 +94,23 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 ###  https://dev.qaecy.com/ont#alternativeRepresentation
 :alternativeRepresentation rdf:type owl:ObjectProperty ;
                            rdfs:domain :InformationObject ;
-                           rdfs:range :FileLocation ;
-                           rdfs:comment "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content." ;
+                           rdfs:range :InformationObject ;
+                           rdfs:comment "Relationship between two information objects where one is an alternative representation of the other. For example an image derived from a PDF page fragment or a CAD drawing." ;
                            rdfs:label "alternative representation"@en ;
                            :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#applicableContentCategories
+:applicableContentCategories rdf:type owl:ObjectProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( :EntityCategory
+                                                         :relatedEntity
+                                                       )
+                                         ] ;
+                             rdfs:range :ContentCategory ;
+                             rdfs:comment "Relationship between a qcy:EntityCategory or a qcy:relatedEntity sub-property and one or more qcy:ContentCategory. This property is used to specify the entities that will be represented based on the type of the content." ;
+                             rdfs:label "applicable content categories"@en ;
+                             :visibleForAgent "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/ont#applicableObjectCategories
@@ -118,18 +138,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                 rdfs:range :EntityReference .
 
 
-###  https://dev.qaecy.com/ont#containsBuilding
-:containsBuilding rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :relatedEntity ;
-                  rdfs:domain :EntityReference ;
-                  rdfs:range :EntityReference .
-
-
-###  https://dev.qaecy.com/ont#containsElement
-:containsElement rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :hasElement ;
-                 rdfs:domain :EntityReference ;
-                 rdfs:range :EntityReference .
+###  https://dev.qaecy.com/ont#buildingContainsStorey
+:buildingContainsStorey rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#containsFragment
@@ -141,32 +154,81 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://dev.qaecy.com/ont#containsSpace
-:containsSpace rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :relatedEntity ;
-               rdfs:domain :EntityReference ;
-               rdfs:range :EntityReference .
+###  https://dev.qaecy.com/ont#contractHasEndDate
+:contractHasEndDate rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:domain :EntityReference ;
+                    rdfs:range :EntityReference .
 
 
-###  https://dev.qaecy.com/ont#containsStorey
-:containsStorey rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :relatedEntity ;
-                rdfs:domain :EntityReference ;
-                rdfs:range :EntityReference .
+###  https://dev.qaecy.com/ont#contractHasSignatureDate
+:contractHasSignatureDate rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :relatedEntity ;
+                          rdfs:domain :EntityReference ;
+                          rdfs:range :EntityReference .
 
 
-###  https://dev.qaecy.com/ont#endDate
-:endDate rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :relatedEntity ;
-         rdfs:domain :EntityReference ;
-         rdfs:range :EntityReference .
+###  https://dev.qaecy.com/ont#contractHasStartDate
+:contractHasStartDate rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:domain :EntityReference ;
+                      rdfs:range :EntityReference .
 
 
-###  https://dev.qaecy.com/ont#hasAgent
-:hasAgent rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :relatedEntity ;
-          rdfs:domain :EntityReference ;
-          rdfs:range :EntityReference .
+###  https://dev.qaecy.com/ont#contractInvolvesAsset
+:contractInvolvesAsset rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :relatedEntity ;
+                       rdfs:domain :EntityReference ;
+                       rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#drawingAboutProject
+:drawingAboutProject rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :relatedEntity ;
+                     rdfs:domain :EntityReference ;
+                     rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#drawingApprovedBy
+:drawingApprovedBy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :relatedEntity ;
+                   rdfs:domain :EntityReference ;
+                   rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#drawingCreatedBy
+:drawingCreatedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relatedEntity ;
+                  rdfs:domain :EntityReference ;
+                  rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#drawingHasApprovalDate
+:drawingHasApprovalDate rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#drawingHasCreationDate
+:drawingHasCreationDate rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#elementHasMaterial
+:elementHasMaterial rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:domain :EntityReference ;
+                    rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasActivityAgent
+:hasActivityAgent rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relatedEntity ;
+                  rdfs:domain :EntityReference ;
+                  rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#hasCategory
@@ -188,11 +250,36 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                     :visibleForAgent "true"^^xsd:boolean .
 
 
+###  https://dev.qaecy.com/ont#hasContractCondition
+:hasContractCondition rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:domain :EntityReference ;
+                      rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasContractRole
+:hasContractRole rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :relatedEntity ;
+                 rdfs:domain :EntityReference ;
+                 rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasDesignMetadata
+:hasDesignMetadata rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :relatedEntity ;
+                   rdfs:domain :EntityReference ;
+                   rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasDuration
+:hasDuration rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :relatedEntity ;
+             rdfs:domain :EntityReference ;
+             rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#hasElement
-:hasElement rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :relatedEntity ;
-            rdfs:domain :EntityReference ;
-            rdfs:range :EntityReference .
+:hasElement rdf:type owl:ObjectProperty .
 
 
 ###  https://dev.qaecy.com/ont#hasEmailAddress
@@ -228,15 +315,31 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#hasFileLocation
 :hasFileLocation rdf:type owl:ObjectProperty ;
-                 rdfs:domain :FileContent ;
+                 rdfs:domain :InformationObject ;
                  rdfs:range :FileLocation ;
-                 rdfs:comment "Relationship between a qcy:InformationObject and one of its qcy:FileLocations. All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location" ;
+                 rdfs:comment "Relationship between a qcy:InformationObject and one of its qcy:FileLocation(s). All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location" ;
                  rdfs:label "has file location"@en ;
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-###  https://dev.qaecy.com/ont#hasMaterial
-:hasMaterial rdf:type owl:ObjectProperty ;
+###  https://dev.qaecy.com/ont#hasFoundingMention
+:hasFoundingMention rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CanonicalEntity ;
+                    rdfs:range :EntityMention ;
+                    rdfs:comment "Relationship indicating that a Canonical Entity was originally established or founded based on this specific Entity Mention. This property highlights the mentions that were primary and instrumental in the initial creation or identification of the canonical entity's concept."@en ;
+                    rdfs:label "has founding mention"@en ;
+                    :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#hasGoverningJurisdiction
+:hasGoverningJurisdiction rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :relatedEntity ;
+                          rdfs:domain :EntityReference ;
+                          rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :relatedEntity ;
              rdfs:domain :EntityReference ;
              rdfs:range :EntityReference .
@@ -263,9 +366,23 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#hasSubElement
 :hasSubElement rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :hasSubElement ;
+               rdfs:subPropertyOf :hasElement ;
                rdfs:domain :EntityReference ;
                rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#includesActivity
+:includesActivity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relatedEntity ;
+                  rdfs:domain :EntityReference ;
+                  rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#includesBuildingEntity
+:includesBuildingEntity rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#interfaceOf
@@ -273,6 +390,34 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              rdfs:subPropertyOf :relatedEntity ;
              rdfs:domain :EntityReference ;
              rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#involvedInContract
+:involvedInContract rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:domain :EntityReference ;
+                    rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#involvesBuildingEntity
+:involvesBuildingEntity rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#involvesCost
+:involvesCost rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :relatedEntity ;
+              rdfs:domain :EntityReference ;
+              rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#involvesDiscipline
+:involvesDiscipline rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:domain :EntityReference ;
+                    rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#mentions
@@ -284,11 +429,32 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
           :visibleForAgent "false"^^xsd:boolean .
 
 
+###  https://dev.qaecy.com/ont#metadataReferencesFile
+:metadataReferencesFile rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#obligationHasEndDate
+:obligationHasEndDate rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:domain :EntityReference ;
+                      rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#obligationHasStartDate
+:obligationHasStartDate rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#parentFragment
 :parentFragment rdf:type owl:ObjectProperty ;
                 rdfs:domain :Fragment ;
                 rdfs:range :Fragment ;
-                rdfs:comment "Relationship between a parent fragments (eg a title) and a child fragment (eg a paragraph)." ;
+                rdfs:comment "Relationship between a parent fragment (eg a title) and a child fragment (eg a paragraph)." ;
                 rdfs:label "parent fragment"@en ;
                 :visibleForAgent "false"^^xsd:boolean .
 
@@ -298,6 +464,20 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   rdfs:subPropertyOf :relatedEntity ;
                   rdfs:domain :EntityReference ;
                   rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#projectHasPhase
+:projectHasPhase rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :relatedEntity ;
+                 rdfs:domain :EntityReference ;
+                 rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#projectHasSchedule
+:projectHasSchedule rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:domain :EntityReference ;
+                    rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#relatedEntity
@@ -373,16 +553,69 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://dev.qaecy.com/ont#startDate
-:startDate rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :relatedEntity ;
-           rdfs:domain :EntityReference ;
-           rdfs:range :EntityReference .
+###  https://dev.qaecy.com/ont#sheetContainsDrawing
+:sheetContainsDrawing rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:domain :EntityReference ;
+                      rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#siteContainsBuilding
+:siteContainsBuilding rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:domain :EntityReference ;
+                      rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#zoneContainsElement
+:zoneContainsElement rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasElement ;
+                     rdfs:domain :EntityReference ;
+                     rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#zoneContainsSpace
+:zoneContainsSpace rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :relatedEntity ;
+                   rdfs:domain :EntityReference ;
+                   rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#zoneHasAdjacentElement
+:zoneHasAdjacentElement rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasElement ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#zoneHasElement
+:zoneHasElement rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatedEntity ;
+                rdfs:domain :EntityReference ;
+                rdfs:range :EntityReference .
 
 
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://dev.qaecy.com/ont#classificationPrompt
+:classificationPrompt rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "A property specifying the prompt used to classify a certain type of document by an LLM."@en ;
+                      rdfs:label "classification prompt"@en ;
+                      :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#confidence
+:confidence rdf:type owl:DatatypeProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "A numerical score, typically between 0.0 and 1.0, representing the level of certainty or belief in an assertion, a piece of data, or a relationship. For example, the confidence that an entity mention resolves to a particular canonical entity, or the confidence in the derived properties of a canonical entity."@en ;
+            rdfs:label "confidence"@en ;
+            :visibleForAgent "false"^^xsd:boolean .
+
 
 ###  https://dev.qaecy.com/ont#dateCreated
 :dateCreated rdf:type owl:DatatypeProperty ;
@@ -424,7 +657,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 :extractionPrompt rdf:type owl:DatatypeProperty ;
                   rdfs:domain owl:Thing ;
                   rdfs:range xsd:string ;
-                  rdfs:comment "A property specifying the prompt used to extract a certain kind of entity or relation by a LLM."@en ;
+                  rdfs:comment "A property specifying the prompt used to extract a certain kind of entity or relation by an LLM."@en ;
                   rdfs:label "extraction prompt"@en ;
                   :visibleForAgent "false"^^xsd:boolean .
 
@@ -504,6 +737,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
             rdfs:comment "Is the file content readable without proprietary software tools?"@en ;
             rdfs:label "open format"@en ;
             :visibleForAgent "true"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#reasoning
+:reasoning rdf:type owl:DatatypeProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range xsd:string ;
+           rdfs:comment "A textual explanation or justification supporting an assertion, a piece of data, a derived value, or a relationship. This can include the evidence, logic, or process used to arrive at a conclusion or to assign a confidence score."@en ;
+           rdfs:label "reasoning"@en ;
+           :visibleForAgent "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/ont#regex
@@ -833,14 +1075,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 #    Individuals
 #################################################################
 
-###  http://schema.org/email
-<http://schema.org/email> rdf:type owl:NamedIndividual .
-
-
-###  http://schema.org/endDate
-<http://schema.org/endDate> rdf:type owl:NamedIndividual .
-
-
 ###  http://schema.org/material
 <http://schema.org/material> rdf:type owl:NamedIndividual .
 
@@ -851,10 +1085,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  http://schema.org/requiresMaterial
 <http://schema.org/requiresMaterial> rdf:type owl:NamedIndividual .
-
-
-###  http://schema.org/startDate
-<http://schema.org/startDate> rdf:type owl:NamedIndividual .
 
 
 ###  https://dev.qaecy.com/enum#Activity
@@ -869,8 +1099,68 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <https://dev.qaecy.com/enum#BuildingElement> rdf:type owl:NamedIndividual .
 
 
+###  https://dev.qaecy.com/enum#BuildingZone
+<https://dev.qaecy.com/enum#BuildingZone> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#BuiltAsset
+<https://dev.qaecy.com/enum#BuiltAsset> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#ConstructionProject
+<https://dev.qaecy.com/enum#ConstructionProject> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#Contract
+<https://dev.qaecy.com/enum#Contract> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#ContractCondition
+<https://dev.qaecy.com/enum#ContractCondition> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#ContractObligation
+<https://dev.qaecy.com/enum#ContractObligation> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#ContractRole
+<https://dev.qaecy.com/enum#ContractRole> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#ContractualDocument
+<https://dev.qaecy.com/enum#ContractualDocument> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#Cost
+<https://dev.qaecy.com/enum#Cost> rdf:type owl:NamedIndividual .
+
+
 ###  https://dev.qaecy.com/enum#Date
 <https://dev.qaecy.com/enum#Date> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#DesignDocument
+<https://dev.qaecy.com/enum#DesignDocument> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#DesignMetadata
+<https://dev.qaecy.com/enum#DesignMetadata> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#Discipline
+<https://dev.qaecy.com/enum#Discipline> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#DrawingEntity
+<https://dev.qaecy.com/enum#DrawingEntity> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#DrawingSheet
+<https://dev.qaecy.com/enum#DrawingSheet> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#Duration
+<https://dev.qaecy.com/enum#Duration> rdf:type owl:NamedIndividual .
 
 
 ###  https://dev.qaecy.com/enum#EmailAddress
@@ -885,6 +1175,18 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <https://dev.qaecy.com/enum#Equipment> rdf:type owl:NamedIndividual .
 
 
+###  https://dev.qaecy.com/enum#FileReference
+<https://dev.qaecy.com/enum#FileReference> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#Jurisdiction
+<https://dev.qaecy.com/enum#Jurisdiction> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#Location
+<https://dev.qaecy.com/enum#Location> rdf:type owl:NamedIndividual .
+
+
 ###  https://dev.qaecy.com/enum#Material
 <https://dev.qaecy.com/enum#Material> rdf:type owl:NamedIndividual .
 
@@ -895,6 +1197,18 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/enum#Person
 <https://dev.qaecy.com/enum#Person> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#ProjectPhase
+<https://dev.qaecy.com/enum#ProjectPhase> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#Schedule
+<https://dev.qaecy.com/enum#Schedule> rdf:type owl:NamedIndividual .
+
+
+###  https://dev.qaecy.com/enum#ScheduleDocument
+<https://dev.qaecy.com/enum#ScheduleDocument> rdf:type owl:NamedIndividual .
 
 
 ###  https://dev.qaecy.com/enum#Site
@@ -934,14 +1248,20 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
               :iriPattern "<parentUUID><xywhString>" .
 
 
-###  https://dev.qaecy.com/ont#adjacentElement
-:adjacentElement rdf:type owl:NamedIndividual ;
-                 :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
-                 :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
-                                              <https://dev.qaecy.com/enum#Space> ,
-                                              <https://dev.qaecy.com/enum#Storey> ;
-                 :relatedFormalProperty <https://w3id.org/bot#adjacentElement> ;
-                 :extractionPrompt "A Zone is adjacent to a BuildingElement (eg a door and a space)." .
+###  https://dev.qaecy.com/ont#activityHasEndDate
+:activityHasEndDate rdf:type owl:NamedIndividual ;
+                    :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                    :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                    :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                    :extractionPrompt "An 'Activity' has an end 'Date'." .
+
+
+###  https://dev.qaecy.com/ont#activityHasStartDate
+:activityHasStartDate rdf:type owl:NamedIndividual ;
+                      :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                      :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                      :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                      :extractionPrompt "An 'Activity' has a starting 'Date'." .
 
 
 ###  https://dev.qaecy.com/ont#associatedWith
@@ -950,71 +1270,147 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                                             <https://dev.qaecy.com/enum#Person> ;
                 :applicableSubjectCategories <https://dev.qaecy.com/enum#Organization> ,
                                              <https://dev.qaecy.com/enum#Person> ;
-                :extractionPrompt "An agent (Person, Organization) is related to another agent (Person, Organization)." .
+                :extractionPrompt "A 'Person' or 'Organization' is related to another 'Person' or 'Organization'." .
 
 
-###  https://dev.qaecy.com/ont#containsBuilding
-:containsBuilding rdf:type owl:NamedIndividual ;
-                  :applicableObjectCategories <https://dev.qaecy.com/enum#Building> ;
-                  :applicableSubjectCategories <https://dev.qaecy.com/enum#Site> ;
-                  :relatedFormalProperty <https://w3id.org/bot#hasBuilding> ;
-                  :extractionPrompt "A Site contains a Building." .
+###  https://dev.qaecy.com/ont#buildingContainsStorey
+:buildingContainsStorey rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#Storey> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ;
+                        :relatedFormalProperty <https://w3id.org/bot#hasStorey> ;
+                        :extractionPrompt "A 'Building' contains a 'Storey'." .
 
 
-###  https://dev.qaecy.com/ont#containsElement
-:containsElement rdf:type owl:NamedIndividual ;
-                 :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
-                 :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
-                                              <https://dev.qaecy.com/enum#Site> ,
-                                              <https://dev.qaecy.com/enum#Space> ,
-                                              <https://dev.qaecy.com/enum#Storey> ;
-                 :relatedFormalProperty <https://w3id.org/bot#containsElement> ;
-                 :extractionPrompt "A Zone contains a BuildingElement (eg a wall in a building)." .
+###  https://dev.qaecy.com/ont#contractHasEndDate
+:contractHasEndDate rdf:type owl:NamedIndividual ;
+                    :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                    :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                    :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                    :extractionPrompt "A 'Contract' has a termination 'Date'." .
 
 
-###  https://dev.qaecy.com/ont#containsSpace
-:containsSpace rdf:type owl:NamedIndividual ;
-               :applicableObjectCategories <https://dev.qaecy.com/enum#Space> ;
-               :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
-                                            <https://dev.qaecy.com/enum#Site> ,
-                                            <https://dev.qaecy.com/enum#Storey> ;
-               :relatedFormalProperty <https://w3id.org/bot#hasSpace> ;
-               :extractionPrompt "A Zone contains a Space (eg a classroom on a floor)." .
+###  https://dev.qaecy.com/ont#contractHasSignatureDate
+:contractHasSignatureDate rdf:type owl:NamedIndividual ;
+                          :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                          :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                          :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                          :extractionPrompt "A 'Contract' has a 'Date' that it was signed." .
 
 
-###  https://dev.qaecy.com/ont#containsStorey
-:containsStorey rdf:type owl:NamedIndividual ;
-                :applicableObjectCategories <https://dev.qaecy.com/enum#Storey> ;
-                :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
-                                             <https://dev.qaecy.com/enum#Site> ;
-                :relatedFormalProperty <https://w3id.org/bot#hasStorey> ;
-                :extractionPrompt "A Building contains a Storey." .
+###  https://dev.qaecy.com/ont#contractHasStartDate
+:contractHasStartDate rdf:type owl:NamedIndividual ;
+                      :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                      :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                      :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                      :extractionPrompt "A 'Contract' has a 'Date' that it becomes effective." .
 
 
-###  https://dev.qaecy.com/ont#endDate
-:endDate rdf:type owl:NamedIndividual ;
-         :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
-         :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
-         :relatedFormalProperty <http://schema.org/endDate> ;
-         :extractionPrompt "An Activity has an endDate." .
+###  https://dev.qaecy.com/ont#contractInvolvesAsset
+:contractInvolvesAsset rdf:type owl:NamedIndividual ;
+                       :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                       :applicableObjectCategories <https://dev.qaecy.com/enum#BuiltAsset> ;
+                       :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                       :extractionPrompt "A 'Contract' involves a certain 'BuiltAsset'." .
 
 
-###  https://dev.qaecy.com/ont#hasAgent
-:hasAgent rdf:type owl:NamedIndividual ;
-          :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
-                                      <https://dev.qaecy.com/enum#Person> ;
-          :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
-          :extractionPrompt "An Activity that is carried out by an agent (Person, Organization)." .
+###  https://dev.qaecy.com/ont#drawingAboutProject
+:drawingAboutProject rdf:type owl:NamedIndividual ;
+                     :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                     :applicableObjectCategories <https://dev.qaecy.com/enum#ConstructionProject> ;
+                     :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ,
+                                                  <https://dev.qaecy.com/enum#DrawingSheet> ;
+                     :extractionPrompt "A 'DrawingSheet' or a 'DrawingEntity' is about the 'ConstructionProject'." .
 
 
-###  https://dev.qaecy.com/ont#hasElement
-:hasElement rdf:type owl:NamedIndividual ;
-            :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
-            :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
-                                         <https://dev.qaecy.com/enum#Site> ,
-                                         <https://dev.qaecy.com/enum#Space> ,
-                                         <https://dev.qaecy.com/enum#Storey> ;
-            :relatedFormalProperty <https://w3id.org/bot#hasElement> .
+###  https://dev.qaecy.com/ont#drawingApprovedBy
+:drawingApprovedBy rdf:type owl:NamedIndividual ;
+                   :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                   :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                               <https://dev.qaecy.com/enum#Person> ;
+                   :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ,
+                                                <https://dev.qaecy.com/enum#DrawingSheet> ;
+                   :extractionPrompt "A 'DrawingSheet' or a 'DrawingEntity' was approved by a 'Person' or an 'Organization'." .
+
+
+###  https://dev.qaecy.com/ont#drawingCreatedBy
+:drawingCreatedBy rdf:type owl:NamedIndividual ;
+                  :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                  :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                              <https://dev.qaecy.com/enum#Person> ;
+                  :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ,
+                                               <https://dev.qaecy.com/enum#DrawingSheet> ;
+                  :extractionPrompt "A 'DrawingSheet' or a 'DrawingEntity' was created by a 'Person' or an 'Organization'." .
+
+
+###  https://dev.qaecy.com/ont#drawingHasApprovalDate
+:drawingHasApprovalDate rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ,
+                                                     <https://dev.qaecy.com/enum#DrawingSheet> ;
+                        :extractionPrompt "A 'DrawingSheet' or a 'DrawingEntity' was approved on a 'Date'." .
+
+
+###  https://dev.qaecy.com/ont#drawingHasCreationDate
+:drawingHasCreationDate rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ,
+                                                     <https://dev.qaecy.com/enum#DrawingSheet> ;
+                        :extractionPrompt "A 'DrawingSheet' or a 'DrawingEntity' was created on a 'Date'." .
+
+
+###  https://dev.qaecy.com/ont#elementHasMaterial
+:elementHasMaterial rdf:type owl:NamedIndividual ;
+                    :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                    :applicableObjectCategories <https://dev.qaecy.com/enum#Material> ;
+                    :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+                    :relatedFormalProperty <http://schema.org/material> ;
+                    :extractionPrompt "A 'BuildingElement' is made of some 'Material'." .
+
+
+###  https://dev.qaecy.com/ont#hasActivityAgent
+:hasActivityAgent rdf:type owl:NamedIndividual ;
+                  :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                  :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                              <https://dev.qaecy.com/enum#Person> ;
+                  :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                  :extractionPrompt "An 'Activity' is carried out by a 'Person' or 'Organization'." .
+
+
+###  https://dev.qaecy.com/ont#hasContractCondition
+:hasContractCondition rdf:type owl:NamedIndividual ;
+                      :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                      :applicableObjectCategories <https://dev.qaecy.com/enum#ContractCondition> ;
+                      :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
+                      :extractionPrompt "A 'ContractObligation' involves a certain 'ContractCondition'." .
+
+
+###  https://dev.qaecy.com/ont#hasContractRole
+:hasContractRole rdf:type owl:NamedIndividual ;
+                 :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                 :applicableObjectCategories <https://dev.qaecy.com/enum#ContractRole> ;
+                 :applicableSubjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                              <https://dev.qaecy.com/enum#Person> ;
+                 :extractionPrompt "A 'Person' or 'Organization' undertakes a specific 'ContractRole' in the context of the 'Contract'." .
+
+
+###  https://dev.qaecy.com/ont#hasDesignMetadata
+:hasDesignMetadata rdf:type owl:NamedIndividual ;
+                   :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                   :applicableObjectCategories <https://dev.qaecy.com/enum#DesignMetadata> ;
+                   :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ,
+                                                <https://dev.qaecy.com/enum#DrawingSheet> ;
+                   :extractionPrompt "A 'DrawingSheet' or a 'DrawingEntity' is annotated with 'DesignMetadata'." .
+
+
+###  https://dev.qaecy.com/ont#hasDuration
+:hasDuration rdf:type owl:NamedIndividual ;
+             :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+             :applicableObjectCategories <https://dev.qaecy.com/enum#Duration> ;
+             :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+             :extractionPrompt "An 'Activity' has a certain 'Duration'." .
 
 
 ###  https://dev.qaecy.com/ont#hasEmailAddress
@@ -1022,8 +1418,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  :applicableObjectCategories <https://dev.qaecy.com/enum#EmailAddress> ;
                  :applicableSubjectCategories <https://dev.qaecy.com/enum#Organization> ,
                                               <https://dev.qaecy.com/enum#Person> ;
-                 :relatedFormalProperty <http://schema.org/email> ;
-                 :extractionPrompt "A Person or an Organization has an EmailAddress." .
+                 :extractionPrompt "A 'Person' or an 'Organization' has an 'EmailAddress'." .
 
 
 ###  https://dev.qaecy.com/ont#hasEmailReceiver
@@ -1038,20 +1433,31 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                 :applicableSubjectCategories <https://dev.qaecy.com/enum#EmailFileContent> .
 
 
-###  https://dev.qaecy.com/ont#hasMaterial
-:hasMaterial rdf:type owl:NamedIndividual ;
-             :applicableObjectCategories <https://dev.qaecy.com/enum#Material> ;
-             :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
-             :relatedFormalProperty <http://schema.org/material> ;
-             :extractionPrompt "A BuildingElement is made of some Material." .
+###  https://dev.qaecy.com/ont#hasGoverningJurisdiction
+:hasGoverningJurisdiction rdf:type owl:NamedIndividual ;
+                          :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                          :applicableObjectCategories <https://dev.qaecy.com/enum#Jurisdiction> ;
+                          :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                          :extractionPrompt "A 'Contract' is governed by a certain 'Jurisdiction'." .
+
+
+###  https://dev.qaecy.com/ont#hasLocation
+:hasLocation rdf:type owl:NamedIndividual ;
+             :applicableObjectCategories <https://dev.qaecy.com/enum#Location> ;
+             :applicableSubjectCategories <https://dev.qaecy.com/enum#BuiltAsset> ,
+                                          <https://dev.qaecy.com/enum#ConstructionProject> ,
+                                          <https://dev.qaecy.com/enum#Organization> ,
+                                          <https://dev.qaecy.com/enum#Person> ;
+             :extractionPrompt "A 'Person', 'Organization', 'BuiltAsset' or 'ConstructionProject' has a certain 'Location'." .
 
 
 ###  https://dev.qaecy.com/ont#hasSubElement
 :hasSubElement rdf:type owl:NamedIndividual ;
+               :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
                :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
                :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
                :relatedFormalProperty <https://w3id.org/bot#hasSubElement> ;
-               :extractionPrompt "A BuildingElement contains another BuildingElement (eg a fan in an air handling unit)." .
+               :extractionPrompt "A 'BuildingElement' contains another 'BuildingElement' (eg a fan in an air handling unit)." .
 
 
 ###  https://dev.qaecy.com/ont#ifcPSet
@@ -1059,11 +1465,62 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
          :label "IFC Property Set" .
 
 
+###  https://dev.qaecy.com/ont#includesActivity
+:includesActivity rdf:type owl:NamedIndividual ;
+                  :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                  :applicableObjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                  :applicableSubjectCategories <https://dev.qaecy.com/enum#Schedule> ;
+                  :extractionPrompt "A 'Schedule' includes an 'Activity'." .
+
+
+###  https://dev.qaecy.com/ont#includesBuildingEntity
+:includesBuildingEntity rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ,
+                                                    <https://dev.qaecy.com/enum#BuildingZone> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ;
+                        :extractionPrompt "The 'DrawingEntity' includes a 'BuildingZone' or 'BuildingElement'." .
+
+
 ###  https://dev.qaecy.com/ont#interfaceOf
 :interfaceOf rdf:type owl:NamedIndividual ;
+             :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
              :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
              :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
              :relatedFormalProperty <https://w3id.org/bot#interfaceOf> .
+
+
+###  https://dev.qaecy.com/ont#involvedInContract
+:involvedInContract rdf:type owl:NamedIndividual ;
+                    :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                    :applicableObjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                    :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractRole> ;
+                    :extractionPrompt "A 'ContractRole' is involved in the 'Contract'." .
+
+
+###  https://dev.qaecy.com/ont#involvesBuildingEntity
+:involvesBuildingEntity rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ,
+                                                    <https://dev.qaecy.com/enum#BuildingZone> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                        :extractionPrompt "An 'Activity' involves a certain 'BuildingZone' or 'BuildingElement'." .
+
+
+###  https://dev.qaecy.com/ont#involvesCost
+:involvesCost rdf:type owl:NamedIndividual ;
+              :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+              :applicableObjectCategories <https://dev.qaecy.com/enum#Cost> ;
+              :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+              :extractionPrompt "An 'Activity' involves a certain 'Cost'." .
+
+
+###  https://dev.qaecy.com/ont#involvesDiscipline
+:involvesDiscipline rdf:type owl:NamedIndividual ;
+                    :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                    :applicableObjectCategories <https://dev.qaecy.com/enum#Discipline> ;
+                    :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
+                    :extractionPrompt "An 'Activity' involves a certain 'Discipline'." .
 
 
 ###  https://dev.qaecy.com/ont#language
@@ -1081,46 +1538,143 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                :regex "^[a-zA-Z0-9+/=]{24}$" .
 
 
+###  https://dev.qaecy.com/ont#metadataReferencesFile
+:metadataReferencesFile rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#FileReference> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#DesignMetadata> ;
+                        :extractionPrompt "The 'DesignMetadata' references a 'FileReference'." .
+
+
 ###  https://dev.qaecy.com/ont#mime
 :mime rdf:type owl:NamedIndividual ;
       :regex "^[a-z]+/[a-z0-9-]+$" .
 
 
+###  https://dev.qaecy.com/ont#obligationHasEndDate
+:obligationHasEndDate rdf:type owl:NamedIndividual ;
+                      :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                      :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                      :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
+                      :extractionPrompt "A 'ContractObligation' has a 'Date' that it expires." .
+
+
+###  https://dev.qaecy.com/ont#obligationHasStartDate
+:obligationHasStartDate rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
+                        :extractionPrompt "A 'ContractObligation' has a 'Date' that it becomes effective." .
+
+
 ###  https://dev.qaecy.com/ont#precedesActivity
 :precedesActivity rdf:type owl:NamedIndividual ;
+                  :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
                   :applicableObjectCategories <https://dev.qaecy.com/enum#Activity> ;
                   :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
-                  :relatedFormalProperty <http://schema.org/requiresMaterial> ;
-                  :extractionPrompt "An Activity precedes another Activity, forming a dependency." .
+                  :extractionPrompt "An 'Activity' precedes another 'Activity' (usually by forming a dependency)." .
+
+
+###  https://dev.qaecy.com/ont#projectHasPhase
+:projectHasPhase rdf:type owl:NamedIndividual ;
+                 :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ,
+                                              <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                 :applicableObjectCategories <https://dev.qaecy.com/enum#ProjectPhase> ;
+                 :applicableSubjectCategories <https://dev.qaecy.com/enum#ConstructionProject> ;
+                 :extractionPrompt "A 'ConstructionProject' has a 'ProjectPhase'." .
+
+
+###  https://dev.qaecy.com/ont#projectHasSchedule
+:projectHasSchedule rdf:type owl:NamedIndividual ;
+                    :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
+                    :applicableObjectCategories <https://dev.qaecy.com/enum#Schedule> ;
+                    :applicableSubjectCategories <https://dev.qaecy.com/enum#ConstructionProject> ;
+                    :extractionPrompt "A 'ConstructionProject' has a 'Schedule'." .
 
 
 ###  https://dev.qaecy.com/ont#requiresEquipment
 :requiresEquipment rdf:type owl:NamedIndividual ;
+                   :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
                    :applicableObjectCategories <https://dev.qaecy.com/enum#Equipment> ;
                    :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
                    :relatedFormalProperty <http://schema.org/requiresEquipment> ;
-                   :extractionPrompt "An Activity requires some Equipment." .
+                   :extractionPrompt "An 'Activity' requires some 'Equipment'." .
 
 
 ###  https://dev.qaecy.com/ont#requiresMaterial
 :requiresMaterial rdf:type owl:NamedIndividual ;
+                  :applicableContentCategories <https://dev.qaecy.com/enum#ScheduleDocument> ;
                   :applicableObjectCategories <https://dev.qaecy.com/enum#Material> ;
                   :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
                   :relatedFormalProperty <http://schema.org/requiresMaterial> ;
-                  :extractionPrompt "An Activity requires some Material." .
+                  :extractionPrompt "An 'Activity' requires some 'Material'." .
 
 
-###  https://dev.qaecy.com/ont#startDate
-:startDate rdf:type owl:NamedIndividual ;
-           :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
-           :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
-           :relatedFormalProperty <http://schema.org/startDate> ;
-           :extractionPrompt "An Activity has a startDate." .
+###  https://dev.qaecy.com/ont#sheetContainsDrawing
+:sheetContainsDrawing rdf:type owl:NamedIndividual ;
+                      :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                      :applicableObjectCategories <https://dev.qaecy.com/enum#DrawingEntity> ;
+                      :applicableSubjectCategories <https://dev.qaecy.com/enum#DrawingSheet> ;
+                      :extractionPrompt "A 'DrawingSheet' contains a 'DrawingEntity'." .
+
+
+###  https://dev.qaecy.com/ont#siteContainsBuilding
+:siteContainsBuilding rdf:type owl:NamedIndividual ;
+                      :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                      :applicableObjectCategories <https://dev.qaecy.com/enum#Building> ;
+                      :applicableSubjectCategories <https://dev.qaecy.com/enum#Site> ;
+                      :relatedFormalProperty <https://w3id.org/bot#hasBuilding> ;
+                      :extractionPrompt "A 'Site' contains a 'Building'." .
 
 
 ###  https://dev.qaecy.com/ont#suffix
 :suffix rdf:type owl:NamedIndividual ;
         :regex "^\\.[a-z0-9]+$" .
+
+
+###  https://dev.qaecy.com/ont#zoneContainsElement
+:zoneContainsElement rdf:type owl:NamedIndividual ;
+                     :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                     :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+                     :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                                  <https://dev.qaecy.com/enum#Site> ,
+                                                  <https://dev.qaecy.com/enum#Space> ,
+                                                  <https://dev.qaecy.com/enum#Storey> ;
+                     :relatedFormalProperty <https://w3id.org/bot#containsElement> ;
+                     :extractionPrompt "A 'Zone' contains a 'BuildingElement' (eg a building contains a wall)." .
+
+
+###  https://dev.qaecy.com/ont#zoneContainsSpace
+:zoneContainsSpace rdf:type owl:NamedIndividual ;
+                   :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                   :applicableObjectCategories <https://dev.qaecy.com/enum#Space> ;
+                   :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                                <https://dev.qaecy.com/enum#Site> ,
+                                                <https://dev.qaecy.com/enum#Storey> ;
+                   :relatedFormalProperty <https://w3id.org/bot#hasSpace> ;
+                   :extractionPrompt "A 'Site', 'Building' or 'Storey' contains a 'Space' (eg a classroom on a floor)." .
+
+
+###  https://dev.qaecy.com/ont#zoneHasAdjacentElement
+:zoneHasAdjacentElement rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                                     <https://dev.qaecy.com/enum#Space> ,
+                                                     <https://dev.qaecy.com/enum#Storey> ;
+                        :relatedFormalProperty <https://w3id.org/bot#adjacentElement> ;
+                        :extractionPrompt "A 'Zone' is adjacent to a 'BuildingElement' (eg a wall is adjacent to a space)." .
+
+
+###  https://dev.qaecy.com/ont#zoneHasElement
+:zoneHasElement rdf:type owl:NamedIndividual ;
+                :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
+                :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
+                :applicableSubjectCategories <https://dev.qaecy.com/enum#Building> ,
+                                             <https://dev.qaecy.com/enum#Site> ,
+                                             <https://dev.qaecy.com/enum#Space> ,
+                                             <https://dev.qaecy.com/enum#Storey> ;
+                :relatedFormalProperty <https://w3id.org/bot#hasElement> .
 
 
 ###  https://w3id.org/bot#adjacentElement
@@ -1185,68 +1739,123 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
               :visibleForAgent "false"^^xsd:boolean .
 
 
-:adjacentElement rdfs:comment "Relationship between a zone/element and an adjacent element." ;
-                 rdfs:label "adjacent element"@en ;
-                 :visibleForAgent "true"^^xsd:boolean .
+:activityHasEndDate rdfs:comment "Relationship that specifies the date that an activity ends." ;
+                    rdfs:label "activity has end date"@en ;
+                    :visibleForAgent "true"^^xsd:boolean .
 
 
-:associatedWith rdfs:comment "Relationship between two agents (Person, Organization)." ;
-                rdfs:label "assosiated with"@en ;
+:activityHasStartDate rdfs:comment "Relationship that specifies the date that an activity begins." ;
+                      rdfs:label "activity has start date"@en ;
+                      :visibleForAgent "true"^^xsd:boolean .
+
+
+:associatedWith rdfs:comment "Relationship that describes strong or loose associations between persons and organizations." ;
+                rdfs:label "associated with"@en ;
                 :visibleForAgent "true"^^xsd:boolean .
 
 
-:containsBuilding rdfs:comment "Relationship between a zone and a building." ;
-                  rdfs:label "contains buidling"@en ;
+:buildingContainsStorey rdfs:comment "Relationship that indicates that a building contains a floor." ;
+                        rdfs:label "building contains storey"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
+:contractHasEndDate rdfs:comment "Relationship that specifies the date that a contract is terminated." ;
+                    rdfs:label "contract has end date"@en ;
+                    :visibleForAgent "true"^^xsd:boolean .
+
+
+:contractHasSignatureDate rdfs:comment "Relationship that specifies the signature date of a contract." ;
+                          rdfs:label "contract has signature date"@en ;
+                          :visibleForAgent "true"^^xsd:boolean .
+
+
+:contractHasStartDate rdfs:comment "Relationship that specifies the date that a contract becomes effective." ;
+                      rdfs:label "contract has start date"@en ;
+                      :visibleForAgent "true"^^xsd:boolean .
+
+
+:contractInvolvesAsset rdfs:comment "A built asset is a part of the contract agreement." ;
+                       rdfs:label "contract involves asset"@en ;
+                       :visibleForAgent "true"^^xsd:boolean .
+
+
+:drawingAboutProject rdfs:comment "Relationship that indicates the construction project associated with a drawing sheet or drawing entity." ;
+                     rdfs:label "drawing about construction project"@en ;
+                     :visibleForAgent "true"^^xsd:boolean .
+
+
+:drawingApprovedBy rdfs:comment "Relationship that specifies the entity that approved a drawing entity or drawing sheet." ;
+                   rdfs:label "drawing approved by"@en ;
+                   :visibleForAgent "true"^^xsd:boolean .
+
+
+:drawingCreatedBy rdfs:comment "Relationship that specifies the creator of a drawing entity or drawing sheet." ;
+                  rdfs:label "drawing created by"@en ;
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:containsElement rdfs:comment "Relationship between a zone and a contained element." ;
-                 rdfs:label "contains element"@en ;
+:drawingHasApprovalDate rdfs:comment "Relationship that specifies the date that a drawing was approved." ;
+                        rdfs:label "drawing has approval date"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
+:drawingHasCreationDate rdfs:comment "Relationship that specifies the date that a drawing was created." ;
+                        rdfs:label "drawing has creation date"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
+:elementHasMaterial rdfs:comment "Relationship between a building element and a material." ;
+                    rdfs:label "element has material"@en ;
+                    :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasActivityAgent rdfs:comment "Relationship between an agent (Person, Organization) and an Activity." ;
+                  rdfs:label "has activity agent"@en ;
+                  :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasContractCondition rdfs:comment "A condition associated with a contract obligation." ;
+                      rdfs:label "has contract condition"@en ;
+                      :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasContractRole rdfs:comment "Relationship stating that a person or organization has a role in the contract." ;
+                 rdfs:label "has contract role"@en ;
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-:containsSpace rdfs:comment "Relationship between a zone and a space." ;
-               rdfs:label "contains space"@en ;
-               :visibleForAgent "true"^^xsd:boolean .
+:hasDesignMetadata rdfs:comment "Relationship that links design metadata to a drawing sheet or drawing entity." ;
+                   rdfs:label "has design metadata"@en ;
+                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:containsStorey rdfs:comment "Relationship between a zone and a storey." ;
-                rdfs:label "contains storey"@en ;
-                :visibleForAgent "true"^^xsd:boolean .
+:hasDuration rdfs:comment "Relationship that specifies the duration of an activity." ;
+             rdfs:label "has duration"@en ;
+             :visibleForAgent "true"^^xsd:boolean .
 
 
-:endDate rdfs:comment "The end date of an activity." ;
-         rdfs:label "end date"@en ;
-         :visibleForAgent "true"^^xsd:boolean .
-
-
-:hasAgent rdfs:comment "Relationship between an agent (Person, Organization) and an Activity." ;
-          rdfs:label "has agent"@en ;
-          :visibleForAgent "true"^^xsd:boolean .
-
-
-:hasElement rdfs:comment "Relationship between a zone and a related element." ;
-            rdfs:label "has element"@en ;
-            :visibleForAgent "false"^^xsd:boolean .
-
-
-:hasEmailAddress rdfs:comment "Relationship between a person and an email address." ;
+:hasEmailAddress rdfs:comment "Relationship that states that an email address belongs to a person or an organization." ;
                  rdfs:label "has email address"@en ;
                  :visibleForAgent "true"^^xsd:boolean .
 
 
-:hasEmailReceiver rdfs:comment "Relationship that indicates that an email document has an email address as receiver." ;
+:hasEmailReceiver rdfs:comment "Relationship that specifies the receiving email address of an email file." ;
                   rdfs:label "has email receiver"@en ;
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:hasEmailSender rdfs:comment "Relationship that indicates that an email document has an email address as sender." ;
+:hasEmailSender rdfs:comment "Relationship that specifies the sending email address of an email file." ;
                 rdfs:label "has email sender"@en ;
                 :visibleForAgent "true"^^xsd:boolean .
 
 
-:hasMaterial rdfs:comment "Relationship between a building element and a material." ;
-             rdfs:label "has material"@en ;
+:hasGoverningJurisdiction rdfs:comment "A jurisdiction that governs the contract." ;
+                          rdfs:label "has governing jurisdiction"@en ;
+                          :visibleForAgent "true"^^xsd:boolean .
+
+
+:hasLocation rdfs:comment "Relationship that states that an entity has a physical location." ;
+             rdfs:label "has location"@en ;
              :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -1259,9 +1868,39 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
          :visibleForAgent "false"^^xsd:boolean .
 
 
+:includesActivity rdfs:comment "Relationship that specifies that an activity is part of a schedule / project-plan." ;
+                  rdfs:label "includes activity"@en ;
+                  :visibleForAgent "true"^^xsd:boolean .
+
+
+:includesBuildingEntity rdfs:comment "Relationship that states that the drawing entity includes a building zone or a building element." ;
+                        rdfs:label "includes building entity"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
 :interfaceOf rdfs:comment "Relationship between an interface and the entities (minimum 2) it is an interface of." ;
              rdfs:label "interface of"@en ;
              :visibleForAgent "true"^^xsd:boolean .
+
+
+:involvedInContract rdfs:comment "Relationship stating that a certain contract role is involved in the contract." ;
+                    rdfs:label "involved in contract"@en ;
+                    :visibleForAgent "true"^^xsd:boolean .
+
+
+:involvesBuildingEntity rdfs:comment "Relationship between an activity and a building entity (zone or element)." ;
+                        rdfs:label "involves building entity"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
+:involvesCost rdfs:comment "Relationship between an activity and a cost." ;
+              rdfs:label "involves cost"@en ;
+              :visibleForAgent "true"^^xsd:boolean .
+
+
+:involvesDiscipline rdfs:comment "Relationship between an activity and a discipline." ;
+                    rdfs:label "involves discipline"@en ;
+                    :visibleForAgent "true"^^xsd:boolean .
 
 
 :language rdfs:comment "ISO 639 two letter language code"@en ;
@@ -1279,15 +1918,40 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                :visibleForAgent "false"^^xsd:boolean .
 
 
+:metadataReferencesFile rdfs:comment "Relationship that states that the design metadata contains a reference to a file." ;
+                        rdfs:label "design metadata references file"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
 :mime <http://purl.org/dc/terms/conformsTo> <https://www.iana.org/assignments/media-types/media-types.xhtml> ;
       rdfs:comment "The mimetype of the file content preferably in accordance with IANA but also commonly used mimetypes in the AEC industry are accepted (eg. application/x-step for an IFC in STEP format)"@en ;
       rdfs:label "mime"@en ;
       :visibleForAgent "true"^^xsd:boolean .
 
 
-:precedesActivity rdfs:comment "Relationship between a some activity and a preceding activity." ;
+:obligationHasEndDate rdfs:comment "The end date of a contract obligation." ;
+                      rdfs:label "obligation has end date"@en ;
+                      :visibleForAgent "true"^^xsd:boolean .
+
+
+:obligationHasStartDate rdfs:comment "The start date of a contract obligation." ;
+                        rdfs:label "obligation has start date"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
+:precedesActivity rdfs:comment "Relationship between an activity and a preceding activity." ;
                   rdfs:label "precedes activity"@en ;
                   :visibleForAgent "true"^^xsd:boolean .
+
+
+:projectHasPhase rdfs:comment "Relationship that states that the construction project has a project phase." ;
+                 rdfs:label "project has phase"@en ;
+                 :visibleForAgent "true"^^xsd:boolean .
+
+
+:projectHasSchedule rdfs:comment "Relationship that states that the construction project has a project plan assigned to it." ;
+                    rdfs:label "project has schedule"@en ;
+                    :visibleForAgent "true"^^xsd:boolean .
 
 
 :relatedEntity rdfs:comment "Relationship between either a pair of qcy:EntityMention or qcy:CanonicalEntity occurrences (never between a qcy:EntityMention and a qcy:CanonicalEntity!). This is a general property that should not be used explicitly. Instead, use one of the more specific sub-properties." ;
@@ -1301,24 +1965,49 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                     :visibleForAgent "false"^^xsd:boolean .
 
 
-:requiresEquipment rdfs:comment "Relationship between a some activity and required equipment." ;
+:requiresEquipment rdfs:comment "Relationship between some activity and required equipment." ;
                    rdfs:label "requires equipment"@en ;
                    :visibleForAgent "true"^^xsd:boolean .
 
 
-:requiresMaterial rdfs:comment "Relationship between a some activity and required material." ;
+:requiresMaterial rdfs:comment "Relationship between some activity and required material." ;
                   rdfs:label "requires material"@en ;
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:startDate rdfs:comment "The start date of an activity." ;
-           rdfs:label "start date"@en ;
-           :visibleForAgent "true"^^xsd:boolean .
+:sheetContainsDrawing rdfs:comment "A drawing sheet contains a drawing entity." ;
+                      rdfs:label "drawing sheet contains drawing entity"@en ;
+                      :visibleForAgent "true"^^xsd:boolean .
+
+
+:siteContainsBuilding rdfs:comment "Relationship that indicates that a building belongs to a site." ;
+                      rdfs:label "site contains building"@en ;
+                      :visibleForAgent "true"^^xsd:boolean .
 
 
 :suffix rdfs:comment "The file suffix including dot (ex: \".pdf\")"@en ;
         rdfs:label "file suffix"@en ;
         :visibleForAgent "true"^^xsd:boolean .
+
+
+:zoneContainsElement rdfs:comment "Relationship that indicates that a building zone contains a building element." ;
+                     rdfs:label "building zone contains building element"@en ;
+                     :visibleForAgent "true"^^xsd:boolean .
+
+
+:zoneContainsSpace rdfs:comment "Relationship that indicates that a building zone contains a space." ;
+                   rdfs:label "zone contains space"@en ;
+                   :visibleForAgent "true"^^xsd:boolean .
+
+
+:zoneHasAdjacentElement rdfs:comment "Relationship between a zone/element and an adjacent element." ;
+                        rdfs:label "zone has adjacent element"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
+:zoneHasElement rdfs:comment "Relationship between a zone and a related element." ;
+                rdfs:label "zone has element"@en ;
+                :visibleForAgent "false"^^xsd:boolean .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

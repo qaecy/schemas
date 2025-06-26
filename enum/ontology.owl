@@ -15,7 +15,7 @@
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes special enumerations to be used with the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-31T11:00:58Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-26T11:47:14Z</terms:modified>
         <terms:title xml:lang="en">QAECY Enumerations</terms:title>
         <vann:preferredNamespacePrefix>qcy-e</vann:preferredNamespacePrefix>
     </owl:Ontology>
@@ -83,13 +83,6 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#extractionPrompt -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#extractionPrompt"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
 
@@ -101,6 +94,20 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#applicableContentCategories -->
+
+
+    <owl:AnnotationProperty rdf:about="https://dev.qaecy.com/ont#applicableContentCategories"/>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#classificationPrompt -->
+
+
+    <owl:AnnotationProperty rdf:about="https://dev.qaecy.com/ont#classificationPrompt"/>
     
 
 
@@ -203,7 +210,20 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Activity</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:extractionPrompt xml:lang="en">An activity or process related to the construction or maintenance of a building or infrastructure.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#Address -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Address">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#Location"/>
+        <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -216,6 +236,19 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#MimeCategory"/>
         <skos:definition xml:lang="en">Category for archive file content</skos:definition>
         <skos:prefLabel xml:lang="en">Archive File Content</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#AsBuiltDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#AsBuiltDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">As-Built Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -288,6 +321,8 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Balcony</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/rec#Balcony"/>
     </owl:NamedIndividual>
     
@@ -301,6 +336,8 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Beam</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Beam"/>
     </owl:NamedIndividual>
     
@@ -325,8 +362,9 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingZone"/>
-        <skos:broader rdf:resource="https://dev.qaecy.com/enum#Site"/>
         <skos:prefLabel xml:lang="en">Building</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Building"/>
     </owl:NamedIndividual>
     
@@ -340,21 +378,11 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:definition xml:lang="en">Any tangible part of a building</skos:definition>
         <skos:prefLabel xml:lang="en">Building Element</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">Any tangible part of a building, identified by a name or an id.</ont:extractionPrompt>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">Any tangible part of a &apos;Building&apos;, identified by a name or an id.</ont:extractionPrompt>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Element"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/rec#BuildingElement"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://dev.qaecy.com/enum#BuildingPermit -->
-
-
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#BuildingPermit">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A permit for building the construction issued by a legal authority.</skos:definition>
-        <skos:prefLabel xml:lang="en">Building Permit</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -367,6 +395,7 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:prefLabel xml:lang="en">Building/Storey Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -378,8 +407,22 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Building Zone</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:extractionPrompt xml:lang="en">Any spatial decomposition of a building project, identified by name or id.</ont:extractionPrompt>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Zone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#BuiltAsset -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#BuiltAsset">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Built Asset</skos:prefLabel>
+        <ont:extractionPrompt xml:lang="en">A built asset, identified by its title, name or id.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -396,14 +439,14 @@
     
 
 
-    <!-- https://dev.qaecy.com/enum#ChangeOrder -->
+    <!-- https://dev.qaecy.com/enum#City -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ChangeOrder">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#City">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A change order document.</skos:definition>
-        <skos:prefLabel xml:lang="en">Change Order</skos:prefLabel>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#Location"/>
+        <skos:prefLabel xml:lang="en">City</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -416,7 +459,34 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Column</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Column"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ComplianceDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ComplianceDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Documents that show compliance with legal, safety, and environmental regulations.</skos:definition>
+        <skos:prefLabel xml:lang="en">Compliance Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">Permits, approvals, zoning letters, safety certificates, and authority inspection reports. Look for permit numbers, approval stamps, or regulatory references.</ont:classificationPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ConstructionProject -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ConstructionProject">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Project</skos:prefLabel>
+        <ont:extractionPrompt xml:lang="en">A construction project, identified by its title, name or id. Should be associated with an asset.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -426,9 +496,114 @@
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Contract">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A formal contract.</skos:definition>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Contract</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
+        <ont:extractionPrompt xml:lang="en">A contract, identified by id, name, title etc.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ContractCondition -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ContractCondition">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Contract Condition</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
+        <ont:extractionPrompt xml:lang="en">A certain condition that must be met, as part of a &apos;ContractObligation&apos;.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ContractObligation -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ContractObligation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Contract Obligation</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
+        <ont:extractionPrompt xml:lang="en">A certain obligation that must be undertaken in the context of the &apos;Contract&apos;.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ContractRole -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ContractRole">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Contract Role</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
+        <ont:extractionPrompt xml:lang="en">A role in the &apos;Contract&apos;, described by function (eg Seller, Buyer etc).</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ContractualDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ContractualDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Legal documents that establish obligations, rights, and relationships between contracting parties.</skos:definition>
+        <skos:prefLabel xml:lang="en">Contractual Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">Contracts, subcontracts, bonds, insurance certificates, purchase agreements. Look for legal clauses, signatures, and clearly defined responsibilities or financial terms.</ont:classificationPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#CoordinationDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#CoordinationDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Coordination Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#Cost -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Cost">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Cost</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#CostControlDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">A cost, expressed in currency.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#CostControlDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#CostControlDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Documents that track costs, estimates, variations, payments, and budget performance.</skos:definition>
+        <skos:prefLabel xml:lang="en">Cost Control Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">BoQs, cost estimates, invoices, payment applications, variation/change orders (financial), and budget reports. Look for cost breakdowns, unit rates, or payment terms.</ont:classificationPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#Country -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Country">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#Location"/>
+        <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -452,9 +627,126 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Date</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A date, transformed to YYYY-MM-DD format.</ont:extractionPrompt>
+        <ont:extractionPrompt xml:lang="en">A date, always transformed &apos;YYYY-MM-DD&apos; format, regardless of how it is found.</ont:extractionPrompt>
         <ont:regex>^[0-9]{4}-[0-9]{2}-[0-9]{2}$</ont:regex>
-        <ont:relatedFormalClass rdf:resource="http://schema.org/Date"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DesignDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DesignDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Graphical and technical documents that define the geometry, spatial configuration, and engineering intent of the built asset or its systems.</skos:definition>
+        <skos:prefLabel xml:lang="en">Design Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">CAD drawings (DWG, DGN), BIM models (RVT, IFC), schematics, floor plans, sections, elevations, shop drawings, and as-builts. Look for graphical or model-based depictions with dimensional or system-specific detail.</ont:classificationPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DesignId -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DesignId">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DesignMetadata"/>
+        <skos:prefLabel xml:lang="en">Design Id</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DesignMetadata -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DesignMetadata">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Design Metadata</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:extractionPrompt xml:lang="en">Any metadata related either to the &apos;DrawingSheet&apos; or the &apos;DrawingEntity&apos;. Usually found in the title block of the document.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DesignRevisionId -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DesignRevisionId">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DesignMetadata"/>
+        <skos:prefLabel xml:lang="en">Design Revision Id</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DesignScale -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DesignScale">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DesignMetadata"/>
+        <skos:prefLabel xml:lang="en">Design Scale</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DesignStatus -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DesignStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DesignMetadata"/>
+        <skos:prefLabel xml:lang="en">Design Status</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DesignTitle -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DesignTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DesignMetadata"/>
+        <skos:prefLabel xml:lang="en">Design Title</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DetailDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DetailDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Detail Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#Discipline -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Discipline">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Discipline</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">A discipline/trade associated with the building construction process.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -467,19 +759,63 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Door</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Door"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://dev.qaecy.com/enum#Drawing -->
+    <!-- https://dev.qaecy.com/enum#DrawingEntity -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Drawing">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DrawingEntity">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A drawing or sketch.</skos:definition>
-        <skos:prefLabel xml:lang="en">Drawing</skos:prefLabel>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Drawing Entity</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">Any drawing (floor-plan, site-plan, section, P&amp;ID diagram, detail etc), identified by name, title or id. Usually contained in a &apos;DrawingSheet&apos;.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DrawingSheet -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DrawingSheet">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Drawing Sheet</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">A sheet of a technical drawing, that contains one or more &apos;DrawingEntity&apos; entities. Most often contains a title block with &apos;DesignMetadata&apos;. It is identified by name, title or id.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DuctLayoutDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DuctLayoutDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Duct Layout Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#Duration -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Duration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Activity Duration</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">The duration of an activity, expressed in days, weeks, months or years.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -492,6 +828,20 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:prefLabel xml:lang="en">Element/Adjacent element Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ElevationDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ElevationDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Elevation Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -528,6 +878,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Equipment</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:extractionPrompt xml:lang="en">A piece of equipment, a device, a tool or a machine used in construction or maintenance.</ont:extractionPrompt>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/rec#Equipment"/>
     </owl:NamedIndividual>
@@ -543,7 +894,34 @@
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Facade</skos:prefLabel>
         <skos:related rdf:resource="https://dev.qaecy.com/enum#Wall"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/rec#Facade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#FileReference -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#FileReference">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">File Reference</skos:prefLabel>
+        <ont:extractionPrompt xml:lang="en">A reference to a file by mentioning its name and/or path.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#FloorPlanDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#FloorPlanDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Floor Plan Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -560,6 +938,19 @@
     
 
 
+    <!-- https://dev.qaecy.com/enum#FoundationPlanDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#FoundationPlanDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Foundation Plan Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/enum#GCP -->
 
 
@@ -568,6 +959,18 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#ProviderType"/>
         <skos:definition xml:lang="en">Google Cloud Platform provider type</skos:definition>
         <skos:prefLabel xml:lang="en">Google Cloud Platform</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#GeoCoordinates -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#GeoCoordinates">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#Location"/>
+        <skos:prefLabel xml:lang="en">GeoCoordinates</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -615,9 +1018,35 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:definition xml:lang="en">Abstract category for some interface used to quantify the relationship between two entities</skos:definition>
-        <skos:extractionPrompt xml:lang="en">An interface that quantifies the relationship between two building entities.</skos:extractionPrompt>
         <skos:prefLabel xml:lang="en">Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#Jurisdiction -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Jurisdiction">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:prefLabel xml:lang="en">Jurisdiction</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
+        <ont:extractionPrompt xml:lang="en">The legal authority that governs a certain legal act.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#LightingPlanDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#LightingPlanDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Lighting Plan Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -666,7 +1095,9 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Material</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A mention of some material.</ont:extractionPrompt>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">A mention of some material. Identified by name or id.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -704,6 +1135,20 @@
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:definition xml:lang="en">The void of the parent element which is filled by the child element</skos:definition>
         <skos:prefLabel xml:lang="en">Opening Element Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#OperationsManualDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#OperationsManualDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Documents that support operation, maintenance, and management of the facility after handover.</skos:definition>
+        <skos:prefLabel xml:lang="en">Operations &amp; Maintenance Manual</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">O&amp;M manuals, equipment guides, maintenance schedules, warranties, commissioning reports, and training materials. Look for instructions, service procedures, or system overviews for end-users.</ont:classificationPrompt>
     </owl:NamedIndividual>
     
 
@@ -715,20 +1160,47 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Organization</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A company, organization, corporation or institution, identified by name/title.</ont:extractionPrompt>
+        <ont:extractionPrompt xml:lang="en">A company, organization, corporation or institution, identified by name or title.</ont:extractionPrompt>
         <ont:relatedFormalClass rdf:resource="http://schema.org/Organization"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://dev.qaecy.com/enum#OtherContent -->
+    <!-- https://dev.qaecy.com/enum#OtherDocument -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#OtherContent">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#OtherDocument">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">Other types of documents.</skos:definition>
-        <skos:prefLabel xml:lang="en">Other content</skos:prefLabel>
+        <skos:definition xml:lang="en">Documents that do not clearly fit into any predefined category or whose type is uncertain.</skos:definition>
+        <skos:prefLabel xml:lang="en">Other Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">Use when the document&apos;s type is unclear or does not align with other categories. May include miscellaneous notes, drafts, or unclassified files.</ont:classificationPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#OtherDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#OtherDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Other Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#OtherMetadataField -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#OtherMetadataField">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DesignMetadata"/>
+        <skos:prefLabel xml:lang="en">Other Metadata Field</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -740,7 +1212,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Person</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A person, identified by name or abreviation.</ont:extractionPrompt>
+        <ont:extractionPrompt xml:lang="en">A person, identified by name or abbreviation.</ont:extractionPrompt>
         <ont:relatedFormalClass rdf:resource="http://schema.org/Person"/>
     </owl:NamedIndividual>
     
@@ -758,6 +1230,31 @@
     
 
 
+    <!-- https://dev.qaecy.com/enum#PlumbingLayoutDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#PlumbingLayoutDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Plumbing Layout Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#PostCode -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#PostCode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#Location"/>
+        <skos:prefLabel xml:lang="en">PostCode</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/enum#PresentationFileContent -->
 
 
@@ -770,38 +1267,42 @@
     
 
 
-    <!-- https://dev.qaecy.com/enum#Project -->
+    <!-- https://dev.qaecy.com/enum#ProjectPhase -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Project">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ProjectPhase">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
-        <skos:prefLabel xml:lang="en">Project</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A building project, identified by its title, name or id.</ont:extractionPrompt>
+        <skos:prefLabel xml:lang="en">Project Phase</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">A project phase, identified by name or id.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://dev.qaecy.com/enum#Regulation -->
+    <!-- https://dev.qaecy.com/enum#QualityControlDocument -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Regulation">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#QualityControlDocument">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A regulation document.</skos:definition>
-        <skos:prefLabel xml:lang="en">Regulation</skos:prefLabel>
+        <skos:definition xml:lang="en">Documents that record quality checks, testing results, and conformance activities.</skos:definition>
+        <skos:prefLabel xml:lang="en">Quality Control Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">Test reports, NCRs, CARs, inspection checklists, material certificates, punch lists. Look for results of tests, QA/QC logs, or documentation of corrective actions.</ont:classificationPrompt>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://dev.qaecy.com/enum#Report -->
+    <!-- https://dev.qaecy.com/enum#ReinforcementDrawing -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Report">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ReinforcementDrawing">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A detailed report.</skos:definition>
-        <skos:prefLabel xml:lang="en">Report</skos:prefLabel>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Reinforcement Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -814,20 +1315,10 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Roof</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Roof"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/rec#Roof"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://dev.qaecy.com/enum#SafetyDocument -->
-
-
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#SafetyDocument">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A document regaring safety measures.</skos:definition>
-        <skos:prefLabel xml:lang="en">Safety Document</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -837,9 +1328,23 @@
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Schedule">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A construction schedule.</skos:definition>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Schedule</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <ont:extractionPrompt xml:lang="en">A whole or partial project plan / schedule expressed in some diagram, chart or table, identified by name, revision, date or id.</ont:extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#ScheduleDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ScheduleDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Documents that define project activities, sequences, and time-based milestones.</skos:definition>
+        <skos:prefLabel xml:lang="en">Schedule Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">Gantt charts, CPM schedules, look-ahead schedules, and progress reports focused on timelines. Look for durations, start/end dates, dependencies, and milestones.</ont:classificationPrompt>
     </owl:NamedIndividual>
     
 
@@ -856,6 +1361,19 @@
     
 
 
+    <!-- https://dev.qaecy.com/enum#SectionDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#SectionDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Section Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/enum#Site -->
 
 
@@ -864,7 +1382,22 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingZone"/>
         <skos:prefLabel xml:lang="en">Site</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#SiteAssessmentDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#SiteAssessmentDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Documents that describe physical conditions or assessments of the site before or during construction.</skos:definition>
+        <skos:prefLabel xml:lang="en">Site Assessment Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">Geotechnical reports, soil logs, site surveys, environmental assessments, utility scans. Look for borehole data, environmental findings, or terrain details.</ont:classificationPrompt>
     </owl:NamedIndividual>
     
 
@@ -877,6 +1410,20 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:prefLabel xml:lang="en">Site/Building Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#SitePlanDrawing -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#SitePlanDrawing">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <skos:prefLabel xml:lang="en">Site Plan Drawing</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -889,6 +1436,8 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Slab</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Slab"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/rec#Slab"/>
     </owl:NamedIndividual>
@@ -904,6 +1453,8 @@
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingZone"/>
         <skos:definition xml:lang="en">Space in a building</skos:definition>
         <skos:prefLabel xml:lang="en">Space</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Space"/>
     </owl:NamedIndividual>
     
@@ -917,6 +1468,7 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:prefLabel xml:lang="en">Space/Adjacent element Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -929,18 +1481,7 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:prefLabel xml:lang="en">Space/Contained element Interface</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://dev.qaecy.com/enum#Specification -->
-
-
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Specification">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A detailed specification.</skos:definition>
-        <skos:prefLabel xml:lang="en">Specification</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -965,19 +1506,21 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Stair</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Stair"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://dev.qaecy.com/enum#Standard -->
+    <!-- https://dev.qaecy.com/enum#State -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Standard">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#State">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
-        <skos:prefLabel xml:lang="en">Standard</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A reference of a standard or iso, by name/code.</ont:extractionPrompt>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#Location"/>
+        <skos:prefLabel xml:lang="en">State</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -990,6 +1533,8 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingZone"/>
         <skos:prefLabel xml:lang="en">Storey</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Storey"/>
     </owl:NamedIndividual>
     
@@ -1003,6 +1548,7 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:prefLabel xml:lang="en">Storey/Element Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
@@ -1015,18 +1561,33 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#Interface"/>
         <skos:prefLabel xml:lang="en">Storey/Space Interface</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://dev.qaecy.com/enum#Tender -->
+    <!-- https://dev.qaecy.com/enum#TechnicalSpecificationDocument -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Tender">
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#TechnicalSpecificationDocument">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
-        <skos:definition xml:lang="en">A tender document.</skos:definition>
-        <skos:prefLabel xml:lang="en">Tender</skos:prefLabel>
+        <skos:definition xml:lang="en">Written standards that define technical and performance requirements for materials, systems, and workmanship.</skos:definition>
+        <skos:prefLabel xml:lang="en">Technical Specification Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">Product specs, material data sheets, MasterFormat specs, workmanship criteria, and standards (e.g., ASTM, ISO). Look for structured text describing required properties and tolerances.</ont:classificationPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#TenderingDocument -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#TenderingDocument">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#ContentCategory"/>
+        <skos:definition xml:lang="en">Documents used to solicit, submit, or evaluate bids for works, goods, or services.</skos:definition>
+        <skos:prefLabel xml:lang="en">Tendering Document</skos:prefLabel>
+        <ont:classificationPrompt xml:lang="en">RFPs, RFQs, ITTs, bid submissions, evaluation forms. Look for keywords like &apos;tender&apos;, &apos;bid&apos;, &apos;proposal&apos;, often linked to procurement processes.</ont:classificationPrompt>
     </owl:NamedIndividual>
     
 
@@ -1087,6 +1648,8 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Wall</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Wall"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/rec#Wall"/>
     </owl:NamedIndividual>
@@ -1101,6 +1664,8 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <skos:prefLabel xml:lang="en">Window</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <ont:relatedFormalClass rdf:resource="https://w3id.org/beo#Window"/>
     </owl:NamedIndividual>
 </rdf:RDF>

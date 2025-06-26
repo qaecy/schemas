@@ -1,4 +1,14 @@
 [ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+    }, {
+      "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    } ]
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/conformsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -20,12 +30,6 @@
   "@id" : "http://schema.org/domainIncludes",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://schema.org/email",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "http://schema.org/endDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
   "@id" : "http://schema.org/material",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
@@ -33,9 +37,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://schema.org/requiresMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "http://schema.org/startDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Activity",
@@ -47,7 +48,52 @@
   "@id" : "https://dev.qaecy.com/enum#BuildingElement",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
+  "@id" : "https://dev.qaecy.com/enum#BuildingZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#BuiltAsset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ConstructionProject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Contract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ContractCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ContractObligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ContractRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ContractualDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Cost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
   "@id" : "https://dev.qaecy.com/enum#Date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#DesignDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#DesignMetadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Discipline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#DrawingEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#DrawingSheet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Duration",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#EmailAddress",
@@ -59,6 +105,15 @@
   "@id" : "https://dev.qaecy.com/enum#Equipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
+  "@id" : "https://dev.qaecy.com/enum#FileReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Jurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
   "@id" : "https://dev.qaecy.com/enum#Material",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
@@ -66,6 +121,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ProjectPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Schedule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#ScheduleDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Site",
@@ -91,7 +155,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-03-31T10:59:49Z"
+    "@value" : "2025-06-26T11:47:07Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -650,39 +714,70 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#adjacentElement",
+  "@id" : "https://dev.qaecy.com/ont#activityHasEndDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone/element and an adjacent element."
+    "@value" : "Relationship that specifies the date that an activity ends."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "adjacent element"
+    "@value" : "activity has end date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#hasElement"
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+    "@id" : "https://dev.qaecy.com/enum#Date"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Building"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Space"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Storey"
+    "@id" : "https://dev.qaecy.com/enum#Activity"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A Zone is adjacent to a BuildingElement (eg a door and a space)."
+    "@value" : "An 'Activity' has an end 'Date'."
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "https://w3id.org/bot#adjacentElement"
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#activityHasStartDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the date that an activity begins."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "activity has start date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Date"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Activity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An 'Activity' has a starting 'Date'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -712,7 +807,7 @@
   "@id" : "https://dev.qaecy.com/ont#alternativeRepresentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a qcy:Fragment an alternative representation such as an image derived from the original file content."
+    "@value" : "Relationship between two information objects where one is an alternative representation of the other. For example an image derived from a PDF page fragment or a CAD drawing."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#InformationObject"
@@ -722,7 +817,27 @@
     "@value" : "alternative representation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#FileLocation"
+    "@id" : "https://dev.qaecy.com/ont#InformationObject"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#applicableContentCategories",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a qcy:EntityCategory or a qcy:relatedEntity sub-property and one or more qcy:ContentCategory. This property is used to specify the entities that will be represented based on the type of the content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "applicable content categories"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -772,14 +887,14 @@
   "@id" : "https://dev.qaecy.com/ont#associatedWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between two agents (Person, Organization)."
+    "@value" : "Relationship that describes strong or loose associations between persons and organizations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "assosiated with"
+    "@value" : "associated with"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -798,24 +913,24 @@
     "@id" : "https://dev.qaecy.com/enum#Person"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An agent (Person, Organization) is related to another agent (Person, Organization)."
+    "@value" : "A 'Person' or 'Organization' is related to another 'Person' or 'Organization'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#containsBuilding",
+  "@id" : "https://dev.qaecy.com/ont#buildingContainsStorey",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone and a building."
+    "@value" : "Relationship that indicates that a building contains a floor."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "contains buidling"
+    "@value" : "building contains storey"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -823,62 +938,66 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Building"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Site"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A Site contains a Building."
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasBuilding"
-  } ],
-  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ]
-}, {
-  "@id" : "https://dev.qaecy.com/ont#containsElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone and a contained element."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "contains element"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#hasElement"
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Building"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Site"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Space"
-  }, {
     "@id" : "https://dev.qaecy.com/enum#Storey"
   } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Building"
+  } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A Zone contains a BuildingElement (eg a wall in a building)."
+    "@value" : "A 'Building' contains a 'Storey'."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "https://w3id.org/bot#containsElement"
+    "@id" : "https://w3id.org/bot#hasStorey"
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#classificationPrompt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A property specifying the prompt used to classify a certain type of document by an LLM."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "classification prompt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#confidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A numerical score, typically between 0.0 and 1.0, representing the level of certainty or belief in an assertion, a piece of data, or a relationship. For example, the confidence that an entity mention resolves to a particular canonical entity, or the confidence in the derived properties of a canonical entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "confidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/ont#containsFragment",
@@ -901,17 +1020,17 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#containsSpace",
+  "@id" : "https://dev.qaecy.com/ont#contractHasEndDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone and a space."
+    "@value" : "Relationship that specifies the date that a contract is terminated."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "contains space"
+    "@value" : "contract has end date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -919,38 +1038,34 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Space"
+    "@id" : "https://dev.qaecy.com/enum#Date"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Building"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Site"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Storey"
+    "@id" : "https://dev.qaecy.com/enum#Contract"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A Zone contains a Space (eg a classroom on a floor)."
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasSpace"
+    "@value" : "A 'Contract' has a termination 'Date'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#containsStorey",
+  "@id" : "https://dev.qaecy.com/ont#contractHasSignatureDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone and a storey."
+    "@value" : "Relationship that specifies the signature date of a contract."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "contains storey"
+    "@value" : "contract has signature date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -958,19 +1073,87 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Storey"
+    "@id" : "https://dev.qaecy.com/enum#Date"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Building"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Site"
+    "@id" : "https://dev.qaecy.com/enum#Contract"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A Building contains a Storey."
+    "@value" : "A 'Contract' has a 'Date' that it was signed."
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasStorey"
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#contractHasStartDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the date that a contract becomes effective."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contract has start date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Date"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Contract' has a 'Date' that it becomes effective."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#contractInvolvesAsset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A built asset is a part of the contract agreement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contract involves asset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuiltAsset"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Contract' involves a certain 'BuiltAsset'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1040,17 +1223,17 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#endDate",
+  "@id" : "https://dev.qaecy.com/ont#drawingAboutProject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The end date of an activity."
+    "@value" : "Relationship that indicates the construction project associated with a drawing sheet or drawing entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "end date"
+    "@value" : "drawing about construction project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1058,17 +1241,209 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' is about the 'ConstructionProject'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#drawingApprovedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the entity that approved a drawing entity or drawing sheet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing approved by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Organization"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Person"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' was approved by a 'Person' or an 'Organization'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#drawingCreatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the creator of a drawing entity or drawing sheet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing created by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Organization"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Person"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' was created by a 'Person' or an 'Organization'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#drawingHasApprovalDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the date that a drawing was approved."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing has approval date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Date"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Activity"
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An Activity has an endDate."
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' was approved on a 'Date'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#drawingHasCreationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the date that a drawing was created."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing has creation date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Date"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' was created on a 'Date'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#elementHasMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a building element and a material."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "element has material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Material"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'BuildingElement' is made of some 'Material'."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "http://schema.org/endDate"
+    "@id" : "http://schema.org/material"
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1100,7 +1475,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A property specifying the prompt used to extract a certain kind of entity or relation by a LLM."
+    "@value" : "A property specifying the prompt used to extract a certain kind of entity or relation by an LLM."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -1138,7 +1513,7 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#hasAgent",
+  "@id" : "https://dev.qaecy.com/ont#hasActivityAgent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relationship between an agent (Person, Organization) and an Activity."
@@ -1148,13 +1523,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has agent"
+    "@value" : "has activity agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Organization"
@@ -1165,7 +1543,7 @@
     "@id" : "https://dev.qaecy.com/enum#Activity"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An Activity that is carried out by an agent (Person, Organization)."
+    "@value" : "An 'Activity' is carried out by a 'Person' or 'Organization'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1215,17 +1593,17 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#hasElement",
+  "@id" : "https://dev.qaecy.com/ont#hasContractCondition",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone and a related element."
+    "@value" : "A condition associated with a contract obligation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has element"
+    "@value" : "has contract condition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1233,30 +1611,139 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+    "@id" : "https://dev.qaecy.com/enum#ContractCondition"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Building"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Site"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Space"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Storey"
+    "@id" : "https://dev.qaecy.com/enum#ContractObligation"
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasElement"
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ContractObligation' involves a certain 'ContractCondition'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
+    "@value" : "true"
   } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#hasContractRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship stating that a person or organization has a role in the contract."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has contract role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractRole"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Organization"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Person"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Person' or 'Organization' undertakes a specific 'ContractRole' in the context of the 'Contract'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#hasDesignMetadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that links design metadata to a drawing sheet or drawing entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has design metadata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' is annotated with 'DesignMetadata'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#hasDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the duration of an activity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has duration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Duration"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Activity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An 'Activity' has a certain 'Duration'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#hasElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://dev.qaecy.com/ont#hasEmailAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a person and an email address."
+    "@value" : "Relationship that states that an email address belongs to a person or an organization."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1280,10 +1767,7 @@
     "@id" : "https://dev.qaecy.com/enum#Person"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A Person or an Organization has an EmailAddress."
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "http://schema.org/email"
+    "@value" : "A 'Person' or an 'Organization' has an 'EmailAddress'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1293,7 +1777,7 @@
   "@id" : "https://dev.qaecy.com/ont#hasEmailReceiver",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that indicates that an email document has an email address as receiver."
+    "@value" : "Relationship that specifies the receiving email address of an email file."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1322,7 +1806,7 @@
   "@id" : "https://dev.qaecy.com/ont#hasEmailSender",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that indicates that an email document has an email address as sender."
+    "@value" : "Relationship that specifies the sending email address of an email file."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1374,10 +1858,10 @@
   "@id" : "https://dev.qaecy.com/ont#hasFileLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a qcy:InformationObject and one of its qcy:FileLocations. All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location"
+    "@value" : "Relationship between a qcy:InformationObject and one of its qcy:FileLocation(s). All qcy:FileContent instances have at least one location and other information objects such as a qcy:ImageFragment also have a file location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#FileContent"
+    "@id" : "https://dev.qaecy.com/ont#InformationObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1391,17 +1875,73 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#hasMaterial",
+  "@id" : "https://dev.qaecy.com/ont#hasFoundingMention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship indicating that a Canonical Entity was originally established or founded based on this specific Entity Mention. This property highlights the mentions that were primary and instrumental in the initial creation or identification of the canonical entity's concept."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#CanonicalEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has founding mention"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityMention"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#hasGoverningJurisdiction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a building element and a material."
+    "@value" : "A jurisdiction that governs the contract."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has material"
+    "@value" : "has governing jurisdiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Jurisdiction"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Contract' is governed by a certain 'Jurisdiction'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#hasLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that states that an entity has a physical location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1410,16 +1950,19 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Material"
+    "@id" : "https://dev.qaecy.com/enum#Location"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+    "@id" : "https://dev.qaecy.com/enum#BuiltAsset"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Organization"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Person"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A BuildingElement is made of some Material."
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "http://schema.org/material"
+    "@value" : "A 'Person', 'Organization', 'BuiltAsset' or 'ConstructionProject' has a certain 'Location'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1485,7 +2028,10 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#hasSubElement"
+    "@id" : "https://dev.qaecy.com/ont#hasElement"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
@@ -1494,7 +2040,7 @@
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A BuildingElement contains another BuildingElement (eg a fan in an air handling unit)."
+    "@value" : "A 'BuildingElement' contains another 'BuildingElement' (eg a fan in an air handling unit)."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#hasSubElement"
@@ -1522,6 +2068,78 @@
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#includesActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies that an activity is part of a schedule / project-plan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "includes activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Activity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Schedule"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Schedule' includes an 'Activity'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#includesBuildingEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that states that the drawing entity includes a building zone or a building element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "includes building entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#BuildingZone"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "The 'DrawingEntity' includes a 'BuildingZone' or 'BuildingElement'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/ont#inferredFragmentType",
@@ -1563,6 +2181,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
@@ -1571,6 +2192,148 @@
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#interfaceOf"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#involvedInContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship stating that a certain contract role is involved in the contract."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "involved in contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractRole"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ContractRole' is involved in the 'Contract'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#involvesBuildingEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between an activity and a building entity (zone or element)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "involves building entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#BuildingZone"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Activity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An 'Activity' involves a certain 'BuildingZone' or 'BuildingElement'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#involvesCost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between an activity and a cost."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "involves cost"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Cost"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Activity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An 'Activity' involves a certain 'Cost'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#involvesDiscipline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between an activity and a discipline."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "involves discipline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Discipline"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Activity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An 'Activity' involves a certain 'Discipline'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1716,6 +2479,41 @@
     "@value" : "false"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#metadataReferencesFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that states that the design metadata contains a reference to a file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "design metadata references file"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#FileReference"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "The 'DesignMetadata' references a 'FileReference'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#mime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/conformsTo" : [ {
@@ -1737,6 +2535,76 @@
   } ],
   "https://dev.qaecy.com/ont#regex" : [ {
     "@value" : "^[a-z]+/[a-z0-9-]+$"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#obligationHasEndDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The end date of a contract obligation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "obligation has end date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Date"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractObligation"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ContractObligation' has a 'Date' that it expires."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#obligationHasStartDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The start date of a contract obligation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "obligation has start date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Date"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractObligation"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ContractObligation' has a 'Date' that it becomes effective."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1767,7 +2635,7 @@
   "@id" : "https://dev.qaecy.com/ont#parentFragment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a parent fragments (eg a title) and a child fragment (eg a paragraph)."
+    "@value" : "Relationship between a parent fragment (eg a title) and a child fragment (eg a paragraph)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#Fragment"
@@ -1787,7 +2655,7 @@
   "@id" : "https://dev.qaecy.com/ont#precedesActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a some activity and a preceding activity."
+    "@value" : "Relationship between an activity and a preceding activity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1802,6 +2670,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Activity"
   } ],
@@ -1809,14 +2680,104 @@
     "@id" : "https://dev.qaecy.com/enum#Activity"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An Activity precedes another Activity, forming a dependency."
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "http://schema.org/requiresMaterial"
+    "@value" : "An 'Activity' precedes another 'Activity' (usually by forming a dependency)."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#projectHasPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that states that the construction project has a project phase."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "project has phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ProjectPhase"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ConstructionProject' has a 'ProjectPhase'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#projectHasSchedule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that states that the construction project has a project plan assigned to it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "project has schedule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Schedule"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ConstructionProject' has a 'Schedule'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#reasoning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A textual explanation or justification supporting an assertion, a piece of data, a derived value, or a relationship. This can include the evidence, logic, or process used to arrive at a conclusion or to assign a confidence score."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "reasoning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/ont#regex",
@@ -1968,7 +2929,7 @@
   "@id" : "https://dev.qaecy.com/ont#requiresEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a some activity and required equipment."
+    "@value" : "Relationship between some activity and required equipment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1983,6 +2944,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Equipment"
   } ],
@@ -1990,7 +2954,7 @@
     "@id" : "https://dev.qaecy.com/enum#Activity"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An Activity requires some Equipment."
+    "@value" : "An 'Activity' requires some 'Equipment'."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "http://schema.org/requiresEquipment"
@@ -2003,7 +2967,7 @@
   "@id" : "https://dev.qaecy.com/ont#requiresMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a some activity and required material."
+    "@value" : "Relationship between some activity and required material."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -2018,6 +2982,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+  } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Material"
   } ],
@@ -2025,7 +2992,7 @@
     "@id" : "https://dev.qaecy.com/enum#Activity"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An Activity requires some Material."
+    "@value" : "An 'Activity' requires some 'Material'."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "http://schema.org/requiresMaterial"
@@ -2100,6 +3067,79 @@
     "@value" : "false"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#sheetContainsDrawing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A drawing sheet contains a drawing entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing sheet contains drawing entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' contains a 'DrawingEntity'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#siteContainsBuilding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that indicates that a building belongs to a site."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "site contains building"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Building"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Site"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Site' contains a 'Building'."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasBuilding"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#sizeBytes",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2115,41 +3155,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ],
-  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ]
-}, {
-  "@id" : "https://dev.qaecy.com/ont#startDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The start date of an activity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "start date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
-  } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Date"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Activity"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An Activity has a startDate."
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
-    "@id" : "http://schema.org/startDate"
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -2317,6 +3322,175 @@
 }, {
   "@id" : "https://dev.qaecy.com/ont#visibleForAgent",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#zoneContainsElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that indicates that a building zone contains a building element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "building zone contains building element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasElement"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Building"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Site"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Space"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Storey"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Zone' contains a 'BuildingElement' (eg a building contains a wall)."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
+    "@id" : "https://w3id.org/bot#containsElement"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#zoneContainsSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that indicates that a building zone contains a space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "zone contains space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Space"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Building"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Site"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Storey"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Site', 'Building' or 'Storey' contains a 'Space' (eg a classroom on a floor)."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasSpace"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#zoneHasAdjacentElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a zone/element and an adjacent element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "zone has adjacent element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasElement"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Building"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Space"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Storey"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Zone' is adjacent to a 'BuildingElement' (eg a wall is adjacent to a space)."
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
+    "@id" : "https://w3id.org/bot#adjacentElement"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#zoneHasElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a zone and a related element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "zone has element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#BuildingElement"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Building"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Site"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Space"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Storey"
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasElement"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ]
 }, {
   "@id" : "https://w3id.org/bot#adjacentElement",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
