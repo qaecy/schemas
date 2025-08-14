@@ -67,7 +67,6 @@ This section provides details for each class and property defined by QAECY Enume
   <li><a href="#ImageFileContent" title="https://dev.qaecy.com/enum#ImageFileContent">Image File Content</a></li>
   <li><a href="#InstallerFileContent" title="https://dev.qaecy.com/enum#InstallerFileContent">Installer File Content</a></li>
   <li><a href="#Interface" title="https://dev.qaecy.com/enum#Interface">Interface</a></li>
-  <li><a href="#Jurisdiction" title="https://dev.qaecy.com/enum#Jurisdiction">Jurisdiction</a></li>
   <li><a href="#LightingPlanDrawing" title="https://dev.qaecy.com/enum#LightingPlanDrawing">Lighting Plan Drawing</a></li>
   <li><a href="#LocalProvider" title="https://dev.qaecy.com/enum#LocalProvider">Local provider</a></li>
   <li><a href="#Location" title="https://dev.qaecy.com/enum#Location">Location</a></li>
@@ -827,7 +826,7 @@ This section provides details for each class and property defined by QAECY Enume
     <a href="https://dev.qaecy.com/ont#applicableContentCategories" target="_blank" title="https://dev.qaecy.com/ont#applicableContentCategories">applicable Content Categories</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#ContractualDocument" title="https://dev.qaecy.com/enum#ContractualDocument">Contractual Document</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="https://dev.qaecy.com/ont#extractionPrompt" target="_blank" title="https://dev.qaecy.com/ont#extractionPrompt">extraction Prompt</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"A contract, identified by id, name, title etc."@en</span>
+    <a href="https://dev.qaecy.com/ont#extractionPrompt" target="_blank" title="https://dev.qaecy.com/ont#extractionPrompt">extraction Prompt</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."@en</span>
    </dd>
   </dl>
  </div>
@@ -908,7 +907,7 @@ This section provides details for each class and property defined by QAECY Enume
     <a href="https://dev.qaecy.com/ont#applicableContentCategories" target="_blank" title="https://dev.qaecy.com/ont#applicableContentCategories">applicable Content Categories</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#ContractualDocument" title="https://dev.qaecy.com/enum#ContractualDocument">Contractual Document</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="https://dev.qaecy.com/ont#extractionPrompt" target="_blank" title="https://dev.qaecy.com/ont#extractionPrompt">extraction Prompt</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"A role in the 'Contract', described by function (eg Seller, Buyer etc)."@en</span>
+    <a href="https://dev.qaecy.com/ont#extractionPrompt" target="_blank" title="https://dev.qaecy.com/ont#extractionPrompt">extraction Prompt</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."@en</span>
    </dd>
   </dl>
  </div>
@@ -1920,33 +1919,6 @@ This section provides details for each class and property defined by QAECY Enume
    </dd>
   </dl>
  </div>
- <div class="entity" id="Jurisdiction">
-  <h3>Jurisdiction<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://dev.qaecy.com/enum#Jurisdiction</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dd>
-    <a href="https://dev.qaecy.com/ont#EntityCategory" target="_blank" title="https://dev.qaecy.com/ont#EntityCategory">Entity Category</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Jurisdiction"@en</span>
-   </dd>
-   <dd>
-    <a href="https://dev.qaecy.com/ont#applicableContentCategories" target="_blank" title="https://dev.qaecy.com/ont#applicableContentCategories">applicable Content Categories</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#ContractualDocument" title="https://dev.qaecy.com/enum#ContractualDocument">Contractual Document</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="https://dev.qaecy.com/ont#extractionPrompt" target="_blank" title="https://dev.qaecy.com/ont#extractionPrompt">extraction Prompt</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The legal authority that governs a certain legal act."@en</span>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="LightingPlanDrawing">
   <h3>Lighting Plan Drawing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://dev.qaecy.com/enum#LightingPlanDrawing</p>
@@ -2219,7 +2191,7 @@ This section provides details for each class and property defined by QAECY Enume
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Organization"@en</span>
    </dd>
    <dd>
-    <a href="https://dev.qaecy.com/ont#extractionPrompt" target="_blank" title="https://dev.qaecy.com/ont#extractionPrompt">extraction Prompt</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"A company, organization, corporation or institution, identified by name or title."@en</span>
+    <a href="https://dev.qaecy.com/ont#extractionPrompt" target="_blank" title="https://dev.qaecy.com/ont#extractionPrompt">extraction Prompt</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"A company, organization, corporation, public authority or institution, identified by name or title."@en</span>
    </dd>
    <dd>
     <a href="https://dev.qaecy.com/ont#relatedFormalClass" target="_blank" title="https://dev.qaecy.com/ont#relatedFormalClass">related Formal Class</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://schema.org/Organization" target="_blank" title="http://schema.org/Organization">Organization</a> <sup class="type-ep" title="external property">ep</sup>

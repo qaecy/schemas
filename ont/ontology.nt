@@ -4,7 +4,7 @@
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2025-06-26T11:47:07Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2025-08-14T15:27:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://dev.qaecy.com/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://dev.qaecy.com/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -139,6 +139,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#containsFragment> <http://www.w3.org/2000/01/rdf-schema#label> "contains fragment"@en .
 <https://dev.qaecy.com/ont#containsFragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+# https://dev.qaecy.com/ont#contractGovernedByJurisdiction
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#contractHasEndDate
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
@@ -157,11 +163,23 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
-# https://dev.qaecy.com/ont#contractInvolvesAsset
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# https://dev.qaecy.com/ont#contractInvolvesParty
+<https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
+# https://dev.qaecy.com/ont#contractMentionsBuiltAsset
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
+# https://dev.qaecy.com/ont#contractStatesObligation
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#drawingAboutProject
 <https://dev.qaecy.com/ont#drawingAboutProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -221,12 +239,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasContentCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject (typically a whole document or a page in a document) and its qcy:ContentCategory derived from its content." .
 <https://dev.qaecy.com/ont#hasContentCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has content category"@en .
 <https://dev.qaecy.com/ont#hasContentCategory> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#hasContractCondition
-<https://dev.qaecy.com/ont#hasContractCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#hasContractCondition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
-<https://dev.qaecy.com/ont#hasContractCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
-<https://dev.qaecy.com/ont#hasContractCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#hasContractRole
 <https://dev.qaecy.com/ont#hasContractRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -292,12 +304,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasFoundingMention> <http://www.w3.org/2000/01/rdf-schema#label> "has founding mention"@en .
 <https://dev.qaecy.com/ont#hasFoundingMention> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-# https://dev.qaecy.com/ont#hasGoverningJurisdiction
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
-# 
 # https://dev.qaecy.com/ont#hasLocation
 <https://dev.qaecy.com/ont#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#hasLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
@@ -345,12 +351,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
-# https://dev.qaecy.com/ont#involvedInContract
-<https://dev.qaecy.com/ont#involvedInContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#involvedInContract> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
-<https://dev.qaecy.com/ont#involvedInContract> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
-<https://dev.qaecy.com/ont#involvedInContract> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
-# 
 # https://dev.qaecy.com/ont#involvesBuildingEntity
 <https://dev.qaecy.com/ont#involvesBuildingEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#involvesBuildingEntity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
@@ -383,11 +383,23 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#metadataReferencesFile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#metadataReferencesFile> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
+# https://dev.qaecy.com/ont#obligationHasCondition
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#obligationHasEndDate
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
+# https://dev.qaecy.com/ont#obligationHasResponsibleParty
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#obligationHasStartDate
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -466,6 +478,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity." .
 <https://dev.qaecy.com/ont#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#label> "resolves to"@en .
 <https://dev.qaecy.com/ont#resolvesTo> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://dev.qaecy.com/ont#roleInContract
+<https://dev.qaecy.com/ont#roleInContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#roleInContract> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#roleInContract> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#roleInContract> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#selectorObject
 <https://dev.qaecy.com/ont#selectorObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -696,9 +714,18 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#sizeBytes> <http://www.w3.org/2000/01/rdf-schema#label> "size bytes"@en .
 <https://dev.qaecy.com/ont#sizeBytes> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+# https://dev.qaecy.com/ont#subject
+<https://dev.qaecy.com/ont#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/ont#subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://dev.qaecy.com/ont#subject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://dev.qaecy.com/ont#subject> <http://schema.org/domainIncludes> <https://dev.qaecy.com/ont#InformationObject> .
+<https://dev.qaecy.com/ont#subject> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject is a short description that captures the main theme or topic of a qcy:InformationObject. The subject is typically generated by a Large Language model."@en .
+<https://dev.qaecy.com/ont#subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en .
+<https://dev.qaecy.com/ont#subject> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 # https://dev.qaecy.com/ont#suffix
 <https://dev.qaecy.com/ont#suffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#FileContent> .
+<https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#FileLocation> .
 <https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://dev.qaecy.com/ont#tableContent
@@ -728,9 +755,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#textRaw
 <https://dev.qaecy.com/ont#textRaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#Fragment> .
+<https://dev.qaecy.com/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#InformationObject> .
 <https://dev.qaecy.com/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://dev.qaecy.com/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Raw text as extracted from the fragment."@en .
+<https://dev.qaecy.com/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Raw text as extracted from the qcy:InformationObject."@en .
 <https://dev.qaecy.com/ont#textRaw> <http://www.w3.org/2000/01/rdf-schema#label> "text raw"@en .
 <https://dev.qaecy.com/ont#textRaw> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
@@ -1035,9 +1062,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://dev.qaecy.com/enum#FileReference
 <https://dev.qaecy.com/enum#FileReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
-# https://dev.qaecy.com/enum#Jurisdiction
-<https://dev.qaecy.com/enum#Jurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-# 
 # https://dev.qaecy.com/enum#Location
 <https://dev.qaecy.com/enum#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
@@ -1119,6 +1143,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#buildingContainsStorey> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Building' contains a 'Storey'." .
 # 
+# https://dev.qaecy.com/ont#contractGovernedByJurisdiction
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Organization> .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Contract' is governed by a certain 'Jurisdiction'." .
+# 
 # https://dev.qaecy.com/ont#contractHasEndDate
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#contractHasEndDate> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
@@ -1140,12 +1171,27 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#contractHasStartDate> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
 <https://dev.qaecy.com/ont#contractHasStartDate> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Contract' has a 'Date' that it becomes effective." .
 # 
-# https://dev.qaecy.com/ont#contractInvolvesAsset
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#BuiltAsset> .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Contract' involves a certain 'BuiltAsset'." .
+# https://dev.qaecy.com/ont#contractInvolvesParty
+<https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Organization> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Person> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <https://dev.qaecy.com/ont#extractionPrompt> "A certain party ('Person' or 'Organization') is legally a part of a 'Contract'." .
+# 
+# https://dev.qaecy.com/ont#contractMentionsBuiltAsset
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#BuiltAsset> .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Contract' involves a certain 'BuiltAsset'." .
+# 
+# https://dev.qaecy.com/ont#contractStatesObligation
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#ContractObligation> .
+<https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
+<https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Contract' states a certain 'ContractObligation'." .
 # 
 # https://dev.qaecy.com/ont#drawingAboutProject
 <https://dev.qaecy.com/ont#drawingAboutProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1205,13 +1251,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasActivityAgent> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Activity> .
 <https://dev.qaecy.com/ont#hasActivityAgent> <https://dev.qaecy.com/ont#extractionPrompt> "An 'Activity' is carried out by a 'Person' or 'Organization'." .
 # 
-# https://dev.qaecy.com/ont#hasContractCondition
-<https://dev.qaecy.com/ont#hasContractCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#hasContractCondition> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/ont#hasContractCondition> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#ContractCondition> .
-<https://dev.qaecy.com/ont#hasContractCondition> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#ContractObligation> .
-<https://dev.qaecy.com/ont#hasContractCondition> <https://dev.qaecy.com/ont#extractionPrompt> "A 'ContractObligation' involves a certain 'ContractCondition'." .
-# 
 # https://dev.qaecy.com/ont#hasContractRole
 <https://dev.qaecy.com/ont#hasContractRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#hasContractRole> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
@@ -1251,13 +1290,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasEmailSender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#hasEmailSender> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#EmailAddress> .
 <https://dev.qaecy.com/ont#hasEmailSender> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#EmailFileContent> .
-# 
-# https://dev.qaecy.com/ont#hasGoverningJurisdiction
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Jurisdiction> .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Contract' is governed by a certain 'Jurisdiction'." .
 # 
 # https://dev.qaecy.com/ont#hasLocation
 <https://dev.qaecy.com/ont#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1304,13 +1336,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#interfaceOf> <https://dev.qaecy.com/ont#relatedFormalProperty> <https://w3id.org/bot#interfaceOf> .
 <https://w3id.org/bot#interfaceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
-# https://dev.qaecy.com/ont#involvedInContract
-<https://dev.qaecy.com/ont#involvedInContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#involvedInContract> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/ont#involvedInContract> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Contract> .
-<https://dev.qaecy.com/ont#involvedInContract> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#ContractRole> .
-<https://dev.qaecy.com/ont#involvedInContract> <https://dev.qaecy.com/ont#extractionPrompt> "A 'ContractRole' is involved in the 'Contract'." .
-# 
 # https://dev.qaecy.com/ont#involvesBuildingEntity
 <https://dev.qaecy.com/ont#involvesBuildingEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#involvesBuildingEntity> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ScheduleDocument> .
@@ -1356,12 +1381,27 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#mime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#mime> <https://dev.qaecy.com/ont#regex> "^[a-z]+/[a-z0-9-]+$" .
 # 
+# https://dev.qaecy.com/ont#obligationHasCondition
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#ContractCondition> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#ContractObligation> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <https://dev.qaecy.com/ont#extractionPrompt> "A 'ContractObligation' involves a certain 'ContractCondition'." .
+# 
 # https://dev.qaecy.com/ont#obligationHasEndDate
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Date> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#ContractObligation> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <https://dev.qaecy.com/ont#extractionPrompt> "A 'ContractObligation' has a 'Date' that it expires." .
+# 
+# https://dev.qaecy.com/ont#obligationHasResponsibleParty
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Organization> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Person> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#ContractObligation> .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <https://dev.qaecy.com/ont#extractionPrompt> "A 'ContractObligation' states a 'Person' or 'Organization' as a responible party." .
 # 
 # https://dev.qaecy.com/ont#obligationHasStartDate
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1407,6 +1447,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#requiresMaterial> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Activity> .
 <https://dev.qaecy.com/ont#requiresMaterial> <https://dev.qaecy.com/ont#relatedFormalProperty> <http://schema.org/requiresMaterial> .
 <https://dev.qaecy.com/ont#requiresMaterial> <https://dev.qaecy.com/ont#extractionPrompt> "An 'Activity' requires some 'Material'." .
+# 
+# https://dev.qaecy.com/ont#roleInContract
+<https://dev.qaecy.com/ont#roleInContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#roleInContract> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/ont#roleInContract> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Contract> .
+<https://dev.qaecy.com/ont#roleInContract> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#ContractRole> .
+<https://dev.qaecy.com/ont#roleInContract> <https://dev.qaecy.com/ont#extractionPrompt> "A 'ContractRole' (undertaken by a 'Person' or 'Organization') is involved in the 'Contract'." .
 # 
 # https://dev.qaecy.com/ont#sheetContainsDrawing
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1535,6 +1582,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2000/01/rdf-schema#label> "building contains storey"@en .
 <https://dev.qaecy.com/ont#buildingContainsStorey> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#comment> "A jurisdiction that governs the contract." .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#label> "contract governed by jurisdiction"@en .
+<https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the date that a contract is terminated." .
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "contract has end date"@en .
 <https://dev.qaecy.com/ont#contractHasEndDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
@@ -1547,9 +1598,17 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "contract has start date"@en .
 <https://dev.qaecy.com/ont#contractHasStartDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "A built asset is a part of the contract agreement." .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <http://www.w3.org/2000/01/rdf-schema#label> "contract involves asset"@en .
-<https://dev.qaecy.com/ont#contractInvolvesAsset> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/2000/01/rdf-schema#comment> "A person or organization is a part of the contract agreement." .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/2000/01/rdf-schema#label> "contract involves party"@en .
+<https://dev.qaecy.com/ont#contractInvolvesParty> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "A built asset is a part of the contract agreement." .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <http://www.w3.org/2000/01/rdf-schema#label> "contract mentions built asset"@en .
+<https://dev.qaecy.com/ont#contractMentionsBuiltAsset> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#comment> "The contract involves a certain obligation." .
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#label> "contract states obligation"@en .
+<https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#drawingAboutProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates the construction project associated with a drawing sheet or drawing entity." .
 <https://dev.qaecy.com/ont#drawingAboutProject> <http://www.w3.org/2000/01/rdf-schema#label> "drawing about construction project"@en .
@@ -1579,10 +1638,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasActivityAgent> <http://www.w3.org/2000/01/rdf-schema#label> "has activity agent"@en .
 <https://dev.qaecy.com/ont#hasActivityAgent> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#hasContractCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition associated with a contract obligation." .
-<https://dev.qaecy.com/ont#hasContractCondition> <http://www.w3.org/2000/01/rdf-schema#label> "has contract condition"@en .
-<https://dev.qaecy.com/ont#hasContractCondition> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
 <https://dev.qaecy.com/ont#hasContractRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship stating that a person or organization has a role in the contract." .
 <https://dev.qaecy.com/ont#hasContractRole> <http://www.w3.org/2000/01/rdf-schema#label> "has contract role"@en .
 <https://dev.qaecy.com/ont#hasContractRole> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
@@ -1607,10 +1662,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasEmailSender> <http://www.w3.org/2000/01/rdf-schema#label> "has email sender"@en .
 <https://dev.qaecy.com/ont#hasEmailSender> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <http://www.w3.org/2000/01/rdf-schema#comment> "A jurisdiction that governs the contract." .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <http://www.w3.org/2000/01/rdf-schema#label> "has governing jurisdiction"@en .
-<https://dev.qaecy.com/ont#hasGoverningJurisdiction> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
 <https://dev.qaecy.com/ont#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that states that an entity has a physical location." .
 <https://dev.qaecy.com/ont#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location"@en .
 <https://dev.qaecy.com/ont#hasLocation> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
@@ -1633,10 +1684,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an interface and the entities (minimum 2) it is an interface of." .
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "interface of"@en .
 <https://dev.qaecy.com/ont#interfaceOf> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-<https://dev.qaecy.com/ont#involvedInContract> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship stating that a certain contract role is involved in the contract." .
-<https://dev.qaecy.com/ont#involvedInContract> <http://www.w3.org/2000/01/rdf-schema#label> "involved in contract"@en .
-<https://dev.qaecy.com/ont#involvedInContract> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#involvesBuildingEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an activity and a building entity (zone or element)." .
 <https://dev.qaecy.com/ont#involvesBuildingEntity> <http://www.w3.org/2000/01/rdf-schema#label> "involves building entity"@en .
@@ -1671,9 +1718,17 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#mime> <http://www.w3.org/2000/01/rdf-schema#label> "mime"@en .
 <https://dev.qaecy.com/ont#mime> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition associated with a contract obligation." .
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#label> "contract obligation has contract condition"@en .
+<https://dev.qaecy.com/ont#obligationHasCondition> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The end date of a contract obligation." .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "obligation has end date"@en .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/2000/01/rdf-schema#comment> "The obligation is undertaken by a certain party." .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/2000/01/rdf-schema#label> "obligation has responsible party"@en .
+<https://dev.qaecy.com/ont#obligationHasResponsibleParty> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The start date of a contract obligation." .
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "obligation has start date"@en .
@@ -1707,6 +1762,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#requiresMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between some activity and required material." .
 <https://dev.qaecy.com/ont#requiresMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "requires material"@en .
 <https://dev.qaecy.com/ont#requiresMaterial> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#roleInContract> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship stating that a certain contract role is involved in the contract." .
+<https://dev.qaecy.com/ont#roleInContract> <http://www.w3.org/2000/01/rdf-schema#label> "role in contract"@en .
+<https://dev.qaecy.com/ont#roleInContract> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#comment> "A drawing sheet contains a drawing entity." .
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#label> "drawing sheet contains drawing entity"@en .

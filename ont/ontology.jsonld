@@ -108,9 +108,6 @@
   "@id" : "https://dev.qaecy.com/enum#FileReference",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://dev.qaecy.com/enum#Jurisdiction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
   "@id" : "https://dev.qaecy.com/enum#Location",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
@@ -155,7 +152,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-06-26T11:47:07Z"
+    "@value" : "2025-08-14T15:27:49Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -1020,6 +1017,41 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#contractGovernedByJurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A jurisdiction that governs the contract."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contract governed by jurisdiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Organization"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Contract' is governed by a certain 'Jurisdiction'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#contractHasEndDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1125,7 +1157,44 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#contractInvolvesAsset",
+  "@id" : "https://dev.qaecy.com/ont#contractInvolvesParty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A person or organization is a part of the contract agreement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contract involves party"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Organization"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Person"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A certain party ('Person' or 'Organization') is legally a part of a 'Contract'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#contractMentionsBuiltAsset",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A built asset is a part of the contract agreement."
@@ -1135,7 +1204,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "contract involves asset"
+    "@value" : "contract mentions built asset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1154,6 +1223,41 @@
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@value" : "A 'Contract' involves a certain 'BuiltAsset'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#contractStatesObligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The contract involves a certain obligation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contract states obligation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractObligation"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'Contract' states a certain 'ContractObligation'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1593,41 +1697,6 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#hasContractCondition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A condition associated with a contract obligation."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has contract condition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
-  } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
-  } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ContractCondition"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ContractObligation"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'ContractObligation' involves a certain 'ContractCondition'."
-  } ],
-  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ]
-}, {
   "@id" : "https://dev.qaecy.com/ont#hasContractRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1896,41 +1965,6 @@
     "@value" : "false"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#hasGoverningJurisdiction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A jurisdiction that governs the contract."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has governing jurisdiction"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
-  } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
-  } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Jurisdiction"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Contract"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'Contract' is governed by a certain 'Jurisdiction'."
-  } ],
-  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ]
-}, {
   "@id" : "https://dev.qaecy.com/ont#hasLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2192,41 +2226,6 @@
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#interfaceOf"
-  } ],
-  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ]
-}, {
-  "@id" : "https://dev.qaecy.com/ont#involvedInContract",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship stating that a certain contract role is involved in the contract."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "involved in contract"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
-  } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
-  } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Contract"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ContractRole"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'ContractRole' is involved in the 'Contract'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -2541,6 +2540,41 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#obligationHasCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A condition associated with a contract obligation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contract obligation has contract condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractCondition"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractObligation"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ContractObligation' involves a certain 'ContractCondition'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#obligationHasEndDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2570,6 +2604,43 @@
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@value" : "A 'ContractObligation' has a 'Date' that it expires."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#obligationHasResponsibleParty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The obligation is undertaken by a certain party."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "obligation has responsible party"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Organization"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#Person"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractObligation"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ContractObligation' states a 'Person' or 'Organization' as a responible party."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -3022,6 +3093,41 @@
     "@value" : "false"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#roleInContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship stating that a certain contract role is involved in the contract."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "role in contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Contract"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ContractRole"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'ContractRole' (undertaken by a 'Person' or 'Organization') is involved in the 'Contract'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#selectorObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://schema.org/domainIncludes" : [ {
@@ -3161,6 +3267,30 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://dev.qaecy.com/ont#InformationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A subject is a short description that captures the main theme or topic of a qcy:InformationObject. The subject is typically generated by a Large Language model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "subject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#suffix",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3168,7 +3298,7 @@
     "@value" : "The file suffix including dot (ex: \".pdf\")"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#FileContent"
+    "@id" : "https://dev.qaecy.com/ont#FileLocation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3255,10 +3385,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Raw text as extracted from the fragment."
+    "@value" : "Raw text as extracted from the qcy:InformationObject."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#Fragment"
+    "@id" : "https://dev.qaecy.com/ont#InformationObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

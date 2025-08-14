@@ -11,7 +11,7 @@
                                                                   "Mads Holten Rasmussen" ,
                                                                   "Manos Argyris" ;
                                <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." ;
-                               <http://purl.org/dc/terms/modified> "2025-06-26T11:47:14Z"^^xsd:dateTime ;
+                               <http://purl.org/dc/terms/modified> "2025-08-14T15:27:55Z"^^xsd:dateTime ;
                                <http://purl.org/dc/terms/title> "QAECY Enumerations"@en ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 
@@ -317,7 +317,7 @@
                    <https://dev.qaecy.com/ont#EntityCategory> ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en ;
           <https://dev.qaecy.com/ont#applicableContentCategories> :ContractualDocument ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "A contract, identified by id, name, title etc."@en .
+          <https://dev.qaecy.com/ont#extractionPrompt> "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."@en .
 
 
 ###  https://dev.qaecy.com/enum#ContractCondition
@@ -344,7 +344,7 @@
                        <https://dev.qaecy.com/ont#EntityCategory> ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract Role"@en ;
               <https://dev.qaecy.com/ont#applicableContentCategories> :ContractualDocument ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "A role in the 'Contract', described by function (eg Seller, Buyer etc)."@en .
+              <https://dev.qaecy.com/ont#extractionPrompt> "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."@en .
 
 
 ###  https://dev.qaecy.com/enum#ContractualDocument
@@ -681,15 +681,6 @@
            <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Interface> .
 
 
-###  https://dev.qaecy.com/enum#Jurisdiction
-:Jurisdiction rdf:type owl:NamedIndividual ,
-                       <http://www.w3.org/2004/02/skos/core#Concept> ,
-                       <https://dev.qaecy.com/ont#EntityCategory> ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "Jurisdiction"@en ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :ContractualDocument ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "The legal authority that governs a certain legal act."@en .
-
-
 ###  https://dev.qaecy.com/enum#LightingPlanDrawing
 :LightingPlanDrawing rdf:type owl:NamedIndividual ,
                               <http://www.w3.org/2004/02/skos/core#Concept> ,
@@ -774,7 +765,7 @@
                        <http://www.w3.org/2004/02/skos/core#Concept> ,
                        <https://dev.qaecy.com/ont#EntityCategory> ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Organization"@en ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "A company, organization, corporation or institution, identified by name or title."@en ;
+              <https://dev.qaecy.com/ont#extractionPrompt> "A company, organization, corporation, public authority or institution, identified by name or title."@en ;
               <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Organization> .
 
 

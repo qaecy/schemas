@@ -15,7 +15,7 @@
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes special enumerations to be used with the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-26T11:47:14Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-14T15:27:55Z</terms:modified>
         <terms:title xml:lang="en">QAECY Enumerations</terms:title>
         <vann:preferredNamespacePrefix>qcy-e</vann:preferredNamespacePrefix>
     </owl:Ontology>
@@ -499,7 +499,7 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Contract</skos:prefLabel>
         <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
-        <ont:extractionPrompt xml:lang="en">A contract, identified by id, name, title etc.</ont:extractionPrompt>
+        <ont:extractionPrompt xml:lang="en">The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -538,7 +538,7 @@
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Contract Role</skos:prefLabel>
         <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
-        <ont:extractionPrompt xml:lang="en">A role in the &apos;Contract&apos;, described by function (eg Seller, Buyer etc).</ont:extractionPrompt>
+        <ont:extractionPrompt xml:lang="en">A certain role undertaken by a specific party (&apos;Organization&apos; or &apos;Person&apos;) in the context of a specific &apos;Contract&apos;.</ont:extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -1025,19 +1025,6 @@
     
 
 
-    <!-- https://dev.qaecy.com/enum#Jurisdiction -->
-
-
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Jurisdiction">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
-        <skos:prefLabel xml:lang="en">Jurisdiction</skos:prefLabel>
-        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ContractualDocument"/>
-        <ont:extractionPrompt xml:lang="en">The legal authority that governs a certain legal act.</ont:extractionPrompt>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://dev.qaecy.com/enum#LightingPlanDrawing -->
 
 
@@ -1160,7 +1147,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Organization</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A company, organization, corporation or institution, identified by name or title.</ont:extractionPrompt>
+        <ont:extractionPrompt xml:lang="en">A company, organization, corporation, public authority or institution, identified by name or title.</ont:extractionPrompt>
         <ont:relatedFormalClass rdf:resource="http://schema.org/Organization"/>
     </owl:NamedIndividual>
     

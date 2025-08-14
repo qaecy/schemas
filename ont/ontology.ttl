@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-06-26T11:47:07Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2025-08-14T15:27:49Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.1" .
@@ -154,6 +154,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :visibleForAgent "true"^^xsd:boolean .
 
 
+###  https://dev.qaecy.com/ont#contractGovernedByJurisdiction
+:contractGovernedByJurisdiction rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :relatedEntity ;
+                                rdfs:domain :EntityReference ;
+                                rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#contractHasEndDate
 :contractHasEndDate rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :relatedEntity ;
@@ -175,11 +182,25 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       rdfs:range :EntityReference .
 
 
-###  https://dev.qaecy.com/ont#contractInvolvesAsset
-:contractInvolvesAsset rdf:type owl:ObjectProperty ;
+###  https://dev.qaecy.com/ont#contractInvolvesParty
+:contractInvolvesParty rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :relatedEntity ;
                        rdfs:domain :EntityReference ;
                        rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#contractMentionsBuiltAsset
+:contractMentionsBuiltAsset rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :relatedEntity ;
+                            rdfs:domain :EntityReference ;
+                            rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#contractStatesObligation
+:contractStatesObligation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :relatedEntity ;
+                          rdfs:domain :EntityReference ;
+                          rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#drawingAboutProject
@@ -248,13 +269,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                     rdfs:comment "Relationship between a qcy:InformationObject (typically a whole document or a page in a document) and its qcy:ContentCategory derived from its content." ;
                     rdfs:label "has content category"@en ;
                     :visibleForAgent "true"^^xsd:boolean .
-
-
-###  https://dev.qaecy.com/ont#hasContractCondition
-:hasContractCondition rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :relatedEntity ;
-                      rdfs:domain :EntityReference ;
-                      rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#hasContractRole
@@ -331,13 +345,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                     :visibleForAgent "false"^^xsd:boolean .
 
 
-###  https://dev.qaecy.com/ont#hasGoverningJurisdiction
-:hasGoverningJurisdiction rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf :relatedEntity ;
-                          rdfs:domain :EntityReference ;
-                          rdfs:range :EntityReference .
-
-
 ###  https://dev.qaecy.com/ont#hasLocation
 :hasLocation rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :relatedEntity ;
@@ -392,13 +399,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              rdfs:range :EntityReference .
 
 
-###  https://dev.qaecy.com/ont#involvedInContract
-:involvedInContract rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :relatedEntity ;
-                    rdfs:domain :EntityReference ;
-                    rdfs:range :EntityReference .
-
-
 ###  https://dev.qaecy.com/ont#involvesBuildingEntity
 :involvesBuildingEntity rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :relatedEntity ;
@@ -436,11 +436,25 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                         rdfs:range :EntityReference .
 
 
+###  https://dev.qaecy.com/ont#obligationHasCondition
+:obligationHasCondition rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:domain :EntityReference ;
+                        rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#obligationHasEndDate
 :obligationHasEndDate rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :relatedEntity ;
                       rdfs:domain :EntityReference ;
                       rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#obligationHasResponsibleParty
+:obligationHasResponsibleParty rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :relatedEntity ;
+                               rdfs:domain :EntityReference ;
+                               rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#obligationHasStartDate
@@ -531,6 +545,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
             rdfs:comment "Relationship between a qcy:EntityMention and a qcy:CanonicalEntity. This property indicates that a named entity occurrence resolves to a canonical entity, meaning that the named entity is recognized as an instance of the canonical entity." ;
             rdfs:label "resolves to"@en ;
             :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#roleInContract
+:roleInContract rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatedEntity ;
+                rdfs:domain :EntityReference ;
+                rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#selectorObject
@@ -788,9 +809,19 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
            :visibleForAgent "true"^^xsd:boolean .
 
 
+###  https://dev.qaecy.com/ont#subject
+:subject rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range xsd:string ;
+         <http://schema.org/domainIncludes> :InformationObject ;
+         rdfs:comment "A subject is a short description that captures the main theme or topic of a qcy:InformationObject. The subject is typically generated by a Large Language model."@en ;
+         rdfs:label "subject"@en ;
+         :visibleForAgent "true"^^xsd:boolean .
+
+
 ###  https://dev.qaecy.com/ont#suffix
 :suffix rdf:type owl:DatatypeProperty ;
-        rdfs:domain :FileContent ;
+        rdfs:domain :FileLocation ;
         rdfs:range xsd:integer .
 
 
@@ -824,9 +855,9 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#textRaw
 :textRaw rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Fragment ;
+         rdfs:domain :InformationObject ;
          rdfs:range xsd:string ;
-         rdfs:comment "Raw text as extracted from the fragment."@en ;
+         rdfs:comment "Raw text as extracted from the qcy:InformationObject."@en ;
          rdfs:label "text raw"@en ;
          :visibleForAgent "false"^^xsd:boolean .
 
@@ -1179,10 +1210,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <https://dev.qaecy.com/enum#FileReference> rdf:type owl:NamedIndividual .
 
 
-###  https://dev.qaecy.com/enum#Jurisdiction
-<https://dev.qaecy.com/enum#Jurisdiction> rdf:type owl:NamedIndividual .
-
-
 ###  https://dev.qaecy.com/enum#Location
 <https://dev.qaecy.com/enum#Location> rdf:type owl:NamedIndividual .
 
@@ -1282,6 +1309,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                         :extractionPrompt "A 'Building' contains a 'Storey'." .
 
 
+###  https://dev.qaecy.com/ont#contractGovernedByJurisdiction
+:contractGovernedByJurisdiction rdf:type owl:NamedIndividual ;
+                                :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                                :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ;
+                                :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                                :extractionPrompt "A 'Contract' is governed by a certain 'Jurisdiction'." .
+
+
 ###  https://dev.qaecy.com/ont#contractHasEndDate
 :contractHasEndDate rdf:type owl:NamedIndividual ;
                     :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
@@ -1306,12 +1341,29 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       :extractionPrompt "A 'Contract' has a 'Date' that it becomes effective." .
 
 
-###  https://dev.qaecy.com/ont#contractInvolvesAsset
-:contractInvolvesAsset rdf:type owl:NamedIndividual ;
+###  https://dev.qaecy.com/ont#contractInvolvesParty
+:contractInvolvesParty rdf:type owl:NamedIndividual ;
                        :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
-                       :applicableObjectCategories <https://dev.qaecy.com/enum#BuiltAsset> ;
+                       :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                                   <https://dev.qaecy.com/enum#Person> ;
                        :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
-                       :extractionPrompt "A 'Contract' involves a certain 'BuiltAsset'." .
+                       :extractionPrompt "A certain party ('Person' or 'Organization') is legally a part of a 'Contract'." .
+
+
+###  https://dev.qaecy.com/ont#contractMentionsBuiltAsset
+:contractMentionsBuiltAsset rdf:type owl:NamedIndividual ;
+                            :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                            :applicableObjectCategories <https://dev.qaecy.com/enum#BuiltAsset> ;
+                            :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                            :extractionPrompt "A 'Contract' involves a certain 'BuiltAsset'." .
+
+
+###  https://dev.qaecy.com/ont#contractStatesObligation
+:contractStatesObligation rdf:type owl:NamedIndividual ;
+                          :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                          :applicableObjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
+                          :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                          :extractionPrompt "A 'Contract' states a certain 'ContractObligation'." .
 
 
 ###  https://dev.qaecy.com/ont#drawingAboutProject
@@ -1379,14 +1431,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :extractionPrompt "An 'Activity' is carried out by a 'Person' or 'Organization'." .
 
 
-###  https://dev.qaecy.com/ont#hasContractCondition
-:hasContractCondition rdf:type owl:NamedIndividual ;
-                      :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
-                      :applicableObjectCategories <https://dev.qaecy.com/enum#ContractCondition> ;
-                      :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
-                      :extractionPrompt "A 'ContractObligation' involves a certain 'ContractCondition'." .
-
-
 ###  https://dev.qaecy.com/ont#hasContractRole
 :hasContractRole rdf:type owl:NamedIndividual ;
                  :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
@@ -1431,14 +1475,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 :hasEmailSender rdf:type owl:NamedIndividual ;
                 :applicableObjectCategories <https://dev.qaecy.com/enum#EmailAddress> ;
                 :applicableSubjectCategories <https://dev.qaecy.com/enum#EmailFileContent> .
-
-
-###  https://dev.qaecy.com/ont#hasGoverningJurisdiction
-:hasGoverningJurisdiction rdf:type owl:NamedIndividual ;
-                          :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
-                          :applicableObjectCategories <https://dev.qaecy.com/enum#Jurisdiction> ;
-                          :applicableSubjectCategories <https://dev.qaecy.com/enum#Contract> ;
-                          :extractionPrompt "A 'Contract' is governed by a certain 'Jurisdiction'." .
 
 
 ###  https://dev.qaecy.com/ont#hasLocation
@@ -1488,14 +1524,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
              :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
              :relatedFormalProperty <https://w3id.org/bot#interfaceOf> .
-
-
-###  https://dev.qaecy.com/ont#involvedInContract
-:involvedInContract rdf:type owl:NamedIndividual ;
-                    :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
-                    :applicableObjectCategories <https://dev.qaecy.com/enum#Contract> ;
-                    :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractRole> ;
-                    :extractionPrompt "A 'ContractRole' is involved in the 'Contract'." .
 
 
 ###  https://dev.qaecy.com/ont#involvesBuildingEntity
@@ -1551,12 +1579,29 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
       :regex "^[a-z]+/[a-z0-9-]+$" .
 
 
+###  https://dev.qaecy.com/ont#obligationHasCondition
+:obligationHasCondition rdf:type owl:NamedIndividual ;
+                        :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                        :applicableObjectCategories <https://dev.qaecy.com/enum#ContractCondition> ;
+                        :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
+                        :extractionPrompt "A 'ContractObligation' involves a certain 'ContractCondition'." .
+
+
 ###  https://dev.qaecy.com/ont#obligationHasEndDate
 :obligationHasEndDate rdf:type owl:NamedIndividual ;
                       :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
                       :applicableObjectCategories <https://dev.qaecy.com/enum#Date> ;
                       :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
                       :extractionPrompt "A 'ContractObligation' has a 'Date' that it expires." .
+
+
+###  https://dev.qaecy.com/ont#obligationHasResponsibleParty
+:obligationHasResponsibleParty rdf:type owl:NamedIndividual ;
+                               :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                               :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
+                                                           <https://dev.qaecy.com/enum#Person> ;
+                               :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractObligation> ;
+                               :extractionPrompt "A 'ContractObligation' states a 'Person' or 'Organization' as a responible party." .
 
 
 ###  https://dev.qaecy.com/ont#obligationHasStartDate
@@ -1608,6 +1653,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :applicableSubjectCategories <https://dev.qaecy.com/enum#Activity> ;
                   :relatedFormalProperty <http://schema.org/requiresMaterial> ;
                   :extractionPrompt "An 'Activity' requires some 'Material'." .
+
+
+###  https://dev.qaecy.com/ont#roleInContract
+:roleInContract rdf:type owl:NamedIndividual ;
+                :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
+                :applicableObjectCategories <https://dev.qaecy.com/enum#Contract> ;
+                :applicableSubjectCategories <https://dev.qaecy.com/enum#ContractRole> ;
+                :extractionPrompt "A 'ContractRole' (undertaken by a 'Person' or 'Organization') is involved in the 'Contract'." .
 
 
 ###  https://dev.qaecy.com/ont#sheetContainsDrawing
@@ -1759,6 +1812,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                         :visibleForAgent "true"^^xsd:boolean .
 
 
+:contractGovernedByJurisdiction rdfs:comment "A jurisdiction that governs the contract." ;
+                                rdfs:label "contract governed by jurisdiction"@en ;
+                                :visibleForAgent "true"^^xsd:boolean .
+
+
 :contractHasEndDate rdfs:comment "Relationship that specifies the date that a contract is terminated." ;
                     rdfs:label "contract has end date"@en ;
                     :visibleForAgent "true"^^xsd:boolean .
@@ -1774,9 +1832,19 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       :visibleForAgent "true"^^xsd:boolean .
 
 
-:contractInvolvesAsset rdfs:comment "A built asset is a part of the contract agreement." ;
-                       rdfs:label "contract involves asset"@en ;
+:contractInvolvesParty rdfs:comment "A person or organization is a part of the contract agreement." ;
+                       rdfs:label "contract involves party"@en ;
                        :visibleForAgent "true"^^xsd:boolean .
+
+
+:contractMentionsBuiltAsset rdfs:comment "A built asset is a part of the contract agreement." ;
+                            rdfs:label "contract mentions built asset"@en ;
+                            :visibleForAgent "true"^^xsd:boolean .
+
+
+:contractStatesObligation rdfs:comment "The contract involves a certain obligation." ;
+                          rdfs:label "contract states obligation"@en ;
+                          :visibleForAgent "true"^^xsd:boolean .
 
 
 :drawingAboutProject rdfs:comment "Relationship that indicates the construction project associated with a drawing sheet or drawing entity." ;
@@ -1814,11 +1882,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:hasContractCondition rdfs:comment "A condition associated with a contract obligation." ;
-                      rdfs:label "has contract condition"@en ;
-                      :visibleForAgent "true"^^xsd:boolean .
-
-
 :hasContractRole rdfs:comment "Relationship stating that a person or organization has a role in the contract." ;
                  rdfs:label "has contract role"@en ;
                  :visibleForAgent "true"^^xsd:boolean .
@@ -1849,11 +1912,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                 :visibleForAgent "true"^^xsd:boolean .
 
 
-:hasGoverningJurisdiction rdfs:comment "A jurisdiction that governs the contract." ;
-                          rdfs:label "has governing jurisdiction"@en ;
-                          :visibleForAgent "true"^^xsd:boolean .
-
-
 :hasLocation rdfs:comment "Relationship that states that an entity has a physical location." ;
              rdfs:label "has location"@en ;
              :visibleForAgent "true"^^xsd:boolean .
@@ -1881,11 +1939,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 :interfaceOf rdfs:comment "Relationship between an interface and the entities (minimum 2) it is an interface of." ;
              rdfs:label "interface of"@en ;
              :visibleForAgent "true"^^xsd:boolean .
-
-
-:involvedInContract rdfs:comment "Relationship stating that a certain contract role is involved in the contract." ;
-                    rdfs:label "involved in contract"@en ;
-                    :visibleForAgent "true"^^xsd:boolean .
 
 
 :involvesBuildingEntity rdfs:comment "Relationship between an activity and a building entity (zone or element)." ;
@@ -1929,9 +1982,19 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
       :visibleForAgent "true"^^xsd:boolean .
 
 
+:obligationHasCondition rdfs:comment "A condition associated with a contract obligation." ;
+                        rdfs:label "contract obligation has contract condition"@en ;
+                        :visibleForAgent "true"^^xsd:boolean .
+
+
 :obligationHasEndDate rdfs:comment "The end date of a contract obligation." ;
                       rdfs:label "obligation has end date"@en ;
                       :visibleForAgent "true"^^xsd:boolean .
+
+
+:obligationHasResponsibleParty rdfs:comment "The obligation is undertaken by a certain party." ;
+                               rdfs:label "obligation has responsible party"@en ;
+                               :visibleForAgent "true"^^xsd:boolean .
 
 
 :obligationHasStartDate rdfs:comment "The start date of a contract obligation." ;
@@ -1973,6 +2036,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 :requiresMaterial rdfs:comment "Relationship between some activity and required material." ;
                   rdfs:label "requires material"@en ;
                   :visibleForAgent "true"^^xsd:boolean .
+
+
+:roleInContract rdfs:comment "Relationship stating that a certain contract role is involved in the contract." ;
+                rdfs:label "role in contract"@en ;
+                :visibleForAgent "true"^^xsd:boolean .
 
 
 :sheetContainsDrawing rdfs:comment "A drawing sheet contains a drawing entity." ;

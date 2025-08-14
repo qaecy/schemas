@@ -3,7 +3,7 @@
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." .
-<https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/modified> "2025-06-26T11:47:14Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/modified> "2025-08-14T15:27:55Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/title> "QAECY Enumerations"@en .
 <https://dev.qaecy.com/enum#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 # 
@@ -281,7 +281,7 @@
 <https://dev.qaecy.com/enum#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
 <https://dev.qaecy.com/enum#Contract> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en .
 <https://dev.qaecy.com/enum#Contract> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#Contract> <https://dev.qaecy.com/ont#extractionPrompt> "A contract, identified by id, name, title etc."@en .
+<https://dev.qaecy.com/enum#Contract> <https://dev.qaecy.com/ont#extractionPrompt> "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."@en .
 # 
 # https://dev.qaecy.com/enum#ContractCondition
 <https://dev.qaecy.com/enum#ContractCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -305,7 +305,7 @@
 <https://dev.qaecy.com/enum#ContractRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
 <https://dev.qaecy.com/enum#ContractRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract Role"@en .
 <https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/ont#extractionPrompt> "A role in the 'Contract', described by function (eg Seller, Buyer etc)."@en .
+<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/ont#extractionPrompt> "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."@en .
 # 
 # https://dev.qaecy.com/enum#ContractualDocument
 <https://dev.qaecy.com/enum#ContractualDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -604,14 +604,6 @@
 <https://dev.qaecy.com/enum#Interface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Interface> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Interface> .
 # 
-# https://dev.qaecy.com/enum#Jurisdiction
-<https://dev.qaecy.com/enum#Jurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/enum#Jurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://dev.qaecy.com/enum#Jurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
-<https://dev.qaecy.com/enum#Jurisdiction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Jurisdiction"@en .
-<https://dev.qaecy.com/enum#Jurisdiction> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#Jurisdiction> <https://dev.qaecy.com/ont#extractionPrompt> "The legal authority that governs a certain legal act."@en .
-# 
 # https://dev.qaecy.com/enum#LightingPlanDrawing
 <https://dev.qaecy.com/enum#LightingPlanDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/enum#LightingPlanDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -687,7 +679,7 @@
 <https://dev.qaecy.com/enum#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://dev.qaecy.com/enum#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
 <https://dev.qaecy.com/enum#Organization> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organization"@en .
-<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/ont#extractionPrompt> "A company, organization, corporation or institution, identified by name or title."@en .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/ont#extractionPrompt> "A company, organization, corporation, public authority or institution, identified by name or title."@en .
 <https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Organization> .
 # 
 # https://dev.qaecy.com/enum#OtherDocument

@@ -43,7 +43,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-06-26T11:47:14Z"
+    "@value" : "2025-08-14T15:27:55Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -496,7 +496,7 @@
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
-    "@value" : "A contract, identified by id, name, title etc."
+    "@value" : "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ContractCondition",
@@ -553,7 +553,7 @@
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
-    "@value" : "A role in the 'Contract', described by function (eg Seller, Buyer etc)."
+    "@value" : "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ContractualDocument",
@@ -1243,25 +1243,6 @@
     "@id" : "https://w3id.org/bot#Interface"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/enum#Jurisdiction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Jurisdiction"
-  } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@language" : "en",
-    "@value" : "The legal authority that governs a certain legal act."
-  } ]
-}, {
   "@id" : "https://dev.qaecy.com/enum#LightingPlanDrawing",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1439,7 +1420,7 @@
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
-    "@value" : "A company, organization, corporation or institution, identified by name or title."
+    "@value" : "A company, organization, corporation, public authority or institution, identified by name or title."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "http://schema.org/Organization"
