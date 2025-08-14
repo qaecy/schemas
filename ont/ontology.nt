@@ -4,7 +4,7 @@
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2025-08-14T15:27:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2025-08-14T15:31:04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://dev.qaecy.com/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://dev.qaecy.com/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -726,7 +726,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://dev.qaecy.com/ont#suffix
 <https://dev.qaecy.com/ont#suffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#FileLocation> .
-<https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # https://dev.qaecy.com/ont#tableContent
 <https://dev.qaecy.com/ont#tableContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

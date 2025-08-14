@@ -152,7 +152,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-08-14T15:27:49Z"
+    "@value" : "2025-08-14T15:31:04Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -3305,7 +3305,7 @@
     "@value" : "file suffix"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "https://dev.qaecy.com/ont#regex" : [ {
     "@value" : "^\\.[a-z0-9]+$"
