@@ -15,7 +15,7 @@
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes special enumerations to be used with the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-14T15:27:55Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-25T10:03:00Z</terms:modified>
         <terms:title xml:lang="en">QAECY Enumerations</terms:title>
         <vann:preferredNamespacePrefix>qcy-e</vann:preferredNamespacePrefix>
     </owl:Ontology>

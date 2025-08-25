@@ -4,7 +4,7 @@
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2025-08-14T15:31:04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2025-08-25T10:02:53Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://dev.qaecy.com/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://dev.qaecy.com/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -371,9 +371,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#mentions
 <https://dev.qaecy.com/ont#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#InformationObject> .
 <https://dev.qaecy.com/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityMention> .
-<https://dev.qaecy.com/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector." .
+<https://dev.qaecy.com/ont#mentions> <http://schema.org/domainIncludes> <https://dev.qaecy.com/ont#FileLocation> .
+<https://dev.qaecy.com/ont#mentions> <http://schema.org/domainIncludes> <https://dev.qaecy.com/ont#InformationObject> .
+<https://dev.qaecy.com/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:InformationObject/qcy:FileLocation and a qcy:EntityMention. This property indicates that a file location, file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector. For file locations it is typically resolved by regex mapping of a schema against the file path." .
 <https://dev.qaecy.com/ont#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentions"@en .
 <https://dev.qaecy.com/ont#mentions> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 

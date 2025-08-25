@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-08-14T15:31:04Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2025-08-25T10:02:53Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.1" .
@@ -422,9 +422,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#mentions
 :mentions rdf:type owl:ObjectProperty ;
-          rdfs:domain :InformationObject ;
           rdfs:range :EntityMention ;
-          rdfs:comment "Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector." ;
+          <http://schema.org/domainIncludes> :FileLocation ,
+                                             :InformationObject ;
+          rdfs:comment "Relationship between a qcy:InformationObject/qcy:FileLocation and a qcy:EntityMention. This property indicates that a file location, file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector. For file locations it is typically resolved by regex mapping of a schema against the file path." ;
           rdfs:label "mentions"@en ;
           :visibleForAgent "false"^^xsd:boolean .
 

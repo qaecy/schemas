@@ -3,7 +3,7 @@
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." .
-<https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/modified> "2025-08-14T15:27:55Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/modified> "2025-08-25T10:03:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/title> "QAECY Enumerations"@en .
 <https://dev.qaecy.com/enum#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 # 

@@ -282,7 +282,7 @@ This section provides details for each class and property defined by The QAECY O
     is in domain of
    </dt>
    <dd>
-    <a href="#filePath" title="https://dev.qaecy.com/ont#filePath">file path</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#suffix" title="https://dev.qaecy.com/ont#suffix">file suffix</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#remoteProviderType" title="https://dev.qaecy.com/ont#remoteProviderType">remote provider type</a> <sup class="type-op" title="object property">op</sup>, <a href="#remoteRelativePath" title="https://dev.qaecy.com/ont#remoteRelativePath">remote relative path</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#filePath" title="https://dev.qaecy.com/ont#filePath">file path</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#suffix" title="https://dev.qaecy.com/ont#suffix">file suffix</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#mentions" title="https://dev.qaecy.com/ont#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>, <a href="#remoteProviderType" title="https://dev.qaecy.com/ont#remoteProviderType">remote provider type</a> <sup class="type-op" title="object property">op</sup>, <a href="#remoteRelativePath" title="https://dev.qaecy.com/ont#remoteRelativePath">remote relative path</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -2221,13 +2221,16 @@ This section provides details for each class and property defined by The QAECY O
   <h3>mentions<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://dev.qaecy.com/ont#mentions</p>
   <div class="comment">
-   <span class="markdown">Relationship between a qcy:InformationObject and a qcy:EntityMention. This property indicates that a file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector.</span>
+   <span class="markdown">Relationship between a qcy:InformationObject/qcy:FileLocation and a qcy:EntityMention. This property indicates that a file location, file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector. For file locations it is typically resolved by regex mapping of a schema against the file path.</span>
   </div>
   <div class="description">
    <dl>
     <dt>
-     has domain
+     domain includes
     </dt>
+    <dd>
+     <a href="#FileLocation" title="https://dev.qaecy.com/ont#FileLocation">File Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
     <dd>
      <a href="#InformationObject" title="https://dev.qaecy.com/ont#InformationObject">Information Object</a> <sup class="type-c" title="class">c</sup>
     </dd>
