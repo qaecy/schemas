@@ -54,7 +54,7 @@
   "@id" : "https://dev.qaecy.com/enum#BuiltAsset",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://dev.qaecy.com/enum#ConstructionProject",
+  "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Contract",
@@ -72,7 +72,7 @@
   "@id" : "https://dev.qaecy.com/enum#ContractualDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://dev.qaecy.com/enum#Cost",
+  "@id" : "https://dev.qaecy.com/enum#CostItem",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Date",
@@ -88,6 +88,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#DrawingEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#DrawingOrientation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#DrawingScale",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#DrawingSheet",
@@ -120,13 +126,13 @@
   "@id" : "https://dev.qaecy.com/enum#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
+  "@id" : "https://dev.qaecy.com/enum#ProjectId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
   "@id" : "https://dev.qaecy.com/enum#ProjectPhase",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Schedule",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "https://dev.qaecy.com/enum#ScheduleDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Site",
@@ -152,7 +158,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2025-08-25T10:02:53Z"
+    "@value" : "2025-10-02T05:48:12Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -730,7 +736,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Date"
@@ -765,7 +771,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Date"
@@ -943,9 +949,6 @@
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Building"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'Building' contains a 'Storey'."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#hasStorey"
@@ -1327,43 +1330,6 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#drawingAboutProject",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that indicates the construction project associated with a drawing sheet or drawing entity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "drawing about construction project"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
-  } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' is about the 'ConstructionProject'."
-  } ],
-  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ]
-}, {
   "@id" : "https://dev.qaecy.com/ont#drawingApprovedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1516,6 +1482,115 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#drawingHasFileReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that states that the drawing contains a reference to a file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing has file references"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#FileReference"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "The 'DrawingSheet' or a 'DrawingEntity' contains a reference to a 'FileReference'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#drawingHasOrientation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the orientation of a drawing entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing has orientation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingOrientation"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingEntity' has this 'DrawingOrientation'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#drawingHasScale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the scale of a drawing entity or a drawing sheet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing has scale"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingScale"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' is designed in this 'DrawingScale'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#elementHasMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1636,7 +1711,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Organization"
@@ -1648,6 +1723,43 @@
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@value" : "An 'Activity' is carried out by a 'Person' or 'Organization'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#hasAssociatedDiscipline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies the discipline associated with a drawing entity or a drawing sheet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has associated discipline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Discipline"
+  } ],
+  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DrawingSheet"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A 'DrawingSheet' or a 'DrawingEntity' is associated with a 'Discipline'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1790,7 +1902,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Duration"
@@ -1989,14 +2101,14 @@
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuiltAsset"
   }, {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
-  }, {
     "@id" : "https://dev.qaecy.com/enum#Organization"
   }, {
     "@id" : "https://dev.qaecy.com/enum#Person"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#ProjectId"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'Person', 'Organization', 'BuiltAsset' or 'ConstructionProject' has a certain 'Location'."
+    "@value" : "A 'Person', 'Organization', 'BuiltAsset' or 'ProjectId' has a certain 'Location'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -2073,9 +2185,6 @@
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'BuildingElement' contains another 'BuildingElement' (eg a fan in an air handling unit)."
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#hasSubElement"
   } ],
@@ -2123,7 +2232,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Activity"
@@ -2251,7 +2360,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
@@ -2288,16 +2397,16 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Cost"
+    "@id" : "https://dev.qaecy.com/enum#CostItem"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Activity"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "An 'Activity' involves a certain 'Cost'."
+    "@value" : "An 'Activity' involves a certain 'Cost Item'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -2323,7 +2432,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
@@ -2478,41 +2587,6 @@
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
-  } ]
-}, {
-  "@id" : "https://dev.qaecy.com/ont#metadataReferencesFile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that states that the design metadata contains a reference to a file."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "design metadata references file"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://dev.qaecy.com/ont#EntityReference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
-  } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#FileReference"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "The 'DesignMetadata' references a 'FileReference'."
-  } ],
-  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/ont#mime",
@@ -2744,7 +2818,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Activity"
@@ -2779,18 +2853,18 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ProjectPhase"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
+    "@id" : "https://dev.qaecy.com/enum#ProjectId"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'ConstructionProject' has a 'ProjectPhase'."
+    "@value" : "A 'ProjectId' has a 'ProjectPhase'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -2816,16 +2890,16 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Schedule"
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProject"
+    "@id" : "https://dev.qaecy.com/enum#ProjectId"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'ConstructionProject' has a 'Schedule'."
+    "@value" : "A 'ProjectId' has a 'Schedule'."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -3018,7 +3092,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Equipment"
@@ -3056,7 +3130,7 @@
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ScheduleDocument"
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
   "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Material"
@@ -3236,9 +3310,6 @@
   } ],
   "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#Site"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'Site' contains a 'Building'."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#hasBuilding"
@@ -3488,9 +3559,6 @@
   }, {
     "@id" : "https://dev.qaecy.com/enum#Storey"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'Zone' contains a 'BuildingElement' (eg a building contains a wall)."
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#containsElement"
   } ],
@@ -3530,9 +3598,6 @@
   }, {
     "@id" : "https://dev.qaecy.com/enum#Storey"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'Site', 'Building' or 'Storey' contains a 'Space' (eg a classroom on a floor)."
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#hasSpace"
   } ],
@@ -3571,9 +3636,6 @@
     "@id" : "https://dev.qaecy.com/enum#Space"
   }, {
     "@id" : "https://dev.qaecy.com/enum#Storey"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@value" : "A 'Zone' is adjacent to a 'BuildingElement' (eg a wall is adjacent to a space)."
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "https://w3id.org/bot#adjacentElement"

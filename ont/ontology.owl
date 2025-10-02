@@ -18,7 +18,7 @@
         <terms:description>The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-25T10:02:53Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-02T05:48:12Z</terms:modified>
         <terms:title xml:lang="en">The QAECY Ontology</terms:title>
         <vann:preferredNamespacePrefix>qcy</vann:preferredNamespacePrefix>
         <owl:versionInfo>0.0.1</owl:versionInfo>
@@ -325,17 +325,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
-    <!-- https://dev.qaecy.com/ont#drawingAboutProject -->
-
-
-    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#drawingAboutProject">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
-        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
-        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://dev.qaecy.com/ont#drawingApprovedBy -->
 
 
@@ -380,6 +369,39 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#drawingHasFileReference -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#drawingHasFileReference">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#drawingHasOrientation -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#drawingHasOrientation">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#drawingHasScale -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#drawingHasScale">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dev.qaecy.com/ont#elementHasMaterial -->
 
 
@@ -395,6 +417,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#hasActivityAgent">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#hasAssociatedDiscipline -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#hasAssociatedDiscipline">
         <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
@@ -667,17 +700,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:comment>Relationship between a qcy:InformationObject/qcy:FileLocation and a qcy:EntityMention. This property indicates that a file location, file content or fragment mentions a specific named entity. This relationship can implicitly be derived from the subject/object pair of a qcy:Selector. For file locations it is typically resolved by regex mapping of a schema against the file path.</rdfs:comment>
         <rdfs:label xml:lang="en">mentions</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#metadataReferencesFile -->
-
-
-    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#metadataReferencesFile">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
-        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
-        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
     
 
@@ -1762,10 +1784,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
-    <!-- https://dev.qaecy.com/enum#ConstructionProject -->
+    <!-- https://dev.qaecy.com/enum#ConstructionProcessDocument -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ConstructionProject"/>
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
     
 
 
@@ -1804,10 +1826,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
-    <!-- https://dev.qaecy.com/enum#Cost -->
+    <!-- https://dev.qaecy.com/enum#CostItem -->
 
 
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Cost"/>
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#CostItem"/>
     
 
 
@@ -1843,6 +1865,20 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DrawingEntity"/>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DrawingOrientation -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DrawingOrientation"/>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#DrawingScale -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#DrawingScale"/>
     
 
 
@@ -1916,6 +1952,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/enum#ProjectId -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ProjectId"/>
+    
+
+
     <!-- https://dev.qaecy.com/enum#ProjectPhase -->
 
 
@@ -1927,13 +1970,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#Schedule"/>
-    
-
-
-    <!-- https://dev.qaecy.com/enum#ScheduleDocument -->
-
-
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#ScheduleDocument"/>
     
 
 
@@ -2007,7 +2043,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#activityHasEndDate">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Date"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <extractionPrompt>An &apos;Activity&apos; has an end &apos;Date&apos;.</extractionPrompt>
@@ -2019,7 +2055,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#activityHasStartDate">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Date"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <extractionPrompt>An &apos;Activity&apos; has a starting &apos;Date&apos;.</extractionPrompt>
@@ -2048,7 +2084,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Storey"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Building"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#hasStorey"/>
-        <extractionPrompt>A &apos;Building&apos; contains a &apos;Storey&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2138,19 +2173,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
-    <!-- https://dev.qaecy.com/ont#drawingAboutProject -->
-
-
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#drawingAboutProject">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
-        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProject"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingSheet"/>
-        <extractionPrompt>A &apos;DrawingSheet&apos; or a &apos;DrawingEntity&apos; is about the &apos;ConstructionProject&apos;.</extractionPrompt>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://dev.qaecy.com/ont#drawingApprovedBy -->
 
 
@@ -2205,6 +2227,44 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#drawingHasFileReference -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#drawingHasFileReference">
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#FileReference"/>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingSheet"/>
+        <extractionPrompt>The &apos;DrawingSheet&apos; or a &apos;DrawingEntity&apos; contains a reference to a &apos;FileReference&apos;.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#drawingHasOrientation -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#drawingHasOrientation">
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingOrientation"/>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <extractionPrompt>A &apos;DrawingEntity&apos; has this &apos;DrawingOrientation&apos;.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#drawingHasScale -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#drawingHasScale">
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingScale"/>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingSheet"/>
+        <extractionPrompt>A &apos;DrawingSheet&apos; or a &apos;DrawingEntity&apos; is designed in this &apos;DrawingScale&apos;.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/ont#elementHasMaterial -->
 
 
@@ -2222,11 +2282,24 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#hasActivityAgent">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Organization"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Person"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <extractionPrompt>An &apos;Activity&apos; is carried out by a &apos;Person&apos; or &apos;Organization&apos;.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#hasAssociatedDiscipline -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#hasAssociatedDiscipline">
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Discipline"/>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingEntity"/>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DrawingSheet"/>
+        <extractionPrompt>A &apos;DrawingSheet&apos; or a &apos;DrawingEntity&apos; is associated with a &apos;Discipline&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2261,7 +2334,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#hasDuration">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Duration"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <extractionPrompt>An &apos;Activity&apos; has a certain &apos;Duration&apos;.</extractionPrompt>
@@ -2307,10 +2380,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#hasLocation">
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Location"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#BuiltAsset"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProject"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Organization"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Person"/>
-        <extractionPrompt>A &apos;Person&apos;, &apos;Organization&apos;, &apos;BuiltAsset&apos; or &apos;ConstructionProject&apos; has a certain &apos;Location&apos;.</extractionPrompt>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#ProjectId"/>
+        <extractionPrompt>A &apos;Person&apos;, &apos;Organization&apos;, &apos;BuiltAsset&apos; or &apos;ProjectId&apos; has a certain &apos;Location&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2323,7 +2396,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#hasSubElement"/>
-        <extractionPrompt>A &apos;BuildingElement&apos; contains another &apos;BuildingElement&apos; (eg a fan in an air handling unit).</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2341,7 +2413,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#includesActivity">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Schedule"/>
         <extractionPrompt>A &apos;Schedule&apos; includes an &apos;Activity&apos;.</extractionPrompt>
@@ -2378,7 +2450,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#involvesBuildingEntity">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#BuildingZone"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
@@ -2391,10 +2463,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#involvesCost">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
-        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Cost"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
+        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#CostItem"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
-        <extractionPrompt>An &apos;Activity&apos; involves a certain &apos;Cost&apos;.</extractionPrompt>
+        <extractionPrompt>An &apos;Activity&apos; involves a certain &apos;Cost Item&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2403,7 +2475,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#involvesDiscipline">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Discipline"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <extractionPrompt>An &apos;Activity&apos; involves a certain &apos;Discipline&apos;.</extractionPrompt>
@@ -2434,18 +2506,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#md5HashBase64">
         <regex>^[a-zA-Z0-9+/=]{24}$</regex>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#metadataReferencesFile -->
-
-
-    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#metadataReferencesFile">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
-        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#FileReference"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#DesignMetadata"/>
-        <extractionPrompt>The &apos;DesignMetadata&apos; references a &apos;FileReference&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2512,7 +2572,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#precedesActivity">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <extractionPrompt>An &apos;Activity&apos; precedes another &apos;Activity&apos; (usually by forming a dependency).</extractionPrompt>
@@ -2524,11 +2584,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#projectHasPhase">
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#ProjectPhase"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProject"/>
-        <extractionPrompt>A &apos;ConstructionProject&apos; has a &apos;ProjectPhase&apos;.</extractionPrompt>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#ProjectId"/>
+        <extractionPrompt>A &apos;ProjectId&apos; has a &apos;ProjectPhase&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2537,10 +2597,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#projectHasSchedule">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Schedule"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProject"/>
-        <extractionPrompt>A &apos;ConstructionProject&apos; has a &apos;Schedule&apos;.</extractionPrompt>
+        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#ProjectId"/>
+        <extractionPrompt>A &apos;ProjectId&apos; has a &apos;Schedule&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2549,7 +2609,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#requiresEquipment">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Equipment"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <relatedFormalProperty rdf:resource="http://schema.org/requiresEquipment"/>
@@ -2562,7 +2622,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#requiresMaterial">
-        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ScheduleDocument"/>
+        <applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Material"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Activity"/>
         <relatedFormalProperty rdf:resource="http://schema.org/requiresMaterial"/>
@@ -2603,7 +2663,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Building"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Site"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#hasBuilding"/>
-        <extractionPrompt>A &apos;Site&apos; contains a &apos;Building&apos;.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2628,7 +2687,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Space"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Storey"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#containsElement"/>
-        <extractionPrompt>A &apos;Zone&apos; contains a &apos;BuildingElement&apos; (eg a building contains a wall).</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2643,7 +2701,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Site"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Storey"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#hasSpace"/>
-        <extractionPrompt>A &apos;Site&apos;, &apos;Building&apos; or &apos;Storey&apos; contains a &apos;Space&apos; (eg a classroom on a floor).</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2658,7 +2715,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Space"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Storey"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#adjacentElement"/>
-        <extractionPrompt>A &apos;Zone&apos; is adjacent to a &apos;BuildingElement&apos; (eg a wall is adjacent to a space).</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2824,11 +2880,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:label xml:lang="en">contract states obligation</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
-    <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingAboutProject">
-        <rdfs:comment>Relationship that indicates the construction project associated with a drawing sheet or drawing entity.</rdfs:comment>
-        <rdfs:label xml:lang="en">drawing about construction project</rdfs:label>
-        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
-    </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingApprovedBy">
         <rdfs:comment>Relationship that specifies the entity that approved a drawing entity or drawing sheet.</rdfs:comment>
         <rdfs:label xml:lang="en">drawing approved by</rdfs:label>
@@ -2849,6 +2900,21 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:label xml:lang="en">drawing has creation date</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingHasFileReference">
+        <rdfs:comment>Relationship that states that the drawing contains a reference to a file.</rdfs:comment>
+        <rdfs:label xml:lang="en">drawing has file references</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingHasOrientation">
+        <rdfs:comment>Relationship that specifies the orientation of a drawing entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">drawing has orientation</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingHasScale">
+        <rdfs:comment>Relationship that specifies the scale of a drawing entity or a drawing sheet.</rdfs:comment>
+        <rdfs:label xml:lang="en">drawing has scale</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#elementHasMaterial">
         <rdfs:comment>Relationship between a building element and a material.</rdfs:comment>
         <rdfs:label xml:lang="en">element has material</rdfs:label>
@@ -2857,6 +2923,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#hasActivityAgent">
         <rdfs:comment>Relationship between an agent (Person, Organization) and an Activity.</rdfs:comment>
         <rdfs:label xml:lang="en">has activity agent</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#hasAssociatedDiscipline">
+        <rdfs:comment>Relationship that specifies the discipline associated with a drawing entity or a drawing sheet.</rdfs:comment>
+        <rdfs:label xml:lang="en">has associated discipline</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#hasContractRole">
@@ -2947,11 +3018,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:comment xml:lang="en">The 24 character MD5 hash in Base64 encoding (empty string = 1B2M2Y8AsgTpgAmY7PhCfg==)</rdfs:comment>
         <rdfs:label xml:lang="en">MD5 hash Base 64</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://dev.qaecy.com/ont#metadataReferencesFile">
-        <rdfs:comment>Relationship that states that the design metadata contains a reference to a file.</rdfs:comment>
-        <rdfs:label xml:lang="en">design metadata references file</rdfs:label>
-        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#mime">
         <terms:conformsTo rdf:resource="https://www.iana.org/assignments/media-types/media-types.xhtml"/>
