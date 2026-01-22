@@ -4,7 +4,7 @@
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2025-10-02T05:48:12Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2026-01-22T08:10:55Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://dev.qaecy.com/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://dev.qaecy.com/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -522,6 +522,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
+# https://dev.qaecy.com/ont#similarTo
+<https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#CanonicalEntity> .
+<https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:CanonicalEntity and any other representation of the same entity (for example the Wikidata entry) or a similar entity (for example the OpenStreetMaps street address of an appartment in a building). This property indicates that the canonical entity can be linked to or identified with another entity in a different context or dataset." .
+<https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/2000/01/rdf-schema#label> "similar to"@en .
+<https://dev.qaecy.com/ont#similarTo> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 # https://dev.qaecy.com/ont#siteContainsBuilding
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
@@ -804,6 +813,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://dev.qaecy.com/ont#BIMEntity
 <https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#EntityMention> .
+<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A BIM entity is a special kind of entity mention. It's an intangible (zone) or tangible (element) part of a BIM model."@en .
+<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#label> "BIM Entity"@en .
+<https://dev.qaecy.com/ont#BIMEntity> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/ont#CanonicalEntity
 <https://dev.qaecy.com/ont#CanonicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1111,17 +1123,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://dev.qaecy.com/enum#Storey
 <https://dev.qaecy.com/enum#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
-# https://dev.qaecy.com/ont#BIMEntity
-<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#BIMEntity> <https://dev.qaecy.com/ont#iriPattern> "<docUUID><expressID>" .
-# 
 # https://dev.qaecy.com/ont#IFCExpressIDSelector
 <https://dev.qaecy.com/ont#IFCExpressIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#IFCExpressIDSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID>_globalID" .
+<https://dev.qaecy.com/ont#IFCExpressIDSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID>_expressID" .
 # 
 # https://dev.qaecy.com/ont#IFCGlobalIDSelector
 <https://dev.qaecy.com/ont#IFCGlobalIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID>_expressID" .
+<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID>_globalID" .
 # 
 # https://dev.qaecy.com/ont#TextFragment
 <https://dev.qaecy.com/ont#TextFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1129,7 +1137,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#XYWHSelector
 <https://dev.qaecy.com/ont#XYWHSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#XYWHSelector> <https://dev.qaecy.com/ont#iriPattern> "<parentUUID><xywhString>" .
+<https://dev.qaecy.com/ont#XYWHSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID><xywhString>" .
 # 
 # https://dev.qaecy.com/ont#activityHasEndDate
 <https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1573,10 +1581,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #
 # #################################################################
 # 
-# 
-<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A BIM entity is a special kind of entity mention. It's an intangible (zone) or tangible (element) part of a BIM model."@en .
-<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#label> "BIM Entity"@en .
-<https://dev.qaecy.com/ont#BIMEntity> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en .
 <https://dev.qaecy.com/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Express ID Selector"@en .

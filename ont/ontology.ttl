@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2025-10-02T05:48:12Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2026-01-22T08:10:55Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.1" .
@@ -596,6 +596,16 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       rdfs:range :EntityReference .
 
 
+###  https://dev.qaecy.com/ont#similarTo
+:similarTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :relatedEntity ;
+           rdfs:domain :CanonicalEntity ;
+           rdfs:range owl:Thing ;
+           rdfs:comment "Relationship between a qcy:CanonicalEntity and any other representation of the same entity (for example the Wikidata entry) or a similar entity (for example the OpenStreetMaps street address of an appartment in a building). This property indicates that the canonical entity can be linked to or identified with another entity in a different context or dataset." ;
+           rdfs:label "similar to"@en ;
+           :visibleForAgent "true"^^xsd:boolean .
+
+
 ###  https://dev.qaecy.com/ont#siteContainsBuilding
 :siteContainsBuilding rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :relatedEntity ;
@@ -903,7 +913,10 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#BIMEntity
 :BIMEntity rdf:type owl:Class ;
-           rdfs:subClassOf :EntityMention .
+           rdfs:subClassOf :EntityMention ;
+           rdfs:comment "A BIM entity is a special kind of entity mention. It's an intangible (zone) or tangible (element) part of a BIM model."@en ;
+           rdfs:label "BIM Entity"@en ;
+           :visibleForAgent "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/ont#CanonicalEntity
@@ -1273,19 +1286,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 <https://dev.qaecy.com/enum#Storey> rdf:type owl:NamedIndividual .
 
 
-###  https://dev.qaecy.com/ont#BIMEntity
-:BIMEntity rdf:type owl:NamedIndividual ;
-           :iriPattern "<docUUID><expressID>" .
-
-
 ###  https://dev.qaecy.com/ont#IFCExpressIDSelector
 :IFCExpressIDSelector rdf:type owl:NamedIndividual ;
-                      :iriPattern "<objectUUID>_globalID" .
+                      :iriPattern "<objectUUID>_expressID" .
 
 
 ###  https://dev.qaecy.com/ont#IFCGlobalIDSelector
 :IFCGlobalIDSelector rdf:type owl:NamedIndividual ;
-                     :iriPattern "<objectUUID>_expressID" .
+                     :iriPattern "<objectUUID>_globalID" .
 
 
 ###  https://dev.qaecy.com/ont#TextFragment
@@ -1295,7 +1303,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#XYWHSelector
 :XYWHSelector rdf:type owl:NamedIndividual ;
-              :iriPattern "<parentUUID><xywhString>" .
+              :iriPattern "<objectUUID><xywhString>" .
 
 
 ###  https://dev.qaecy.com/ont#activityHasEndDate
@@ -1800,11 +1808,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 #################################################################
 #    Annotations
 #################################################################
-
-:BIMEntity rdfs:comment "A BIM entity is a special kind of entity mention. It's an intangible (zone) or tangible (element) part of a BIM model."@en ;
-           rdfs:label "BIM Entity"@en ;
-           :visibleForAgent "false"^^xsd:boolean .
-
 
 :IFCExpressIDSelector rdfs:comment "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en ;
                       rdfs:label "IFC Express ID Selector"@en ;
