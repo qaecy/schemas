@@ -4,7 +4,7 @@
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2026-01-22T08:10:55Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2026-01-28T13:56:47Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://dev.qaecy.com/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://dev.qaecy.com/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
@@ -127,9 +127,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#buildingContainsStorey
 <https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
 <https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
+# https://dev.qaecy.com/ont#contains
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#containsFragment
 <https://dev.qaecy.com/ont#containsFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -276,9 +282,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
-# https://dev.qaecy.com/ont#hasElement
-<https://dev.qaecy.com/ont#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
 # https://dev.qaecy.com/ont#hasEmailAddress
 <https://dev.qaecy.com/ont#hasEmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
@@ -347,7 +350,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#hasSubElement
 <https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasElement> .
+<https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
 <https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -463,7 +466,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#relatedFormalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#relatedEntity> .
 <https://dev.qaecy.com/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<https://dev.qaecy.com/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:containsStorey qcy:relatedFormalClass bot:hasStorey)." .
+<https://dev.qaecy.com/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:buildingContainsStorey qcy:relatedFormalClass bot:hasStorey)." .
 <https://dev.qaecy.com/ont#relatedFormalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "related formal property"@en .
 <https://dev.qaecy.com/ont#relatedFormalProperty> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
@@ -518,7 +521,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#sheetContainsDrawing
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -533,25 +536,25 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#siteContainsBuilding
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#zoneContainsElement
 <https://dev.qaecy.com/ont#zoneContainsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#zoneContainsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasElement> .
+<https://dev.qaecy.com/ont#zoneContainsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
 <https://dev.qaecy.com/ont#zoneContainsElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#zoneContainsElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#zoneContainsSpace
 <https://dev.qaecy.com/ont#zoneContainsSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#zoneContainsSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#zoneContainsSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
 <https://dev.qaecy.com/ont#zoneContainsSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#zoneContainsSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#zoneHasAdjacentElement
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasElement> .
+<https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -1169,6 +1172,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#buildingContainsStorey> <https://dev.qaecy.com/ont#relatedFormalProperty> <https://w3id.org/bot#hasStorey> .
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
+# https://dev.qaecy.com/ont#contains
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#contains> <https://dev.qaecy.com/ont#extractionPrompt> "An entity contains another entity." .
+# 
 # https://dev.qaecy.com/ont#contractGovernedByJurisdiction
 <https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
@@ -1614,6 +1621,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates that a building contains a floor." .
 <https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2000/01/rdf-schema#label> "building contains storey"@en .
 <https://dev.qaecy.com/ont#buildingContainsStorey> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Top level relationship that indicates that an entity contains another entity." .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+<https://dev.qaecy.com/ont#contains> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#comment> "A jurisdiction that governs the contract." .
 <https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#label> "contract governed by jurisdiction"@en .

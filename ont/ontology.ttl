@@ -14,7 +14,7 @@
                               <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
 
 The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2026-01-22T08:10:55Z"^^xsd:dateTime ;
+                              <http://purl.org/dc/terms/modified> "2026-01-28T13:56:47Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.1" .
@@ -140,9 +140,16 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#buildingContainsStorey
 :buildingContainsStorey rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:subPropertyOf :contains ;
                         rdfs:domain :EntityReference ;
                         rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :relatedEntity ;
+          rdfs:domain :EntityReference ;
+          rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#containsFragment
@@ -313,10 +320,6 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              rdfs:range :EntityReference .
 
 
-###  https://dev.qaecy.com/ont#hasElement
-:hasElement rdf:type owl:ObjectProperty .
-
-
 ###  https://dev.qaecy.com/ont#hasEmailAddress
 :hasEmailAddress rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :relatedEntity ;
@@ -394,7 +397,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#hasSubElement
 :hasSubElement rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :hasElement ;
+               rdfs:subPropertyOf :contains ;
                rdfs:domain :EntityReference ;
                rdfs:range :EntityReference .
 
@@ -528,7 +531,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 :relatedFormalProperty rdf:type owl:ObjectProperty ;
                        rdfs:domain :relatedEntity ;
                        rdfs:range owl:Thing ;
-                       rdfs:comment "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:containsStorey qcy:relatedFormalClass bot:hasStorey)." ;
+                       rdfs:comment "Relationship between a qcy:relatedEntity sub-property and one or more formal properties in external ontologies (Ex: qcy:buildingContainsStorey qcy:relatedFormalClass bot:hasStorey)." ;
                        rdfs:label "related formal property"@en ;
                        :visibleForAgent "false"^^xsd:boolean .
 
@@ -591,7 +594,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#sheetContainsDrawing
 :sheetContainsDrawing rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:subPropertyOf :contains ;
                       rdfs:domain :EntityReference ;
                       rdfs:range :EntityReference .
 
@@ -608,28 +611,28 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#siteContainsBuilding
 :siteContainsBuilding rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:subPropertyOf :contains ;
                       rdfs:domain :EntityReference ;
                       rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#zoneContainsElement
 :zoneContainsElement rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :hasElement ;
+                     rdfs:subPropertyOf :contains ;
                      rdfs:domain :EntityReference ;
                      rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#zoneContainsSpace
 :zoneContainsSpace rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :relatedEntity ;
+                   rdfs:subPropertyOf :contains ;
                    rdfs:domain :EntityReference ;
                    rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#zoneHasAdjacentElement
 :zoneHasAdjacentElement rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :hasElement ;
+                        rdfs:subPropertyOf :relatedEntity ;
                         rdfs:domain :EntityReference ;
                         rdfs:range :EntityReference .
 
@@ -1339,6 +1342,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                         :relatedFormalProperty <https://w3id.org/bot#hasStorey> .
 
 
+###  https://dev.qaecy.com/ont#contains
+:contains rdf:type owl:NamedIndividual ;
+          :extractionPrompt "An entity contains another entity." .
+
+
 ###  https://dev.qaecy.com/ont#contractGovernedByJurisdiction
 :contractGovernedByJurisdiction rdf:type owl:NamedIndividual ;
                                 :applicableContentCategories <https://dev.qaecy.com/enum#ContractualDocument> ;
@@ -1848,6 +1856,11 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 :buildingContainsStorey rdfs:comment "Relationship that indicates that a building contains a floor." ;
                         rdfs:label "building contains storey"@en ;
                         :visibleForAgent "true"^^xsd:boolean .
+
+
+:contains rdfs:comment "Top level relationship that indicates that an entity contains another entity." ;
+          rdfs:label "contains"@en ;
+          :visibleForAgent "true"^^xsd:boolean .
 
 
 :contractGovernedByJurisdiction rdfs:comment "A jurisdiction that governs the contract." ;

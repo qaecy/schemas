@@ -15,7 +15,7 @@
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes special enumerations to be used with the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-02T05:48:19Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-28T13:56:52Z</terms:modified>
         <terms:title xml:lang="en">QAECY Enumerations</terms:title>
         <vann:preferredNamespacePrefix>qcy-e</vann:preferredNamespacePrefix>
     </owl:Ontology>
@@ -727,7 +727,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
         <skos:prefLabel xml:lang="en">Date</skos:prefLabel>
-        <ont:extractionPrompt xml:lang="en">A date. Must be transformed in &apos;YYYY-MM-DD&apos; format, regardless of how it is found.</ont:extractionPrompt>
+        <ont:extractionPrompt xml:lang="en">A date. Must be returned in ISO 8601 **YYYY-MM-DD** format (eg: 4/5/2005 becomes 2005-05-04, 1 July 2021 becomes 2021-07-01 etc).</ont:extractionPrompt>
         <ont:regex>^[0-9]{4}-[0-9]{2}-[0-9]{2}$</ont:regex>
     </owl:NamedIndividual>
     
@@ -1216,6 +1216,30 @@
         <skos:prefLabel xml:lang="en">Heating System</skos:prefLabel>
         <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
         <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/enum#HousingUnit -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/enum#HousingUnit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://dev.qaecy.com/ont#EntityCategory"/>
+        <skos:broader rdf:resource="https://dev.qaecy.com/enum#BuildingZone"/>
+        <skos:definition xml:lang="en">Either the whole building or a unit of a building or storey</skos:definition>
+        <skos:definition xml:lang="da">Enten hele bygningen eller en enhed i en bygning eller etage</skos:definition>
+        <skos:definition xml:lang="de">Entweder das ganze Gebäude oder eine Einheit eines Gebäudes oder Stockwerks</skos:definition>
+        <skos:definition xml:lang="it">O l&apos;intero edificio o un&apos;unità di un edificio o di un piano</skos:definition>
+        <skos:definition xml:lang="fr">Soit le bâtiment entier, soit une unité d&apos;un bâtiment ou d&apos;un étage</skos:definition>
+        <skos:prefLabel xml:lang="da">Boligenhed</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Housing unit</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Unità abitativa</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Unité d&apos;habitation</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Wohneinheit</skos:prefLabel>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#ConstructionProcessDocument"/>
+        <ont:applicableContentCategories rdf:resource="https://dev.qaecy.com/enum#DesignDocument"/>
+        <ont:relatedFormalClass rdf:resource="https://w3id.org/bot#Zone"/>
     </owl:NamedIndividual>
     
 
