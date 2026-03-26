@@ -3,7 +3,7 @@
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/description> "This document describes log specific terms to be used with the Cue processors and the QAECY Ontology." .
-<https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/modified> "2026-03-26T09:51:06Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/modified> "2026-03-26T10:02:36Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/title> "QAECY Logging Ontology"@en .
 <https://dev.qaecy.com/logs#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-l" .
 # 
@@ -14,9 +14,6 @@
 # #
 # #################################################################
 # 
-# 
-# http://purl.org/dc/terms/conformsTo
-<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -32,12 +29,6 @@
 # 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://dev.qaecy.com/ont#iriPattern
-<https://dev.qaecy.com/ont#iriPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://dev.qaecy.com/ont#visibleForAgent
-<https://dev.qaecy.com/ont#visibleForAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -61,24 +52,31 @@
 <https://dev.qaecy.com/logs#consumed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
 <https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#Process> .
-<https://dev.qaecy.com/logs#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/logs#Process> .
+<https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#comment> "Sub-processes or external processes consumed by this process."@en .
+<https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#label> "consumed"@en .
 # 
 # https://dev.qaecy.com/logs#executedBy
 <https://dev.qaecy.com/logs#executedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/logs#executedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#Service> .
-<https://dev.qaecy.com/logs#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dev.qaecy.com/logs#executedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/logs#Process> .
+<https://dev.qaecy.com/logs#executedBy> <http://www.w3.org/2000/01/rdf-schema#label> "executed by"@en .
 # 
 # https://dev.qaecy.com/logs#hasService
 <https://dev.qaecy.com/logs#hasService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
 <https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2002/07/owl#inverseOf> <https://dev.qaecy.com/logs#executedBy> .
 <https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#Process> .
+<https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/logs#Service> .
+<https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#comment> "The service that executed this process."@en .
+<https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#label> "has service"@en .
 # 
 # https://dev.qaecy.com/logs#hasSource
 <https://dev.qaecy.com/logs#hasSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/logs#hasSource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
 <https://dev.qaecy.com/logs#hasSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#Process> .
 <https://dev.qaecy.com/logs#hasSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#FileLocation> .
+<https://dev.qaecy.com/ont#FileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://dev.qaecy.com/logs#hasSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Source file location used by this process."@en .
 <https://dev.qaecy.com/logs#hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "has source"@en .
 # 
@@ -105,15 +103,9 @@
 # http://www.w3.org/ns/prov#startedAtTime
 <http://www.w3.org/ns/prov#startedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
-# https://dev.qaecy.com/logs#consumed
-<https://dev.qaecy.com/logs#consumed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/logs#Process> .
-<https://dev.qaecy.com/logs#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
 # https://dev.qaecy.com/logs#consumedTokensIn
 <https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#LLMRequest> .
-<https://dev.qaecy.com/logs#LLMRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Input tokens consumed by LLM request."@en .
 <https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#label> "tokens in"@en .
@@ -139,15 +131,6 @@
 <https://dev.qaecy.com/logs#endTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/logs#endTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Timestamp when the process ended."@en .
 <https://dev.qaecy.com/logs#endTime> <http://www.w3.org/2000/01/rdf-schema#label> "end time"@en .
-# 
-# https://dev.qaecy.com/logs#executedBy
-<https://dev.qaecy.com/logs#executedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/logs#executedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/logs#Process> .
-# 
-# https://dev.qaecy.com/logs#hasService
-<https://dev.qaecy.com/logs#hasService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/logs#Service> .
-<https://dev.qaecy.com/logs#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 # 
 # https://dev.qaecy.com/logs#message
 <https://dev.qaecy.com/logs#message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -180,263 +163,37 @@
 # #################################################################
 # 
 # 
+# http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://dev.qaecy.com/logs#EmbeddingRequest
+<https://dev.qaecy.com/logs#EmbeddingRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dev.qaecy.com/logs#EmbeddingRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/logs#Process> .
+<https://dev.qaecy.com/logs#EmbeddingRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "A process representing an embedding service request."@en .
+<https://dev.qaecy.com/logs#EmbeddingRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Embedding Request"@en .
+# 
 # https://dev.qaecy.com/logs#LLMRequest
+<https://dev.qaecy.com/logs#LLMRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dev.qaecy.com/logs#LLMRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/logs#Process> .
+<https://dev.qaecy.com/logs#LLMRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "A process representing an LLM API request with token consumption tracking."@en .
+<https://dev.qaecy.com/logs#LLMRequest> <http://www.w3.org/2000/01/rdf-schema#label> "LLM Request"@en .
 # 
-# https://dev.qaecy.com/ont#BIMEntity
-<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#EntityMention> .
-<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A BIM entity is a special kind of entity mention. It's an intangible (zone) or tangible (element) part of a BIM model."@en .
-<https://dev.qaecy.com/ont#BIMEntity> <http://www.w3.org/2000/01/rdf-schema#label> "BIM Entity"@en .
-<https://dev.qaecy.com/ont#BIMEntity> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# https://dev.qaecy.com/logs#Process
+<https://dev.qaecy.com/logs#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dev.qaecy.com/logs#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://dev.qaecy.com/logs#Process> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/logs#Service> .
+<https://dev.qaecy.com/logs#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A process represents an execution of a service within the QAECY logging system."@en .
+<https://dev.qaecy.com/logs#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
 # 
-# https://dev.qaecy.com/ont#CADLayoutFragment
-<https://dev.qaecy.com/ont#CADLayoutFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#CADLayoutFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Fragment> .
-<https://dev.qaecy.com/ont#CADLayoutFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a CAD layout. It should be specified with a selector (qcy:CADLayoutSelector) relative to its parent fragment and the extracted layout's location should be specified."@en .
-<https://dev.qaecy.com/ont#CADLayoutFragment> <http://www.w3.org/2000/01/rdf-schema#label> "CAD Layout Fragment"@en .
-<https://dev.qaecy.com/ont#CADLayoutFragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#CADLayoutSelector
-<https://dev.qaecy.com/ont#CADLayoutSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#CADLayoutSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#CADLayoutSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A CAD layout selector specifies the name of a layout in a CAD file. It should be used to connect a qcy:FileContent object representing a CAD file with a qcy:Fragment representing the layout. The value is the name of the layout as specified in the CAD file and corresponds to the block parameter used when extracting an image of the CAD layout using QCAD."@en .
-<https://dev.qaecy.com/ont#CADLayoutSelector> <http://www.w3.org/2000/01/rdf-schema#label> "CAD Layout Selector"@en .
-<https://dev.qaecy.com/ont#CADLayoutSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#CADViewportFragment
-<https://dev.qaecy.com/ont#CADViewportFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#CADViewportFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Fragment> .
-<https://dev.qaecy.com/ont#CADViewportFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a CAD viewport. It should be specified with a selector (qcy:CADViewportSelector) relative to its parent fragment and the extracted viewport's location should be specified."@en .
-<https://dev.qaecy.com/ont#CADViewportFragment> <http://www.w3.org/2000/01/rdf-schema#label> "CAD Viewport Fragment"@en .
-<https://dev.qaecy.com/ont#CADViewportFragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#CADViewportSelector
-<https://dev.qaecy.com/ont#CADViewportSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#CADViewportSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#CADViewportSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A CAD viewport selector specifies the location of a viewport in a CAD layout. It should be used to connect a qcy:FileContent object representing a CAD layout with a qcy:Fragment representing the viewport. The value is the XYWH coordinates of the viewport within the cartesian coordinate system of the CAD layout (Y axis pointing upwards) normalised to mm. The value corresponds to the window parameter (-w) that is fed to QCAD when extracting an image of the CAD layout and is always."@en .
-<https://dev.qaecy.com/ont#CADViewportSelector> <http://www.w3.org/2000/01/rdf-schema#label> "CAD Viewport Selector"@en .
-<https://dev.qaecy.com/ont#CADViewportSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#CanonicalEntity
-<https://dev.qaecy.com/ont#CanonicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#EntityReference> .
-<https://dev.qaecy.com/ont#CanonicalEntity> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#EntityMention> .
-<https://dev.qaecy.com/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept."@en .
-<https://dev.qaecy.com/ont#CanonicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Canonical Entity"@en .
-<https://dev.qaecy.com/ont#CanonicalEntity> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#Category
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#EntityReference> .
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#FileLocation> .
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#InformationObject> .
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Property> .
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class for specific categories that each hold enumerations used for specification of information objects and entity references. It is recommended to use SKOS to establish more context between the Category entities."@en .
-<https://dev.qaecy.com/ont#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en .
-<https://dev.qaecy.com/ont#Category> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#ContentCategory
-<https://dev.qaecy.com/ont#ContentCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Category> .
-<https://dev.qaecy.com/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category derived from the content of the file" .
-<https://dev.qaecy.com/ont#ContentCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Content Category"@en .
-<https://dev.qaecy.com/ont#ContentCategory> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#CoordinateTranslator
-<https://dev.qaecy.com/ont#CoordinateTranslator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#CoordinateTranslator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#CoordinateTranslator> <http://www.w3.org/2000/01/rdf-schema#comment> "A coordinate translator specifies the parameters needed to translate coordinates from one coordinate system to another. This is used to connect a qcy:Fragment representing a CAD layout with a qcy:Fragment representing an image of that layout, to enable translation of the viewport coordinates in the CAD layout to XYWH coordinates in the image. The value is formatted as an SVG transformation matrix (eg. matrix(56.69, 0, 0, -56.69, 110.07, 257.10))"@en .
-<https://dev.qaecy.com/ont#CoordinateTranslator> <http://www.w3.org/2000/01/rdf-schema#label> "Coordinate Translator"@en .
-<https://dev.qaecy.com/ont#CoordinateTranslator> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#DocumentPageFragment
-<https://dev.qaecy.com/ont#DocumentPageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Fragment> .
-<https://dev.qaecy.com/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a page in a paginated document."@en .
-<https://dev.qaecy.com/ont#DocumentPageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Document Page Fragment"@en .
-<https://dev.qaecy.com/ont#DocumentPageFragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#EntityCategory
-<https://dev.qaecy.com/ont#EntityCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Category> .
-<https://dev.qaecy.com/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category that specifies the categories of an entity reference" .
-<https://dev.qaecy.com/ont#EntityCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Category"@en .
-<https://dev.qaecy.com/ont#EntityCategory> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#EntityMention
-<https://dev.qaecy.com/ont#EntityMention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#EntityReference> .
-<https://dev.qaecy.com/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of \"Albert Einstein\" in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns."@en .
-<https://dev.qaecy.com/ont#EntityMention> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Mention"@en .
-<https://dev.qaecy.com/ont#EntityMention> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#EntityReference
-<https://dev.qaecy.com/ont#EntityReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#EntityReference> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#FileLocation> .
-<https://dev.qaecy.com/ont#EntityReference> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#InformationObject> .
-<https://dev.qaecy.com/ont#EntityReference> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Property> .
-<https://dev.qaecy.com/ont#EntityReference> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#EntityReference> <http://www.w3.org/2000/01/rdf-schema#comment> "This abstract class captures reference points for all features of interest in a project, such as a building element, a zone, a person, or material. These references can be either explicit or potential occurrences of the entity. This class should not be assigned directly; instead, use the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalized entity."@en .
-<https://dev.qaecy.com/ont#EntityReference> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Reference"@en .
-<https://dev.qaecy.com/ont#EntityReference> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#FileContent
-<https://dev.qaecy.com/ont#FileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#InformationObject> .
-<https://dev.qaecy.com/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#comment> "A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud."@en .
-<https://dev.qaecy.com/ont#FileContent> <http://www.w3.org/2000/01/rdf-schema#label> "File Content"@en .
-<https://dev.qaecy.com/ont#FileContent> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# https://dev.qaecy.com/logs#Service
+<https://dev.qaecy.com/logs#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dev.qaecy.com/logs#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<https://dev.qaecy.com/logs#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service or microservice that executes processes (e.g., enrichers-bim-tiles, gemini_light)."@en .
+<https://dev.qaecy.com/logs#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
 # 
 # https://dev.qaecy.com/ont#FileLocation
-<https://dev.qaecy.com/ont#FileLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#InformationObject> .
-<https://dev.qaecy.com/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Property> .
-<https://dev.qaecy.com/ont#FileLocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud."@en .
-<https://dev.qaecy.com/ont#FileLocation> <http://www.w3.org/2000/01/rdf-schema#label> "File Location"@en .
-<https://dev.qaecy.com/ont#FileLocation> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#Fragment
-<https://dev.qaecy.com/ont#Fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#InformationObject> .
-<https://dev.qaecy.com/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#comment> "A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page."@en .
-<https://dev.qaecy.com/ont#Fragment> <http://www.w3.org/2000/01/rdf-schema#label> "Fragment"@en .
-<https://dev.qaecy.com/ont#Fragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#IDSelector
-<https://dev.qaecy.com/ont#IDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID."@en .
-<https://dev.qaecy.com/ont#IDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "ID Selector"@en .
-<https://dev.qaecy.com/ont#IDSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#IFCExpressIDSelector
-<https://dev.qaecy.com/ont#IFCExpressIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model."@en .
-<https://dev.qaecy.com/ont#IFCExpressIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Express ID Selector"@en .
-<https://dev.qaecy.com/ont#IFCExpressIDSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID>_expressID" .
-<https://dev.qaecy.com/ont#IFCExpressIDSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#IFCGlobalIDSelector
-<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document."@en .
-<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <http://www.w3.org/2000/01/rdf-schema#label> "IFC Global ID Selector"@en .
-<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID>_globalID" .
-<https://dev.qaecy.com/ont#IFCGlobalIDSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#ImageFragment
-<https://dev.qaecy.com/ont#ImageFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Fragment> .
-<https://dev.qaecy.com/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image's location should be specified."@en .
-<https://dev.qaecy.com/ont#ImageFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Image Fragment"@en .
-<https://dev.qaecy.com/ont#ImageFragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#InformationObject
-<https://dev.qaecy.com/ont#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#InformationObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Property> .
-<https://dev.qaecy.com/ont#InformationObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#InformationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes."@en .
-<https://dev.qaecy.com/ont#InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "Information Object"@en .
-# 
-# https://dev.qaecy.com/ont#MimeCategory
-<https://dev.qaecy.com/ont#MimeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Category> .
-<https://dev.qaecy.com/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category derived from the mimetype of the file content" .
-<https://dev.qaecy.com/ont#MimeCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Mime Category"@en .
-<https://dev.qaecy.com/ont#MimeCategory> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#PageSelector
-<https://dev.qaecy.com/ont#PageSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A page selector specifies a particular page within a document. This special selector always always connects a qcy:FileContent object with a qcy:DocumentPage. The value is the page number starting from 1."@en .
-<https://dev.qaecy.com/ont#PageSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Page Selector"@en .
-<https://dev.qaecy.com/ont#PageSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#Property
-<https://dev.qaecy.com/ont#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Any quantitative or qualitative property of an entity."@en .
-<https://dev.qaecy.com/ont#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
-<https://dev.qaecy.com/ont#Property> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#ProviderType
-<https://dev.qaecy.com/ont#ProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#ProviderType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Category> .
-<https://dev.qaecy.com/ont#ProviderType> <http://www.w3.org/2000/01/rdf-schema#comment> "Category that specifies the type of provider" .
-<https://dev.qaecy.com/ont#ProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "Provider Type"@en .
-<https://dev.qaecy.com/ont#ProviderType> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#Selector
-<https://dev.qaecy.com/ont#Selector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#comment> "A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file."@en .
-<https://dev.qaecy.com/ont#Selector> <http://www.w3.org/2000/01/rdf-schema#label> "Selector"@en .
-<https://dev.qaecy.com/ont#Selector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#TableFragment
-<https://dev.qaecy.com/ont#TableFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Fragment> .
-<https://dev.qaecy.com/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified."@en .
-<https://dev.qaecy.com/ont#TableFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Table Fragment"@en .
-<https://dev.qaecy.com/ont#TableFragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#TextDirectiveSelector
-<https://dev.qaecy.com/ont#TextDirectiveSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#TextDirectiveSelector> <http://purl.org/dc/terms/conformsTo> <https://wicg.github.io/scroll-to-text-fragment/> .
-<https://dev.qaecy.com/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A text directive selector specifies a range within a text using the syntax \\\"#:~:text=[prefix-,]start[,end][,-suffix]\\\". For example, \\\"#:~:text=example,fragment\\\" would indicate a range from the first occurrence of \\\"example\\\" to the next occurrence of \\\"fragment\\\". This is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
-<https://dev.qaecy.com/ont#TextDirectiveSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Text Directive Selector"@en .
-<https://dev.qaecy.com/ont#TextDirectiveSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#TextFragment
-<https://dev.qaecy.com/ont#TextFragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Fragment> .
-<https://dev.qaecy.com/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it's location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted."@en .
-<https://dev.qaecy.com/ont#TextFragment> <http://www.w3.org/2000/01/rdf-schema#label> "Text Fragment"@en .
-<https://dev.qaecy.com/ont#TextFragment> <https://dev.qaecy.com/ont#iriPattern> "<parentUUID><selectorUUID>"@en .
-<https://dev.qaecy.com/ont#TextFragment> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#TextIndexSelector
-<https://dev.qaecy.com/ont#TextIndexSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "A text index selector specifies a range within a text using start and end separated by a comma (\\\"start,end\\\"). For example \\\"6,11\\\" on the text string \\\"Hello World\\\" would specify the subset \\\"World\\\". This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment."@en .
-<https://dev.qaecy.com/ont#TextIndexSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Text Index Selector"@en .
-<https://dev.qaecy.com/ont#TextIndexSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#TimeRangeSelector
-<https://dev.qaecy.com/ont#TimeRangeSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#TimeRangeSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
-<https://dev.qaecy.com/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/"@en .
-<https://dev.qaecy.com/ont#TimeRangeSelector> <http://www.w3.org/2000/01/rdf-schema#label> "Time Range Selector"@en .
-<https://dev.qaecy.com/ont#TimeRangeSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# https://dev.qaecy.com/ont#XYWHSelector
-<https://dev.qaecy.com/ont#XYWHSelector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dev.qaecy.com/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/ont#Selector> .
-<https://dev.qaecy.com/ont#XYWHSelector> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/media-frags/> .
-<https://dev.qaecy.com/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#comment> "The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document."@en .
-<https://dev.qaecy.com/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#label> "XYWH Selector"@en .
-<https://dev.qaecy.com/ont#XYWHSelector> <https://dev.qaecy.com/ont#iriPattern> "<objectUUID><xywhString>" .
-<https://dev.qaecy.com/ont#XYWHSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#comment> "Sub-processes or external processes consumed by this process."@en .
-<https://dev.qaecy.com/logs#consumed> <http://www.w3.org/2000/01/rdf-schema#label> "consumed"@en .
-# 
-<https://dev.qaecy.com/logs#executedBy> <http://www.w3.org/2000/01/rdf-schema#label> "executed by"@en .
-# 
-<https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#comment> "The service that executed this process."@en .
-<https://dev.qaecy.com/logs#hasService> <http://www.w3.org/2000/01/rdf-schema#label> "has service"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

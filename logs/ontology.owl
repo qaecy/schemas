@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://dev.qaecy.com/logs#"
      xml:base="https://dev.qaecy.com/logs"
-     xmlns:ont="https://dev.qaecy.com/ont#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -14,7 +13,7 @@
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes log specific terms to be used with the Cue processors and the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-26T09:51:06Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-26T10:02:36Z</terms:modified>
         <terms:title xml:lang="en">QAECY Logging Ontology</terms:title>
         <vann:preferredNamespacePrefix>qcy-l</vann:preferredNamespacePrefix>
     </owl:Ontology>
@@ -30,13 +29,6 @@
      -->
 
 
-    
-
-
-    <!-- http://purl.org/dc/terms/conformsTo -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/conformsTo"/>
     
 
 
@@ -72,20 +64,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#iriPattern -->
-
-
-    <owl:AnnotationProperty rdf:about="https://dev.qaecy.com/ont#iriPattern"/>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#visibleForAgent -->
-
-
-    <owl:AnnotationProperty rdf:about="https://dev.qaecy.com/ont#visibleForAgent"/>
     
 
 
@@ -128,6 +106,9 @@
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/logs#consumed">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#Process"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/logs#Process"/>
+        <rdfs:comment xml:lang="en">Sub-processes or external processes consumed by this process.</rdfs:comment>
+        <rdfs:label xml:lang="en">consumed</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -137,6 +118,8 @@
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/logs#executedBy">
         <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#Service"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/logs#Process"/>
+        <rdfs:label xml:lang="en">executed by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -148,6 +131,9 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
         <owl:inverseOf rdf:resource="https://dev.qaecy.com/logs#executedBy"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#Process"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/logs#Service"/>
+        <rdfs:comment xml:lang="en">The service that executed this process.</rdfs:comment>
+        <rdfs:label xml:lang="en">has service</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -204,15 +190,6 @@
     
 
 
-    <!-- https://dev.qaecy.com/logs#consumed -->
-
-
-    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#consumed">
-        <rdfs:range rdf:resource="https://dev.qaecy.com/logs#Process"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://dev.qaecy.com/logs#consumedTokensIn -->
 
 
@@ -258,24 +235,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Timestamp when the process ended.</rdfs:comment>
         <rdfs:label xml:lang="en">end time</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://dev.qaecy.com/logs#executedBy -->
-
-
-    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#executedBy">
-        <rdfs:range rdf:resource="https://dev.qaecy.com/logs#Process"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://dev.qaecy.com/logs#hasService -->
-
-
-    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#hasService">
-        <rdfs:range rdf:resource="https://dev.qaecy.com/logs#Service"/>
     </owl:DatatypeProperty>
     
 
@@ -329,185 +288,61 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#EmbeddingRequest -->
+
+
+    <owl:Class rdf:about="https://dev.qaecy.com/logs#EmbeddingRequest">
+        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/logs#Process"/>
+        <rdfs:comment xml:lang="en">A process representing an embedding service request.</rdfs:comment>
+        <rdfs:label xml:lang="en">Embedding Request</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://dev.qaecy.com/logs#LLMRequest -->
 
 
-    <owl:Class rdf:about="https://dev.qaecy.com/logs#LLMRequest"/>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#BIMEntity -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#BIMEntity">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#EntityMention"/>
-        <rdfs:comment xml:lang="en">A BIM entity is a special kind of entity mention. It&apos;s an intangible (zone) or tangible (element) part of a BIM model.</rdfs:comment>
-        <rdfs:label xml:lang="en">BIM Entity</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
+    <owl:Class rdf:about="https://dev.qaecy.com/logs#LLMRequest">
+        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/logs#Process"/>
+        <rdfs:comment xml:lang="en">A process representing an LLM API request with token consumption tracking.</rdfs:comment>
+        <rdfs:label xml:lang="en">LLM Request</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://dev.qaecy.com/ont#CADLayoutFragment -->
+    <!-- https://dev.qaecy.com/logs#Process -->
 
 
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#CADLayoutFragment">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Fragment"/>
-        <rdfs:comment xml:lang="en">This special fragment constitutes a CAD layout. It should be specified with a selector (qcy:CADLayoutSelector) relative to its parent fragment and the extracted layout&apos;s location should be specified.</rdfs:comment>
-        <rdfs:label xml:lang="en">CAD Layout Fragment</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
+    <owl:Class rdf:about="https://dev.qaecy.com/logs#Process">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <owl:disjointWith rdf:resource="https://dev.qaecy.com/logs#Service"/>
+        <rdfs:comment xml:lang="en">A process represents an execution of a service within the QAECY logging system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://dev.qaecy.com/ont#CADLayoutSelector -->
+    <!-- https://dev.qaecy.com/logs#Service -->
 
 
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#CADLayoutSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">A CAD layout selector specifies the name of a layout in a CAD file. It should be used to connect a qcy:FileContent object representing a CAD file with a qcy:Fragment representing the layout. The value is the name of the layout as specified in the CAD file and corresponds to the block parameter used when extracting an image of the CAD layout using QCAD.</rdfs:comment>
-        <rdfs:label xml:lang="en">CAD Layout Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#CADViewportFragment -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#CADViewportFragment">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Fragment"/>
-        <rdfs:comment xml:lang="en">This special fragment constitutes a CAD viewport. It should be specified with a selector (qcy:CADViewportSelector) relative to its parent fragment and the extracted viewport&apos;s location should be specified.</rdfs:comment>
-        <rdfs:label xml:lang="en">CAD Viewport Fragment</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#CADViewportSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#CADViewportSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">A CAD viewport selector specifies the location of a viewport in a CAD layout. It should be used to connect a qcy:FileContent object representing a CAD layout with a qcy:Fragment representing the viewport. The value is the XYWH coordinates of the viewport within the cartesian coordinate system of the CAD layout (Y axis pointing upwards) normalised to mm. The value corresponds to the window parameter (-w) that is fed to QCAD when extracting an image of the CAD layout and is always.</rdfs:comment>
-        <rdfs:label xml:lang="en">CAD Viewport Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#CanonicalEntity -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#CanonicalEntity">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#EntityMention"/>
-        <rdfs:comment xml:lang="en">These are standardized representations of named entities that are the output of an enrichment step in the QAECY pipelines. The entity resolution should include relevant contextual information to distinguish between unique named entities. For example, there can be a ground floor in two buildings but they are not the same concept.</rdfs:comment>
-        <rdfs:label xml:lang="en">Canonical Entity</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#Category -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#Category">
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#FileLocation"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#InformationObject"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Property"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">Abstract class for specific categories that each hold enumerations used for specification of information objects and entity references. It is recommended to use SKOS to establish more context between the Category entities.</rdfs:comment>
-        <rdfs:label xml:lang="en">Category</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#ContentCategory -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#ContentCategory">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Category"/>
-        <rdfs:comment>Category derived from the content of the file</rdfs:comment>
-        <rdfs:label xml:lang="en">Content Category</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#CoordinateTranslator -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#CoordinateTranslator">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">A coordinate translator specifies the parameters needed to translate coordinates from one coordinate system to another. This is used to connect a qcy:Fragment representing a CAD layout with a qcy:Fragment representing an image of that layout, to enable translation of the viewport coordinates in the CAD layout to XYWH coordinates in the image. The value is formatted as an SVG transformation matrix (eg. matrix(56.69, 0, 0, -56.69, 110.07, 257.10))</rdfs:comment>
-        <rdfs:label xml:lang="en">Coordinate Translator</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#DocumentPageFragment -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#DocumentPageFragment">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Fragment"/>
-        <rdfs:comment xml:lang="en">This special fragment constitutes a page in a paginated document.</rdfs:comment>
-        <rdfs:label xml:lang="en">Document Page Fragment</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#EntityCategory -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#EntityCategory">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Category"/>
-        <rdfs:comment>Category that specifies the categories of an entity reference</rdfs:comment>
-        <rdfs:label xml:lang="en">Entity Category</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#EntityMention -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#EntityMention">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
-        <rdfs:comment xml:lang="en">An entity mention is an occurrence of a specific entity within a qcy:InformationObject. Each occurrence is unique, meaning that two mentions of &quot;Albert Einstein&quot; in the same information object are considered two distinct entity mentions. Entity mentions can describe mentionings of persons, organizations, locations, dates, and other proper nouns.</rdfs:comment>
-        <rdfs:label xml:lang="en">Entity Mention</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#EntityReference -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#EntityReference">
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#FileLocation"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#InformationObject"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Property"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">This abstract class captures reference points for all features of interest in a project, such as a building element, a zone, a person, or material. These references can be either explicit or potential occurrences of the entity. This class should not be assigned directly; instead, use the sub-class qcy:EntityMention for potential occurrences of an entity and qcy:CanonicalEntity for a formalized entity.</rdfs:comment>
-        <rdfs:label xml:lang="en">Entity Reference</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#FileContent -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#FileContent">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#InformationObject"/>
-        <rdfs:comment xml:lang="en">A file content object represents the full content of a qcy:File. It is uniquely identified by its content, meaning that any modification, even a single character change, results in a new file content object. This ensures that each file content object is immutable and uniquely identifiable. Additionally, a single file content object can be referenced by multiple qcy:File instances, which may be stored in different locations, either locally or in the cloud.</rdfs:comment>
-        <rdfs:label xml:lang="en">File Content</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
+    <owl:Class rdf:about="https://dev.qaecy.com/logs#Service">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment xml:lang="en">A service or microservice that executes processes (e.g., enrichers-bim-tiles, gemini_light).</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
     </owl:Class>
     
 
@@ -515,247 +350,7 @@
     <!-- https://dev.qaecy.com/ont#FileLocation -->
 
 
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#FileLocation">
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#InformationObject"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Property"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">A file location is a digital representation of an information object that is stored on a hard drive, either locally or in the cloud.</rdfs:comment>
-        <rdfs:label xml:lang="en">File Location</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#Fragment -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#Fragment">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#InformationObject"/>
-        <rdfs:comment xml:lang="en">A fragment is a subset of a qcy:FileContent object. Each fragment can have sub-fragments in any arbitrary depth (see qcy:containsFragment). For example, a page is a fragment of a document and a text paragraph, image, and table can all be sub-fragments of that page.</rdfs:comment>
-        <rdfs:label xml:lang="en">Fragment</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#IDSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#IDSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">The value specifies an identifier within a structured document, such as an XML or JSON file. For BIM models use one of the more specific ID selectors for the specific kind of ID. The ID Selector is typically used to identify the location of a qcy:EntityMention by its unique ID.</rdfs:comment>
-        <rdfs:label xml:lang="en">ID Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#IFCExpressIDSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#IFCExpressIDSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">The value of an IFC Express ID Selector specifies the ExpressId of the object within the IFC document. Beware that this ID is only unique in context of that single serailization of the model and is likely to change in future versions of the model.</rdfs:comment>
-        <rdfs:label xml:lang="en">IFC Express ID Selector</rdfs:label>
-        <ont:iriPattern>&lt;objectUUID&gt;_expressID</ont:iriPattern>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#IFCGlobalIDSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#IFCGlobalIDSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">The value of an IFC Global ID Selector specifies the GlobalId of the object within the IFC document.</rdfs:comment>
-        <rdfs:label xml:lang="en">IFC Global ID Selector</rdfs:label>
-        <ont:iriPattern>&lt;objectUUID&gt;_globalID</ont:iriPattern>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#ImageFragment -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#ImageFragment">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Fragment"/>
-        <rdfs:comment xml:lang="en">This special fragment constitutes an image. It should be specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the extracted image&apos;s location should be specified.</rdfs:comment>
-        <rdfs:label xml:lang="en">Image Fragment</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#InformationObject -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#InformationObject">
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Property"/>
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">An information object is an abstract class that captures all information found in project files. It can either be the full content of the file (see qcy:FileContent) or a subset (see qcy:Fragment). This abstract class should not be defined explicitly, so instead use one of the more specific sub-classes.</rdfs:comment>
-        <rdfs:label xml:lang="en">Information Object</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#MimeCategory -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#MimeCategory">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Category"/>
-        <rdfs:comment>Category derived from the mimetype of the file content</rdfs:comment>
-        <rdfs:label xml:lang="en">Mime Category</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#PageSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#PageSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">A page selector specifies a particular page within a document. This special selector always always connects a qcy:FileContent object with a qcy:DocumentPage. The value is the page number starting from 1.</rdfs:comment>
-        <rdfs:label xml:lang="en">Page Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#Property -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#Property">
-        <owl:disjointWith rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">Any quantitative or qualitative property of an entity.</rdfs:comment>
-        <rdfs:label xml:lang="en">Property</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#ProviderType -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#ProviderType">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Category"/>
-        <rdfs:comment>Category that specifies the type of provider</rdfs:comment>
-        <rdfs:label xml:lang="en">Provider Type</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#Selector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#Selector">
-        <rdfs:comment xml:lang="en">A selector specifies where in a qcy:InformationObject a qcy:EntityMention occurs. For example from/to what index in a text paragraph, what XYWH bounding box on a page or what GlobalId in an IFC file.</rdfs:comment>
-        <rdfs:label xml:lang="en">Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#TableFragment -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#TableFragment">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Fragment"/>
-        <rdfs:comment xml:lang="en">This special fragment constitutes a table with rows and columns. It should specified with a selector (qcy:XYWHSelector) relative to its parent fragment and the qcy:tableGrid should be specified.</rdfs:comment>
-        <rdfs:label xml:lang="en">Table Fragment</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#TextDirectiveSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#TextDirectiveSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <terms:conformsTo rdf:resource="https://wicg.github.io/scroll-to-text-fragment/"/>
-        <rdfs:comment xml:lang="en">A text directive selector specifies a range within a text using the syntax \&quot;#:~:text=[prefix-,]start[,end][,-suffix]\&quot;. For example, \&quot;#:~:text=example,fragment\&quot; would indicate a range from the first occurrence of \&quot;example\&quot; to the next occurrence of \&quot;fragment\&quot;. This is used to identify the exact location of a qcy:EntityMention within a text fragment.</rdfs:comment>
-        <rdfs:label xml:lang="en">Text Directive Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#TextFragment -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#TextFragment">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Fragment"/>
-        <rdfs:comment xml:lang="en">This special fragment constitutes a text extraction. It can be the full text of a page a paragraph, footer, header or the like. Except for the former case, it should specified with a selector (qcy:XYWHSelector) to describe it&apos;s location relative to its parent fragment. It should also specify a qcy:textRaw and optionally a qcy:textFormatted.</rdfs:comment>
-        <rdfs:label xml:lang="en">Text Fragment</rdfs:label>
-        <ont:iriPattern xml:lang="en">&lt;parentUUID&gt;&lt;selectorUUID&gt;</ont:iriPattern>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#TextIndexSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#TextIndexSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <rdfs:comment xml:lang="en">A text index selector specifies a range within a text using start and end separated by a comma (\&quot;start,end\&quot;). For example \&quot;6,11\&quot; on the text string \&quot;Hello World\&quot; would specify the subset \&quot;World\&quot;. This is similar to string slicing in Python and is used to identify the exact location of a qcy:EntityMention within a text fragment.</rdfs:comment>
-        <rdfs:label xml:lang="en">Text Index Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#TimeRangeSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#TimeRangeSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <terms:conformsTo rdf:resource="http://www.w3.org/TR/media-frags/"/>
-        <rdfs:comment xml:lang="en">The value specifies the time range formatted in accordance with http://www.w3.org/TR/media-frags/</rdfs:comment>
-        <rdfs:label xml:lang="en">Time Range Selector</rdfs:label>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- https://dev.qaecy.com/ont#XYWHSelector -->
-
-
-    <owl:Class rdf:about="https://dev.qaecy.com/ont#XYWHSelector">
-        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/ont#Selector"/>
-        <terms:conformsTo rdf:resource="http://www.w3.org/TR/media-frags/"/>
-        <rdfs:comment xml:lang="en">The value specifies the bounding box formatted as an xywh box (http://www.w3.org/TR/media-frags/) either in absolute pixels or relative to the information object. The XYWH Selector is used to identify the location of a qcy:EntityMention or qcy:InformationObject within a visual document.</rdfs:comment>
-        <rdfs:label xml:lang="en">XYWH Selector</rdfs:label>
-        <ont:iriPattern>&lt;objectUUID&gt;&lt;xywhString&gt;</ont:iriPattern>
-        <ont:visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:visibleForAgent>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://dev.qaecy.com/logs#consumed">
-        <rdfs:comment xml:lang="en">Sub-processes or external processes consumed by this process.</rdfs:comment>
-        <rdfs:label xml:lang="en">consumed</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://dev.qaecy.com/logs#executedBy">
-        <rdfs:label xml:lang="en">executed by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://dev.qaecy.com/logs#hasService">
-        <rdfs:comment xml:lang="en">The service that executed this process.</rdfs:comment>
-        <rdfs:label xml:lang="en">has service</rdfs:label>
-    </rdf:Description>
+    <owl:Class rdf:about="https://dev.qaecy.com/ont#FileLocation"/>
 </rdf:RDF>
 
 
