@@ -13,7 +13,7 @@
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes log specific terms to be used with the Cue processors and the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-26T10:02:36Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-26T10:06:33Z</terms:modified>
         <terms:title xml:lang="en">QAECY Logging Ontology</terms:title>
         <vann:preferredNamespacePrefix>qcy-l</vann:preferredNamespacePrefix>
     </owl:Ontology>
