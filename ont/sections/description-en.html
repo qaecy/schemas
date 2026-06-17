@@ -1,5 +1,11 @@
 <h2 id="desc" class="list">The QAECY Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
+<span class="markdown">The QAECY Ontology defines the core knowledge model used by QAECY and the Cue Agent to represent information from Architecture, Engineering, and Construction projects.
 
-The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.</span>
+The model is centered around information objects and entity references. Information is represented through FileLocation, InformationObject and Fragment, while project meaning is represented through EntityMention and CanonicalEntity. Entity mentions are resolved to canonical entities, which can be qualified with categories, linked to properties, and connected through explicit relationships.
+
+Entity-to-entity semantics are organized under qcy:relatedEntity. The recommended top-level relation families are: qcy:contains (part-whole), qcy:leadsTo (order/causal flow), qcy:involves (participation/roles), qcy:expressedBy (descriptive qualification), and qcy:associatedWith (non-hierarchical association). Temporal qualification is modeled through qcy:hasTemporalMarker and specific sub-properties (for example startsOn, endsOn, effectiveOn, signedOn, createdOn, approvedOn, invalidatedOn).
+
+Categories are managed through qcy:Category and its sub-types: qcy:EntityCategory, qcy:ContentCategory, qcy:MimeCategory, qcy:ProviderType, and qcy:RelationCategory. These are intended as controlled vocabularies for classification and context, and should be extended by adding new SKOS concepts, typically in the qcy-e namespace or in project-specific enum namespaces.
+
+Project-specific relation specializations are allowed and encouraged in separate namespaces when needed. New properties should be declared as sub-properties of one of the top-level qcy:relatedEntity families (or qcy:hasTemporalMarker for temporal cases), and should define labels, comments, and applicable subject/object/content categories. This keeps the QAECY core stable while enabling domain-specific precision per project namespace.</span>

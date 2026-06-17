@@ -43,7 +43,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2026-01-28T13:56:52Z"
+    "@value" : "2026-06-17T08:56:19Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -62,7 +62,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Amazon Web Services provider type"
+    "@value" : "A cloud infrastructure provider, denoting resources hosted on Amazon Web Services."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -76,9 +76,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A task or process carried out as part of the construction, operation or maintenance of a built asset."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Aufgabe oder ein Vorgang im Rahmen von Bau, Betrieb oder Instandhaltung einer baulichen Anlage."
+  }, {
+    "@language" : "da",
+    "@value" : "En opgave eller proces, der udføres som led i opførelse, drift eller vedligeholdelse af et bygget aktiv."
+  }, {
+    "@language" : "it",
+    "@value" : "Un'attività o un processo svolto nell'ambito della costruzione, del funzionamento o della manutenzione di un bene edilizio."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une tâche ou un processus réalisé dans le cadre de la construction, de l'exploitation ou de la maintenance d'un actif bâti."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Activity"
+  }, {
+    "@language" : "fr",
+    "@value" : "Activité"
+  }, {
+    "@language" : "da",
+    "@value" : "Aktivitet"
+  }, {
+    "@language" : "de",
+    "@value" : "Aktivität"
+  }, {
+    "@language" : "it",
+    "@value" : "Attività"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -98,9 +126,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Location"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A postal address identifying the location of a building, site or organization."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Postanschrift, die den Standort eines Gebäudes, Geländes oder einer Organisation angibt."
+  }, {
+    "@language" : "da",
+    "@value" : "En postadresse, der angiver placeringen af en bygning, et sted eller en organisation."
+  }, {
+    "@language" : "it",
+    "@value" : "Un indirizzo postale che identifica la posizione di un edificio, un sito o un'organizzazione."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une adresse postale identifiant l'emplacement d'un bâtiment, d'un site ou d'une organisation."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Address"
+  }, {
+    "@language" : "da",
+    "@value" : "Adresse"
+  }, {
+    "@language" : "de",
+    "@value" : "Adresse"
+  }, {
+    "@language" : "fr",
+    "@value" : "Adresse"
+  }, {
+    "@language" : "it",
+    "@value" : "Indirizzo"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#AppraisalValuationDocument",
@@ -113,8 +169,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#FinancialAdministrativeDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An appraisal or valuation of a property or asset."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Begutachtung oder Bewertung einer Immobilie oder eines Vermögenswerts."
+  }, {
+    "@language" : "da",
+    "@value" : "En vurdering eller værdiansættelse af en ejendom eller et aktiv."
+  }, {
+    "@language" : "it",
+    "@value" : "Una perizia o valutazione di un immobile o di un bene."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une expertise ou une évaluation d'un bien ou d'un actif."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Appraisal or Valuation Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Appraisal or Valuation Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Appraisal or Valuation Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Appraisal or Valuation Document"
+  }, {
+    "@language" : "it",
     "@value" : "Appraisal or Valuation Document"
   } ]
 }, {
@@ -128,8 +212,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A design document produced by the architectural discipline, such as architectural drawings or models."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Entwurfsdokument der Disziplin Architektur, etwa Architekturzeichnungen oder Modelle."
+  }, {
+    "@language" : "da",
+    "@value" : "Et designdokument udarbejdet af den arkitektoniske disciplin, såsom arkitekttegninger eller modeller."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document de conception produit par la discipline architecturale, tel que des plans d'architecte ou des maquettes."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di progetto prodotto dalla disciplina architettonica, come disegni architettonici o modelli."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Architectural Design Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Architectural Design Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Architectural Design Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Architectural Design Document"
+  }, {
+    "@language" : "it",
     "@value" : "Architectural Design Document"
   } ]
 }, {
@@ -143,8 +255,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "da",
+    "@value" : "Den arkitektoniske disciplin, der er ansvarlig for udformningen af bygninger og deres rum."
+  }, {
+    "@language" : "de",
+    "@value" : "Die Disziplin Architektur, verantwortlich für den Entwurf von Gebäuden und ihren Räumen."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'architettura, responsabile della progettazione degli edifici e dei loro spazi."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'architecture, responsable de la conception des bâtiments et de leurs espaces."
+  }, {
     "@language" : "en",
+    "@value" : "The architectural discipline, responsible for the design of buildings and their spaces."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Architecture"
+  }, {
+    "@language" : "de",
+    "@value" : "Architecture"
+  }, {
+    "@language" : "en",
+    "@value" : "Architecture"
+  }, {
+    "@language" : "fr",
+    "@value" : "Architecture"
+  }, {
+    "@language" : "it",
     "@value" : "Architecture"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -162,7 +302,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for archive file content"
+    "@value" : "Content of a compressed archive file, such as ZIP or RAR."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -179,8 +319,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#OperationsMaintenanceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A drawing or document recording the as-built condition of the works."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Zeichnung oder ein Dokument, das den Bestandszustand der Arbeiten festhält."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegning eller et dokument, der registrerer arbejdernes som udført-tilstand."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin ou un document consignant l'état tel que construit des travaux."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno o documento che registra lo stato as-built dei lavori."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "As-Built Document"
+  }, {
+    "@language" : "de",
+    "@value" : "As-Built Document"
+  }, {
+    "@language" : "en",
+    "@value" : "As-Built Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "As-Built Document"
+  }, {
+    "@language" : "it",
     "@value" : "As-Built Document"
   } ]
 }, {
@@ -193,7 +361,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for audio file content"
+    "@value" : "Content of an audio file, such as MP3 or WAV."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -209,7 +377,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for automation file content"
+    "@value" : "Content of an automation or scripting file used to control software or devices."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -225,7 +393,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Azure provider type"
+    "@value" : "A cloud infrastructure provider, denoting resources hosted on Microsoft Azure."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -241,7 +409,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for BIM file content"
+    "@value" : "Content of a Building Information Modelling (BIM) file, such as IFC or RVT."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -257,7 +425,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for backup file content"
+    "@value" : "Content of a backup file holding a copy of other data."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -274,8 +442,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A platform projecting from a building wall, enclosed by a railing or balustrade."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine von einer Gebäudewand auskragende Plattform, die durch ein Geländer begrenzt ist."
+  }, {
+    "@language" : "da",
+    "@value" : "En platform, der rager ud fra en bygningsvæg og er afgrænset af et værn."
+  }, {
+    "@language" : "it",
+    "@value" : "Una piattaforma che sporge da una parete dell'edificio, delimitata da una ringhiera."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une plateforme en saillie d'un mur de bâtiment, délimitée par un garde-corps."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Balcony"
+  }, {
+    "@language" : "de",
+    "@value" : "Balcony"
+  }, {
+    "@language" : "en",
+    "@value" : "Balcony"
+  }, {
+    "@language" : "fr",
+    "@value" : "Balcony"
+  }, {
+    "@language" : "it",
     "@value" : "Balcony"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -297,8 +493,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A horizontal structural element that carries loads across a span."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein horizontales Tragelement, das Lasten über eine Spannweite trägt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et vandret bærende element, der bærer laster over et spænd."
+  }, {
+    "@language" : "it",
+    "@value" : "Un elemento strutturale orizzontale che sostiene i carichi su una luce."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un élément structurel horizontal qui supporte les charges sur une portée."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Beam"
+  }, {
+    "@language" : "en",
+    "@value" : "Beam"
+  }, {
+    "@language" : "fr",
+    "@value" : "Beam"
+  }, {
+    "@language" : "it",
     "@value" : "Beam"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -319,7 +543,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for binary file content"
+    "@value" : "Content of a generic binary file with no more specific type."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -336,8 +560,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#FinancialAdministrativeDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A budget or cost estimate for a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Budget oder eine Kostenschätzung für ein Projekt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et budget eller omkostningsoverslag for et projekt."
+  }, {
+    "@language" : "it",
+    "@value" : "Un budget o una stima dei costi per un progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un budget ou une estimation de coûts pour un projet."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Budget or Estimate Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Budget or Estimate Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Budget or Estimate Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Budget or Estimate Document"
+  }, {
+    "@language" : "it",
     "@value" : "Budget or Estimate Document"
   } ]
 }, {
@@ -351,9 +603,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingZone"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A building structure within a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Gebäudebauwerk innerhalb eines Projekts."
+  }, {
+    "@language" : "da",
+    "@value" : "En bygningskonstruktion inden for et projekt."
+  }, {
+    "@language" : "it",
+    "@value" : "Una struttura edilizia nell'ambito di un progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une structure de bâtiment au sein d'un projet."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Building"
+  }, {
+    "@language" : "da",
+    "@value" : "Bygning"
+  }, {
+    "@language" : "fr",
+    "@value" : "Bâtiment"
+  }, {
+    "@language" : "it",
+    "@value" : "Edificio"
+  }, {
+    "@language" : "de",
+    "@value" : "Gebäude"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -374,9 +654,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Gebäudeautomation, verantwortlich für die Steuerungs- und Automationssysteme eines Gebäudes."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen bygningsautomation, der er ansvarlig for en bygnings styrings- og automationssystemer."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'automazione degli edifici, responsabile dei sistemi di controllo e automazione di un edificio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'automatisation du bâtiment, responsable des systèmes de commande et d'automatisation d'un bâtiment."
+  }, {
+    "@language" : "en",
+    "@value" : "The building automation discipline, responsible for the control and automation systems of a building."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Building Automation System"
+  }, {
+    "@language" : "da",
+    "@value" : "Bygning Automation System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Bâtiment Automation System"
+  }, {
+    "@language" : "it",
+    "@value" : "Edificio Automation System"
+  }, {
+    "@language" : "de",
+    "@value" : "Gebäude Automation System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -393,11 +701,35 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Any tangible part of a building"
+    "@value" : "Any tangible part of a building, such as a wall, slab, window or door."
+  }, {
+    "@language" : "da",
+    "@value" : "Enhver håndgribelig del af en bygning, såsom en væg, et dæk, et vindue eller en dør."
+  }, {
+    "@language" : "de",
+    "@value" : "Jeder greifbare Teil eines Gebäudes, etwa eine Wand, Decke, ein Fenster oder eine Tür."
+  }, {
+    "@language" : "it",
+    "@value" : "Qualsiasi parte tangibile di un edificio, come un muro, un solaio, una finestra o una porta."
+  }, {
+    "@language" : "fr",
+    "@value" : "Toute partie tangible d'un bâtiment, telle qu'un mur, une dalle, une fenêtre ou une porte."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Building Element"
+  }, {
+    "@language" : "da",
+    "@value" : "Bygning Element"
+  }, {
+    "@language" : "fr",
+    "@value" : "Bâtiment Element"
+  }, {
+    "@language" : "it",
+    "@value" : "Edificio Element"
+  }, {
+    "@language" : "de",
+    "@value" : "Gebäude Element"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -424,9 +756,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Beziehung zwischen einem Gebäude und einem seiner Geschosse."
+  }, {
+    "@language" : "da",
+    "@value" : "Forholdet mellem en bygning og en af dens etager."
+  }, {
+    "@language" : "fr",
+    "@value" : "La relation entre un bâtiment et l'un de ses étages."
+  }, {
+    "@language" : "it",
+    "@value" : "La relazione tra un edificio e uno dei suoi piani."
+  }, {
+    "@language" : "en",
+    "@value" : "The relationship between a building and one of its storeys."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Building/Storey Interface"
+  }, {
+    "@language" : "da",
+    "@value" : "Bygning/Etage Interface"
+  }, {
+    "@language" : "fr",
+    "@value" : "Bâtiment/Étage Interface"
+  }, {
+    "@language" : "it",
+    "@value" : "Edificio/Piano Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Gebäude/Geschoss Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -439,9 +799,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A spatial subdivision of a building project, such as a site, building, storey or space."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine räumliche Unterteilung eines Bauprojekts, etwa ein Grundstück, Gebäude, Geschoss oder Raum."
+  }, {
+    "@language" : "da",
+    "@value" : "En rumlig opdeling af et byggeprojekt, såsom en grund, bygning, etage eller et rum."
+  }, {
+    "@language" : "it",
+    "@value" : "Una suddivisione spaziale di un progetto edilizio, come un sito, un edificio, un piano o uno spazio."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une subdivision spatiale d'un projet de construction, telle qu'un site, un bâtiment, un étage ou un espace."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Building Zone"
+  }, {
+    "@language" : "da",
+    "@value" : "Bygning Zone"
+  }, {
+    "@language" : "fr",
+    "@value" : "Bâtiment Zone"
+  }, {
+    "@language" : "it",
+    "@value" : "Edificio Zone"
+  }, {
+    "@language" : "de",
+    "@value" : "Gebäude Zone"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -463,8 +851,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A physical built asset such as a building, facility or piece of infrastructure, identified by name, title or id."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine physische bauliche Anlage wie ein Gebäude, eine Einrichtung oder Infrastruktur, angegeben durch Name, Titel oder ID."
+  }, {
+    "@language" : "da",
+    "@value" : "Et fysisk bygget aktiv såsom en bygning, et anlæg eller infrastruktur, angivet ved navn, titel eller id."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un actif bâti physique tel qu'un bâtiment, un équipement ou une infrastructure, identifié par son nom, son titre ou son identifiant."
+  }, {
+    "@language" : "it",
+    "@value" : "Un bene edilizio fisico come un edificio, un impianto o un'infrastruttura, identificato da nome, titolo o id."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Built Asset"
+  }, {
+    "@language" : "de",
+    "@value" : "Built Asset"
+  }, {
+    "@language" : "en",
+    "@value" : "Built Asset"
+  }, {
+    "@language" : "fr",
+    "@value" : "Built Asset"
+  }, {
+    "@language" : "it",
     "@value" : "Built Asset"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
@@ -481,7 +897,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for CAD file content"
+    "@value" : "Content of a computer-aided design (CAD) file, such as DWG or DXF."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -498,8 +914,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RegulatoryComplianceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A certificate attesting compliance with a standard or requirement."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Bescheinigung, die die Einhaltung einer Norm oder Anforderung bestätigt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et certifikat, der attesterer overholdelse af en standard eller et krav."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un certificat attestant la conformité à une norme ou à une exigence."
+  }, {
+    "@language" : "it",
+    "@value" : "Un certificato che attesta la conformità a una norma o a un requisito."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Certification Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Certification Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Certification Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Certification Document"
+  }, {
+    "@language" : "it",
     "@value" : "Certification Document"
   } ]
 }, {
@@ -513,8 +957,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A change order or request for information (RFI) issued during construction."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Nachtrag oder eine Informationsanfrage (RFI), die während des Baus ausgestellt wird."
+  }, {
+    "@language" : "da",
+    "@value" : "En ændringsordre eller anmodning om information (RFI) udstedt under byggeriet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un ordine di variazione o una richiesta di informazioni (RFI) emessa durante la costruzione."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un ordre de modification ou une demande d'information (RFI) émis pendant la construction."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Change Order & RFI Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Change Order & RFI Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Change Order & RFI Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Change Order & RFI Document"
+  }, {
+    "@language" : "it",
     "@value" : "Change Order & RFI Document"
   } ]
 }, {
@@ -528,9 +1000,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Location"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A city, town or municipality in which a project, asset or organization is located."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Stadt oder Gemeinde, in der sich ein Projekt, eine Anlage oder eine Organisation befindet."
+  }, {
+    "@language" : "da",
+    "@value" : "En by eller kommune, hvor et projekt, et aktiv eller en organisation er placeret."
+  }, {
+    "@language" : "it",
+    "@value" : "Una città o un comune in cui si trova un progetto, un bene o un'organizzazione."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une ville ou une municipalité où se situe un projet, un actif ou une organisation."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "By"
+  }, {
+    "@language" : "it",
+    "@value" : "Città"
+  }, {
     "@language" : "en",
     "@value" : "City"
+  }, {
+    "@language" : "de",
+    "@value" : "Stadt"
+  }, {
+    "@language" : "fr",
+    "@value" : "Ville"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Column",
@@ -543,8 +1043,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A vertical structural element that carries loads down to the foundation."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein vertikales Tragelement, das Lasten zur Gründung ableitet."
+  }, {
+    "@language" : "da",
+    "@value" : "Et lodret bærende element, der fører laster ned til fundamentet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un elemento strutturale verticale che trasferisce i carichi alle fondazioni."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un élément structurel vertical qui transmet les charges aux fondations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Column"
+  }, {
+    "@language" : "de",
+    "@value" : "Column"
+  }, {
+    "@language" : "en",
+    "@value" : "Column"
+  }, {
+    "@language" : "fr",
+    "@value" : "Column"
+  }, {
+    "@language" : "it",
     "@value" : "Column"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -566,8 +1094,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RegulatoryComplianceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A report demonstrating compliance with regulations or requirements."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Bericht, der die Einhaltung von Vorschriften oder Anforderungen nachweist."
+  }, {
+    "@language" : "da",
+    "@value" : "En rapport, der dokumenterer overholdelse af regler eller krav."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un rapport démontrant la conformité aux réglementations ou aux exigences."
+  }, {
+    "@language" : "it",
+    "@value" : "Una relazione che dimostra la conformità a regolamenti o requisiti."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Compliance Report"
+  }, {
+    "@language" : "de",
+    "@value" : "Compliance Report"
+  }, {
+    "@language" : "en",
+    "@value" : "Compliance Report"
+  }, {
+    "@language" : "fr",
+    "@value" : "Compliance Report"
+  }, {
+    "@language" : "it",
     "@value" : "Compliance Report"
   } ]
 }, {
@@ -581,9 +1137,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A contract governing the execution of construction works."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Vertrag, der die Ausführung von Bauarbeiten regelt."
+  }, {
+    "@language" : "da",
+    "@value" : "En kontrakt, der regulerer udførelsen af byggearbejder."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un contrat régissant l'exécution des travaux de construction."
+  }, {
+    "@language" : "it",
+    "@value" : "Un contratto che disciplina l'esecuzione dei lavori di costruzione."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Construction Contract"
+  }, {
+    "@language" : "fr",
+    "@value" : "Construction Contrat"
+  }, {
+    "@language" : "it",
+    "@value" : "Construction Contratto"
+  }, {
+    "@language" : "da",
+    "@value" : "Construction Kontrakt"
+  }, {
+    "@language" : "de",
+    "@value" : "Construction Vertrag"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument",
@@ -594,11 +1178,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "it",
+    "@value" : "Documenti utilizzati per pianificare, monitorare e controllare le attività di costruzione e la sicurezza."
+  }, {
     "@language" : "en",
     "@value" : "Documents used to plan, monitor, and control construction activities and safety."
+  }, {
+    "@language" : "fr",
+    "@value" : "Documents utilisés pour planifier, suivre et contrôler les activités de construction et la sécurité."
+  }, {
+    "@language" : "de",
+    "@value" : "Dokumente zur Planung, Überwachung und Steuerung von Bauaktivitäten und Sicherheit."
+  }, {
+    "@language" : "da",
+    "@value" : "Dokumenter, der bruges til at planlægge, overvåge og styre byggeaktiviteter og sikkerhed."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Construction Process & Management Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Construction Process & Management Document"
+  }, {
     "@language" : "en",
+    "@value" : "Construction Process & Management Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Construction Process & Management Document"
+  }, {
+    "@language" : "it",
     "@value" : "Construction Process & Management Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -613,9 +1221,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A formal agreement between parties, identified by id, name or title."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine förmliche Vereinbarung zwischen Parteien, angegeben durch ID, Name oder Titel."
+  }, {
+    "@language" : "da",
+    "@value" : "En formel aftale mellem parter, angivet ved id, navn eller titel."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un accord formel entre des parties, identifié par un identifiant, un nom ou un titre."
+  }, {
+    "@language" : "it",
+    "@value" : "Un accordo formale tra parti, identificato da id, nome o titolo."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Contract"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contrat"
+  }, {
+    "@language" : "it",
+    "@value" : "Contratto"
+  }, {
+    "@language" : "da",
+    "@value" : "Kontrakt"
+  }, {
+    "@language" : "de",
+    "@value" : "Vertrag"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -632,9 +1268,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A condition that must be met as part of a contractual obligation."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Bedingung, die im Rahmen einer vertraglichen Verpflichtung erfüllt werden muss."
+  }, {
+    "@language" : "da",
+    "@value" : "En betingelse, der skal opfyldes som led i en kontraktlig forpligtelse."
+  }, {
+    "@language" : "it",
+    "@value" : "Una condizione che deve essere soddisfatta nell'ambito di un obbligo contrattuale."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une condition qui doit être satisfaite dans le cadre d'une obligation contractuelle."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Contract Condition"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contrat Condition"
+  }, {
+    "@language" : "it",
+    "@value" : "Contratto Condizione"
+  }, {
+    "@language" : "da",
+    "@value" : "Kontrakt Betingelse"
+  }, {
+    "@language" : "de",
+    "@value" : "Vertrag Bedingung"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -651,9 +1315,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An obligation that a party must fulfil under a contract."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Verpflichtung, die eine Partei im Rahmen eines Vertrags erfüllen muss."
+  }, {
+    "@language" : "da",
+    "@value" : "En forpligtelse, som en part skal opfylde i henhold til en kontrakt."
+  }, {
+    "@language" : "it",
+    "@value" : "Un obbligo che una parte deve adempiere ai sensi di un contratto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une obligation qu'une partie doit remplir au titre d'un contrat."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Contract Obligation"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contrat Obligation"
+  }, {
+    "@language" : "it",
+    "@value" : "Contratto Obligation"
+  }, {
+    "@language" : "da",
+    "@value" : "Kontrakt Obligation"
+  }, {
+    "@language" : "de",
+    "@value" : "Vertrag Obligation"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -670,9 +1362,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A role undertaken by a party (organization or person) within a specific contract."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Rolle, die von einer Partei (Organisation oder Person) im Rahmen eines bestimmten Vertrags übernommen wird."
+  }, {
+    "@language" : "da",
+    "@value" : "En rolle, der varetages af en part (organisation eller person) inden for en bestemt kontrakt."
+  }, {
+    "@language" : "it",
+    "@value" : "Un ruolo svolto da una parte (organizzazione o persona) nell'ambito di un contratto specifico."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un rôle assumé par une partie (organisation ou personne) dans le cadre d'un contrat spécifique."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Contract Role"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contrat Role"
+  }, {
+    "@language" : "it",
+    "@value" : "Contratto Role"
+  }, {
+    "@language" : "da",
+    "@value" : "Kontrakt Role"
+  }, {
+    "@language" : "de",
+    "@value" : "Vertrag Role"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -690,11 +1410,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "it",
+    "@value" : "Accordi, contratti e atti legali che stabiliscono obblighi, diritti e responsabilità."
+  }, {
+    "@language" : "fr",
+    "@value" : "Accords, contrats et documents juridiques qui établissent des obligations, des droits et des responsabilités."
+  }, {
+    "@language" : "da",
+    "@value" : "Aftaler, kontrakter og juridiske dokumenter, der fastlægger forpligtelser, rettigheder og ansvar."
+  }, {
     "@language" : "en",
     "@value" : "Agreements, contracts, and legal filings that establish obligations, rights, and responsibilities."
+  }, {
+    "@language" : "de",
+    "@value" : "Vereinbarungen, Verträge und rechtliche Unterlagen, die Pflichten, Rechte und Verantwortlichkeiten festlegen."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Contractual & Legal Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Contractual & Legal Document"
+  }, {
     "@language" : "en",
+    "@value" : "Contractual & Legal Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contractual & Legal Document"
+  }, {
+    "@language" : "it",
     "@value" : "Contractual & Legal Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -712,8 +1456,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Kühlung, verantwortlich für die Kühl- und Klimaanlagen eines Gebäudes."
+  }, {
+    "@language" : "da",
+    "@value" : "Køledisciplinen, der er ansvarlig for en bygnings køle- og klimaanlæg."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina del raffrescamento, responsabile degli impianti di raffrescamento e condizionamento di un edificio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline du refroidissement, responsable des systèmes de refroidissement et de climatisation d'un bâtiment."
+  }, {
     "@language" : "en",
+    "@value" : "The cooling discipline, responsible for the cooling and air-conditioning systems of a building."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Cooling System"
+  }, {
+    "@language" : "de",
+    "@value" : "Cooling System"
+  }, {
+    "@language" : "en",
+    "@value" : "Cooling System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Cooling System"
+  }, {
+    "@language" : "it",
     "@value" : "Cooling System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -732,8 +1504,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#MiscDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Correspondance telle que lettres, e-mails ou notes échangés dans un projet."
+  }, {
     "@language" : "en",
+    "@value" : "Correspondence such as letters, emails or memos exchanged on a project."
+  }, {
+    "@language" : "it",
+    "@value" : "Corrispondenza come lettere, e-mail o memorandum scambiati in un progetto."
+  }, {
+    "@language" : "da",
+    "@value" : "Korrespondance såsom breve, e-mails eller notater udvekslet i et projekt."
+  }, {
+    "@language" : "de",
+    "@value" : "Korrespondenz wie Briefe, E-Mails oder Notizen, die in einem Projekt ausgetauscht werden."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Correspondence Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Correspondence Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Correspondence Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Correspondence Document"
+  }, {
+    "@language" : "it",
     "@value" : "Correspondence Document"
   } ]
 }, {
@@ -744,8 +1544,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A monetary cost or price, expressed in a currency."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein monetärer Kostenposten oder Preis, ausgedrückt in einer Währung."
+  }, {
+    "@language" : "da",
+    "@value" : "En monetær omkostning eller pris, udtrykt i en valuta."
+  }, {
+    "@language" : "it",
+    "@value" : "Un costo o prezzo monetario, espresso in una valuta."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un coût ou un prix monétaire, exprimé dans une devise."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Cost Item"
+  }, {
+    "@language" : "de",
+    "@value" : "Cost Item"
+  }, {
+    "@language" : "en",
+    "@value" : "Cost Item"
+  }, {
+    "@language" : "fr",
+    "@value" : "Cost Item"
+  }, {
+    "@language" : "it",
     "@value" : "Cost Item"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -770,9 +1598,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Location"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A sovereign country or nation."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein souveränes Land oder eine Nation."
+  }, {
+    "@language" : "da",
+    "@value" : "Et selvstændigt land eller en nation."
+  }, {
+    "@language" : "it",
+    "@value" : "Un paese sovrano o una nazione."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un pays souverain ou une nation."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Country"
+  }, {
+    "@language" : "da",
+    "@value" : "Land"
+  }, {
+    "@language" : "de",
+    "@value" : "Land"
+  }, {
+    "@language" : "it",
+    "@value" : "Paese"
+  }, {
+    "@language" : "fr",
+    "@value" : "Pays"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#DataFileContent",
@@ -784,7 +1640,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for data file content"
+    "@value" : "Content of a structured data file, such as JSON, CSV or a database export."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -798,9 +1654,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A calendar date, expressed in ISO 8601 (YYYY-MM-DD) format."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Kalenderdatum im ISO-8601-Format (JJJJ-MM-TT)."
+  }, {
+    "@language" : "da",
+    "@value" : "En kalenderdato angivet i ISO 8601-format (ÅÅÅÅ-MM-DD)."
+  }, {
+    "@language" : "it",
+    "@value" : "Una data di calendario espressa nel formato ISO 8601 (AAAA-MM-GG)."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une date calendaire exprimée au format ISO 8601 (AAAA-MM-JJ)."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "it",
+    "@value" : "Data"
+  }, {
     "@language" : "en",
     "@value" : "Date"
+  }, {
+    "@language" : "fr",
+    "@value" : "Date"
+  }, {
+    "@language" : "da",
+    "@value" : "Dato"
+  }, {
+    "@language" : "de",
+    "@value" : "Datum"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
@@ -818,11 +1702,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Dessins, spécifications et modèles qui définissent la géométrie, les matériaux et l'intention de conception."
+  }, {
+    "@language" : "it",
+    "@value" : "Disegni, specifiche e modelli che definiscono geometria, materiali e intento progettuale."
+  }, {
     "@language" : "en",
     "@value" : "Drawings, specifications, and models that define geometry, materials, and design intent."
+  }, {
+    "@language" : "da",
+    "@value" : "Tegninger, specifikationer og modeller, der definerer geometri, materialer og designhensigt."
+  }, {
+    "@language" : "de",
+    "@value" : "Zeichnungen, Spezifikationen und Modelle, die Geometrie, Materialien und Entwurfsabsicht definieren."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Design Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Design Document"
+  }, {
     "@language" : "en",
+    "@value" : "Design Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Design Document"
+  }, {
+    "@language" : "it",
     "@value" : "Design Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -840,8 +1748,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An identifier assigned to a drawing sheet or drawing."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Kennung, die einem Zeichnungsblatt oder einer Zeichnung zugewiesen ist."
+  }, {
+    "@language" : "da",
+    "@value" : "En identifikator tildelt et tegningsark eller en tegning."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un identifiant attribué à une planche de dessin ou à un dessin."
+  }, {
+    "@language" : "it",
+    "@value" : "Un identificatore assegnato a un foglio di disegno o a un disegno."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Design Id"
+  }, {
+    "@language" : "de",
+    "@value" : "Design Id"
+  }, {
+    "@language" : "en",
+    "@value" : "Design Id"
+  }, {
+    "@language" : "fr",
+    "@value" : "Design Id"
+  }, {
+    "@language" : "it",
     "@value" : "Design Id"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -855,8 +1791,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "Metadata describing a drawing sheet or drawing, typically found in the title block of a document."
+  }, {
+    "@language" : "da",
+    "@value" : "Metadata, der beskriver et tegningsark eller en tegning, typisk fundet i dokumentets titelfelt."
+  }, {
+    "@language" : "de",
+    "@value" : "Metadaten, die ein Zeichnungsblatt oder eine Zeichnung beschreiben, üblicherweise im Schriftfeld des Dokuments zu finden."
+  }, {
+    "@language" : "it",
+    "@value" : "Metadati che descrivono un foglio di disegno o un disegno, in genere riportati nel cartiglio del documento."
+  }, {
+    "@language" : "fr",
+    "@value" : "Métadonnées décrivant une planche de dessin ou un dessin, généralement présentes dans le cartouche du document."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Design Metadata"
+  }, {
+    "@language" : "de",
+    "@value" : "Design Metadata"
+  }, {
+    "@language" : "en",
+    "@value" : "Design Metadata"
+  }, {
+    "@language" : "fr",
+    "@value" : "Design Metadata"
+  }, {
+    "@language" : "it",
     "@value" : "Design Metadata"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -877,8 +1841,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An identifier of a specific revision of a drawing sheet or drawing."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Kennung einer bestimmten Revision eines Zeichnungsblatts oder einer Zeichnung."
+  }, {
+    "@language" : "da",
+    "@value" : "En identifikator for en bestemt revision af et tegningsark eller en tegning."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un identifiant d'une révision spécifique d'une planche de dessin ou d'un dessin."
+  }, {
+    "@language" : "it",
+    "@value" : "Un identificatore di una specifica revisione di un foglio di disegno o di un disegno."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Design Revision Id"
+  }, {
+    "@language" : "de",
+    "@value" : "Design Revision Id"
+  }, {
+    "@language" : "en",
+    "@value" : "Design Revision Id"
+  }, {
+    "@language" : "fr",
+    "@value" : "Design Revision Id"
+  }, {
+    "@language" : "it",
     "@value" : "Design Revision Id"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -895,8 +1887,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Status eines Entwurfs, etwa Entwurf, zur Prüfung, freigegeben oder wie gebaut."
+  }, {
+    "@language" : "da",
+    "@value" : "Et designs status, såsom udkast, til gennemsyn, udgivet eller som udført."
+  }, {
+    "@language" : "fr",
+    "@value" : "Le statut d'une conception, tel que brouillon, pour revue, émis ou tel que construit."
+  }, {
+    "@language" : "it",
+    "@value" : "Lo stato di un progetto, ad esempio bozza, in revisione, emesso o come costruito."
+  }, {
     "@language" : "en",
+    "@value" : "The status of a design, such as draft, for review, issued or as-built."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Design Status"
+  }, {
+    "@language" : "de",
+    "@value" : "Design Status"
+  }, {
+    "@language" : "en",
+    "@value" : "Design Status"
+  }, {
+    "@language" : "fr",
+    "@value" : "Design Status"
+  }, {
+    "@language" : "it",
     "@value" : "Design Status"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -913,8 +1933,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Titel eines Zeichnungsblatts oder einer Zeichnung gemäß dessen Schriftfeld."
+  }, {
+    "@language" : "it",
+    "@value" : "Il titolo di un foglio di disegno o di un disegno come indicato nel suo cartiglio."
+  }, {
+    "@language" : "fr",
+    "@value" : "Le titre d'une planche de dessin ou d'un dessin tel qu'indiqué dans son cartouche."
+  }, {
     "@language" : "en",
+    "@value" : "The title of a drawing sheet or drawing as stated in its title block."
+  }, {
+    "@language" : "da",
+    "@value" : "Titlen på et tegningsark eller en tegning som angivet i dets titelfelt."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Design Title"
+  }, {
+    "@language" : "de",
+    "@value" : "Design Title"
+  }, {
+    "@language" : "en",
+    "@value" : "Design Title"
+  }, {
+    "@language" : "fr",
+    "@value" : "Design Title"
+  }, {
+    "@language" : "it",
     "@value" : "Design Title"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -931,8 +1979,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A large-scale drawing showing the construction of a specific part or junction in detail."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine großmaßstäbliche Zeichnung, die die Konstruktion eines bestimmten Bauteils oder Anschlusses im Detail zeigt."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegning i stor målestok, der viser opbygningen af en bestemt del eller samling i detaljer."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin à grande échelle montrant en détail la construction d'une partie ou d'une jonction spécifique."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno in scala ampia che mostra in dettaglio la costruzione di una parte o di un nodo specifico."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Detail Drawing"
+  }, {
+    "@language" : "de",
+    "@value" : "Detail Drawing"
+  }, {
+    "@language" : "en",
+    "@value" : "Detail Drawing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Detail Drawing"
+  }, {
+    "@language" : "it",
     "@value" : "Detail Drawing"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -949,8 +2025,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A schematic drawing, such as a P&ID or single-line diagram, representing a system rather than its physical geometry."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine schematische Zeichnung, etwa ein R&I- oder Einliniendiagramm, die ein System statt seiner physischen Geometrie darstellt."
+  }, {
+    "@language" : "da",
+    "@value" : "En skematisk tegning, såsom et P&ID- eller enstregsdiagram, der repræsenterer et system snarere end dets fysiske geometri."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin schématique, tel qu'un P&ID ou un schéma unifilaire, représentant un système plutôt que sa géométrie physique."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno schematico, come un P&ID o uno schema unifilare, che rappresenta un sistema anziché la sua geometria fisica."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Diagram Drawing"
+  }, {
+    "@language" : "de",
+    "@value" : "Diagram Drawing"
+  }, {
+    "@language" : "en",
+    "@value" : "Diagram Drawing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Diagram Drawing"
+  }, {
+    "@language" : "it",
     "@value" : "Diagram Drawing"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -964,9 +2068,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A professional discipline or trade responsible for part of a project's design, construction or operation."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Fachdisziplin oder ein Gewerk, das für einen Teil der Planung, des Baus oder Betriebs eines Projekts verantwortlich ist."
+  }, {
+    "@language" : "da",
+    "@value" : "En faglig disciplin eller et fag, der er ansvarlig for en del af et projekts projektering, opførelse eller drift."
+  }, {
+    "@language" : "it",
+    "@value" : "Una disciplina professionale o un mestiere responsabile di una parte della progettazione, della costruzione o della gestione di un progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une discipline professionnelle ou un corps de métier responsable d'une partie de la conception, de la construction ou de l'exploitation d'un projet."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Disciplin"
+  }, {
+    "@language" : "it",
+    "@value" : "Disciplina"
+  }, {
     "@language" : "en",
     "@value" : "Discipline"
+  }, {
+    "@language" : "fr",
+    "@value" : "Discipline"
+  }, {
+    "@language" : "de",
+    "@value" : "Disziplin"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -988,8 +2120,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An opening element providing access through a wall or partition."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Öffnungselement, das den Zugang durch eine Wand oder Trennwand ermöglicht."
+  }, {
+    "@language" : "da",
+    "@value" : "Et åbningselement, der giver adgang gennem en væg eller skillevæg."
+  }, {
+    "@language" : "it",
+    "@value" : "Un elemento di apertura che consente l'accesso attraverso una parete o un tramezzo."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un élément d'ouverture permettant le passage à travers un mur ou une cloison."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Door"
+  }, {
+    "@language" : "de",
+    "@value" : "Door"
+  }, {
+    "@language" : "en",
+    "@value" : "Door"
+  }, {
+    "@language" : "fr",
+    "@value" : "Door"
+  }, {
+    "@language" : "it",
     "@value" : "Door"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1008,8 +2168,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An individual drawing such as a floor plan, section, elevation or diagram, usually placed on a drawing sheet."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine einzelne Zeichnung wie ein Grundriss, Schnitt, Aufriss oder Diagramm, die meist auf einem Zeichnungsblatt platziert ist."
+  }, {
+    "@language" : "da",
+    "@value" : "En enkelt tegning såsom en plantegning, et snit, en facade eller et diagram, normalt placeret på et tegningsark."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin individuel tel qu'un plan, une coupe, une élévation ou un schéma, généralement placé sur une planche de dessin."
+  }, {
+    "@language" : "it",
+    "@value" : "Un singolo disegno come una pianta, una sezione, un prospetto o uno schema, di solito collocato su un foglio di disegno."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Drawing Entity"
+  }, {
+    "@language" : "de",
+    "@value" : "Drawing Entity"
+  }, {
+    "@language" : "en",
+    "@value" : "Drawing Entity"
+  }, {
+    "@language" : "fr",
+    "@value" : "Drawing Entity"
+  }, {
+    "@language" : "it",
     "@value" : "Drawing Entity"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1029,9 +2217,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Ausrichtung einer Zeichnung, etwa die Nordrichtung oder der Blickwinkel."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegnings orientering, såsom nordretningen eller synsvinklen."
+  }, {
+    "@language" : "it",
+    "@value" : "L'orientamento di un disegno, come la direzione del nord o l'angolo di vista."
+  }, {
+    "@language" : "fr",
+    "@value" : "L'orientation d'un dessin, telle que la direction du nord ou l'angle de vue."
+  }, {
     "@language" : "en",
-    "@value" : "Drawing Orientation "
+    "@value" : "The orientation of a drawing, such as the direction of north or the viewing angle."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Drawing Orientation"
+  }, {
+    "@language" : "de",
+    "@value" : "Drawing Orientation"
+  }, {
+    "@language" : "en",
+    "@value" : "Drawing Orientation"
+  }, {
+    "@language" : "fr",
+    "@value" : "Drawing Orientation"
+  }, {
+    "@language" : "it",
+    "@value" : "Drawing Orientation"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -1048,8 +2264,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "da",
+    "@value" : "Den målestok, hvori en tegning eller et tegningsark er gengivet, for eksempel 1:100."
+  }, {
+    "@language" : "de",
+    "@value" : "Der Maßstab, in dem eine Zeichnung oder ein Zeichnungsblatt dargestellt ist, zum Beispiel 1:100."
+  }, {
+    "@language" : "fr",
+    "@value" : "L'échelle à laquelle un dessin ou une planche de dessin est représenté, par exemple 1:100."
+  }, {
+    "@language" : "it",
+    "@value" : "La scala in cui è rappresentato un disegno o un foglio di disegno, ad esempio 1:100."
+  }, {
     "@language" : "en",
+    "@value" : "The scale at which a drawing or drawing sheet is represented, for example 1:100."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Drawing Scale"
+  }, {
+    "@language" : "de",
+    "@value" : "Drawing Scale"
+  }, {
+    "@language" : "en",
+    "@value" : "Drawing Scale"
+  }, {
+    "@language" : "fr",
+    "@value" : "Drawing Scale"
+  }, {
+    "@language" : "it",
     "@value" : "Drawing Scale"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1067,8 +2311,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A sheet of a technical drawing set that contains one or more drawings, usually with a title block holding design metadata."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Blatt eines technischen Zeichnungssatzes, das eine oder mehrere Zeichnungen enthält, meist mit einem Schriftfeld mit Entwurfsmetadaten."
+  }, {
+    "@language" : "da",
+    "@value" : "Et ark i et teknisk tegningssæt, der indeholder en eller flere tegninger, normalt med et titelfelt med designmetadata."
+  }, {
+    "@language" : "it",
+    "@value" : "Un foglio di una serie di disegni tecnici che contiene uno o più disegni, di solito con un cartiglio contenente i metadati di progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une planche d'un jeu de plans techniques contenant un ou plusieurs dessins, généralement avec un cartouche regroupant les métadonnées de conception."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Drawing Sheet"
+  }, {
+    "@language" : "de",
+    "@value" : "Drawing Sheet"
+  }, {
+    "@language" : "en",
+    "@value" : "Drawing Sheet"
+  }, {
+    "@language" : "fr",
+    "@value" : "Drawing Sheet"
+  }, {
+    "@language" : "it",
     "@value" : "Drawing Sheet"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1091,8 +2363,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#MiscDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A due diligence report assessing the risks or conditions of a project or asset."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Due-Diligence-Bericht, der Risiken oder Bedingungen eines Projekts oder Vermögenswerts bewertet."
+  }, {
+    "@language" : "da",
+    "@value" : "En due diligence-rapport, der vurderer risici eller forhold ved et projekt eller aktiv."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un rapport de due diligence évaluant les risques ou les conditions d'un projet ou d'un actif."
+  }, {
+    "@language" : "it",
+    "@value" : "Una relazione di due diligence che valuta i rischi o le condizioni di un progetto o bene."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Due Diligence Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Due Diligence Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Due Diligence Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Due Diligence Document"
+  }, {
+    "@language" : "it",
     "@value" : "Due Diligence Document"
   } ]
 }, {
@@ -1103,9 +2403,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "da",
+    "@value" : "Den tid en aktivitet tager, udtrykt i dage, uger, måneder eller år."
+  }, {
+    "@language" : "de",
+    "@value" : "Die Dauer einer Aktivität, ausgedrückt in Tagen, Wochen, Monaten oder Jahren."
+  }, {
+    "@language" : "it",
+    "@value" : "La durata di un'attività, espressa in giorni, settimane, mesi o anni."
+  }, {
+    "@language" : "fr",
+    "@value" : "La durée d'une activité, exprimée en jours, semaines, mois ou années."
+  }, {
+    "@language" : "en",
+    "@value" : "The length of time an activity takes, expressed in days, weeks, months or years."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Activity Duration"
+  }, {
+    "@language" : "fr",
+    "@value" : "Activité Durée"
+  }, {
+    "@language" : "da",
+    "@value" : "Aktivitet Varighed"
+  }, {
+    "@language" : "de",
+    "@value" : "Aktivität Dauer"
+  }, {
+    "@language" : "it",
+    "@value" : "Attività Durata"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -1125,8 +2453,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Elektrotechnik, verantwortlich für die Stromversorgungs- und Verteilungssysteme eines Gebäudes."
+  }, {
+    "@language" : "da",
+    "@value" : "El-disciplinen, der er ansvarlig for en bygnings elforsynings- og fordelingssystemer."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina elettrica, responsabile dei sistemi di alimentazione e distribuzione elettrica di un edificio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'électricité, responsable des systèmes d'alimentation et de distribution électrique d'un bâtiment."
+  }, {
     "@language" : "en",
+    "@value" : "The electrical discipline, responsible for the electrical power and distribution systems of a building."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Electrical System"
+  }, {
+    "@language" : "de",
+    "@value" : "Electrical System"
+  }, {
+    "@language" : "en",
+    "@value" : "Electrical System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Electrical System"
+  }, {
+    "@language" : "it",
     "@value" : "Electrical System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1145,8 +2501,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Beziehung zwischen einem Element und einem anderen daran angrenzenden Element."
+  }, {
+    "@language" : "da",
+    "@value" : "Forholdet mellem et element og et andet element, der støder op til det."
+  }, {
+    "@language" : "fr",
+    "@value" : "La relation entre un élément et un autre élément qui lui est adjacent."
+  }, {
+    "@language" : "it",
+    "@value" : "La relazione tra un elemento e un altro elemento ad esso adiacente."
+  }, {
     "@language" : "en",
+    "@value" : "The relationship between an element and another element adjacent to it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Element/Adjacent element Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Element/Adjacent element Interface"
+  }, {
+    "@language" : "en",
+    "@value" : "Element/Adjacent element Interface"
+  }, {
+    "@language" : "fr",
+    "@value" : "Element/Adjacent element Interface"
+  }, {
+    "@language" : "it",
     "@value" : "Element/Adjacent element Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1163,8 +2547,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A drawing showing a vertical view of the exterior or interior face of a building."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Zeichnung, die eine vertikale Ansicht der Außen- oder Innenfläche eines Gebäudes zeigt."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegning, der viser en lodret visning af en bygnings udvendige eller indvendige flade."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin montrant une vue verticale de la face extérieure ou intérieure d'un bâtiment."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno che mostra una vista verticale della facciata esterna o interna di un edificio."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Elevation Drawing"
+  }, {
+    "@language" : "de",
+    "@value" : "Elevation Drawing"
+  }, {
+    "@language" : "en",
+    "@value" : "Elevation Drawing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Elevation Drawing"
+  }, {
+    "@language" : "it",
     "@value" : "Elevation Drawing"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1178,9 +2590,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An electronic mail address used to contact a person or organization."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine E-Mail-Adresse, die zur Kontaktaufnahme mit einer Person oder Organisation verwendet wird."
+  }, {
+    "@language" : "da",
+    "@value" : "En e-mailadresse, der bruges til at kontakte en person eller organisation."
+  }, {
+    "@language" : "it",
+    "@value" : "Un indirizzo e-mail utilizzato per contattare una persona o un'organizzazione."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une adresse e-mail utilisée pour contacter une personne ou une organisation."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Email Address"
+  }, {
+    "@language" : "da",
+    "@value" : "Email Adresse"
+  }, {
+    "@language" : "de",
+    "@value" : "Email Adresse"
+  }, {
+    "@language" : "fr",
+    "@value" : "Email Adresse"
+  }, {
+    "@language" : "it",
+    "@value" : "Email Indirizzo"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
@@ -1199,7 +2639,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for email file content"
+    "@value" : "Content of an email message or mailbox file, such as EML or MSG."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1216,8 +2656,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A design document produced by an engineering discipline, such as structural or building-services designs."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Entwurfsdokument einer Ingenieurdisziplin, etwa Tragwerks- oder Gebäudetechnikplanung."
+  }, {
+    "@language" : "da",
+    "@value" : "Et designdokument udarbejdet af en ingeniørdisciplin, såsom konstruktions- eller installationsprojekter."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document de conception produit par une discipline d'ingénierie, tel que des études de structure ou de techniques du bâtiment."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di progetto prodotto da una disciplina ingegneristica, come progetti strutturali o impiantistici."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Engineering Design Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Engineering Design Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Engineering Design Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Engineering Design Document"
+  }, {
+    "@language" : "it",
     "@value" : "Engineering Design Document"
   } ]
 }, {
@@ -1231,8 +2699,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Umwelttechnik, verantwortlich für Umweltschutz, Nachhaltigkeit und die Minderung von Auswirkungen."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen miljøteknik, der er ansvarlig for miljøbeskyttelse, bæredygtighed og afbødning af påvirkninger."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'ingegneria ambientale, responsabile della protezione dell'ambiente, della sostenibilità e della mitigazione degli impatti."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'ingénierie environnementale, responsable de la protection de l'environnement, de la durabilité et de l'atténuation des impacts."
+  }, {
     "@language" : "en",
+    "@value" : "The environmental engineering discipline, responsible for environmental protection, sustainability and impact mitigation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Environmental Engineering"
+  }, {
+    "@language" : "de",
+    "@value" : "Environmental Engineering"
+  }, {
+    "@language" : "en",
+    "@value" : "Environmental Engineering"
+  }, {
+    "@language" : "fr",
+    "@value" : "Environmental Engineering"
+  }, {
+    "@language" : "it",
     "@value" : "Environmental Engineering"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1248,9 +2744,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A device, tool, machine or appliance used in construction, operation or maintenance."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Gerät, Werkzeug, eine Maschine oder ein Apparat, das im Bau, Betrieb oder der Instandhaltung verwendet wird."
+  }, {
+    "@language" : "da",
+    "@value" : "En enhed, et værktøj, en maskine eller et apparat, der anvendes i byggeri, drift eller vedligeholdelse."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dispositif, un outil, une machine ou un appareil utilisé dans la construction, l'exploitation ou la maintenance."
+  }, {
+    "@language" : "it",
+    "@value" : "Un dispositivo, uno strumento, una macchina o un apparecchio utilizzato nella costruzione, nel funzionamento o nella manutenzione."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "it",
+    "@value" : "Attrezzatura"
+  }, {
+    "@language" : "de",
+    "@value" : "Ausrüstung"
+  }, {
     "@language" : "en",
     "@value" : "Equipment"
+  }, {
+    "@language" : "da",
+    "@value" : "Udstyr"
+  }, {
+    "@language" : "fr",
+    "@value" : "Équipement"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -1273,8 +2797,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "da",
+    "@value" : "Den udvendige flade eller klimaskærm på en bygning."
+  }, {
+    "@language" : "de",
+    "@value" : "Die Außenfläche oder Gebäudehülle eines Gebäudes."
+  }, {
+    "@language" : "it",
+    "@value" : "La facciata esterna o l'involucro di un edificio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La face extérieure ou l'enveloppe d'un bâtiment."
+  }, {
     "@language" : "en",
+    "@value" : "The exterior face or envelope of a building."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Facade"
+  }, {
+    "@language" : "de",
+    "@value" : "Facade"
+  }, {
+    "@language" : "en",
+    "@value" : "Facade"
+  }, {
+    "@language" : "fr",
+    "@value" : "Facade"
+  }, {
+    "@language" : "it",
     "@value" : "Facade"
   } ],
   "http://www.w3.org/2004/02/skos/core#related" : [ {
@@ -1299,8 +2851,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Facility Management, verantwortlich für die Instandhaltung und den Service einer baulichen Anlage im Betrieb."
+  }, {
+    "@language" : "da",
+    "@value" : "Facility management-disciplinen, der er ansvarlig for vedligeholdelse og servicering af et bygget aktiv i drift."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina del facility management, responsabile della manutenzione e dell'assistenza di un bene edilizio in esercizio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de la gestion des installations, responsable de la maintenance et de l'entretien d'un actif bâti en exploitation."
+  }, {
     "@language" : "en",
+    "@value" : "The facility management discipline, responsible for maintaining and servicing a built asset in operation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Facility Management"
+  }, {
+    "@language" : "de",
+    "@value" : "Facility Management"
+  }, {
+    "@language" : "en",
+    "@value" : "Facility Management"
+  }, {
+    "@language" : "fr",
+    "@value" : "Facility Management"
+  }, {
+    "@language" : "it",
     "@value" : "Facility Management"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1316,8 +2896,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A reference to a file by its name, id or path."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Verweis auf eine Datei anhand ihres Namens, ihrer ID oder ihres Pfads."
+  }, {
+    "@language" : "da",
+    "@value" : "En reference til en fil ved dens navn, id eller sti."
+  }, {
+    "@language" : "it",
+    "@value" : "Un riferimento a un file tramite nome, id o percorso."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une référence à un fichier par son nom, son identifiant ou son chemin."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "File Reference"
+  }, {
+    "@language" : "de",
+    "@value" : "File Reference"
+  }, {
+    "@language" : "en",
+    "@value" : "File Reference"
+  }, {
+    "@language" : "fr",
+    "@value" : "File Reference"
+  }, {
+    "@language" : "it",
     "@value" : "File Reference"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
@@ -1333,11 +2941,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "it",
+    "@value" : "Documenti che registrano transazioni finanziarie, valutazioni e controllo di budget."
+  }, {
+    "@language" : "fr",
+    "@value" : "Documents consignant les transactions financières, les évaluations et le contrôle budgétaire."
+  }, {
     "@language" : "en",
     "@value" : "Documents recording financial transactions, valuations, and budget control."
+  }, {
+    "@language" : "de",
+    "@value" : "Dokumente, die Finanztransaktionen, Bewertungen und Budgetkontrolle erfassen."
+  }, {
+    "@language" : "da",
+    "@value" : "Dokumenter, der registrerer finansielle transaktioner, vurderinger og budgetstyring."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Financial & Administrative Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Financial & Administrative Document"
+  }, {
     "@language" : "en",
+    "@value" : "Financial & Administrative Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Financial & Administrative Document"
+  }, {
+    "@language" : "it",
     "@value" : "Financial & Administrative Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -1355,8 +2987,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "da",
+    "@value" : "Brandsikringsdisciplinen, der er ansvarlig for branddetektering, slukning og personsikkerhed."
+  }, {
+    "@language" : "de",
+    "@value" : "Die Disziplin Brandschutz, verantwortlich für Branderkennung, Löschung und Personensicherheit."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina della protezione antincendio, responsabile del rilevamento, dello spegnimento e della sicurezza delle persone."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de la protection incendie, responsable de la détection, de l'extinction et de la sécurité des personnes."
+  }, {
     "@language" : "en",
+    "@value" : "The fire protection discipline, responsible for fire detection, suppression and life-safety systems."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Fire Protection System"
+  }, {
+    "@language" : "de",
+    "@value" : "Fire Protection System"
+  }, {
+    "@language" : "en",
+    "@value" : "Fire Protection System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Fire Protection System"
+  }, {
+    "@language" : "it",
     "@value" : "Fire Protection System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1375,8 +3035,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A drawing showing a horizontal section through a building, depicting the layout of a storey."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Zeichnung, die einen horizontalen Schnitt durch ein Gebäude zeigt und die Anordnung eines Geschosses darstellt."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegning, der viser et vandret snit gennem en bygning og gengiver en etages indretning."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin montrant une coupe horizontale d'un bâtiment et représentant l'agencement d'un étage."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno che mostra una sezione orizzontale di un edificio e rappresenta la disposizione di un piano."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Floor Plan Drawing"
+  }, {
+    "@language" : "de",
+    "@value" : "Floor Plan Drawing"
+  }, {
+    "@language" : "en",
+    "@value" : "Floor Plan Drawing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Floor Plan Drawing"
+  }, {
+    "@language" : "it",
     "@value" : "Floor Plan Drawing"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1392,7 +3080,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for font file content"
+    "@value" : "Content of a font file, such as TTF or OTF."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1409,8 +3097,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RequirementsDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A document specifying the functional requirements of a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Dokument, das die funktionalen Anforderungen eines Projekts festlegt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et dokument, der specificerer et projekts funktionelle krav."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document spécifiant les exigences fonctionnelles d'un projet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento che specifica i requisiti funzionali di un progetto."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Functional Requirements Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Functional Requirements Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Functional Requirements Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Functional Requirements Document"
+  }, {
+    "@language" : "it",
     "@value" : "Functional Requirements Document"
   } ]
 }, {
@@ -1423,7 +3139,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Google Cloud Platform provider type"
+    "@value" : "A cloud infrastructure provider, denoting resources hosted on Google Cloud Platform."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1440,9 +3156,80 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Location"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "GeoCoordinates"
+    "@value" : "A geographic position expressed as latitude and longitude coordinates."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine geografische Position, ausgedrückt als Breiten- und Längengrad."
+  }, {
+    "@language" : "da",
+    "@value" : "En geografisk position udtrykt som bredde- og længdegrad."
+  }, {
+    "@language" : "it",
+    "@value" : "Una posizione geografica espressa come latitudine e longitudine."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une position géographique exprimée en latitude et longitude."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "it",
+    "@value" : "Coordinate geografiche"
+  }, {
+    "@language" : "fr",
+    "@value" : "Coordonnées géographiques"
+  }, {
+    "@language" : "en",
+    "@value" : "Geo Coordinates"
+  }, {
+    "@language" : "de",
+    "@value" : "Geokoordinaten"
+  }, {
+    "@language" : "da",
+    "@value" : "Geokoordinater"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "da",
+    "@value" : "Den geometriske repræsentation af en entitet, for eksempel SVG-polygonen eller glTF-modellen af et BIM-objekt."
+  }, {
+    "@language" : "de",
+    "@value" : "Die geometrische Darstellung einer Entität, zum Beispiel das SVG-Polygon oder die glTF-Datei eines BIM-Objekts."
+  }, {
+    "@language" : "it",
+    "@value" : "La rappresentazione geometrica di un'entità, ad esempio il poligono SVG o il glTF di un oggetto BIM."
+  }, {
+    "@language" : "fr",
+    "@value" : "La représentation géométrique d'une entité, par exemple le polygone SVG ou le glTF d'un objet BIM."
+  }, {
+    "@language" : "en",
+    "@value" : "The geometric representation of some entity, for example the SVG polygon or the glTF of a BIM object."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Geometry"
+  }, {
+    "@language" : "de",
+    "@value" : "Geometry"
+  }, {
+    "@language" : "en",
+    "@value" : "Geometry"
+  }, {
+    "@language" : "fr",
+    "@value" : "Geometry"
+  }, {
+    "@language" : "it",
+    "@value" : "Geometry"
+  } ],
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/omg#hasGeometry"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#GeospatialFileContent",
@@ -1454,7 +3241,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for geospatial file content"
+    "@value" : "Content of a geospatial or GIS file, such as SHP or GeoJSON."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1471,8 +3258,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Geotechnik, verantwortlich für Boden, Gründung und Baugrundverhältnisse."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen geoteknik, der er ansvarlig for jordbund, fundering og jordbundsforhold."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'ingegneria geotecnica, responsabile del suolo, delle fondazioni e delle condizioni del terreno."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'ingénierie géotechnique, responsable des sols, des fondations et des conditions du terrain."
+  }, {
     "@language" : "en",
+    "@value" : "The geotechnical engineering discipline, responsible for soil, foundations and ground conditions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Geotechnical Engineering"
+  }, {
+    "@language" : "de",
+    "@value" : "Geotechnical Engineering"
+  }, {
+    "@language" : "en",
+    "@value" : "Geotechnical Engineering"
+  }, {
+    "@language" : "fr",
+    "@value" : "Geotechnical Engineering"
+  }, {
+    "@language" : "it",
     "@value" : "Geotechnical Engineering"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1491,8 +3306,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Heizung, verantwortlich für die Heizsysteme eines Gebäudes."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina del riscaldamento, responsabile degli impianti di riscaldamento di un edificio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline du chauffage, responsable des systèmes de chauffage d'un bâtiment."
+  }, {
     "@language" : "en",
+    "@value" : "The heating discipline, responsible for the heating systems of a building."
+  }, {
+    "@language" : "da",
+    "@value" : "Varmedisciplinen, der er ansvarlig for en bygnings varmesystemer."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Heating System"
+  }, {
+    "@language" : "de",
+    "@value" : "Heating System"
+  }, {
+    "@language" : "en",
+    "@value" : "Heating System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Heating System"
+  }, {
+    "@language" : "it",
     "@value" : "Heating System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1561,7 +3404,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for image file content"
+    "@value" : "Content of a raster or vector image file, such as PNG, JPEG or SVG."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1578,8 +3421,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Infrastrukturplanung, verantwortlich für Straßen, Versorgungsleitungen und andere Tiefbauinfrastruktur."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen infrastrukturingeniørarbejde, der er ansvarlig for veje, forsyninger og anden anlægsinfrastruktur."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'ingegneria delle infrastrutture, responsabile di strade, reti di servizi e altre infrastrutture civili."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'ingénierie des infrastructures, responsable des routes, des réseaux et autres infrastructures de génie civil."
+  }, {
     "@language" : "en",
+    "@value" : "The infrastructure engineering discipline, responsible for roads, utilities and other civil infrastructure."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Infrastructure Engineering"
+  }, {
+    "@language" : "de",
+    "@value" : "Infrastructure Engineering"
+  }, {
+    "@language" : "en",
+    "@value" : "Infrastructure Engineering"
+  }, {
+    "@language" : "fr",
+    "@value" : "Infrastructure Engineering"
+  }, {
+    "@language" : "it",
     "@value" : "Infrastructure Engineering"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1598,8 +3469,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RegulatoryComplianceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A report documenting an inspection of works or conditions."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Bericht, der eine Inspektion von Arbeiten oder Zuständen dokumentiert."
+  }, {
+    "@language" : "da",
+    "@value" : "En rapport, der dokumenterer en inspektion af arbejder eller forhold."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un rapport documentant une inspection des travaux ou des conditions."
+  }, {
+    "@language" : "it",
+    "@value" : "Una relazione che documenta un'ispezione di lavori o condizioni."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Inspection Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Inspection Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Inspection Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Inspection Document"
+  }, {
+    "@language" : "it",
     "@value" : "Inspection Document"
   } ]
 }, {
@@ -1612,7 +3511,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for installer file content"
+    "@value" : "Content of a software installer package, such as EXE, MSI or DMG."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1629,8 +3528,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An insurance policy or surety bond covering project risks."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Versicherungspolice oder Bürgschaft, die Projektrisiken abdeckt."
+  }, {
+    "@language" : "da",
+    "@value" : "En forsikringspolice eller kautionsforsikring, der dækker projektrisici."
+  }, {
+    "@language" : "it",
+    "@value" : "Una polizza assicurativa o una garanzia fideiussoria che copre i rischi del progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une police d'assurance ou une caution couvrant les risques du projet."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Insurance & Bond Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Insurance & Bond Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Insurance & Bond Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Insurance & Bond Document"
+  }, {
+    "@language" : "it",
     "@value" : "Insurance & Bond Document"
   } ]
 }, {
@@ -1644,9 +3571,33 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Abstract category for some interface used to quantify the relationship between two entities"
+  }, {
+    "@language" : "da",
+    "@value" : "Abstrakt kategori for en grænseflade, der bruges til at kvantificere forholdet mellem to entiteter."
+  }, {
+    "@language" : "de",
+    "@value" : "Abstrakte Kategorie für eine Schnittstelle, die zur Quantifizierung der Beziehung zwischen zwei Entitäten verwendet wird."
+  }, {
+    "@language" : "it",
+    "@value" : "Categoria astratta per un'interfaccia utilizzata per quantificare la relazione tra due entità."
+  }, {
+    "@language" : "fr",
+    "@value" : "Catégorie abstraite pour une interface utilisée pour quantifier la relation entre deux entités."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Interface"
+  }, {
     "@language" : "en",
+    "@value" : "Interface"
+  }, {
+    "@language" : "fr",
+    "@value" : "Interface"
+  }, {
+    "@language" : "it",
     "@value" : "Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1666,8 +3617,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Innenarchitektur, verantwortlich für die Gestaltung von Innenräumen und Oberflächen."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen indretningsarkitektur, der er ansvarlig for udformningen af indvendige rum og overflader."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'architettura d'interni, responsabile della progettazione degli spazi interni e delle finiture."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'architecture d'intérieur, responsable de la conception des espaces intérieurs et des finitions."
+  }, {
     "@language" : "en",
+    "@value" : "The interior architecture discipline, responsible for the design of interior spaces and finishes."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Interior Architecture"
+  }, {
+    "@language" : "de",
+    "@value" : "Interior Architecture"
+  }, {
+    "@language" : "en",
+    "@value" : "Interior Architecture"
+  }, {
+    "@language" : "fr",
+    "@value" : "Interior Architecture"
+  }, {
+    "@language" : "it",
     "@value" : "Interior Architecture"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1686,8 +3665,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A design document covering the interior spaces and finishes of a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Entwurfsdokument, das die Innenräume und Oberflächen eines Projekts abdeckt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et designdokument, der dækker et projekts indvendige rum og overflader."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document de conception couvrant les espaces intérieurs et les finitions d'un projet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di progetto che riguarda gli spazi interni e le finiture di un progetto."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Interior Design Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Interior Design Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Interior Design Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Interior Design Document"
+  }, {
+    "@language" : "it",
     "@value" : "Interior Design Document"
   } ]
 }, {
@@ -1701,8 +3708,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#FinancialAdministrativeDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An invoice or payment application for works, goods or services."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Rechnung oder Zahlungsanforderung für Arbeiten, Waren oder Dienstleistungen."
+  }, {
+    "@language" : "da",
+    "@value" : "En faktura eller betalingsanmodning for arbejder, varer eller tjenesteydelser."
+  }, {
+    "@language" : "it",
+    "@value" : "Una fattura o una richiesta di pagamento per lavori, beni o servizi."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une facture ou une demande de paiement pour des travaux, des biens ou des services."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Invoice or Payment Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Invoice or Payment Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Invoice or Payment Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Invoice or Payment Document"
+  }, {
+    "@language" : "it",
     "@value" : "Invoice or Payment Document"
   } ]
 }, {
@@ -1716,8 +3751,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Landschaftsarchitektur, verantwortlich für die Gestaltung von Außen- und Landschaftsbereichen."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen landskabsarkitektur, der er ansvarlig for udformningen af udendørs- og landskabsområder."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'architettura del paesaggio, responsabile della progettazione delle aree esterne e paesaggistiche."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'architecture paysagère, responsable de la conception des espaces extérieurs et paysagers."
+  }, {
     "@language" : "en",
+    "@value" : "The landscape architecture discipline, responsible for the design of outdoor and landscaped areas."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Landscape Architecture"
+  }, {
+    "@language" : "de",
+    "@value" : "Landscape Architecture"
+  }, {
+    "@language" : "en",
+    "@value" : "Landscape Architecture"
+  }, {
+    "@language" : "fr",
+    "@value" : "Landscape Architecture"
+  }, {
+    "@language" : "it",
     "@value" : "Landscape Architecture"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1736,8 +3799,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A design document covering the landscape and outdoor areas of a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Entwurfsdokument, das die Landschaft und Außenbereiche eines Projekts abdeckt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et designdokument, der dækker et projekts landskab og udendørsarealer."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document de conception couvrant le paysage et les espaces extérieurs d'un projet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di progetto che riguarda il paesaggio e le aree esterne di un progetto."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Landscape Design Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Landscape Design Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Landscape Design Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Landscape Design Document"
+  }, {
+    "@language" : "it",
     "@value" : "Landscape Design Document"
   } ]
 }, {
@@ -1750,7 +3841,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Local provider type"
+    "@value" : "A local provider, denoting resources hosted on-premise or on the local machine rather than in the cloud."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1764,9 +3855,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A physical place or geographic position, such as an address, city or set of coordinates."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein physischer Ort oder eine geografische Position, etwa eine Adresse, Stadt oder ein Satz von Koordinaten."
+  }, {
+    "@language" : "da",
+    "@value" : "Et fysisk sted eller en geografisk position, såsom en adresse, by eller et sæt koordinater."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un lieu physique ou une position géographique, telle qu'une adresse, une ville ou un ensemble de coordonnées."
+  }, {
+    "@language" : "it",
+    "@value" : "Un luogo fisico o una posizione geografica, come un indirizzo, una città o un insieme di coordinate."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Lieu"
+  }, {
+    "@language" : "it",
+    "@value" : "Località"
+  }, {
     "@language" : "en",
     "@value" : "Location"
+  }, {
+    "@language" : "da",
+    "@value" : "Lokation"
+  }, {
+    "@language" : "de",
+    "@value" : "Ort"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
@@ -1786,8 +3905,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#OperationsMaintenanceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A record of maintenance activities carried out on a built asset."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Aufzeichnung der an einer baulichen Anlage durchgeführten Wartungsarbeiten."
+  }, {
+    "@language" : "da",
+    "@value" : "En registrering af vedligeholdelsesaktiviteter udført på et bygget aktiv."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un registre des activités de maintenance effectuées sur un actif bâti."
+  }, {
+    "@language" : "it",
+    "@value" : "Un registro delle attività di manutenzione svolte su un bene edilizio."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Maintenance Log"
+  }, {
+    "@language" : "de",
+    "@value" : "Maintenance Log"
+  }, {
+    "@language" : "en",
+    "@value" : "Maintenance Log"
+  }, {
+    "@language" : "fr",
+    "@value" : "Maintenance Log"
+  }, {
+    "@language" : "it",
     "@value" : "Maintenance Log"
   } ]
 }, {
@@ -1801,8 +3948,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#MiscDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A marketing document or project closeout record."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Marketingdokument oder ein Projektabschlussnachweis."
+  }, {
+    "@language" : "da",
+    "@value" : "Et markedsføringsdokument eller en projektafslutningsoptegnelse."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document marketing ou un dossier de clôture de projet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di marketing o un record di chiusura del progetto."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Marketing or Project Closeout Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Marketing or Project Closeout Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Marketing or Project Closeout Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Marketing or Project Closeout Document"
+  }, {
+    "@language" : "it",
     "@value" : "Marketing or Project Closeout Document"
   } ]
 }, {
@@ -1815,7 +3990,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for markup file content"
+    "@value" : "Content of a markup file, such as HTML, XML or Markdown."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1829,9 +4004,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A material or product used in the construction, fit-out or maintenance of a built asset."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Material oder Produkt, das beim Bau, Ausbau oder der Instandhaltung einer baulichen Anlage verwendet wird."
+  }, {
+    "@language" : "da",
+    "@value" : "Et materiale eller produkt, der anvendes til opførelse, indretning eller vedligeholdelse af et bygget aktiv."
+  }, {
+    "@language" : "it",
+    "@value" : "Un materiale o prodotto utilizzato per la costruzione, l'allestimento o la manutenzione di un bene edilizio."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un matériau ou produit utilisé pour la construction, l'aménagement ou la maintenance d'un actif bâti."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "de",
+    "@value" : "Material"
+  }, {
     "@language" : "en",
     "@value" : "Material"
+  }, {
+    "@language" : "da",
+    "@value" : "Materiale"
+  }, {
+    "@language" : "it",
+    "@value" : "Materiale"
+  }, {
+    "@language" : "fr",
+    "@value" : "Matériau"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -1851,11 +4054,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Allgemeine Kommunikation, Due Diligence, Marketing und Abschlussdokumentation."
+  }, {
+    "@language" : "fr",
+    "@value" : "Communication générale, due diligence, marketing et documentation de clôture."
+  }, {
+    "@language" : "it",
+    "@value" : "Comunicazioni generali, due diligence, marketing e documentazione di chiusura."
+  }, {
     "@language" : "en",
     "@value" : "General communication, due diligence, marketing, and closeout documentation."
+  }, {
+    "@language" : "da",
+    "@value" : "Generel kommunikation, due diligence, markedsføring og afslutningsdokumentation."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Miscellaneous Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Miscellaneous Document"
+  }, {
     "@language" : "en",
+    "@value" : "Miscellaneous Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Miscellaneous Document"
+  }, {
+    "@language" : "it",
     "@value" : "Miscellaneous Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -1872,7 +4099,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for multimedia file content"
+    "@value" : "Content of a multimedia file combining audio, video or interactive media."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1886,8 +4113,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A code, classification or identifier assigned to a physical or virtual object used in a building project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Code, eine Klassifikation oder Kennung, die einem physischen oder virtuellen Objekt in einem Bauprojekt zugewiesen ist."
+  }, {
+    "@language" : "da",
+    "@value" : "En kode, klassifikation eller identifikator tildelt et fysisk eller virtuelt objekt i et byggeprojekt."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un code, une classification ou un identifiant attribué à un objet physique ou virtuel utilisé dans un projet de construction."
+  }, {
+    "@language" : "it",
+    "@value" : "Un codice, una classificazione o un identificatore assegnato a un oggetto fisico o virtuale utilizzato in un progetto edilizio."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Object Id"
+  }, {
+    "@language" : "de",
+    "@value" : "Object Id"
+  }, {
+    "@language" : "en",
+    "@value" : "Object Id"
+  }, {
+    "@language" : "fr",
+    "@value" : "Object Id"
+  }, {
+    "@language" : "it",
     "@value" : "Object Id"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
@@ -1906,11 +4161,35 @@
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Hohlraum des übergeordneten Elements, der vom untergeordneten Element gefüllt wird."
+  }, {
+    "@language" : "da",
+    "@value" : "Det hulrum i forældreelementet, som udfyldes af barneelementet."
+  }, {
+    "@language" : "it",
+    "@value" : "Il vuoto dell'elemento padre che viene riempito dall'elemento figlio."
+  }, {
+    "@language" : "fr",
+    "@value" : "Le vide de l'élément parent qui est comblé par l'élément enfant."
+  }, {
     "@language" : "en",
     "@value" : "The void of the parent element which is filled by the child element"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Opening Element Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Opening Element Interface"
+  }, {
     "@language" : "en",
+    "@value" : "Opening Element Interface"
+  }, {
+    "@language" : "fr",
+    "@value" : "Opening Element Interface"
+  }, {
+    "@language" : "it",
     "@value" : "Opening Element Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1927,8 +4206,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#OperationsMaintenanceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A manual describing how to operate a building or its systems."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Handbuch, das beschreibt, wie ein Gebäude oder seine Systeme betrieben werden."
+  }, {
+    "@language" : "da",
+    "@value" : "En manual, der beskriver, hvordan en bygning eller dens systemer betjenes."
+  }, {
+    "@language" : "it",
+    "@value" : "Un manuale che descrive come far funzionare un edificio o i suoi impianti."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un manuel décrivant comment exploiter un bâtiment ou ses systèmes."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Operation Manual"
+  }, {
+    "@language" : "de",
+    "@value" : "Operation Manual"
+  }, {
+    "@language" : "en",
+    "@value" : "Operation Manual"
+  }, {
+    "@language" : "fr",
+    "@value" : "Operation Manual"
+  }, {
+    "@language" : "it",
     "@value" : "Operation Manual"
   } ]
 }, {
@@ -1940,11 +4247,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "it",
+    "@value" : "Documenti per il funzionamento dell'edificio, la manutenzione degli impianti, le garanzie e gli elaborati as-built."
+  }, {
     "@language" : "en",
     "@value" : "Documents for building operation, system maintenance, warranties, and as-builts."
+  }, {
+    "@language" : "fr",
+    "@value" : "Documents pour l'exploitation du bâtiment, la maintenance des systèmes, les garanties et les dossiers de récolement."
+  }, {
+    "@language" : "de",
+    "@value" : "Dokumente für Gebäudebetrieb, Anlagenwartung, Garantien und Bestandsunterlagen."
+  }, {
+    "@language" : "da",
+    "@value" : "Dokumenter til bygningsdrift, systemvedligeholdelse, garantier og som udført-tegninger."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Operations & Maintenance Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Operations & Maintenance Document"
+  }, {
     "@language" : "en",
+    "@value" : "Operations & Maintenance Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Operations & Maintenance Document"
+  }, {
+    "@language" : "it",
     "@value" : "Operations & Maintenance Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -1962,8 +4293,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Betriebsmanagement, verantwortlich für den Betrieb einer baulichen Anlage im Gebrauch."
+  }, {
+    "@language" : "da",
+    "@value" : "Driftsledelsesdisciplinen, der er ansvarlig for driften af et bygget aktiv i brug."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina della gestione operativa, responsabile del funzionamento di un bene edilizio in uso."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de la gestion de l'exploitation, responsable du fonctionnement d'un actif bâti en service."
+  }, {
     "@language" : "en",
+    "@value" : "The operations management discipline, responsible for running a built asset while it is in use."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Operations Management"
+  }, {
+    "@language" : "de",
+    "@value" : "Operations Management"
+  }, {
+    "@language" : "en",
+    "@value" : "Operations Management"
+  }, {
+    "@language" : "fr",
+    "@value" : "Operations Management"
+  }, {
+    "@language" : "it",
     "@value" : "Operations Management"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -1979,9 +4338,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A company, corporation, public authority, institution or other legal body that takes part in a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Unternehmen, eine Körperschaft, eine Behörde, eine Institution oder eine andere juristische Person, die an einem Projekt beteiligt ist."
+  }, {
+    "@language" : "da",
+    "@value" : "En virksomhed, koncern, offentlig myndighed, institution eller anden juridisk enhed, der deltager i et projekt."
+  }, {
+    "@language" : "it",
+    "@value" : "Un'azienda, una società, un ente pubblico, un'istituzione o un'altra persona giuridica che partecipa a un progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une entreprise, une société, une autorité publique, une institution ou une autre personne morale participant à un projet."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Organisation"
+  }, {
+    "@language" : "de",
+    "@value" : "Organisation"
+  }, {
+    "@language" : "fr",
+    "@value" : "Organisation"
+  }, {
     "@language" : "en",
     "@value" : "Organization"
+  }, {
+    "@language" : "it",
+    "@value" : "Organizzazione"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
@@ -2001,8 +4388,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A construction process or management document that does not fall within any of the other categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Bauprozess- oder Managementdokument, das in keine der anderen Kategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et byggeproces- eller styringsdokument, der ikke falder ind under nogen af de øvrige kategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document de processus ou de gestion de construction ne relevant d'aucune des autres catégories."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di processo o gestione della costruzione che non rientra in nessuna delle altre categorie."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Construction Management Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Construction Management Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Construction Management Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Construction Management Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other Construction Management Document"
   } ]
 }, {
@@ -2016,8 +4431,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A contractual or legal document that does not fall within any of the other categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein vertragliches oder rechtliches Dokument, das in keine der anderen Kategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et kontraktligt eller juridisk dokument, der ikke falder ind under nogen af de øvrige kategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document contractuel ou juridique ne relevant d'aucune des autres catégories."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento contrattuale o legale che non rientra in nessuna delle altre categorie."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Contractual & Legal Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Contractual & Legal Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Contractual & Legal Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Contractual & Legal Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other Contractual & Legal Document"
   } ]
 }, {
@@ -2031,8 +4474,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A design document that does not fall within any of the other design categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Entwurfsdokument, das in keine der anderen Entwurfskategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et designdokument, der ikke falder ind under nogen af de øvrige designkategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document de conception ne relevant d'aucune des autres catégories de conception."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di progetto che non rientra in nessuna delle altre categorie di progetto."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Design Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Design Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Design Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Design Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other Design Document"
   } ]
 }, {
@@ -2046,9 +4517,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A discipline or trade that does not fall within any of the other defined disciplines."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Disziplin oder ein Gewerk, das in keine der anderen definierten Disziplinen fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "En disciplin eller et fag, der ikke falder ind under nogen af de øvrige definerede discipliner."
+  }, {
+    "@language" : "it",
+    "@value" : "Una disciplina o un mestiere che non rientra in nessuna delle altre discipline definite."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une discipline ou un corps de métier ne relevant d'aucune des autres disciplines définies."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Disciplin"
+  }, {
+    "@language" : "it",
+    "@value" : "Other Disciplina"
+  }, {
     "@language" : "en",
     "@value" : "Other Discipline"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Discipline"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Disziplin"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -2066,8 +4565,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A drawing that does not fall within any of the other defined drawing types."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Zeichnung, die in keinen der anderen definierten Zeichnungstypen fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegning, der ikke falder ind under nogen af de øvrige definerede tegningstyper."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin ne relevant d'aucun des autres types de dessins définis."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno che non rientra in nessuno degli altri tipi di disegno definiti."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Drawing"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Drawing"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Drawing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Drawing"
+  }, {
+    "@language" : "it",
     "@value" : "Other Drawing"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2084,8 +4611,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#FinancialAdministrativeDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A financial or administrative document that does not fall within any of the other categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Finanz- oder Verwaltungsdokument, das in keine der anderen Kategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et finansielt eller administrativt dokument, der ikke falder ind under nogen af de øvrige kategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document financier ou administratif ne relevant d'aucune des autres catégories."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento finanziario o amministrativo che non rientra in nessuna delle altre categorie."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Financial & Administrative Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Financial & Administrative Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Financial & Administrative Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Financial & Administrative Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other Financial & Administrative Document"
   } ]
 }, {
@@ -2099,8 +4654,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignMetadata"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A design metadata field that does not match any of the other defined fields."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Entwurfsmetadatenfeld, das keinem der anderen definierten Felder entspricht."
+  }, {
+    "@language" : "da",
+    "@value" : "Et designmetadatafelt, der ikke matcher nogen af de øvrige definerede felter."
+  }, {
+    "@language" : "it",
+    "@value" : "Un campo di metadati di progetto che non corrisponde a nessuno degli altri campi definiti."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un champ de métadonnées de conception ne correspondant à aucun des autres champs définis."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Metadata Field"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Metadata Field"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Metadata Field"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Metadata Field"
+  }, {
+    "@language" : "it",
     "@value" : "Other Metadata Field"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2117,8 +4700,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#MiscDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A miscellaneous document that does not fall within any of the other categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein sonstiges Dokument, das in keine der anderen Kategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et diverse dokument, der ikke falder ind under nogen af de øvrige kategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document divers ne relevant d'aucune des autres catégories."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento vario che non rientra in nessuna delle altre categorie."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Miscellaneous Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Miscellaneous Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Miscellaneous Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Miscellaneous Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other Miscellaneous Document"
   } ]
 }, {
@@ -2132,8 +4743,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#OperationsMaintenanceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An operations or maintenance document that does not fall within any of the other categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Betriebs- oder Wartungsdokument, das in keine der anderen Kategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et drifts- eller vedligeholdelsesdokument, der ikke falder ind under nogen af de øvrige kategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document d'exploitation ou de maintenance ne relevant d'aucune des autres catégories."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di esercizio o manutenzione che non rientra in nessuna delle altre categorie."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other O&M Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other O&M Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other O&M Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other O&M Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other O&M Document"
   } ]
 }, {
@@ -2147,8 +4786,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RegulatoryComplianceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A regulatory or compliance document that does not fall within any of the other categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein behördliches oder Compliance-Dokument, das in keine der anderen Kategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et myndigheds- eller compliancedokument, der ikke falder ind under nogen af de øvrige kategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document réglementaire ou de conformité ne relevant d'aucune des autres catégories."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento normativo o di conformità che non rientra in nessuna delle altre categorie."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Regulatory & Compliance Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Regulatory & Compliance Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Regulatory & Compliance Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Regulatory & Compliance Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other Regulatory & Compliance Document"
   } ]
 }, {
@@ -2162,8 +4829,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RequirementsDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A requirements or scoping document that does not fall within any of the other categories."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Anforderungs- oder Abgrenzungsdokument, das in keine der anderen Kategorien fällt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et krav- eller afgrænsningsdokument, der ikke falder ind under nogen af de øvrige kategorier."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document d'exigences ou de cadrage ne relevant d'aucune des autres catégories."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di requisiti o di definizione dell'ambito che non rientra in nessuna delle altre categorie."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Other Requirements & Scoping Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Other Requirements & Scoping Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Other Requirements & Scoping Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Other Requirements & Scoping Document"
+  }, {
+    "@language" : "it",
     "@value" : "Other Requirements & Scoping Document"
   } ]
 }, {
@@ -2177,8 +4872,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RequirementsDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A document specifying the performance requirements or targets of a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Dokument, das die Leistungsanforderungen oder -ziele eines Projekts festlegt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et dokument, der specificerer et projekts ydelseskrav eller -mål."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document spécifiant les exigences ou objectifs de performance d'un projet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento che specifica i requisiti o gli obiettivi prestazionali di un progetto."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Performance Requirements Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Performance Requirements Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Performance Requirements Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Performance Requirements Document"
+  }, {
+    "@language" : "it",
     "@value" : "Performance Requirements Document"
   } ]
 }, {
@@ -2192,8 +4915,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RegulatoryComplianceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An official permit or authorization required for a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine offizielle Genehmigung oder Erlaubnis, die für ein Projekt erforderlich ist."
+  }, {
+    "@language" : "da",
+    "@value" : "En officiel tilladelse eller godkendelse, der kræves til et projekt."
+  }, {
+    "@language" : "it",
+    "@value" : "Un permesso o un'autorizzazione ufficiale richiesta per un progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un permis ou une autorisation officielle requis pour un projet."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Permit Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Permit Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Permit Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Permit Document"
+  }, {
+    "@language" : "it",
     "@value" : "Permit Document"
   } ]
 }, {
@@ -2204,9 +4955,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An individual human being, typically referenced by name, initials or role within a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine einzelne Person, üblicherweise angegeben durch Name, Initialen oder Rolle in einem Projekt."
+  }, {
+    "@language" : "da",
+    "@value" : "En enkelt person, typisk angivet ved navn, initialer eller rolle i et projekt."
+  }, {
+    "@language" : "it",
+    "@value" : "Una singola persona, in genere indicata con nome, iniziali o ruolo all'interno di un progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une personne physique, généralement désignée par son nom, ses initiales ou son rôle dans un projet."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Person"
+  }, {
+    "@language" : "de",
+    "@value" : "Person"
+  }, {
     "@language" : "en",
     "@value" : "Person"
+  }, {
+    "@language" : "it",
+    "@value" : "Persona"
+  }, {
+    "@language" : "fr",
+    "@value" : "Personne"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@language" : "en",
@@ -2225,7 +5004,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for planning file content"
+    "@value" : "Content of a project planning or scheduling file, such as MPP."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2242,8 +5021,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Sanitär, verantwortlich für Wasserversorgung, Entwässerung und Sanitärsysteme."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'idraulica, responsabile dell'approvvigionamento idrico, dello scarico e degli impianti sanitari."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de la plomberie, responsable de l'alimentation en eau, de l'évacuation et des systèmes sanitaires."
+  }, {
     "@language" : "en",
+    "@value" : "The plumbing discipline, responsible for water supply, drainage and sanitary systems."
+  }, {
+    "@language" : "da",
+    "@value" : "VVS-disciplinen, der er ansvarlig for vandforsyning, afløb og sanitære systemer."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Plumbing System"
+  }, {
+    "@language" : "de",
+    "@value" : "Plumbing System"
+  }, {
+    "@language" : "en",
+    "@value" : "Plumbing System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Plumbing System"
+  }, {
+    "@language" : "it",
     "@value" : "Plumbing System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2262,9 +5069,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Location"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "PostCode"
+    "@value" : "A postal or ZIP code identifying a delivery area within a city or region."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Postleitzahl, die ein Zustellgebiet innerhalb einer Stadt oder Region angibt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et postnummer, der angiver et leveringsområde i en by eller region."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un code postal identifiant une zone de distribution au sein d'une ville ou d'une région."
+  }, {
+    "@language" : "it",
+    "@value" : "Un codice postale che identifica un'area di consegna all'interno di una città o regione."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Code postal"
+  }, {
+    "@language" : "it",
+    "@value" : "Codice postale"
+  }, {
+    "@language" : "en",
+    "@value" : "Post Code"
+  }, {
+    "@language" : "de",
+    "@value" : "Postleitzahl"
+  }, {
+    "@language" : "da",
+    "@value" : "Postnummer"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#PresentationFileContent",
@@ -2276,7 +5111,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for presentation file content"
+    "@value" : "Content of a presentation file, such as PPTX or KEY."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2293,8 +5128,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A report describing the progress or status of construction works."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Bericht, der den Fortschritt oder Status der Bauarbeiten beschreibt."
+  }, {
+    "@language" : "da",
+    "@value" : "En rapport, der beskriver fremdriften eller status for byggearbejder."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un rapport décrivant l'avancement ou l'état des travaux de construction."
+  }, {
+    "@language" : "it",
+    "@value" : "Una relazione che descrive l'avanzamento o lo stato dei lavori di costruzione."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Progress & Status Report"
+  }, {
+    "@language" : "de",
+    "@value" : "Progress & Status Report"
+  }, {
+    "@language" : "en",
+    "@value" : "Progress & Status Report"
+  }, {
+    "@language" : "fr",
+    "@value" : "Progress & Status Report"
+  }, {
+    "@language" : "it",
     "@value" : "Progress & Status Report"
   } ]
 }, {
@@ -2305,8 +5168,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A construction, renovation or maintenance project, identified by its name, title or id."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Bau-, Renovierungs- oder Instandhaltungsprojekt, angegeben durch Name, Titel oder ID."
+  }, {
+    "@language" : "da",
+    "@value" : "Et bygge-, renoverings- eller vedligeholdelsesprojekt, angivet ved navn, titel eller id."
+  }, {
+    "@language" : "it",
+    "@value" : "Un progetto di costruzione, ristrutturazione o manutenzione, identificato da nome, titolo o id."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un projet de construction, de rénovation ou de maintenance, identifié par son nom, son titre ou son identifiant."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Project Id"
+  }, {
+    "@language" : "de",
+    "@value" : "Project Id"
+  }, {
+    "@language" : "en",
+    "@value" : "Project Id"
+  }, {
+    "@language" : "fr",
+    "@value" : "Project Id"
+  }, {
+    "@language" : "it",
     "@value" : "Project Id"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
@@ -2324,8 +5215,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Projektmanagement, verantwortlich für die Planung, Koordination und Steuerung eines Projekts."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina della gestione del progetto, responsabile della pianificazione, del coordinamento e del controllo di un progetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de la gestion de projet, responsable de la planification, de la coordination et du contrôle d'un projet."
+  }, {
+    "@language" : "da",
+    "@value" : "Projektledelsesdisciplinen, der er ansvarlig for planlægning, koordinering og styring af et projekt."
+  }, {
     "@language" : "en",
+    "@value" : "The project management discipline, responsible for planning, coordinating and controlling a project."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Project Management"
+  }, {
+    "@language" : "de",
+    "@value" : "Project Management"
+  }, {
+    "@language" : "en",
+    "@value" : "Project Management"
+  }, {
+    "@language" : "fr",
+    "@value" : "Project Management"
+  }, {
+    "@language" : "it",
     "@value" : "Project Management"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2341,8 +5260,36 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A distinct stage in the lifecycle of a project, identified by name or id."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine bestimmte Phase im Lebenszyklus eines Projekts, angegeben durch Name oder ID."
+  }, {
+    "@language" : "da",
+    "@value" : "Et afgrænset stadie i et projekts livscyklus, angivet ved navn eller id."
+  }, {
+    "@language" : "it",
+    "@value" : "Una fase distinta del ciclo di vita di un progetto, identificata da nome o id."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une étape distincte du cycle de vie d'un projet, identifiée par son nom ou son identifiant."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Project Phase"
+  }, {
+    "@language" : "de",
+    "@value" : "Project Phase"
+  }, {
+    "@language" : "en",
+    "@value" : "Project Phase"
+  }, {
+    "@language" : "fr",
+    "@value" : "Project Phase"
+  }, {
+    "@language" : "it",
     "@value" : "Project Phase"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2365,8 +5312,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A contract for the purchase or lease of property, goods or services."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Vertrag über den Kauf oder die Miete von Immobilien, Waren oder Dienstleistungen."
+  }, {
+    "@language" : "da",
+    "@value" : "En kontrakt om køb eller leje af ejendom, varer eller tjenesteydelser."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un contrat d'achat ou de location de biens immobiliers, de marchandises ou de services."
+  }, {
+    "@language" : "it",
+    "@value" : "Un contratto per l'acquisto o la locazione di beni immobili, beni o servizi."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Purchase & Lease Agreement"
+  }, {
+    "@language" : "de",
+    "@value" : "Purchase & Lease Agreement"
+  }, {
+    "@language" : "en",
+    "@value" : "Purchase & Lease Agreement"
+  }, {
+    "@language" : "fr",
+    "@value" : "Purchase & Lease Agreement"
+  }, {
+    "@language" : "it",
     "@value" : "Purchase & Lease Agreement"
   } ]
 }, {
@@ -2380,8 +5355,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A quality assurance or quality control (QA/QC) record."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Qualitätssicherungs- oder Qualitätskontrollnachweis (QA/QC)."
+  }, {
+    "@language" : "da",
+    "@value" : "En kvalitetssikrings- eller kvalitetskontroloptegnelse (QA/QC)."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento di garanzia o controllo della qualità (QA/QC)."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un enregistrement d'assurance qualité ou de contrôle qualité (QA/QC)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "QA/QC Document"
+  }, {
+    "@language" : "de",
+    "@value" : "QA/QC Document"
+  }, {
+    "@language" : "en",
+    "@value" : "QA/QC Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "QA/QC Document"
+  }, {
+    "@language" : "it",
     "@value" : "QA/QC Document"
   } ]
 }, {
@@ -2393,11 +5396,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "it",
+    "@value" : "Documenti necessari per l'approvazione normativa, i permessi, le ispezioni e le certificazioni."
+  }, {
     "@language" : "en",
     "@value" : "Documents required for regulatory approval, permits, inspections, and certifications."
+  }, {
+    "@language" : "fr",
+    "@value" : "Documents requis pour l'approbation réglementaire, les permis, les inspections et les certifications."
+  }, {
+    "@language" : "de",
+    "@value" : "Dokumente, die für behördliche Genehmigungen, Erlaubnisse, Inspektionen und Zertifizierungen erforderlich sind."
+  }, {
+    "@language" : "da",
+    "@value" : "Dokumenter, der kræves til myndighedsgodkendelse, tilladelser, inspektioner og certificeringer."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Regulatory & Compliance Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Regulatory & Compliance Document"
+  }, {
     "@language" : "en",
+    "@value" : "Regulatory & Compliance Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Regulatory & Compliance Document"
+  }, {
+    "@language" : "it",
     "@value" : "Regulatory & Compliance Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -2413,11 +5440,35 @@
     "@id" : "https://dev.qaecy.com/ont#ContentCategory"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "it",
+    "@value" : "Documenti che stabiliscono l'ambito e i requisiti funzionali, tecnici e prestazionali."
+  }, {
+    "@language" : "fr",
+    "@value" : "Documents qui établissent le périmètre ainsi que les exigences fonctionnelles, techniques et de performance."
+  }, {
     "@language" : "en",
     "@value" : "Documents that establish scope, functional, technical, and performance requirements."
+  }, {
+    "@language" : "de",
+    "@value" : "Dokumente, die Umfang sowie funktionale, technische und Leistungsanforderungen festlegen."
+  }, {
+    "@language" : "da",
+    "@value" : "Dokumenter, der fastlægger omfang samt funktionelle, tekniske og ydelsesmæssige krav."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Requirements & Scoping Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Requirements & Scoping Document"
+  }, {
     "@language" : "en",
+    "@value" : "Requirements & Scoping Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Requirements & Scoping Document"
+  }, {
+    "@language" : "it",
     "@value" : "Requirements & Scoping Document"
   } ],
   "https://dev.qaecy.com/ont#classificationPrompt" : [ {
@@ -2435,8 +5486,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Das Bauteil, das die Oberseite eines Gebäudes abdeckt und schützt."
+  }, {
+    "@language" : "da",
+    "@value" : "Det bygningselement, der dækker og beskytter toppen af en bygning."
+  }, {
+    "@language" : "it",
+    "@value" : "L'elemento edilizio che copre e protegge la parte superiore di un edificio."
+  }, {
+    "@language" : "fr",
+    "@value" : "L'élément de construction qui couvre et protège le sommet d'un bâtiment."
+  }, {
     "@language" : "en",
+    "@value" : "The building element that covers and protects the top of a building."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Roof"
+  }, {
+    "@language" : "de",
+    "@value" : "Roof"
+  }, {
+    "@language" : "en",
+    "@value" : "Roof"
+  }, {
+    "@language" : "fr",
+    "@value" : "Roof"
+  }, {
+    "@language" : "it",
     "@value" : "Roof"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2450,6 +5529,49 @@
     "@id" : "https://w3id.org/rec#Roof"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/enum#SVGPathGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://dev.qaecy.com/enum#Geometry"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Informations de tracé SVG, généralement décrites dans le système de coordonnées cartésiennes de l'espace modèle."
+  }, {
+    "@language" : "it",
+    "@value" : "Informazioni sul tracciato SVG, generalmente descritte nel sistema di coordinate cartesiane dello spazio del modello."
+  }, {
+    "@language" : "en",
+    "@value" : "SVG path information typically described in the model space cartesian coordinate system."
+  }, {
+    "@language" : "de",
+    "@value" : "SVG-Pfadinformationen, die typischerweise im kartesischen Koordinatensystem des Modellraums beschrieben werden."
+  }, {
+    "@language" : "da",
+    "@value" : "SVG-stiinformation, typisk beskrevet i modelrummets kartesiske koordinatsystem."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "SVG Path Geometry"
+  }, {
+    "@language" : "de",
+    "@value" : "SVG Path Geometry"
+  }, {
+    "@language" : "en",
+    "@value" : "SVG Path Geometry"
+  }, {
+    "@language" : "fr",
+    "@value" : "SVG Path Geometry"
+  }, {
+    "@language" : "it",
+    "@value" : "SVG Path Geometry"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/enum#SafetyDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2460,8 +5582,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A document covering health and safety on a construction project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Dokument zu Gesundheit und Sicherheit auf einem Bauprojekt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et dokument om arbejdsmiljø og sikkerhed på et byggeprojekt."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document relatif à la santé et à la sécurité sur un projet de construction."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento relativo alla salute e sicurezza in un progetto di costruzione."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Safety Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Safety Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Safety Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Safety Document"
+  }, {
+    "@language" : "it",
     "@value" : "Safety Document"
   } ]
 }, {
@@ -2472,9 +5622,37 @@
   }, {
     "@id" : "https://dev.qaecy.com/ont#EntityCategory"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A complete or partial project plan or programme expressed as a diagram, chart or table."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein vollständiger oder teilweiser Projektplan oder Zeitplan, dargestellt als Diagramm, Grafik oder Tabelle."
+  }, {
+    "@language" : "da",
+    "@value" : "En hel eller delvis projektplan eller tidsplan udtrykt som et diagram, en graf eller en tabel."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un planning ou un calendrier de projet complet ou partiel, présenté sous forme de diagramme, de graphique ou de tableau."
+  }, {
+    "@language" : "it",
+    "@value" : "Un programma o pianificazione di progetto completa o parziale, espressa come diagramma, grafico o tabella."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Planning"
+  }, {
+    "@language" : "it",
+    "@value" : "Programma"
+  }, {
     "@language" : "en",
     "@value" : "Schedule"
+  }, {
+    "@language" : "da",
+    "@value" : "Tidsplan"
+  }, {
+    "@language" : "de",
+    "@value" : "Zeitplan"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -2494,9 +5672,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A document setting out the programme or schedule of a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Dokument, das das Programm oder den Zeitplan eines Projekts festlegt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et dokument, der fastlægger et projekts program eller tidsplan."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document définissant le programme ou le calendrier d'un projet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento che definisce il programma o la pianificazione di un progetto."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Planning Document"
+  }, {
+    "@language" : "it",
+    "@value" : "Programma Document"
+  }, {
     "@language" : "en",
     "@value" : "Schedule Document"
+  }, {
+    "@language" : "da",
+    "@value" : "Tidsplan Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Zeitplan Document"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ScopeOfWorkDocument",
@@ -2509,8 +5715,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RequirementsDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A document defining the scope of work (SOW) to be carried out."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Dokument, das den auszuführenden Leistungsumfang (SOW) definiert."
+  }, {
+    "@language" : "da",
+    "@value" : "Et dokument, der definerer det arbejdsomfang (SOW), der skal udføres."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document définissant l'étendue des travaux (SOW) à réaliser."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento che definisce l'ambito di lavoro (SOW) da svolgere."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Scope of Work (SOW) Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Scope of Work (SOW) Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Scope of Work (SOW) Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Scope of Work (SOW) Document"
+  }, {
+    "@language" : "it",
     "@value" : "Scope of Work (SOW) Document"
   } ]
 }, {
@@ -2523,7 +5757,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for script file content"
+    "@value" : "Content of a source code or script file."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2540,8 +5774,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A drawing showing a vertical cut through a building to reveal its internal arrangement."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Zeichnung, die einen vertikalen Schnitt durch ein Gebäude zeigt und dessen innere Anordnung offenlegt."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegning, der viser et lodret snit gennem en bygning og afslører dens indvendige opbygning."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin montrant une coupe verticale d'un bâtiment et révélant son agencement intérieur."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno che mostra una sezione verticale di un edificio e ne rivela la disposizione interna."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Section Drawing"
+  }, {
+    "@language" : "de",
+    "@value" : "Section Drawing"
+  }, {
+    "@language" : "en",
+    "@value" : "Section Drawing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Section Drawing"
+  }, {
+    "@language" : "it",
     "@value" : "Section Drawing"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2558,8 +5820,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Sicherheit und Zutrittskontrolle, verantwortlich für Überwachungs- und Zutrittssysteme."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen sikring og adgangskontrol, der er ansvarlig for overvågnings- og adgangssystemer."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina della sicurezza e del controllo degli accessi, responsabile dei sistemi di sorveglianza e di accesso."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de la sécurité et du contrôle d'accès, responsable des systèmes de surveillance et d'accès."
+  }, {
     "@language" : "en",
+    "@value" : "The security and access-control discipline, responsible for surveillance and access systems."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Security Access System"
+  }, {
+    "@language" : "de",
+    "@value" : "Security Access System"
+  }, {
+    "@language" : "en",
+    "@value" : "Security Access System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Security Access System"
+  }, {
+    "@language" : "it",
     "@value" : "Security Access System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2578,8 +5868,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingZone"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A plot of land on which one or more buildings are located."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Grundstück, auf dem sich ein oder mehrere Gebäude befinden."
+  }, {
+    "@language" : "da",
+    "@value" : "Et stykke jord, hvorpå en eller flere bygninger er placeret."
+  }, {
+    "@language" : "it",
+    "@value" : "Un appezzamento di terreno su cui si trovano uno o più edifici."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une parcelle de terrain sur laquelle se trouvent un ou plusieurs bâtiments."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Site"
+  }, {
+    "@language" : "de",
+    "@value" : "Site"
+  }, {
+    "@language" : "en",
+    "@value" : "Site"
+  }, {
+    "@language" : "fr",
+    "@value" : "Site"
+  }, {
+    "@language" : "it",
     "@value" : "Site"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2601,9 +5919,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Beziehung zwischen einem Grundstück und einem darauf befindlichen Gebäude."
+  }, {
+    "@language" : "da",
+    "@value" : "Forholdet mellem en grund og en bygning placeret på den."
+  }, {
+    "@language" : "fr",
+    "@value" : "La relation entre un site et un bâtiment qui s'y trouve."
+  }, {
+    "@language" : "it",
+    "@value" : "La relazione tra un sito e un edificio situato su di esso."
+  }, {
+    "@language" : "en",
+    "@value" : "The relationship between a site and a building located on it."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Site/Building Interface"
+  }, {
+    "@language" : "da",
+    "@value" : "Site/Bygning Interface"
+  }, {
+    "@language" : "fr",
+    "@value" : "Site/Bâtiment Interface"
+  }, {
+    "@language" : "it",
+    "@value" : "Site/Edificio Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Site/Gebäude Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2619,8 +5965,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#DrawingEntity"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A drawing showing a building and its surroundings within the boundaries of a site."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Zeichnung, die ein Gebäude und seine Umgebung innerhalb der Grundstücksgrenzen zeigt."
+  }, {
+    "@language" : "da",
+    "@value" : "En tegning, der viser en bygning og dens omgivelser inden for grundens grænser."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un dessin montrant un bâtiment et ses environs dans les limites d'un site."
+  }, {
+    "@language" : "it",
+    "@value" : "Un disegno che mostra un edificio e i suoi dintorni entro i confini di un sito."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Site Plan Drawing"
+  }, {
+    "@language" : "de",
+    "@value" : "Site Plan Drawing"
+  }, {
+    "@language" : "en",
+    "@value" : "Site Plan Drawing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Site Plan Drawing"
+  }, {
+    "@language" : "it",
     "@value" : "Site Plan Drawing"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2637,8 +6011,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A horizontal structural building element forming a floor or ceiling."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein horizontales tragendes Bauteil, das einen Boden oder eine Decke bildet."
+  }, {
+    "@language" : "da",
+    "@value" : "Et vandret bærende bygningselement, der danner et gulv eller loft."
+  }, {
+    "@language" : "it",
+    "@value" : "Un elemento strutturale orizzontale che forma un pavimento o un soffitto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un élément de construction porteur horizontal formant un plancher ou un plafond."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Slab"
+  }, {
+    "@language" : "de",
+    "@value" : "Slab"
+  }, {
+    "@language" : "en",
+    "@value" : "Slab"
+  }, {
+    "@language" : "fr",
+    "@value" : "Slab"
+  }, {
+    "@language" : "it",
     "@value" : "Slab"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2664,11 +6066,35 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Space in a building"
+    "@value" : "An enclosed or bounded space, such as a room, within a building."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein abgegrenzter Raum, etwa ein Zimmer, innerhalb eines Gebäudes."
+  }, {
+    "@language" : "da",
+    "@value" : "Et afgrænset rum, såsom et lokale, i en bygning."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un espace délimité, tel qu'une pièce, au sein d'un bâtiment."
+  }, {
+    "@language" : "it",
+    "@value" : "Uno spazio delimitato, come una stanza, all'interno di un edificio."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Espace"
+  }, {
+    "@language" : "de",
+    "@value" : "Raum"
+  }, {
+    "@language" : "da",
+    "@value" : "Rum"
+  }, {
     "@language" : "en",
     "@value" : "Space"
+  }, {
+    "@language" : "it",
+    "@value" : "Spazio"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -2689,9 +6115,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Beziehung zwischen einem Raum und einem daran angrenzenden Element."
+  }, {
+    "@language" : "da",
+    "@value" : "Forholdet mellem et rum og et element, der støder op til det."
+  }, {
+    "@language" : "fr",
+    "@value" : "La relation entre un espace et un élément qui lui est adjacent."
+  }, {
+    "@language" : "it",
+    "@value" : "La relazione tra uno spazio e un elemento ad esso adiacente."
+  }, {
+    "@language" : "en",
+    "@value" : "The relationship between a space and an element adjacent to it."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Espace/Adjacent element Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Raum/Adjacent element Interface"
+  }, {
+    "@language" : "da",
+    "@value" : "Rum/Adjacent element Interface"
+  }, {
     "@language" : "en",
     "@value" : "Space/Adjacent element Interface"
+  }, {
+    "@language" : "it",
+    "@value" : "Spazio/Adjacent element Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2707,9 +6161,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Beziehung zwischen einem Raum und einem darin enthaltenen Element."
+  }, {
+    "@language" : "da",
+    "@value" : "Forholdet mellem et rum og et element, der er indeholdt i det."
+  }, {
+    "@language" : "fr",
+    "@value" : "La relation entre un espace et un élément qu'il contient."
+  }, {
+    "@language" : "it",
+    "@value" : "La relazione tra uno spazio e un elemento in esso contenuto."
+  }, {
+    "@language" : "en",
+    "@value" : "The relationship between a space and an element contained within it."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Espace/Contained element Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Raum/Contained element Interface"
+  }, {
+    "@language" : "da",
+    "@value" : "Rum/Contained element Interface"
+  }, {
     "@language" : "en",
     "@value" : "Space/Contained element Interface"
+  }, {
+    "@language" : "it",
+    "@value" : "Spazio/Contained element Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2724,7 +6206,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for spreadsheet file content"
+    "@value" : "Content of a spreadsheet file, such as XLSX or CSV."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2741,8 +6223,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A building element providing pedestrian access between different levels."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Bauteil, das Fußgängern den Zugang zwischen verschiedenen Ebenen ermöglicht."
+  }, {
+    "@language" : "da",
+    "@value" : "Et bygningselement, der giver fodgængeradgang mellem forskellige niveauer."
+  }, {
+    "@language" : "it",
+    "@value" : "Un elemento edilizio che consente l'accesso pedonale tra livelli diversi."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un élément de construction permettant l'accès piéton entre différents niveaux."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Stair"
+  }, {
+    "@language" : "de",
+    "@value" : "Stair"
+  }, {
+    "@language" : "en",
+    "@value" : "Stair"
+  }, {
+    "@language" : "fr",
+    "@value" : "Stair"
+  }, {
+    "@language" : "it",
     "@value" : "Stair"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2764,9 +6274,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Location"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A state, province or region within a country."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Bundesland, eine Provinz oder Region innerhalb eines Landes."
+  }, {
+    "@language" : "da",
+    "@value" : "En stat, provins eller region inden for et land."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un État, une province ou une région au sein d'un pays."
+  }, {
+    "@language" : "it",
+    "@value" : "Uno stato, una provincia o una regione all'interno di un paese."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "de",
+    "@value" : "Bundesland"
+  }, {
+    "@language" : "da",
+    "@value" : "Region"
+  }, {
     "@language" : "en",
     "@value" : "State"
+  }, {
+    "@language" : "it",
+    "@value" : "Stato"
+  }, {
+    "@language" : "fr",
+    "@value" : "État"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Storey",
@@ -2779,9 +6317,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingZone"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A single level or floor of a building."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine einzelne Ebene oder ein Geschoss eines Gebäudes."
+  }, {
+    "@language" : "da",
+    "@value" : "Et enkelt niveau eller en etage i en bygning."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un niveau ou un étage unique d'un bâtiment."
+  }, {
+    "@language" : "it",
+    "@value" : "Un singolo livello o piano di un edificio."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Etage"
+  }, {
+    "@language" : "de",
+    "@value" : "Geschoss"
+  }, {
+    "@language" : "it",
+    "@value" : "Piano"
+  }, {
     "@language" : "en",
     "@value" : "Storey"
+  }, {
+    "@language" : "fr",
+    "@value" : "Étage"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -2802,9 +6368,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Beziehung zwischen einem Geschoss und einem darauf befindlichen Element."
+  }, {
+    "@language" : "da",
+    "@value" : "Forholdet mellem en etage og et element placeret på den."
+  }, {
+    "@language" : "fr",
+    "@value" : "La relation entre un étage et un élément qui s'y trouve."
+  }, {
+    "@language" : "it",
+    "@value" : "La relazione tra un piano e un elemento situato su di esso."
+  }, {
+    "@language" : "en",
+    "@value" : "The relationship between a storey and an element located on it."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Etage/Element Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Geschoss/Element Interface"
+  }, {
+    "@language" : "it",
+    "@value" : "Piano/Element Interface"
+  }, {
     "@language" : "en",
     "@value" : "Storey/Element Interface"
+  }, {
+    "@language" : "fr",
+    "@value" : "Étage/Element Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2820,9 +6414,37 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Interface"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Beziehung zwischen einem Geschoss und einem darauf befindlichen Raum."
+  }, {
+    "@language" : "da",
+    "@value" : "Forholdet mellem en etage og et rum placeret på den."
+  }, {
+    "@language" : "fr",
+    "@value" : "La relation entre un étage et un espace qui s'y trouve."
+  }, {
+    "@language" : "it",
+    "@value" : "La relazione tra un piano e uno spazio situato su di esso."
+  }, {
+    "@language" : "en",
+    "@value" : "The relationship between a storey and a space located on it."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Etage/Rum Interface"
+  }, {
+    "@language" : "de",
+    "@value" : "Geschoss/Raum Interface"
+  }, {
+    "@language" : "it",
+    "@value" : "Piano/Spazio Interface"
+  }, {
     "@language" : "en",
     "@value" : "Storey/Space Interface"
+  }, {
+    "@language" : "fr",
+    "@value" : "Étage/Espace Interface"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2838,8 +6460,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Tragwerksplanung, verantwortlich für die tragende Struktur einer baulichen Anlage."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen bærende konstruktioner, der er ansvarlig for et bygget aktivs bærende struktur."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'ingegneria strutturale, responsabile della struttura portante di un bene edilizio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'ingénierie structurelle, responsable de la structure porteuse d'un actif bâti."
+  }, {
     "@language" : "en",
+    "@value" : "The structural engineering discipline, responsible for the load-bearing structure of a built asset."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Structural Engineering"
+  }, {
+    "@language" : "de",
+    "@value" : "Structural Engineering"
+  }, {
+    "@language" : "en",
+    "@value" : "Structural Engineering"
+  }, {
+    "@language" : "fr",
+    "@value" : "Structural Engineering"
+  }, {
+    "@language" : "it",
     "@value" : "Structural Engineering"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2858,8 +6508,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Vermessung, verantwortlich für das Messen und Kartieren von Gelände, Grundstücken und Bauwerken."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina del rilevamento topografico, responsabile della misurazione e mappatura di terreni, siti e strutture."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline du géomètre, responsable de la mesure et de la cartographie des terrains, sites et structures."
+  }, {
+    "@language" : "da",
+    "@value" : "Opmålingsdisciplinen, der er ansvarlig for opmåling og kortlægning af terræn, grunde og bygværker."
+  }, {
     "@language" : "en",
+    "@value" : "The surveying discipline, responsible for measuring and mapping land, sites and structures."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Surveying Engineering"
+  }, {
+    "@language" : "de",
+    "@value" : "Surveying Engineering"
+  }, {
+    "@language" : "en",
+    "@value" : "Surveying Engineering"
+  }, {
+    "@language" : "fr",
+    "@value" : "Surveying Engineering"
+  }, {
+    "@language" : "it",
     "@value" : "Surveying Engineering"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2878,8 +6556,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#RequirementsDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A document specifying the technical requirements of a project."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Dokument, das die technischen Anforderungen eines Projekts festlegt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et dokument, der specificerer et projekts tekniske krav."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un document spécifiant les exigences techniques d'un projet."
+  }, {
+    "@language" : "it",
+    "@value" : "Un documento che specifica i requisiti tecnici di un progetto."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Technical Requirements Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Technical Requirements Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Technical Requirements Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Technical Requirements Document"
+  }, {
+    "@language" : "it",
     "@value" : "Technical Requirements Document"
   } ]
 }, {
@@ -2892,7 +6598,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for text file content"
+    "@value" : "Content of a plain text or document file, such as TXT, DOC or PDF."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2908,7 +6614,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for 3D file content"
+    "@value" : "Content of a 3D model or geometry file, such as OBJ, STL or glTF."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2925,8 +6631,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Verkehrstechnik, verantwortlich für Verkehrssysteme und Verkehrsinfrastruktur."
+  }, {
+    "@language" : "da",
+    "@value" : "Disciplinen trafik- og transportteknik, der er ansvarlig for transportsystemer og trafikinfrastruktur."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina dell'ingegneria dei trasporti, responsabile dei sistemi di trasporto e delle infrastrutture per il traffico."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de l'ingénierie des transports, responsable des systèmes de transport et des infrastructures de circulation."
+  }, {
     "@language" : "en",
+    "@value" : "The transportation engineering discipline, responsible for transport systems and traffic infrastructure."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Transportation Engineering"
+  }, {
+    "@language" : "de",
+    "@value" : "Transportation Engineering"
+  }, {
+    "@language" : "en",
+    "@value" : "Transportation Engineering"
+  }, {
+    "@language" : "fr",
+    "@value" : "Transportation Engineering"
+  }, {
+    "@language" : "it",
     "@value" : "Transportation Engineering"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2944,7 +6678,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for unknown file content"
+    "@value" : "Content of a file whose type could not be determined."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2961,8 +6695,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#Discipline"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Disziplin Lüftung, verantwortlich für die Zu- und Abluft in einem Gebäude."
+  }, {
+    "@language" : "it",
+    "@value" : "La disciplina della ventilazione, responsabile dell'immissione ed estrazione dell'aria in un edificio."
+  }, {
+    "@language" : "fr",
+    "@value" : "La discipline de la ventilation, responsable de l'apport et de l'extraction de l'air dans un bâtiment."
+  }, {
     "@language" : "en",
+    "@value" : "The ventilation discipline, responsible for the supply and extraction of air within a building."
+  }, {
+    "@language" : "da",
+    "@value" : "Ventilationsdisciplinen, der er ansvarlig for tilførsel og udsugning af luft i en bygning."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Ventilation System"
+  }, {
+    "@language" : "de",
+    "@value" : "Ventilation System"
+  }, {
+    "@language" : "en",
+    "@value" : "Ventilation System"
+  }, {
+    "@language" : "fr",
+    "@value" : "Ventilation System"
+  }, {
+    "@language" : "it",
     "@value" : "Ventilation System"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -2980,7 +6742,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Category for video file content"
+    "@value" : "Content of a video file, such as MP4 or MOV."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2997,8 +6759,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A vertical building element that encloses or divides spaces."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein vertikales Bauteil, das Räume umschließt oder unterteilt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et lodret bygningselement, der lukker eller opdeler rum."
+  }, {
+    "@language" : "it",
+    "@value" : "Un elemento edilizio verticale che racchiude o divide gli spazi."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un élément de construction vertical qui délimite ou divise les espaces."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Wall"
+  }, {
+    "@language" : "de",
+    "@value" : "Wall"
+  }, {
+    "@language" : "en",
+    "@value" : "Wall"
+  }, {
+    "@language" : "fr",
+    "@value" : "Wall"
+  }, {
+    "@language" : "it",
     "@value" : "Wall"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
@@ -3022,8 +6812,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#OperationsMaintenanceDocument"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "A warranty or guarantee covering products, systems or works."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Garantie oder Gewährleistung für Produkte, Systeme oder Arbeiten."
+  }, {
+    "@language" : "da",
+    "@value" : "En garanti, der dækker produkter, systemer eller arbejder."
+  }, {
+    "@language" : "it",
+    "@value" : "Una garanzia che copre prodotti, sistemi o lavori."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une garantie couvrant des produits, des systèmes ou des travaux."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Warranty or Guarantee Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Warranty or Guarantee Document"
+  }, {
+    "@language" : "en",
+    "@value" : "Warranty or Guarantee Document"
+  }, {
+    "@language" : "fr",
+    "@value" : "Warranty or Guarantee Document"
+  }, {
+    "@language" : "it",
     "@value" : "Warranty or Guarantee Document"
   } ]
 }, {
@@ -3037,8 +6855,36 @@
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "https://dev.qaecy.com/enum#BuildingElement"
   } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
+    "@value" : "An opening element that admits light and air, filling a void in a wall or roof."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Öffnungselement, das Licht und Luft einlässt und eine Öffnung in einer Wand oder einem Dach füllt."
+  }, {
+    "@language" : "da",
+    "@value" : "Et åbningselement, der lukker lys og luft ind og udfylder et hul i en væg eller et tag."
+  }, {
+    "@language" : "it",
+    "@value" : "Un elemento di apertura che fa entrare luce e aria, riempiendo un vuoto in una parete o in un tetto."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un élément d'ouverture qui laisse passer la lumière et l'air, comblant une ouverture dans un mur ou une toiture."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "Window"
+  }, {
+    "@language" : "de",
+    "@value" : "Window"
+  }, {
+    "@language" : "en",
+    "@value" : "Window"
+  }, {
+    "@language" : "fr",
+    "@value" : "Window"
+  }, {
+    "@language" : "it",
     "@value" : "Window"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {

@@ -160,11 +160,11 @@
     "@value" : "Manos Argyris"
   } ],
   "http://purl.org/dc/terms/description" : [ {
-    "@value" : "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc."
+    "@value" : "The QAECY Ontology defines the core knowledge model used by QAECY and the Cue Agent to represent information from Architecture, Engineering, and Construction projects.\n\nThe model is centered around information objects and entity references. Information is represented through FileLocation, InformationObject and Fragment, while project meaning is represented through EntityMention and CanonicalEntity. Entity mentions are resolved to canonical entities, which can be qualified with categories, linked to properties, and connected through explicit relationships.\n\nEntity-to-entity semantics are organized under qcy:relatedEntity. The recommended top-level relation families are: qcy:contains (part-whole), qcy:leadsTo (order/causal flow), qcy:involves (participation/roles), qcy:expressedBy (descriptive qualification), and qcy:associatedWith (non-hierarchical association). Temporal qualification is modeled through qcy:hasTemporalMarker and specific sub-properties (for example startsOn, endsOn, effectiveOn, signedOn, createdOn, approvedOn, invalidatedOn).\n\nCategories are managed through qcy:Category and its sub-types: qcy:EntityCategory, qcy:ContentCategory, qcy:MimeCategory, qcy:ProviderType, and qcy:RelationCategory. These are intended as controlled vocabularies for classification and context, and should be extended by adding new SKOS concepts, typically in the qcy-e namespace or in project-specific enum namespaces.\n\nProject-specific relation specializations are allowed and encouraged in separate namespaces when needed. New properties should be declared as sub-properties of one of the top-level qcy:relatedEntity families (or qcy:hasTemporalMarker for temporal cases), and should define labels, comments, and applicable subject/object/content categories. This keeps the QAECY core stable while enabling domain-specific precision per project namespace."
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2026-06-08T14:56:27Z"
+    "@value" : "2026-06-17T08:56:14Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -862,7 +862,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that specifies the date that an activity ends."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that an activity ends."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -875,7 +875,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#endsOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -900,7 +904,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that specifies the date that an activity begins."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:startsOn instead. Relationship that specifies the date that an activity begins."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -913,7 +917,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#startsOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
@@ -952,6 +960,35 @@
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#adjacentTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies that two things are adjacent to each other."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "adjacent to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#associatedWith"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A zone or element is adjacent to another zone or element."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/ont#alternativeRepresentation",
@@ -1042,12 +1079,77 @@
     "@value" : "false"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#approvedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die angibt, wann eine Entität genehmigt wurde."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der angiver, hvornår en entitet blev godkendt."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui indique quand une entité a été approuvée."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che indica quando un'entità è stata approvata."
+  }, {
+    "@value" : "Relationship that specifies when an entity was approved."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "approuvé le"
+  }, {
+    "@language" : "it",
+    "@value" : "approvato il"
+  }, {
+    "@language" : "en",
+    "@value" : "approved on"
+  }, {
+    "@language" : "de",
+    "@value" : "genehmigt am"
+  }, {
+    "@language" : "da",
+    "@value" : "godkendt den"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity was approved on a given date."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#associatedWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die starke oder lose Assoziationen zwischen Entitäten beschreibt."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der beskriver stærke eller løse associationer mellem entiteter."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui décrit des associations fortes ou faibles entre des entités."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che descrive associazioni forti o deboli tra entità."
+  }, {
     "@value" : "Relationship that describes strong or loose associations between entities."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1056,22 +1158,24 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "associated with"
+  }, {
+    "@language" : "it",
+    "@value" : "associato a"
+  }, {
+    "@language" : "da",
+    "@value" : "associeret med"
+  }, {
+    "@language" : "fr",
+    "@value" : "associé à"
+  }, {
+    "@language" : "de",
+    "@value" : "assoziiert mit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
-  } ],
-  "https://dev.qaecy.com/ont#applicableObjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Organization"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Person"
-  } ],
-  "https://dev.qaecy.com/ont#applicableSubjectCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#Organization"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#Person"
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@value" : "An entity is associated with another entity."
@@ -1213,6 +1317,18 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Overordnet relation der angiver, at en entitet er en del af noget større."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation de haut niveau indiquant qu'une entité fait partie d'un ensemble plus grand."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione di alto livello che indica che un'entità fa parte di qualcosa di più grande."
+  }, {
+    "@language" : "de",
+    "@value" : "Übergeordnete Beziehung, die angibt, dass eine Entität Teil von etwas Größerem ist."
+  }, {
     "@value" : "Top level relationship that indicates that an entity is part of a larger thing."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1221,6 +1337,18 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "contains"
+  }, {
+    "@language" : "it",
+    "@value" : "contiene"
+  }, {
+    "@language" : "fr",
+    "@value" : "contient"
+  }, {
+    "@language" : "de",
+    "@value" : "enthält"
+  }, {
+    "@language" : "da",
+    "@value" : "indeholder"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1306,7 +1434,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that specifies the date that a contract is terminated."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that a contract is terminated."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1319,7 +1447,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#endsOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -1344,7 +1476,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that specifies the signature date of a contract."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:signedOn instead. Relationship that specifies the signature date of a contract."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1357,7 +1489,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#signedOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -1382,7 +1518,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that specifies the date that a contract becomes effective."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. Relationship that specifies the date that a contract becomes effective."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1395,7 +1531,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#effectiveOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -1521,6 +1661,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://dev.qaecy.com/ont#contains"
   } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
@@ -1532,6 +1676,59 @@
   } ],
   "https://dev.qaecy.com/ont#extractionPrompt" : [ {
     "@value" : "A 'Contract' states a certain 'ContractObligation'."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#createdOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die angibt, wann eine Entität erstellt wurde."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der angiver, hvornår en entitet blev oprettet."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui indique quand une entité a été créée."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che indica quando un'entità è stata creata."
+  }, {
+    "@value" : "Relationship that specifies when an entity was created."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "created on"
+  }, {
+    "@language" : "it",
+    "@value" : "creato il"
+  }, {
+    "@language" : "fr",
+    "@value" : "créé le"
+  }, {
+    "@language" : "de",
+    "@value" : "erstellt am"
+  }, {
+    "@language" : "da",
+    "@value" : "oprettet den"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity was created on a given date."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1699,7 +1896,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was approved."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:approvedOn instead. Relationship that specifies the date that a drawing was approved."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1712,7 +1909,7 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#expressedBy"
+    "@id" : "https://dev.qaecy.com/ont#approvedOn"
   } ],
   "http://www.w3.org/2002/07/owl#deprecated" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1743,7 +1940,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was created."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:createdOn instead. Relationship that specifies the date that a drawing was created."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -1756,7 +1953,7 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#expressedBy"
+    "@id" : "https://dev.qaecy.com/ont#createdOn"
   } ],
   "http://www.w3.org/2002/07/owl#deprecated" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1913,6 +2110,59 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#effectiveOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die angibt, wann eine Entität wirksam oder aktiv wird."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der angiver, hvornår en entitet bliver gældende eller aktiv."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui indique quand une entité devient effective ou active."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che indica quando un'entità diventa efficace o attiva."
+  }, {
+    "@value" : "Relationship that specifies when an entity becomes effective or active."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "effective on"
+  }, {
+    "@language" : "it",
+    "@value" : "efficace dal"
+  }, {
+    "@language" : "da",
+    "@value" : "gældende fra"
+  }, {
+    "@language" : "fr",
+    "@value" : "prend effet le"
+  }, {
+    "@language" : "de",
+    "@value" : "wirksam ab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity becomes effective on a given date."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#elementHasMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1952,6 +2202,59 @@
   } ],
   "https://dev.qaecy.com/ont#relatedFormalProperty" : [ {
     "@id" : "http://schema.org/material"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#endsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die das End-, Beendigungs- oder Ablaufdatum einer Entität angibt."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der angiver slut-, ophørs- eller udløbsdatoen for en entitet."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui indique la date de fin, de résiliation ou d'expiration d'une entité."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che indica la data di fine, cessazione o scadenza di un'entità."
+  }, {
+    "@value" : "Relationship that specifies the end, termination, or expiration date of an entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "endet am"
+  }, {
+    "@language" : "en",
+    "@value" : "ends on"
+  }, {
+    "@language" : "fr",
+    "@value" : "se termine le"
+  }, {
+    "@language" : "da",
+    "@value" : "slutter den"
+  }, {
+    "@language" : "it",
+    "@value" : "termina il"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity ends on a given date."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -2006,14 +2309,38 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Overordnet relation der udtrykker en egenskab eller kvalitet ved en entitet (fx at en tegning udtrykkes ved sin målestok, orientering osv.)."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation de haut niveau qui exprime une caractéristique ou une qualité d'une entité (par ex. un dessin est exprimé par son échelle, son orientation, etc.)."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione di alto livello che esprime una caratteristica o qualità di un'entità (ad esempio un disegno è espresso dalla sua scala, orientamento, ecc.)."
+  }, {
+    "@language" : "de",
+    "@value" : "Übergeordnete Beziehung, die eine Eigenschaft oder Qualität einer Entität ausdrückt (z. B. wird eine Zeichnung durch Maßstab, Ausrichtung usw. ausgedrückt)."
+  }, {
     "@value" : "Top level relationship that expresses a characteristic or quality of an entity (eg. a drawing is expressed by its scale, orientation etc.)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "ausgedrückt durch"
+  }, {
+    "@language" : "it",
+    "@value" : "espresso da"
+  }, {
     "@language" : "en",
     "@value" : "expressed by"
+  }, {
+    "@language" : "fr",
+    "@value" : "exprimé par"
+  }, {
+    "@language" : "da",
+    "@value" : "udtrykt ved"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -2121,7 +2448,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship that specifies the discipline associated with a drawing entity or a drawing sheet."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. Relationship that specifies the discipline associated with a drawing entity or a drawing sheet."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -2134,7 +2461,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#associatedWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2765,6 +3096,59 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Overordnet relation for tidslig kvalificering af en entitet på tværs af livscyklus-, juridiske- og proceskontekster."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation de haut niveau pour la qualification temporelle d'une entité dans des contextes de cycle de vie, juridiques et de processus."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione di alto livello per la qualificazione temporale di un'entità nei contesti di ciclo di vita, legali e di processo."
+  }, {
+    "@language" : "de",
+    "@value" : "Übergeordnete Beziehung zur zeitlichen Qualifizierung einer Entität über Lebenszyklus-, rechtliche und Prozesskontexte hinweg."
+  }, {
+    "@value" : "Top level relationship for temporal qualification of an entity across lifecycle, legal, and process contexts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "a un marqueur temporel"
+  }, {
+    "@language" : "it",
+    "@value" : "ha un marcatore temporale"
+  }, {
+    "@language" : "da",
+    "@value" : "har tidsmarkør"
+  }, {
+    "@language" : "en",
+    "@value" : "has temporal marker"
+  }, {
+    "@language" : "de",
+    "@value" : "hat zeitliche Markierung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#expressedBy"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity is temporally qualified by a date or time marker."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#ifcPSet",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2930,18 +3314,124 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#intersectsWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship that specifies that two things intersect (overlap) with each other."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intersects with"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#associatedWith"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "A zone or element intersects with another zone or element."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#invalidatedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die angibt, wann eine Entität ungültig wurde."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der angiver, hvornår en entitet blev ugyldig."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui indique quand une entité est devenue invalide."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che indica quando un'entità è diventata non valida."
+  }, {
+    "@value" : "Relationship that specifies when an entity became invalid."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "invalidated on"
+  }, {
+    "@language" : "it",
+    "@value" : "invalidato il"
+  }, {
+    "@language" : "fr",
+    "@value" : "invalidé le"
+  }, {
+    "@language" : "da",
+    "@value" : "ugyldiggjort den"
+  }, {
+    "@language" : "de",
+    "@value" : "ungültig ab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity became invalid on a given date."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#involves",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Overordnet relation der angiver, at en entitet involverer en anden entitet. Den udtrykker deltagelse eller involvering i en aktivitet eller proces."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation de haut niveau indiquant qu'une entité en implique une autre. Elle exprime la participation ou l'engagement dans une activité ou un processus."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione di alto livello che indica che un'entità coinvolge un'altra entità. Esprime partecipazione o coinvolgimento in un'attività o processo."
+  }, {
+    "@language" : "de",
+    "@value" : "Übergeordnete Beziehung, die angibt, dass eine Entität eine andere Entität einbezieht. Sie drückt Teilnahme oder Beteiligung an einer Aktivität oder einem Prozess aus."
+  }, {
     "@value" : "Top level relationship that indicates that an entity involves another entity. It expresses a participation or engagement in some activity or process."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "bezieht ein"
+  }, {
+    "@language" : "it",
+    "@value" : "coinvolge"
+  }, {
+    "@language" : "fr",
+    "@value" : "implique"
+  }, {
+    "@language" : "da",
+    "@value" : "involverer"
+  }, {
     "@language" : "en",
     "@value" : "involves"
   } ],
@@ -3164,14 +3654,38 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Overordnet relation der angiver, at en entitet fører til en anden entitet. Den udtrykker en sekventiel eller kausal afhængighed mellem to entiteter."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation de haut niveau indiquant qu'une entité mène à une autre entité. Elle exprime une dépendance séquentielle ou causale entre deux entités."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione di alto livello che indica che un'entità porta a un'altra entità. Esprime una dipendenza sequenziale o causale tra due entità."
+  }, {
+    "@language" : "de",
+    "@value" : "Übergeordnete Beziehung, die angibt, dass eine Entität zu einer anderen Entität führt. Sie drückt eine sequenzielle oder kausale Abhängigkeit zwischen zwei Entitäten aus."
+  }, {
     "@value" : "Top level relationship that indicates that an entity leads to another entity. It expresses a sequential or causal dependency between two entities."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "fører til"
+  }, {
+    "@language" : "de",
+    "@value" : "führt zu"
+  }, {
     "@language" : "en",
     "@value" : "leads to"
+  }, {
+    "@language" : "fr",
+    "@value" : "mène à"
+  }, {
+    "@language" : "it",
+    "@value" : "porta a"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -3292,7 +3806,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A condition associated with a contract obligation."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. A condition associated with a contract obligation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -3305,7 +3819,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#associatedWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -3330,7 +3848,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The end date of a contract obligation."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. The end date of a contract obligation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -3343,7 +3861,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#endsOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -3412,7 +3934,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The start date of a contract obligation."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. The start date of a contract obligation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -3425,7 +3947,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#effectiveOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
@@ -4100,6 +4626,59 @@
     "@value" : "true"
   } ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#signedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die das Unterzeichnungsdatum einer Entität angibt, z. B. eines Vertrags."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der angiver underskriftsdatoen for en entitet, f.eks. en kontrakt."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui indique la date de signature d'une entité, par exemple un contrat."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che indica la data di firma di un'entità, ad esempio un contratto."
+  }, {
+    "@value" : "Relationship that specifies the signature date of an entity such as a contract."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "firmato il"
+  }, {
+    "@language" : "en",
+    "@value" : "signed on"
+  }, {
+    "@language" : "fr",
+    "@value" : "signé le"
+  }, {
+    "@language" : "da",
+    "@value" : "underskrevet den"
+  }, {
+    "@language" : "de",
+    "@value" : "unterzeichnet am"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity is signed on a given date."
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#similarTo",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -4182,6 +4761,59 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "https://dev.qaecy.com/ont#visibleForAgent" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/ont#startsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Beziehung, die das Startdatum einer Entität in einem Prozesskontext angibt."
+  }, {
+    "@language" : "da",
+    "@value" : "Relation der angiver startdatoen for en entitet i en proceskontekst."
+  }, {
+    "@language" : "fr",
+    "@value" : "Relation qui indique la date de début d'une entité dans un contexte de processus."
+  }, {
+    "@language" : "it",
+    "@value" : "Relazione che indica la data di inizio di un'entità in un contesto di processo."
+  }, {
+    "@value" : "Relationship that specifies the start date of an entity in a process context."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "beginnt am"
+  }, {
+    "@language" : "fr",
+    "@value" : "commence le"
+  }, {
+    "@language" : "it",
+    "@value" : "inizia il"
+  }, {
+    "@language" : "da",
+    "@value" : "starter den"
+  }, {
+    "@language" : "en",
+    "@value" : "starts on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://dev.qaecy.com/ont#EntityReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#hasTemporalMarker"
+  } ],
+  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+    "@value" : "An entity starts on a given date."
   } ],
   "https://dev.qaecy.com/ont#visibleForAgent" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -4474,7 +5106,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone/element and an adjacent element."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:adjacentTo instead. Relationship between a zone/element and an adjacent element."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -4487,7 +5119,11 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+    "@id" : "https://dev.qaecy.com/ont#adjacentTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -4516,7 +5152,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a zone and a related element."
+    "@value" : "DEPRECATED: This property is outdated. Please use qcy:contains or qcy:adjacentTo instead. Relationship between a zone and a contained or adjacent element."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
@@ -4529,7 +5165,13 @@
     "@id" : "https://dev.qaecy.com/ont#EntityReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://dev.qaecy.com/ont#contains"
+  }, {
     "@id" : "https://dev.qaecy.com/ont#relatedEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
   "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"

@@ -15,10 +15,16 @@
         <terms:creator>Christian Frausing</terms:creator>
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
-        <terms:description>The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
+        <terms:description>The QAECY Ontology defines the core knowledge model used by QAECY and the Cue Agent to represent information from Architecture, Engineering, and Construction projects.
 
-The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-08T14:56:27Z</terms:modified>
+The model is centered around information objects and entity references. Information is represented through FileLocation, InformationObject and Fragment, while project meaning is represented through EntityMention and CanonicalEntity. Entity mentions are resolved to canonical entities, which can be qualified with categories, linked to properties, and connected through explicit relationships.
+
+Entity-to-entity semantics are organized under qcy:relatedEntity. The recommended top-level relation families are: qcy:contains (part-whole), qcy:leadsTo (order/causal flow), qcy:involves (participation/roles), qcy:expressedBy (descriptive qualification), and qcy:associatedWith (non-hierarchical association). Temporal qualification is modeled through qcy:hasTemporalMarker and specific sub-properties (for example startsOn, endsOn, effectiveOn, signedOn, createdOn, approvedOn, invalidatedOn).
+
+Categories are managed through qcy:Category and its sub-types: qcy:EntityCategory, qcy:ContentCategory, qcy:MimeCategory, qcy:ProviderType, and qcy:RelationCategory. These are intended as controlled vocabularies for classification and context, and should be extended by adding new SKOS concepts, typically in the qcy-e namespace or in project-specific enum namespaces.
+
+Project-specific relation specializations are allowed and encouraged in separate namespaces when needed. New properties should be declared as sub-properties of one of the top-level qcy:relatedEntity families (or qcy:hasTemporalMarker for temporal cases), and should define labels, comments, and applicable subject/object/content categories. This keeps the QAECY core stable while enabling domain-specific precision per project namespace.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-17T08:56:14Z</terms:modified>
         <terms:title xml:lang="en">The QAECY Ontology</terms:title>
         <vann:preferredNamespacePrefix>qcy</vann:preferredNamespacePrefix>
         <owl:versionInfo>0.0.2</owl:versionInfo>
@@ -123,7 +129,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#activityHasEndDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#endsOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -134,7 +140,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#activityHasStartDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#startsOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -150,6 +156,18 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:comment>Relationship between two fragments that are adjacent within the shared parent information object.</rdfs:comment>
         <rdfs:label xml:lang="en">adjacent fragment</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#adjacentTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#adjacentTo">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#associatedWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
     
 
@@ -209,6 +227,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:comment>Relationship between a qcy:relatedEntity sub-property and one or more qcy:EntityCategory. This property is used to specify the categories that are applicable to the subject of the relationship.</rdfs:comment>
         <rdfs:label xml:lang="en">applicable subject categories</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#approvedOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#approvedOn">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#hasTemporalMarker"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
     
 
@@ -285,7 +314,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#contractHasEndDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#endsOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -296,7 +325,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#contractHasSignatureDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#signedOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -307,7 +336,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#contractHasStartDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#effectiveOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -347,6 +376,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#createdOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#createdOn">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#hasTemporalMarker"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dev.qaecy.com/ont#drawingApprovedBy -->
 
 
@@ -373,7 +413,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#drawingHasApprovalDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#expressedBy"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#approvedOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -384,7 +424,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#drawingHasCreationDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#expressedBy"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#createdOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -424,11 +464,33 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#effectiveOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#effectiveOn">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#hasTemporalMarker"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dev.qaecy.com/ont#elementHasMaterial -->
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#elementHasMaterial">
         <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#expressedBy"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#endsOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#endsOn">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#hasTemporalMarker"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -461,7 +523,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#hasAssociatedDiscipline">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#associatedWith"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -717,6 +779,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#hasTemporalMarker -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#hasTemporalMarker">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#expressedBy"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dev.qaecy.com/ont#includesActivity -->
 
 
@@ -744,6 +817,29 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#interfaceOf">
         <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#intersectsWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#intersectsWith">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#associatedWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#invalidatedOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#invalidatedOn">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#hasTemporalMarker"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -823,7 +919,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#obligationHasCondition">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#associatedWith"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -834,7 +930,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#obligationHasEndDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#endsOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -856,7 +952,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#obligationHasStartDate">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#effectiveOn"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -1051,6 +1147,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#signedOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#signedOn">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#hasTemporalMarker"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dev.qaecy.com/ont#similarTo -->
 
 
@@ -1070,6 +1177,17 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#siteContainsBuilding">
         <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#contains"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+        <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#startsOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#startsOn">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#hasTemporalMarker"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -1102,7 +1220,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#zoneHasAdjacentElement">
-        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#adjacentTo"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
     </owl:ObjectProperty>
@@ -1113,6 +1231,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 
     <owl:ObjectProperty rdf:about="https://dev.qaecy.com/ont#zoneHasElement">
+        <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#contains"/>
         <rdfs:subPropertyOf rdf:resource="https://dev.qaecy.com/ont#relatedEntity"/>
         <rdfs:domain rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
         <rdfs:range rdf:resource="https://dev.qaecy.com/ont#EntityReference"/>
@@ -2326,14 +2445,28 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#adjacentTo -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#adjacentTo">
+        <extractionPrompt>A zone or element is adjacent to another zone or element.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#approvedOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#approvedOn">
+        <extractionPrompt>An entity was approved on a given date.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/ont#associatedWith -->
 
 
     <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#associatedWith">
-        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Organization"/>
-        <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Person"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Organization"/>
-        <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Person"/>
         <extractionPrompt>An entity is associated with another entity.</extractionPrompt>
     </owl:NamedIndividual>
     
@@ -2459,6 +2592,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#createdOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#createdOn">
+        <extractionPrompt>An entity was created on a given date.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/ont#drawingApprovedBy -->
 
 
@@ -2552,6 +2694,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#effectiveOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#effectiveOn">
+        <extractionPrompt>An entity becomes effective on a given date.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/ont#elementHasMaterial -->
 
 
@@ -2561,6 +2712,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <relatedFormalProperty rdf:resource="http://schema.org/material"/>
         <extractionPrompt>A &apos;BuildingElement&apos; is made of some &apos;Material&apos;.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#endsOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#endsOn">
+        <extractionPrompt>An entity ends on a given date.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2696,6 +2856,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#hasTemporalMarker -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#hasTemporalMarker">
+        <extractionPrompt>An entity is temporally qualified by a date or time marker.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/ont#ifcPSet -->
 
 
@@ -2738,6 +2907,24 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#BuildingElement"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#interfaceOf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#intersectsWith -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#intersectsWith">
+        <extractionPrompt>A zone or element intersects with another zone or element.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#invalidatedOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#invalidatedOn">
+        <extractionPrompt>An entity became invalid on a given date.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -2983,6 +3170,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     
 
 
+    <!-- https://dev.qaecy.com/ont#signedOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#signedOn">
+        <extractionPrompt>An entity is signed on a given date.</extractionPrompt>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://dev.qaecy.com/ont#siteContainsBuilding -->
 
 
@@ -2991,6 +3187,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <applicableObjectCategories rdf:resource="https://dev.qaecy.com/enum#Building"/>
         <applicableSubjectCategories rdf:resource="https://dev.qaecy.com/enum#Site"/>
         <relatedFormalProperty rdf:resource="https://w3id.org/bot#hasBuilding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.qaecy.com/ont#startsOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://dev.qaecy.com/ont#startsOn">
+        <extractionPrompt>An entity starts on a given date.</extractionPrompt>
     </owl:NamedIndividual>
     
 
@@ -3149,18 +3354,46 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#activityHasEndDate">
-        <rdfs:comment>Relationship that specifies the date that an activity ends.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that an activity ends.</rdfs:comment>
         <rdfs:label xml:lang="en">activity has end date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#activityHasStartDate">
-        <rdfs:comment>Relationship that specifies the date that an activity begins.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:startsOn instead. Relationship that specifies the date that an activity begins.</rdfs:comment>
         <rdfs:label xml:lang="en">activity has start date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#adjacentTo">
+        <rdfs:comment>Relationship that specifies that two things are adjacent to each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">adjacent to</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#approvedOn">
+        <rdfs:comment xml:lang="de">Beziehung, die angibt, wann eine Entität genehmigt wurde.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der angiver, hvornår en entitet blev godkendt.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui indique quand une entité a été approuvée.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che indica quando un&apos;entità è stata approvata.</rdfs:comment>
+        <rdfs:comment>Relationship that specifies when an entity was approved.</rdfs:comment>
+        <rdfs:label xml:lang="fr">approuvé le</rdfs:label>
+        <rdfs:label xml:lang="it">approvato il</rdfs:label>
+        <rdfs:label xml:lang="en">approved on</rdfs:label>
+        <rdfs:label xml:lang="de">genehmigt am</rdfs:label>
+        <rdfs:label xml:lang="da">godkendt den</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#associatedWith">
+        <rdfs:comment xml:lang="de">Beziehung, die starke oder lose Assoziationen zwischen Entitäten beschreibt.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der beskriver stærke eller løse associationer mellem entiteter.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui décrit des associations fortes ou faibles entre des entités.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che descrive associazioni forti o deboli tra entità.</rdfs:comment>
         <rdfs:comment>Relationship that describes strong or loose associations between entities.</rdfs:comment>
         <rdfs:label xml:lang="en">associated with</rdfs:label>
+        <rdfs:label xml:lang="it">associato a</rdfs:label>
+        <rdfs:label xml:lang="da">associeret med</rdfs:label>
+        <rdfs:label xml:lang="fr">associé à</rdfs:label>
+        <rdfs:label xml:lang="de">assoziiert mit</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#author">
@@ -3175,8 +3408,16 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#contains">
+        <rdfs:comment xml:lang="da">Overordnet relation der angiver, at en entitet er en del af noget større.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation de haut niveau indiquant qu&apos;une entité fait partie d&apos;un ensemble plus grand.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione di alto livello che indica che un&apos;entità fa parte di qualcosa di più grande.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Übergeordnete Beziehung, die angibt, dass eine Entität Teil von etwas Größerem ist.</rdfs:comment>
         <rdfs:comment>Top level relationship that indicates that an entity is part of a larger thing.</rdfs:comment>
         <rdfs:label xml:lang="en">contains</rdfs:label>
+        <rdfs:label xml:lang="it">contiene</rdfs:label>
+        <rdfs:label xml:lang="fr">contient</rdfs:label>
+        <rdfs:label xml:lang="de">enthält</rdfs:label>
+        <rdfs:label xml:lang="da">indeholder</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#contractGovernedByJurisdiction">
@@ -3186,18 +3427,21 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#contractHasEndDate">
-        <rdfs:comment>Relationship that specifies the date that a contract is terminated.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that a contract is terminated.</rdfs:comment>
         <rdfs:label xml:lang="en">contract has end date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#contractHasSignatureDate">
-        <rdfs:comment>Relationship that specifies the signature date of a contract.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:signedOn instead. Relationship that specifies the signature date of a contract.</rdfs:comment>
         <rdfs:label xml:lang="en">contract has signature date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#contractHasStartDate">
-        <rdfs:comment>Relationship that specifies the date that a contract becomes effective.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. Relationship that specifies the date that a contract becomes effective.</rdfs:comment>
         <rdfs:label xml:lang="en">contract has start date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#contractInvolvesParty">
@@ -3215,6 +3459,20 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#contractStatesObligation">
         <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:contains instead. The contract involves a certain obligation.</rdfs:comment>
         <rdfs:label xml:lang="en">contract states obligation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#createdOn">
+        <rdfs:comment xml:lang="de">Beziehung, die angibt, wann eine Entität erstellt wurde.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der angiver, hvornår en entitet blev oprettet.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui indique quand une entité a été créée.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che indica quando un&apos;entità è stata creata.</rdfs:comment>
+        <rdfs:comment>Relationship that specifies when an entity was created.</rdfs:comment>
+        <rdfs:label xml:lang="en">created on</rdfs:label>
+        <rdfs:label xml:lang="it">creato il</rdfs:label>
+        <rdfs:label xml:lang="fr">créé le</rdfs:label>
+        <rdfs:label xml:lang="de">erstellt am</rdfs:label>
+        <rdfs:label xml:lang="da">oprettet den</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingApprovedBy">
@@ -3230,13 +3488,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingHasApprovalDate">
-        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was approved.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:approvedOn instead. Relationship that specifies the date that a drawing was approved.</rdfs:comment>
         <rdfs:label xml:lang="en">drawing has approval date</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#drawingHasCreationDate">
-        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was created.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:createdOn instead. Relationship that specifies the date that a drawing was created.</rdfs:comment>
         <rdfs:label xml:lang="en">drawing has creation date</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
@@ -3259,15 +3517,49 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#effectiveOn">
+        <rdfs:comment xml:lang="de">Beziehung, die angibt, wann eine Entität wirksam oder aktiv wird.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der angiver, hvornår en entitet bliver gældende eller aktiv.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui indique quand une entité devient effective ou active.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che indica quando un&apos;entità diventa efficace o attiva.</rdfs:comment>
+        <rdfs:comment>Relationship that specifies when an entity becomes effective or active.</rdfs:comment>
+        <rdfs:label xml:lang="en">effective on</rdfs:label>
+        <rdfs:label xml:lang="it">efficace dal</rdfs:label>
+        <rdfs:label xml:lang="da">gældende fra</rdfs:label>
+        <rdfs:label xml:lang="fr">prend effet le</rdfs:label>
+        <rdfs:label xml:lang="de">wirksam ab</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#elementHasMaterial">
         <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship between a building element and a material.</rdfs:comment>
         <rdfs:label xml:lang="en">element has material</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#endsOn">
+        <rdfs:comment xml:lang="de">Beziehung, die das End-, Beendigungs- oder Ablaufdatum einer Entität angibt.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der angiver slut-, ophørs- eller udløbsdatoen for en entitet.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui indique la date de fin, de résiliation ou d&apos;expiration d&apos;une entité.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che indica la data di fine, cessazione o scadenza di un&apos;entità.</rdfs:comment>
+        <rdfs:comment>Relationship that specifies the end, termination, or expiration date of an entity.</rdfs:comment>
+        <rdfs:label xml:lang="de">endet am</rdfs:label>
+        <rdfs:label xml:lang="en">ends on</rdfs:label>
+        <rdfs:label xml:lang="fr">se termine le</rdfs:label>
+        <rdfs:label xml:lang="da">slutter den</rdfs:label>
+        <rdfs:label xml:lang="it">termina il</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#expressedBy">
+        <rdfs:comment xml:lang="da">Overordnet relation der udtrykker en egenskab eller kvalitet ved en entitet (fx at en tegning udtrykkes ved sin målestok, orientering osv.).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation de haut niveau qui exprime une caractéristique ou une qualité d&apos;une entité (par ex. un dessin est exprimé par son échelle, son orientation, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione di alto livello che esprime una caratteristica o qualità di un&apos;entità (ad esempio un disegno è espresso dalla sua scala, orientamento, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="de">Übergeordnete Beziehung, die eine Eigenschaft oder Qualität einer Entität ausdrückt (z. B. wird eine Zeichnung durch Maßstab, Ausrichtung usw. ausgedrückt).</rdfs:comment>
         <rdfs:comment>Top level relationship that expresses a characteristic or quality of an entity (eg. a drawing is expressed by its scale, orientation etc.).</rdfs:comment>
+        <rdfs:label xml:lang="de">ausgedrückt durch</rdfs:label>
+        <rdfs:label xml:lang="it">espresso da</rdfs:label>
         <rdfs:label xml:lang="en">expressed by</rdfs:label>
+        <rdfs:label xml:lang="fr">exprimé par</rdfs:label>
+        <rdfs:label xml:lang="da">udtrykt ved</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#hasActivityAgent">
@@ -3277,8 +3569,9 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#hasAssociatedDiscipline">
-        <rdfs:comment>Relationship that specifies the discipline associated with a drawing entity or a drawing sheet.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. Relationship that specifies the discipline associated with a drawing entity or a drawing sheet.</rdfs:comment>
         <rdfs:label xml:lang="en">has associated discipline</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#hasContractRole">
@@ -3329,6 +3622,19 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#hasTemporalMarker">
+        <rdfs:comment xml:lang="da">Overordnet relation for tidslig kvalificering af en entitet på tværs af livscyklus-, juridiske- og proceskontekster.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation de haut niveau pour la qualification temporelle d&apos;une entité dans des contextes de cycle de vie, juridiques et de processus.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione di alto livello per la qualificazione temporale di un&apos;entità nei contesti di ciclo di vita, legali e di processo.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Übergeordnete Beziehung zur zeitlichen Qualifizierung einer Entität über Lebenszyklus-, rechtliche und Prozesskontexte hinweg.</rdfs:comment>
+        <rdfs:comment>Top level relationship for temporal qualification of an entity across lifecycle, legal, and process contexts.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a un marqueur temporel</rdfs:label>
+        <rdfs:label xml:lang="it">ha un marcatore temporale</rdfs:label>
+        <rdfs:label xml:lang="da">har tidsmarkør</rdfs:label>
+        <rdfs:label xml:lang="en">has temporal marker</rdfs:label>
+        <rdfs:label xml:lang="de">hat zeitliche Markierung</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#ifcPSet">
         <rdfs:comment xml:lang="en">The name of the Property Set in the IFC file. Official PSets are considered higher quality and SHACL shapes can be applied to evaluate the BIM model quality.</rdfs:comment>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
@@ -3350,8 +3656,34 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <rdfs:label xml:lang="en">interface of</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#intersectsWith">
+        <rdfs:comment>Relationship that specifies that two things intersect (overlap) with each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">intersects with</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#invalidatedOn">
+        <rdfs:comment xml:lang="de">Beziehung, die angibt, wann eine Entität ungültig wurde.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der angiver, hvornår en entitet blev ugyldig.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui indique quand une entité est devenue invalide.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che indica quando un&apos;entità è diventata non valida.</rdfs:comment>
+        <rdfs:comment>Relationship that specifies when an entity became invalid.</rdfs:comment>
+        <rdfs:label xml:lang="en">invalidated on</rdfs:label>
+        <rdfs:label xml:lang="it">invalidato il</rdfs:label>
+        <rdfs:label xml:lang="fr">invalidé le</rdfs:label>
+        <rdfs:label xml:lang="da">ugyldiggjort den</rdfs:label>
+        <rdfs:label xml:lang="de">ungültig ab</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#involves">
+        <rdfs:comment xml:lang="da">Overordnet relation der angiver, at en entitet involverer en anden entitet. Den udtrykker deltagelse eller involvering i en aktivitet eller proces.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation de haut niveau indiquant qu&apos;une entité en implique une autre. Elle exprime la participation ou l&apos;engagement dans une activité ou un processus.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione di alto livello che indica che un&apos;entità coinvolge un&apos;altra entità. Esprime partecipazione o coinvolgimento in un&apos;attività o processo.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Übergeordnete Beziehung, die angibt, dass eine Entität eine andere Entität einbezieht. Sie drückt Teilnahme oder Beteiligung an einer Aktivität oder einem Prozess aus.</rdfs:comment>
         <rdfs:comment>Top level relationship that indicates that an entity involves another entity. It expresses a participation or engagement in some activity or process.</rdfs:comment>
+        <rdfs:label xml:lang="de">bezieht ein</rdfs:label>
+        <rdfs:label xml:lang="it">coinvolge</rdfs:label>
+        <rdfs:label xml:lang="fr">implique</rdfs:label>
+        <rdfs:label xml:lang="da">involverer</rdfs:label>
         <rdfs:label xml:lang="en">involves</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
@@ -3379,8 +3711,16 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#leadsTo">
+        <rdfs:comment xml:lang="da">Overordnet relation der angiver, at en entitet fører til en anden entitet. Den udtrykker en sekventiel eller kausal afhængighed mellem to entiteter.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation de haut niveau indiquant qu&apos;une entité mène à une autre entité. Elle exprime une dépendance séquentielle ou causale entre deux entités.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione di alto livello che indica che un&apos;entità porta a un&apos;altra entità. Esprime una dipendenza sequenziale o causale tra due entità.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Übergeordnete Beziehung, die angibt, dass eine Entität zu einer anderen Entität führt. Sie drückt eine sequenzielle oder kausale Abhängigkeit zwischen zwei Entitäten aus.</rdfs:comment>
         <rdfs:comment>Top level relationship that indicates that an entity leads to another entity. It expresses a sequential or causal dependency between two entities.</rdfs:comment>
+        <rdfs:label xml:lang="da">fører til</rdfs:label>
+        <rdfs:label xml:lang="de">führt zu</rdfs:label>
         <rdfs:label xml:lang="en">leads to</rdfs:label>
+        <rdfs:label xml:lang="fr">mène à</rdfs:label>
+        <rdfs:label xml:lang="it">porta a</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#md5Hash">
@@ -3400,13 +3740,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#obligationHasCondition">
-        <rdfs:comment>A condition associated with a contract obligation.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. A condition associated with a contract obligation.</rdfs:comment>
         <rdfs:label xml:lang="en">contract obligation has contract condition</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#obligationHasEndDate">
-        <rdfs:comment>The end date of a contract obligation.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:endsOn instead. The end date of a contract obligation.</rdfs:comment>
         <rdfs:label xml:lang="en">obligation has end date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#obligationHasResponsibleParty">
@@ -3416,8 +3758,9 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#obligationHasStartDate">
-        <rdfs:comment>The start date of a contract obligation.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. The start date of a contract obligation.</rdfs:comment>
         <rdfs:label xml:lang="en">obligation has start date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#precedesActivity">
@@ -3478,10 +3821,36 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#signedOn">
+        <rdfs:comment xml:lang="de">Beziehung, die das Unterzeichnungsdatum einer Entität angibt, z. B. eines Vertrags.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der angiver underskriftsdatoen for en entitet, f.eks. en kontrakt.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui indique la date de signature d&apos;une entité, par exemple un contrat.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che indica la data di firma di un&apos;entità, ad esempio un contratto.</rdfs:comment>
+        <rdfs:comment>Relationship that specifies the signature date of an entity such as a contract.</rdfs:comment>
+        <rdfs:label xml:lang="it">firmato il</rdfs:label>
+        <rdfs:label xml:lang="en">signed on</rdfs:label>
+        <rdfs:label xml:lang="fr">signé le</rdfs:label>
+        <rdfs:label xml:lang="da">underskrevet den</rdfs:label>
+        <rdfs:label xml:lang="de">unterzeichnet am</rdfs:label>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#siteContainsBuilding">
         <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:contains instead. Relationship that indicates that a building belongs to a site.</rdfs:comment>
         <rdfs:label xml:lang="en">site contains building</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://dev.qaecy.com/ont#startsOn">
+        <rdfs:comment xml:lang="de">Beziehung, die das Startdatum einer Entität in einem Prozesskontext angibt.</rdfs:comment>
+        <rdfs:comment xml:lang="da">Relation der angiver startdatoen for en entitet i en proceskontekst.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui indique la date de début d&apos;une entité dans un contexte de processus.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che indica la data di inizio di un&apos;entità in un contesto di processo.</rdfs:comment>
+        <rdfs:comment>Relationship that specifies the start date of an entity in a process context.</rdfs:comment>
+        <rdfs:label xml:lang="de">beginnt am</rdfs:label>
+        <rdfs:label xml:lang="fr">commence le</rdfs:label>
+        <rdfs:label xml:lang="it">inizia il</rdfs:label>
+        <rdfs:label xml:lang="da">starter den</rdfs:label>
+        <rdfs:label xml:lang="en">starts on</rdfs:label>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#suffix">
@@ -3502,13 +3871,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#zoneHasAdjacentElement">
-        <rdfs:comment>Relationship between a zone/element and an adjacent element.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:adjacentTo instead. Relationship between a zone/element and an adjacent element.</rdfs:comment>
         <rdfs:label xml:lang="en">zone has adjacent element</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</visibleForAgent>
     </rdf:Description>
     <rdf:Description rdf:about="https://dev.qaecy.com/ont#zoneHasElement">
-        <rdfs:comment>Relationship between a zone and a related element.</rdfs:comment>
+        <rdfs:comment>DEPRECATED: This property is outdated. Please use qcy:contains or qcy:adjacentTo instead. Relationship between a zone and a contained or adjacent element.</rdfs:comment>
         <rdfs:label xml:lang="en">zone has element</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <visibleForAgent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</visibleForAgent>
     </rdf:Description>
 </rdf:RDF>

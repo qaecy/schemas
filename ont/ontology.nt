@@ -3,8 +3,8 @@
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Christian Frausing" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
-<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.\n\nThe core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc." .
-<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2026-06-08T14:56:27Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/description> "The QAECY Ontology defines the core knowledge model used by QAECY and the Cue Agent to represent information from Architecture, Engineering, and Construction projects.\n\nThe model is centered around information objects and entity references. Information is represented through FileLocation, InformationObject and Fragment, while project meaning is represented through EntityMention and CanonicalEntity. Entity mentions are resolved to canonical entities, which can be qualified with categories, linked to properties, and connected through explicit relationships.\n\nEntity-to-entity semantics are organized under qcy:relatedEntity. The recommended top-level relation families are: qcy:contains (part-whole), qcy:leadsTo (order/causal flow), qcy:involves (participation/roles), qcy:expressedBy (descriptive qualification), and qcy:associatedWith (non-hierarchical association). Temporal qualification is modeled through qcy:hasTemporalMarker and specific sub-properties (for example startsOn, endsOn, effectiveOn, signedOn, createdOn, approvedOn, invalidatedOn).\n\nCategories are managed through qcy:Category and its sub-types: qcy:EntityCategory, qcy:ContentCategory, qcy:MimeCategory, qcy:ProviderType, and qcy:RelationCategory. These are intended as controlled vocabularies for classification and context, and should be extended by adding new SKOS concepts, typically in the qcy-e namespace or in project-specific enum namespaces.\n\nProject-specific relation specializations are allowed and encouraged in separate namespaces when needed. New properties should be declared as sub-properties of one of the top-level qcy:relatedEntity families (or qcy:hasTemporalMarker for temporal cases), and should define labels, comments, and applicable subject/object/content categories. This keeps the QAECY core stable while enabling domain-specific precision per project namespace." .
+<https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/modified> "2026-06-17T08:56:14Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/ont#> <http://purl.org/dc/terms/title> "The QAECY Ontology"@en .
 <https://dev.qaecy.com/ont#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" .
 <https://dev.qaecy.com/ont#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
@@ -60,13 +60,13 @@
 # 
 # https://dev.qaecy.com/ont#activityHasEndDate
 <https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#endsOn> .
 <https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#activityHasStartDate
 <https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#startsOn> .
 <https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -77,6 +77,13 @@
 <https://dev.qaecy.com/ont#adjacentFragment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between two fragments that are adjacent within the shared parent information object." .
 <https://dev.qaecy.com/ont#adjacentFragment> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent fragment"@en .
 <https://dev.qaecy.com/ont#adjacentFragment> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://dev.qaecy.com/ont#adjacentTo
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#associatedWith> .
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#alternativeRepresentation
 <https://dev.qaecy.com/ont#alternativeRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -119,6 +126,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#applicableSubjectCategories> <http://www.w3.org/2000/01/rdf-schema#label> "applicable subject categories"@en .
 <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+# https://dev.qaecy.com/ont#approvedOn
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasTemporalMarker> .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#associatedWith
 <https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
@@ -159,19 +172,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#contractHasEndDate
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#endsOn> .
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#contractHasSignatureDate
 <https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#signedOn> .
 <https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#contractHasStartDate
 <https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#effectiveOn> .
 <https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -193,6 +206,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
+# https://dev.qaecy.com/ont#createdOn
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasTemporalMarker> .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#drawingApprovedBy
 <https://dev.qaecy.com/ont#drawingApprovedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#drawingApprovedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#reviewer> .
@@ -207,13 +226,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#drawingHasApprovalDate
 <https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#expressedBy> .
+<https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#approvedOn> .
 <https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#drawingHasCreationDate
 <https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#expressedBy> .
+<https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#createdOn> .
 <https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -235,11 +254,23 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#drawingHasScale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#drawingHasScale> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
+# https://dev.qaecy.com/ont#effectiveOn
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasTemporalMarker> .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#elementHasMaterial
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#expressedBy> .
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
+# https://dev.qaecy.com/ont#endsOn
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasTemporalMarker> .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#expressedBy
 <https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -255,7 +286,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#hasAssociatedDiscipline
 <https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#associatedWith> .
 <https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -409,6 +440,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
+# https://dev.qaecy.com/ont#hasTemporalMarker
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#expressedBy> .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#includesActivity
 <https://dev.qaecy.com/ont#includesActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#includesActivity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
@@ -426,6 +463,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
+# https://dev.qaecy.com/ont#intersectsWith
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#associatedWith> .
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
+# https://dev.qaecy.com/ont#invalidatedOn
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasTemporalMarker> .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#involves
 <https://dev.qaecy.com/ont#involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -468,13 +518,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#obligationHasCondition
 <https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#associatedWith> .
 <https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#obligationHasEndDate
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#endsOn> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -486,7 +536,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#obligationHasStartDate
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#effectiveOn> .
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
@@ -598,6 +648,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
+# https://dev.qaecy.com/ont#signedOn
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasTemporalMarker> .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#similarTo
 <https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#similarTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
@@ -613,6 +669,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
+# https://dev.qaecy.com/ont#startsOn
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#hasTemporalMarker> .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
+# 
 # https://dev.qaecy.com/ont#zoneContainsElement
 <https://dev.qaecy.com/ont#zoneContainsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://dev.qaecy.com/ont#zoneContainsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
@@ -627,12 +689,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://dev.qaecy.com/ont#zoneHasAdjacentElement
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
+<https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#adjacentTo> .
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
 # 
 # https://dev.qaecy.com/ont#zoneHasElement
 <https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#contains> .
 <https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://dev.qaecy.com/ont#relatedEntity> .
 <https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/ont#EntityReference> .
 <https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://dev.qaecy.com/ont#EntityReference> .
@@ -1304,12 +1367,16 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#activityHasStartDate> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Activity> .
 <https://dev.qaecy.com/ont#activityHasStartDate> <https://dev.qaecy.com/ont#extractionPrompt> "An 'Activity' has a starting 'Date'." .
 # 
+# https://dev.qaecy.com/ont#adjacentTo
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#adjacentTo> <https://dev.qaecy.com/ont#extractionPrompt> "A zone or element is adjacent to another zone or element." .
+# 
+# https://dev.qaecy.com/ont#approvedOn
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#approvedOn> <https://dev.qaecy.com/ont#extractionPrompt> "An entity was approved on a given date." .
+# 
 # https://dev.qaecy.com/ont#associatedWith
 <https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://dev.qaecy.com/ont#associatedWith> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Organization> .
-<https://dev.qaecy.com/ont#associatedWith> <https://dev.qaecy.com/ont#applicableObjectCategories> <https://dev.qaecy.com/enum#Person> .
-<https://dev.qaecy.com/ont#associatedWith> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Organization> .
-<https://dev.qaecy.com/ont#associatedWith> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Person> .
 <https://dev.qaecy.com/ont#associatedWith> <https://dev.qaecy.com/ont#extractionPrompt> "An entity is associated with another entity." .
 # 
 # https://dev.qaecy.com/ont#author
@@ -1383,6 +1450,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Contract> .
 <https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#extractionPrompt> "A 'Contract' states a certain 'ContractObligation'." .
 # 
+# https://dev.qaecy.com/ont#createdOn
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#createdOn> <https://dev.qaecy.com/ont#extractionPrompt> "An entity was created on a given date." .
+# 
 # https://dev.qaecy.com/ont#drawingApprovedBy
 <https://dev.qaecy.com/ont#drawingApprovedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#drawingApprovedBy> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
@@ -1441,6 +1512,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#drawingHasScale> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#DrawingSheet> .
 <https://dev.qaecy.com/ont#drawingHasScale> <https://dev.qaecy.com/ont#extractionPrompt> "A 'DrawingSheet' or a 'DrawingEntity' is designed in this 'DrawingScale'." .
 # 
+# https://dev.qaecy.com/ont#effectiveOn
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#effectiveOn> <https://dev.qaecy.com/ont#extractionPrompt> "An entity becomes effective on a given date." .
+# 
 # https://dev.qaecy.com/ont#elementHasMaterial
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#elementHasMaterial> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
@@ -1448,6 +1523,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#elementHasMaterial> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#BuildingElement> .
 <https://dev.qaecy.com/ont#elementHasMaterial> <https://dev.qaecy.com/ont#relatedFormalProperty> <http://schema.org/material> .
 <https://dev.qaecy.com/ont#elementHasMaterial> <https://dev.qaecy.com/ont#extractionPrompt> "A 'BuildingElement' is made of some 'Material'." .
+# 
+# https://dev.qaecy.com/ont#endsOn
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#endsOn> <https://dev.qaecy.com/ont#extractionPrompt> "An entity ends on a given date." .
 # 
 # https://dev.qaecy.com/ont#expressedBy
 <https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1526,6 +1605,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasSubElement> <https://dev.qaecy.com/ont#relatedFormalProperty> <https://w3id.org/bot#hasSubElement> .
 <https://w3id.org/bot#hasSubElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
+# https://dev.qaecy.com/ont#hasTemporalMarker
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <https://dev.qaecy.com/ont#extractionPrompt> "An entity is temporally qualified by a date or time marker." .
+# 
 # https://dev.qaecy.com/ont#ifcPSet
 <https://dev.qaecy.com/ont#ifcPSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#ifcPSet> <https://dev.qaecy.com/ont#label> "IFC Property Set" .
@@ -1552,6 +1635,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#interfaceOf> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#BuildingElement> .
 <https://dev.qaecy.com/ont#interfaceOf> <https://dev.qaecy.com/ont#relatedFormalProperty> <https://w3id.org/bot#interfaceOf> .
 <https://w3id.org/bot#interfaceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://dev.qaecy.com/ont#intersectsWith
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#intersectsWith> <https://dev.qaecy.com/ont#extractionPrompt> "A zone or element intersects with another zone or element." .
+# 
+# https://dev.qaecy.com/ont#invalidatedOn
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#invalidatedOn> <https://dev.qaecy.com/ont#extractionPrompt> "An entity became invalid on a given date." .
 # 
 # https://dev.qaecy.com/ont#involves
 <https://dev.qaecy.com/ont#involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1689,6 +1780,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#DrawingSheet> .
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <https://dev.qaecy.com/ont#extractionPrompt> "A 'DrawingSheet' contains a 'DrawingEntity'." .
 # 
+# https://dev.qaecy.com/ont#signedOn
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#signedOn> <https://dev.qaecy.com/ont#extractionPrompt> "An entity is signed on a given date." .
+# 
 # https://dev.qaecy.com/ont#siteContainsBuilding
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
@@ -1696,6 +1791,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#siteContainsBuilding> <https://dev.qaecy.com/ont#applicableSubjectCategories> <https://dev.qaecy.com/enum#Site> .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <https://dev.qaecy.com/ont#relatedFormalProperty> <https://w3id.org/bot#hasBuilding> .
 <https://w3id.org/bot#hasBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://dev.qaecy.com/ont#startsOn
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/ont#startsOn> <https://dev.qaecy.com/ont#extractionPrompt> "An entity starts on a given date." .
 # 
 # https://dev.qaecy.com/ont#suffix
 <https://dev.qaecy.com/ont#suffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1785,16 +1884,42 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#XYWHSelector> <http://www.w3.org/2000/01/rdf-schema#label> "XYWH Selector"@en .
 <https://dev.qaecy.com/ont#XYWHSelector> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the date that an activity ends." .
+<https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that an activity ends." .
 <https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "activity has end date"@en .
+<https://dev.qaecy.com/ont#activityHasEndDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#activityHasEndDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the date that an activity begins." .
+<https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:startsOn instead. Relationship that specifies the date that an activity begins." .
 <https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "activity has start date"@en .
+<https://dev.qaecy.com/ont#activityHasStartDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#activityHasStartDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies that two things are adjacent to each other." .
+<https://dev.qaecy.com/ont#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent to"@en .
+<https://dev.qaecy.com/ont#adjacentTo> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die angibt, wann eine Entität genehmigt wurde."@de .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der angiver, hvornår en entitet blev godkendt."@da .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui indique quand une entité a été approuvée."@fr .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che indica quando un'entità è stata approvata."@it .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies when an entity was approved." .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#label> "approuvé le"@fr .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#label> "approvato il"@it .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#label> "approved on"@en .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#label> "genehmigt am"@de .
+<https://dev.qaecy.com/ont#approvedOn> <http://www.w3.org/2000/01/rdf-schema#label> "godkendt den"@da .
+<https://dev.qaecy.com/ont#approvedOn> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die starke oder lose Assoziationen zwischen Entitäten beschreibt."@de .
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der beskriver stærke eller løse associationer mellem entiteter."@da .
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui décrit des associations fortes ou faibles entre des entités."@fr .
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che descrive associazioni forti o deboli tra entità."@it .
 <https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that describes strong or loose associations between entities." .
 <https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associated with"@en .
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associato a"@it .
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associeret med"@da .
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associé à"@fr .
+<https://dev.qaecy.com/ont#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "assoziiert mit"@de .
 <https://dev.qaecy.com/ont#associatedWith> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#author> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies that a person or organization is an author of the entity." .
@@ -1806,8 +1931,16 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#buildingContainsStorey> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#buildingContainsStorey> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Overordnet relation der angiver, at en entitet er en del af noget større."@da .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation de haut niveau indiquant qu'une entité fait partie d'un ensemble plus grand."@fr .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione di alto livello che indica che un'entità fa parte di qualcosa di più grande."@it .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Übergeordnete Beziehung, die angibt, dass eine Entität Teil von etwas Größerem ist."@de .
 <https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Top level relationship that indicates that an entity is part of a larger thing." .
 <https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contiene"@it .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contient"@fr .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#label> "enthält"@de .
+<https://dev.qaecy.com/ont#contains> <http://www.w3.org/2000/01/rdf-schema#label> "indeholder"@da .
 <https://dev.qaecy.com/ont#contains> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:involves instead. A jurisdiction that governs the contract." .
@@ -1815,16 +1948,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#contractGovernedByJurisdiction> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the date that a contract is terminated." .
+<https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that a contract is terminated." .
 <https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "contract has end date"@en .
+<https://dev.qaecy.com/ont#contractHasEndDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#contractHasEndDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the signature date of a contract." .
+<https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:signedOn instead. Relationship that specifies the signature date of a contract." .
 <https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2000/01/rdf-schema#label> "contract has signature date"@en .
+<https://dev.qaecy.com/ont#contractHasSignatureDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#contractHasSignatureDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the date that a contract becomes effective." .
+<https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. Relationship that specifies the date that a contract becomes effective." .
 <https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "contract has start date"@en .
+<https://dev.qaecy.com/ont#contractHasStartDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#contractHasStartDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#contractInvolvesParty> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:involves instead. A person or organization is a part of the contract agreement." .
@@ -1839,7 +1975,20 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 <https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:contains instead. The contract involves a certain obligation." .
 <https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2000/01/rdf-schema#label> "contract states obligation"@en .
+<https://dev.qaecy.com/ont#contractStatesObligation> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#contractStatesObligation> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die angibt, wann eine Entität erstellt wurde."@de .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der angiver, hvornår en entitet blev oprettet."@da .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui indique quand une entité a été créée."@fr .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che indica quando un'entità è stata creata."@it .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies when an entity was created." .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#label> "created on"@en .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#label> "creato il"@it .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#label> "créé le"@fr .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#label> "erstellt am"@de .
+<https://dev.qaecy.com/ont#createdOn> <http://www.w3.org/2000/01/rdf-schema#label> "oprettet den"@da .
+<https://dev.qaecy.com/ont#createdOn> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#drawingApprovedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:reviewer instead. Relationship that specifies the entity that approved a drawing entity or drawing sheet." .
 <https://dev.qaecy.com/ont#drawingApprovedBy> <http://www.w3.org/2000/01/rdf-schema#label> "drawing approved by"@en .
@@ -1851,12 +2000,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#drawingCreatedBy> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#drawingCreatedBy> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was approved." .
+<https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:approvedOn instead. Relationship that specifies the date that a drawing was approved." .
 <https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2000/01/rdf-schema#label> "drawing has approval date"@en .
 <https://dev.qaecy.com/ont#drawingHasApprovalDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#drawingHasApprovalDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was created." .
+<https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:createdOn instead. Relationship that specifies the date that a drawing was created." .
 <https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2000/01/rdf-schema#label> "drawing has creation date"@en .
 <https://dev.qaecy.com/ont#drawingHasCreationDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#drawingHasCreationDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
@@ -1876,13 +2025,45 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#drawingHasScale> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#drawingHasScale> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die angibt, wann eine Entität wirksam oder aktiv wird."@de .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der angiver, hvornår en entitet bliver gældende eller aktiv."@da .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui indique quand une entité devient effective ou active."@fr .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che indica quando un'entità diventa efficace o attiva."@it .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies when an entity becomes effective or active." .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#label> "effective on"@en .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#label> "efficace dal"@it .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#label> "gældende fra"@da .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#label> "prend effet le"@fr .
+<https://dev.qaecy.com/ont#effectiveOn> <http://www.w3.org/2000/01/rdf-schema#label> "wirksam ab"@de .
+<https://dev.qaecy.com/ont#effectiveOn> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship between a building element and a material." .
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "element has material"@en .
 <https://dev.qaecy.com/ont#elementHasMaterial> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#elementHasMaterial> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die das End-, Beendigungs- oder Ablaufdatum einer Entität angibt."@de .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der angiver slut-, ophørs- eller udløbsdatoen for en entitet."@da .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui indique la date de fin, de résiliation ou d'expiration d'une entité."@fr .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che indica la data di fine, cessazione o scadenza di un'entità."@it .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the end, termination, or expiration date of an entity." .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#label> "endet am"@de .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#label> "ends on"@en .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#label> "se termine le"@fr .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#label> "slutter den"@da .
+<https://dev.qaecy.com/ont#endsOn> <http://www.w3.org/2000/01/rdf-schema#label> "termina il"@it .
+<https://dev.qaecy.com/ont#endsOn> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Overordnet relation der udtrykker en egenskab eller kvalitet ved en entitet (fx at en tegning udtrykkes ved sin målestok, orientering osv.)."@da .
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation de haut niveau qui exprime une caractéristique ou une qualité d'une entité (par ex. un dessin est exprimé par son échelle, son orientation, etc.)."@fr .
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione di alto livello che esprime una caratteristica o qualità di un'entità (ad esempio un disegno è espresso dalla sua scala, orientamento, ecc.)."@it .
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Übergeordnete Beziehung, die eine Eigenschaft oder Qualität einer Entität ausdrückt (z. B. wird eine Zeichnung durch Maßstab, Ausrichtung usw. ausgedrückt)."@de .
 <https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Top level relationship that expresses a characteristic or quality of an entity (eg. a drawing is expressed by its scale, orientation etc.)." .
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#label> "ausgedrückt durch"@de .
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#label> "espresso da"@it .
 <https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#label> "expressed by"@en .
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#label> "exprimé par"@fr .
+<https://dev.qaecy.com/ont#expressedBy> <http://www.w3.org/2000/01/rdf-schema#label> "udtrykt ved"@da .
 <https://dev.qaecy.com/ont#expressedBy> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#hasActivityAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:involves instead. Relationship between an agent (Person, Organization) and an Activity." .
@@ -1890,8 +2071,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasActivityAgent> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#hasActivityAgent> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the discipline associated with a drawing entity or a drawing sheet." .
+<https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. Relationship that specifies the discipline associated with a drawing entity or a drawing sheet." .
 <https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2000/01/rdf-schema#label> "has associated discipline"@en .
+<https://dev.qaecy.com/ont#hasAssociatedDiscipline> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#hasAssociatedDiscipline> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#hasContractRole> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. Relationship stating that a person or organization has a role in the contract." .
@@ -1934,6 +2116,18 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#hasSubElement> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#hasSubElement> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#comment> "Overordnet relation for tidslig kvalificering af en entitet på tværs af livscyklus-, juridiske- og proceskontekster."@da .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation de haut niveau pour la qualification temporelle d'une entité dans des contextes de cycle de vie, juridiques et de processus."@fr .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione di alto livello per la qualificazione temporale di un'entità nei contesti di ciclo di vita, legali e di processo."@it .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#comment> "Übergeordnete Beziehung zur zeitlichen Qualifizierung einer Entität über Lebenszyklus-, rechtliche und Prozesskontexte hinweg."@de .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#comment> "Top level relationship for temporal qualification of an entity across lifecycle, legal, and process contexts." .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#label> "a un marqueur temporel"@fr .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#label> "ha un marcatore temporale"@it .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#label> "har tidsmarkør"@da .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#label> "has temporal marker"@en .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <http://www.w3.org/2000/01/rdf-schema#label> "hat zeitliche Markierung"@de .
+<https://dev.qaecy.com/ont#hasTemporalMarker> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 <https://dev.qaecy.com/ont#ifcPSet> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the Property Set in the IFC file. Official PSets are considered higher quality and SHACL shapes can be applied to evaluate the BIM model quality."@en .
 <https://dev.qaecy.com/ont#ifcPSet> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
@@ -1951,7 +2145,31 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "interface of"@en .
 <https://dev.qaecy.com/ont#interfaceOf> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies that two things intersect (overlap) with each other." .
+<https://dev.qaecy.com/ont#intersectsWith> <http://www.w3.org/2000/01/rdf-schema#label> "intersects with"@en .
+<https://dev.qaecy.com/ont#intersectsWith> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die angibt, wann eine Entität ungültig wurde."@de .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der angiver, hvornår en entitet blev ugyldig."@da .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui indique quand une entité est devenue invalide."@fr .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che indica quando un'entità è diventata non valida."@it .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies when an entity became invalid." .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "invalidated on"@en .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "invalidato il"@it .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "invalidé le"@fr .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "ugyldiggjort den"@da .
+<https://dev.qaecy.com/ont#invalidatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "ungültig ab"@de .
+<https://dev.qaecy.com/ont#invalidatedOn> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#comment> "Overordnet relation der angiver, at en entitet involverer en anden entitet. Den udtrykker deltagelse eller involvering i en aktivitet eller proces."@da .
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation de haut niveau indiquant qu'une entité en implique une autre. Elle exprime la participation ou l'engagement dans une activité ou un processus."@fr .
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione di alto livello che indica che un'entità coinvolge un'altra entità. Esprime partecipazione o coinvolgimento in un'attività o processo."@it .
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#comment> "Übergeordnete Beziehung, die angibt, dass eine Entität eine andere Entität einbezieht. Sie drückt Teilnahme oder Beteiligung an einer Aktivität oder einem Prozess aus."@de .
 <https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#comment> "Top level relationship that indicates that an entity involves another entity. It expresses a participation or engagement in some activity or process." .
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#label> "bezieht ein"@de .
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#label> "coinvolge"@it .
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#label> "implique"@fr .
+<https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#label> "involverer"@da .
 <https://dev.qaecy.com/ont#involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .
 <https://dev.qaecy.com/ont#involves> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
@@ -1974,8 +2192,16 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
 <https://dev.qaecy.com/ont#language> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Overordnet relation der angiver, at en entitet fører til en anden entitet. Den udtrykker en sekventiel eller kausal afhængighed mellem to entiteter."@da .
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation de haut niveau indiquant qu'une entité mène à une autre entité. Elle exprime une dépendance séquentielle ou causale entre deux entités."@fr .
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione di alto livello che indica che un'entità porta a un'altra entità. Esprime una dipendenza sequenziale o causale tra due entità."@it .
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Übergeordnete Beziehung, die angibt, dass eine Entität zu einer anderen Entität führt. Sie drückt eine sequenzielle oder kausale Abhängigkeit zwischen zwei Entitäten aus."@de .
 <https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Top level relationship that indicates that an entity leads to another entity. It expresses a sequential or causal dependency between two entities." .
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "fører til"@da .
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "führt zu"@de .
 <https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "leads to"@en .
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "mène à"@fr .
+<https://dev.qaecy.com/ont#leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "porta a"@it .
 <https://dev.qaecy.com/ont#leadsTo> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#md5Hash> <http://www.w3.org/2000/01/rdf-schema#comment> "The 32 character MD5 hash in lower case hexadecimals (empty string = d41d8cd98f00b204e9800998ecf8427e)"@en .
@@ -1991,12 +2217,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#mime> <http://www.w3.org/2000/01/rdf-schema#label> "mime"@en .
 <https://dev.qaecy.com/ont#mime> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition associated with a contract obligation." .
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. A condition associated with a contract obligation." .
 <https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2000/01/rdf-schema#label> "contract obligation has contract condition"@en .
+<https://dev.qaecy.com/ont#obligationHasCondition> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#obligationHasCondition> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The end date of a contract obligation." .
+<https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. The end date of a contract obligation." .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "obligation has end date"@en .
+<https://dev.qaecy.com/ont#obligationHasEndDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#obligationHasEndDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:involves instead. The obligation is undertaken by a certain party." .
@@ -2004,8 +2232,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#obligationHasResponsibleParty> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#obligationHasResponsibleParty> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The start date of a contract obligation." .
+<https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. The start date of a contract obligation." .
 <https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "obligation has start date"@en .
+<https://dev.qaecy.com/ont#obligationHasStartDate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#obligationHasStartDate> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#precedesActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:leadsTo instead. Relationship between an activity and a preceding activity." .
@@ -2056,10 +2285,34 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#sheetContainsDrawing> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die das Unterzeichnungsdatum einer Entität angibt, z. B. eines Vertrags."@de .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der angiver underskriftsdatoen for en entitet, f.eks. en kontrakt."@da .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui indique la date de signature d'une entité, par exemple un contrat."@fr .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che indica la data di firma di un'entità, ad esempio un contratto."@it .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the signature date of an entity such as a contract." .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#label> "firmato il"@it .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#label> "signed on"@en .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#label> "signé le"@fr .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#label> "underskrevet den"@da .
+<https://dev.qaecy.com/ont#signedOn> <http://www.w3.org/2000/01/rdf-schema#label> "unterzeichnet am"@de .
+<https://dev.qaecy.com/ont#signedOn> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:contains instead. Relationship that indicates that a building belongs to a site." .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "site contains building"@en .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#siteContainsBuilding> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung, die das Startdatum einer Entität in einem Prozesskontext angibt."@de .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation der angiver startdatoen for en entitet i en proceskontekst."@da .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation qui indique la date de début d'une entité dans un contexte de processus."@fr .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relazione che indica la data di inizio di un'entità in un contesto di processo."@it .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that specifies the start date of an entity in a process context." .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#label> "beginnt am"@de .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#label> "commence le"@fr .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#label> "inizia il"@it .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#label> "starter den"@da .
+<https://dev.qaecy.com/ont#startsOn> <http://www.w3.org/2000/01/rdf-schema#label> "starts on"@en .
+<https://dev.qaecy.com/ont#startsOn> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 <https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#comment> "The file suffix including dot (ex: \".pdf\")"@en .
 <https://dev.qaecy.com/ont#suffix> <http://www.w3.org/2000/01/rdf-schema#label> "file suffix"@en .
@@ -2075,12 +2328,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://dev.qaecy.com/ont#zoneContainsSpace> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#zoneContainsSpace> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone/element and an adjacent element." .
+<https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:adjacentTo instead. Relationship between a zone/element and an adjacent element." .
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "zone has adjacent element"@en .
+<https://dev.qaecy.com/ont#zoneHasAdjacentElement> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#zoneHasAdjacentElement> <https://dev.qaecy.com/ont#visibleForAgent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-<https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a zone and a related element." .
+<https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "DEPRECATED: This property is outdated. Please use qcy:contains or qcy:adjacentTo instead. Relationship between a zone and a contained or adjacent element." .
 <https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2000/01/rdf-schema#label> "zone has element"@en .
+<https://dev.qaecy.com/ont#zoneHasElement> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://dev.qaecy.com/ont#zoneHasElement> <https://dev.qaecy.com/ont#visibleForAgent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -11,10 +11,16 @@
                               <http://purl.org/dc/terms/creator> "Christian Frausing" ,
                                                                  "Mads Holten Rasmussen" ,
                                                                  "Manos Argyris" ;
-                              <http://purl.org/dc/terms/description> """The QAECY Ontology defines the terminology used by QAECY and the Cue Agent to provide meaningful insights in Architecture, Engineering and Construction projects.
+                              <http://purl.org/dc/terms/description> """The QAECY Ontology defines the core knowledge model used by QAECY and the Cue Agent to represent information from Architecture, Engineering, and Construction projects.
 
-The core concepts File, FileContent, Fragment and NamedEntity are core to our understanding of the document landscape around any built asset or projects in general. Some concepts are strongly coupled with other well-defined concepts in broadly adopted ontologies and we have a strong focus on establishing a knowledge graph that can be easily translated to BOT, Brick, REC etc.""" ;
-                              <http://purl.org/dc/terms/modified> "2026-06-08T14:56:27Z"^^xsd:dateTime ;
+The model is centered around information objects and entity references. Information is represented through FileLocation, InformationObject and Fragment, while project meaning is represented through EntityMention and CanonicalEntity. Entity mentions are resolved to canonical entities, which can be qualified with categories, linked to properties, and connected through explicit relationships.
+
+Entity-to-entity semantics are organized under qcy:relatedEntity. The recommended top-level relation families are: qcy:contains (part-whole), qcy:leadsTo (order/causal flow), qcy:involves (participation/roles), qcy:expressedBy (descriptive qualification), and qcy:associatedWith (non-hierarchical association). Temporal qualification is modeled through qcy:hasTemporalMarker and specific sub-properties (for example startsOn, endsOn, effectiveOn, signedOn, createdOn, approvedOn, invalidatedOn).
+
+Categories are managed through qcy:Category and its sub-types: qcy:EntityCategory, qcy:ContentCategory, qcy:MimeCategory, qcy:ProviderType, and qcy:RelationCategory. These are intended as controlled vocabularies for classification and context, and should be extended by adding new SKOS concepts, typically in the qcy-e namespace or in project-specific enum namespaces.
+
+Project-specific relation specializations are allowed and encouraged in separate namespaces when needed. New properties should be declared as sub-properties of one of the top-level qcy:relatedEntity families (or qcy:hasTemporalMarker for temporal cases), and should define labels, comments, and applicable subject/object/content categories. This keeps the QAECY core stable while enabling domain-specific precision per project namespace.""" ;
+                              <http://purl.org/dc/terms/modified> "2026-06-17T08:56:14Z"^^xsd:dateTime ;
                               <http://purl.org/dc/terms/title> "The QAECY Ontology"@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy" ;
                               owl:versionInfo "0.0.2" .
@@ -70,14 +76,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#activityHasEndDate
 :activityHasEndDate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:subPropertyOf :endsOn ;
                     rdfs:domain :EntityReference ;
                     rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#activityHasStartDate
 :activityHasStartDate rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:subPropertyOf :startsOn ;
                       rdfs:domain :EntityReference ;
                       rdfs:range :EntityReference .
 
@@ -89,6 +95,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                   rdfs:comment "Relationship between two fragments that are adjacent within the shared parent information object." ;
                   rdfs:label "adjacent fragment"@en ;
                   :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#adjacentTo
+:adjacentTo rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :associatedWith ;
+            rdf:type owl:SymmetricProperty ;
+            rdfs:domain :EntityReference ;
+            rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#alternativeRepresentation
@@ -129,6 +143,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                              rdfs:comment "Relationship between a qcy:relatedEntity sub-property and one or more qcy:EntityCategory. This property is used to specify the categories that are applicable to the subject of the relationship." ;
                              rdfs:label "applicable subject categories"@en ;
                              :visibleForAgent "false"^^xsd:boolean .
+
+
+###  https://dev.qaecy.com/ont#approvedOn
+:approvedOn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasTemporalMarker ;
+            rdfs:domain :EntityReference ;
+            rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#associatedWith
@@ -177,21 +198,21 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#contractHasEndDate
 :contractHasEndDate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :relatedEntity ;
+                    rdfs:subPropertyOf :endsOn ;
                     rdfs:domain :EntityReference ;
                     rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#contractHasSignatureDate
 :contractHasSignatureDate rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf :relatedEntity ;
+                          rdfs:subPropertyOf :signedOn ;
                           rdfs:domain :EntityReference ;
                           rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#contractHasStartDate
 :contractHasStartDate rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:subPropertyOf :effectiveOn ;
                       rdfs:domain :EntityReference ;
                       rdfs:range :EntityReference .
 
@@ -217,6 +238,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                           rdfs:range :EntityReference .
 
 
+###  https://dev.qaecy.com/ont#createdOn
+:createdOn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasTemporalMarker ;
+           rdfs:domain :EntityReference ;
+           rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#drawingApprovedBy
 :drawingApprovedBy rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :reviewer ;
@@ -233,14 +261,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#drawingHasApprovalDate
 :drawingHasApprovalDate rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :expressedBy ;
+                        rdfs:subPropertyOf :approvedOn ;
                         rdfs:domain :EntityReference ;
                         rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#drawingHasCreationDate
 :drawingHasCreationDate rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :expressedBy ;
+                        rdfs:subPropertyOf :createdOn ;
                         rdfs:domain :EntityReference ;
                         rdfs:range :EntityReference .
 
@@ -266,11 +294,25 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                  rdfs:range :EntityReference .
 
 
+###  https://dev.qaecy.com/ont#effectiveOn
+:effectiveOn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasTemporalMarker ;
+             rdfs:domain :EntityReference ;
+             rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#elementHasMaterial
 :elementHasMaterial rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :expressedBy ;
                     rdfs:domain :EntityReference ;
                     rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#endsOn
+:endsOn rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasTemporalMarker ;
+        rdfs:domain :EntityReference ;
+        rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#expressedBy
@@ -289,7 +331,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#hasAssociatedDiscipline
 :hasAssociatedDiscipline rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :relatedEntity ;
+                         rdfs:subPropertyOf :associatedWith ;
                          rdfs:domain :EntityReference ;
                          rdfs:range :EntityReference .
 
@@ -463,6 +505,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                rdfs:range :EntityReference .
 
 
+###  https://dev.qaecy.com/ont#hasTemporalMarker
+:hasTemporalMarker rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :expressedBy ;
+                   rdfs:domain :EntityReference ;
+                   rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#includesActivity
 :includesActivity rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :contains ;
@@ -482,6 +531,21 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
              rdfs:subPropertyOf :relatedEntity ;
              rdfs:domain :EntityReference ;
              rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#intersectsWith
+:intersectsWith rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :associatedWith ;
+                rdf:type owl:SymmetricProperty ;
+                rdfs:domain :EntityReference ;
+                rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#invalidatedOn
+:invalidatedOn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasTemporalMarker ;
+               rdfs:domain :EntityReference ;
+               rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#involves
@@ -531,14 +595,14 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#obligationHasCondition
 :obligationHasCondition rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:subPropertyOf :associatedWith ;
                         rdfs:domain :EntityReference ;
                         rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#obligationHasEndDate
 :obligationHasEndDate rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :relatedEntity ;
+                      rdfs:subPropertyOf :endsOn ;
                       rdfs:domain :EntityReference ;
                       rdfs:range :EntityReference .
 
@@ -552,7 +616,7 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#obligationHasStartDate
 :obligationHasStartDate rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:subPropertyOf :effectiveOn ;
                         rdfs:domain :EntityReference ;
                         rdfs:range :EntityReference .
 
@@ -681,6 +745,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       rdfs:range :EntityReference .
 
 
+###  https://dev.qaecy.com/ont#signedOn
+:signedOn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasTemporalMarker ;
+          rdfs:domain :EntityReference ;
+          rdfs:range :EntityReference .
+
+
 ###  https://dev.qaecy.com/ont#similarTo
 :similarTo rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :relatedEntity ;
@@ -696,6 +767,13 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
                       rdfs:subPropertyOf :contains ;
                       rdfs:domain :EntityReference ;
                       rdfs:range :EntityReference .
+
+
+###  https://dev.qaecy.com/ont#startsOn
+:startsOn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasTemporalMarker ;
+          rdfs:domain :EntityReference ;
+          rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#zoneContainsElement
@@ -714,14 +792,15 @@ The core concepts File, FileContent, Fragment and NamedEntity are core to our un
 
 ###  https://dev.qaecy.com/ont#zoneHasAdjacentElement
 :zoneHasAdjacentElement rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :relatedEntity ;
+                        rdfs:subPropertyOf :adjacentTo ;
                         rdfs:domain :EntityReference ;
                         rdfs:range :EntityReference .
 
 
 ###  https://dev.qaecy.com/ont#zoneHasElement
 :zoneHasElement rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :relatedEntity ;
+                rdfs:subPropertyOf :contains ,
+                                   :relatedEntity ;
                 rdfs:domain :EntityReference ;
                 rdfs:range :EntityReference .
 
@@ -1494,12 +1573,18 @@ owl:ObjectProperty rdf:type owl:Class .
                       :extractionPrompt "An 'Activity' has a starting 'Date'." .
 
 
+###  https://dev.qaecy.com/ont#adjacentTo
+:adjacentTo rdf:type owl:NamedIndividual ;
+            :extractionPrompt "A zone or element is adjacent to another zone or element." .
+
+
+###  https://dev.qaecy.com/ont#approvedOn
+:approvedOn rdf:type owl:NamedIndividual ;
+            :extractionPrompt "An entity was approved on a given date." .
+
+
 ###  https://dev.qaecy.com/ont#associatedWith
 :associatedWith rdf:type owl:NamedIndividual ;
-                :applicableObjectCategories <https://dev.qaecy.com/enum#Organization> ,
-                                            <https://dev.qaecy.com/enum#Person> ;
-                :applicableSubjectCategories <https://dev.qaecy.com/enum#Organization> ,
-                                             <https://dev.qaecy.com/enum#Person> ;
                 :extractionPrompt "An entity is associated with another entity." .
 
 
@@ -1583,6 +1668,11 @@ owl:ObjectProperty rdf:type owl:Class .
                           :extractionPrompt "A 'Contract' states a certain 'ContractObligation'." .
 
 
+###  https://dev.qaecy.com/ont#createdOn
+:createdOn rdf:type owl:NamedIndividual ;
+           :extractionPrompt "An entity was created on a given date." .
+
+
 ###  https://dev.qaecy.com/ont#drawingApprovedBy
 :drawingApprovedBy rdf:type owl:NamedIndividual ;
                    :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
@@ -1648,6 +1738,11 @@ owl:ObjectProperty rdf:type owl:Class .
                  :extractionPrompt "A 'DrawingSheet' or a 'DrawingEntity' is designed in this 'DrawingScale'." .
 
 
+###  https://dev.qaecy.com/ont#effectiveOn
+:effectiveOn rdf:type owl:NamedIndividual ;
+             :extractionPrompt "An entity becomes effective on a given date." .
+
+
 ###  https://dev.qaecy.com/ont#elementHasMaterial
 :elementHasMaterial rdf:type owl:NamedIndividual ;
                     :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
@@ -1655,6 +1750,11 @@ owl:ObjectProperty rdf:type owl:Class .
                     :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
                     :relatedFormalProperty <http://schema.org/material> ;
                     :extractionPrompt "A 'BuildingElement' is made of some 'Material'." .
+
+
+###  https://dev.qaecy.com/ont#endsOn
+:endsOn rdf:type owl:NamedIndividual ;
+        :extractionPrompt "An entity ends on a given date." .
 
 
 ###  https://dev.qaecy.com/ont#expressedBy
@@ -1744,6 +1844,11 @@ owl:ObjectProperty rdf:type owl:Class .
                :relatedFormalProperty <https://w3id.org/bot#hasSubElement> .
 
 
+###  https://dev.qaecy.com/ont#hasTemporalMarker
+:hasTemporalMarker rdf:type owl:NamedIndividual ;
+                   :extractionPrompt "An entity is temporally qualified by a date or time marker." .
+
+
 ###  https://dev.qaecy.com/ont#ifcPSet
 :ifcPSet rdf:type owl:NamedIndividual ;
          :label "IFC Property Set" .
@@ -1772,6 +1877,16 @@ owl:ObjectProperty rdf:type owl:Class .
              :applicableObjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
              :applicableSubjectCategories <https://dev.qaecy.com/enum#BuildingElement> ;
              :relatedFormalProperty <https://w3id.org/bot#interfaceOf> .
+
+
+###  https://dev.qaecy.com/ont#intersectsWith
+:intersectsWith rdf:type owl:NamedIndividual ;
+                :extractionPrompt "A zone or element intersects with another zone or element." .
+
+
+###  https://dev.qaecy.com/ont#invalidatedOn
+:invalidatedOn rdf:type owl:NamedIndividual ;
+               :extractionPrompt "An entity became invalid on a given date." .
 
 
 ###  https://dev.qaecy.com/ont#involves
@@ -1931,12 +2046,22 @@ owl:ObjectProperty rdf:type owl:Class .
                       :extractionPrompt "A 'DrawingSheet' contains a 'DrawingEntity'." .
 
 
+###  https://dev.qaecy.com/ont#signedOn
+:signedOn rdf:type owl:NamedIndividual ;
+          :extractionPrompt "An entity is signed on a given date." .
+
+
 ###  https://dev.qaecy.com/ont#siteContainsBuilding
 :siteContainsBuilding rdf:type owl:NamedIndividual ;
                       :applicableContentCategories <https://dev.qaecy.com/enum#DesignDocument> ;
                       :applicableObjectCategories <https://dev.qaecy.com/enum#Building> ;
                       :applicableSubjectCategories <https://dev.qaecy.com/enum#Site> ;
                       :relatedFormalProperty <https://w3id.org/bot#hasBuilding> .
+
+
+###  https://dev.qaecy.com/ont#startsOn
+:startsOn rdf:type owl:NamedIndividual ;
+          :extractionPrompt "An entity starts on a given date." .
 
 
 ###  https://dev.qaecy.com/ont#suffix
@@ -2043,18 +2168,46 @@ owl:ObjectProperty rdf:type owl:Class .
               :visibleForAgent "false"^^xsd:boolean .
 
 
-:activityHasEndDate rdfs:comment "Relationship that specifies the date that an activity ends." ;
+:activityHasEndDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that an activity ends." ;
                     rdfs:label "activity has end date"@en ;
+                    owl:deprecated "true"^^xsd:boolean ;
                     :visibleForAgent "true"^^xsd:boolean .
 
 
-:activityHasStartDate rdfs:comment "Relationship that specifies the date that an activity begins." ;
+:activityHasStartDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:startsOn instead. Relationship that specifies the date that an activity begins." ;
                       rdfs:label "activity has start date"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       :visibleForAgent "true"^^xsd:boolean .
 
 
-:associatedWith rdfs:comment "Relationship that describes strong or loose associations between entities." ;
-                rdfs:label "associated with"@en ;
+:adjacentTo rdfs:comment "Relationship that specifies that two things are adjacent to each other." ;
+            rdfs:label "adjacent to"@en ;
+            :visibleForAgent "true"^^xsd:boolean .
+
+
+:approvedOn rdfs:comment "Beziehung, die angibt, wann eine Entität genehmigt wurde."@de ,
+                         "Relation der angiver, hvornår en entitet blev godkendt."@da ,
+                         "Relation qui indique quand une entité a été approuvée."@fr ,
+                         "Relazione che indica quando un'entità è stata approvata."@it ,
+                         "Relationship that specifies when an entity was approved." ;
+            rdfs:label "approuvé le"@fr ,
+                       "approvato il"@it ,
+                       "approved on"@en ,
+                       "genehmigt am"@de ,
+                       "godkendt den"@da ;
+            :visibleForAgent "true"^^xsd:boolean .
+
+
+:associatedWith rdfs:comment "Beziehung, die starke oder lose Assoziationen zwischen Entitäten beschreibt."@de ,
+                             "Relation der beskriver stærke eller løse associationer mellem entiteter."@da ,
+                             "Relation qui décrit des associations fortes ou faibles entre des entités."@fr ,
+                             "Relazione che descrive associazioni forti o deboli tra entità."@it ,
+                             "Relationship that describes strong or loose associations between entities." ;
+                rdfs:label "associated with"@en ,
+                           "associato a"@it ,
+                           "associeret med"@da ,
+                           "associé à"@fr ,
+                           "assoziiert mit"@de ;
                 :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2069,8 +2222,16 @@ owl:ObjectProperty rdf:type owl:Class .
                         :visibleForAgent "true"^^xsd:boolean .
 
 
-:contains rdfs:comment "Top level relationship that indicates that an entity is part of a larger thing." ;
-          rdfs:label "contains"@en ;
+:contains rdfs:comment "Overordnet relation der angiver, at en entitet er en del af noget større."@da ,
+                       "Relation de haut niveau indiquant qu'une entité fait partie d'un ensemble plus grand."@fr ,
+                       "Relazione di alto livello che indica che un'entità fa parte di qualcosa di più grande."@it ,
+                       "Übergeordnete Beziehung, die angibt, dass eine Entität Teil von etwas Größerem ist."@de ,
+                       "Top level relationship that indicates that an entity is part of a larger thing." ;
+          rdfs:label "contains"@en ,
+                     "contiene"@it ,
+                     "contient"@fr ,
+                     "enthält"@de ,
+                     "indeholder"@da ;
           :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2080,18 +2241,21 @@ owl:ObjectProperty rdf:type owl:Class .
                                 :visibleForAgent "true"^^xsd:boolean .
 
 
-:contractHasEndDate rdfs:comment "Relationship that specifies the date that a contract is terminated." ;
+:contractHasEndDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. Relationship that specifies the date that a contract is terminated." ;
                     rdfs:label "contract has end date"@en ;
+                    owl:deprecated "true"^^xsd:boolean ;
                     :visibleForAgent "true"^^xsd:boolean .
 
 
-:contractHasSignatureDate rdfs:comment "Relationship that specifies the signature date of a contract." ;
+:contractHasSignatureDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:signedOn instead. Relationship that specifies the signature date of a contract." ;
                           rdfs:label "contract has signature date"@en ;
+                          owl:deprecated "true"^^xsd:boolean ;
                           :visibleForAgent "true"^^xsd:boolean .
 
 
-:contractHasStartDate rdfs:comment "Relationship that specifies the date that a contract becomes effective." ;
+:contractHasStartDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. Relationship that specifies the date that a contract becomes effective." ;
                       rdfs:label "contract has start date"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2109,7 +2273,21 @@ owl:ObjectProperty rdf:type owl:Class .
 
 :contractStatesObligation rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:contains instead. The contract involves a certain obligation." ;
                           rdfs:label "contract states obligation"@en ;
+                          owl:deprecated "true"^^xsd:boolean ;
                           :visibleForAgent "true"^^xsd:boolean .
+
+
+:createdOn rdfs:comment "Beziehung, die angibt, wann eine Entität erstellt wurde."@de ,
+                        "Relation der angiver, hvornår en entitet blev oprettet."@da ,
+                        "Relation qui indique quand une entité a été créée."@fr ,
+                        "Relazione che indica quando un'entità è stata creata."@it ,
+                        "Relationship that specifies when an entity was created." ;
+           rdfs:label "created on"@en ,
+                      "creato il"@it ,
+                      "créé le"@fr ,
+                      "erstellt am"@de ,
+                      "oprettet den"@da ;
+           :visibleForAgent "true"^^xsd:boolean .
 
 
 :drawingApprovedBy rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:reviewer instead. Relationship that specifies the entity that approved a drawing entity or drawing sheet." ;
@@ -2124,13 +2302,13 @@ owl:ObjectProperty rdf:type owl:Class .
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:drawingHasApprovalDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was approved." ;
+:drawingHasApprovalDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:approvedOn instead. Relationship that specifies the date that a drawing was approved." ;
                         rdfs:label "drawing has approval date"@en ;
                         owl:deprecated "true"^^xsd:boolean ;
                         :visibleForAgent "true"^^xsd:boolean .
 
 
-:drawingHasCreationDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship that specifies the date that a drawing was created." ;
+:drawingHasCreationDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:createdOn instead. Relationship that specifies the date that a drawing was created." ;
                         rdfs:label "drawing has creation date"@en ;
                         owl:deprecated "true"^^xsd:boolean ;
                         :visibleForAgent "true"^^xsd:boolean .
@@ -2154,14 +2332,48 @@ owl:ObjectProperty rdf:type owl:Class .
                  :visibleForAgent "true"^^xsd:boolean .
 
 
+:effectiveOn rdfs:comment "Beziehung, die angibt, wann eine Entität wirksam oder aktiv wird."@de ,
+                          "Relation der angiver, hvornår en entitet bliver gældende eller aktiv."@da ,
+                          "Relation qui indique quand une entité devient effective ou active."@fr ,
+                          "Relazione che indica quando un'entità diventa efficace o attiva."@it ,
+                          "Relationship that specifies when an entity becomes effective or active." ;
+             rdfs:label "effective on"@en ,
+                        "efficace dal"@it ,
+                        "gældende fra"@da ,
+                        "prend effet le"@fr ,
+                        "wirksam ab"@de ;
+             :visibleForAgent "true"^^xsd:boolean .
+
+
 :elementHasMaterial rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:expressedBy instead. Relationship between a building element and a material." ;
                     rdfs:label "element has material"@en ;
                     owl:deprecated "true"^^xsd:boolean ;
                     :visibleForAgent "true"^^xsd:boolean .
 
 
-:expressedBy rdfs:comment "Top level relationship that expresses a characteristic or quality of an entity (eg. a drawing is expressed by its scale, orientation etc.)." ;
-             rdfs:label "expressed by"@en ;
+:endsOn rdfs:comment "Beziehung, die das End-, Beendigungs- oder Ablaufdatum einer Entität angibt."@de ,
+                     "Relation der angiver slut-, ophørs- eller udløbsdatoen for en entitet."@da ,
+                     "Relation qui indique la date de fin, de résiliation ou d'expiration d'une entité."@fr ,
+                     "Relazione che indica la data di fine, cessazione o scadenza di un'entità."@it ,
+                     "Relationship that specifies the end, termination, or expiration date of an entity." ;
+        rdfs:label "endet am"@de ,
+                   "ends on"@en ,
+                   "se termine le"@fr ,
+                   "slutter den"@da ,
+                   "termina il"@it ;
+        :visibleForAgent "true"^^xsd:boolean .
+
+
+:expressedBy rdfs:comment "Overordnet relation der udtrykker en egenskab eller kvalitet ved en entitet (fx at en tegning udtrykkes ved sin målestok, orientering osv.)."@da ,
+                          "Relation de haut niveau qui exprime une caractéristique ou une qualité d'une entité (par ex. un dessin est exprimé par son échelle, son orientation, etc.)."@fr ,
+                          "Relazione di alto livello che esprime una caratteristica o qualità di un'entità (ad esempio un disegno è espresso dalla sua scala, orientamento, ecc.)."@it ,
+                          "Übergeordnete Beziehung, die eine Eigenschaft oder Qualität einer Entität ausdrückt (z. B. wird eine Zeichnung durch Maßstab, Ausrichtung usw. ausgedrückt)."@de ,
+                          "Top level relationship that expresses a characteristic or quality of an entity (eg. a drawing is expressed by its scale, orientation etc.)." ;
+             rdfs:label "ausgedrückt durch"@de ,
+                        "espresso da"@it ,
+                        "expressed by"@en ,
+                        "exprimé par"@fr ,
+                        "udtrykt ved"@da ;
              :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2171,8 +2383,9 @@ owl:ObjectProperty rdf:type owl:Class .
                   :visibleForAgent "true"^^xsd:boolean .
 
 
-:hasAssociatedDiscipline rdfs:comment "Relationship that specifies the discipline associated with a drawing entity or a drawing sheet." ;
+:hasAssociatedDiscipline rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. Relationship that specifies the discipline associated with a drawing entity or a drawing sheet." ;
                          rdfs:label "has associated discipline"@en ;
+                         owl:deprecated "true"^^xsd:boolean ;
                          :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2224,6 +2437,19 @@ owl:ObjectProperty rdf:type owl:Class .
                :visibleForAgent "true"^^xsd:boolean .
 
 
+:hasTemporalMarker rdfs:comment "Overordnet relation for tidslig kvalificering af en entitet på tværs af livscyklus-, juridiske- og proceskontekster."@da ,
+                                "Relation de haut niveau pour la qualification temporelle d'une entité dans des contextes de cycle de vie, juridiques et de processus."@fr ,
+                                "Relazione di alto livello per la qualificazione temporale di un'entità nei contesti di ciclo di vita, legali e di processo."@it ,
+                                "Übergeordnete Beziehung zur zeitlichen Qualifizierung einer Entität über Lebenszyklus-, rechtliche und Prozesskontexte hinweg."@de ,
+                                "Top level relationship for temporal qualification of an entity across lifecycle, legal, and process contexts." ;
+                   rdfs:label "a un marqueur temporel"@fr ,
+                              "ha un marcatore temporale"@it ,
+                              "har tidsmarkør"@da ,
+                              "has temporal marker"@en ,
+                              "hat zeitliche Markierung"@de ;
+                   :visibleForAgent "true"^^xsd:boolean .
+
+
 :ifcPSet rdfs:comment "The name of the Property Set in the IFC file. Official PSets are considered higher quality and SHACL shapes can be applied to evaluate the BIM model quality."@en ;
          :visibleForAgent "false"^^xsd:boolean .
 
@@ -2245,8 +2471,34 @@ owl:ObjectProperty rdf:type owl:Class .
              :visibleForAgent "true"^^xsd:boolean .
 
 
-:involves rdfs:comment "Top level relationship that indicates that an entity involves another entity. It expresses a participation or engagement in some activity or process." ;
-          rdfs:label "involves"@en ;
+:intersectsWith rdfs:comment "Relationship that specifies that two things intersect (overlap) with each other." ;
+                rdfs:label "intersects with"@en ;
+                :visibleForAgent "true"^^xsd:boolean .
+
+
+:invalidatedOn rdfs:comment "Beziehung, die angibt, wann eine Entität ungültig wurde."@de ,
+                            "Relation der angiver, hvornår en entitet blev ugyldig."@da ,
+                            "Relation qui indique quand une entité est devenue invalide."@fr ,
+                            "Relazione che indica quando un'entità è diventata non valida."@it ,
+                            "Relationship that specifies when an entity became invalid." ;
+               rdfs:label "invalidated on"@en ,
+                          "invalidato il"@it ,
+                          "invalidé le"@fr ,
+                          "ugyldiggjort den"@da ,
+                          "ungültig ab"@de ;
+               :visibleForAgent "true"^^xsd:boolean .
+
+
+:involves rdfs:comment "Overordnet relation der angiver, at en entitet involverer en anden entitet. Den udtrykker deltagelse eller involvering i en aktivitet eller proces."@da ,
+                       "Relation de haut niveau indiquant qu'une entité en implique une autre. Elle exprime la participation ou l'engagement dans une activité ou un processus."@fr ,
+                       "Relazione di alto livello che indica che un'entità coinvolge un'altra entità. Esprime partecipazione o coinvolgimento in un'attività o processo."@it ,
+                       "Übergeordnete Beziehung, die angibt, dass eine Entität eine andere Entität einbezieht. Sie drückt Teilnahme oder Beteiligung an einer Aktivität oder einem Prozess aus."@de ,
+                       "Top level relationship that indicates that an entity involves another entity. It expresses a participation or engagement in some activity or process." ;
+          rdfs:label "bezieht ein"@de ,
+                     "coinvolge"@it ,
+                     "implique"@fr ,
+                     "involverer"@da ,
+                     "involves"@en ;
           :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2273,8 +2525,16 @@ owl:ObjectProperty rdf:type owl:Class .
           :visibleForAgent "true"^^xsd:boolean .
 
 
-:leadsTo rdfs:comment "Top level relationship that indicates that an entity leads to another entity. It expresses a sequential or causal dependency between two entities." ;
-         rdfs:label "leads to"@en ;
+:leadsTo rdfs:comment "Overordnet relation der angiver, at en entitet fører til en anden entitet. Den udtrykker en sekventiel eller kausal afhængighed mellem to entiteter."@da ,
+                      "Relation de haut niveau indiquant qu'une entité mène à une autre entité. Elle exprime une dépendance séquentielle ou causale entre deux entités."@fr ,
+                      "Relazione di alto livello che indica che un'entità porta a un'altra entità. Esprime una dipendenza sequenziale o causale tra due entità."@it ,
+                      "Übergeordnete Beziehung, die angibt, dass eine Entität zu einer anderen Entität führt. Sie drückt eine sequenzielle oder kausale Abhängigkeit zwischen zwei Entitäten aus."@de ,
+                      "Top level relationship that indicates that an entity leads to another entity. It expresses a sequential or causal dependency between two entities." ;
+         rdfs:label "fører til"@da ,
+                    "führt zu"@de ,
+                    "leads to"@en ,
+                    "mène à"@fr ,
+                    "porta a"@it ;
          :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2294,13 +2554,15 @@ owl:ObjectProperty rdf:type owl:Class .
       :visibleForAgent "true"^^xsd:boolean .
 
 
-:obligationHasCondition rdfs:comment "A condition associated with a contract obligation." ;
+:obligationHasCondition rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:associatedWith instead. A condition associated with a contract obligation." ;
                         rdfs:label "contract obligation has contract condition"@en ;
+                        owl:deprecated "true"^^xsd:boolean ;
                         :visibleForAgent "true"^^xsd:boolean .
 
 
-:obligationHasEndDate rdfs:comment "The end date of a contract obligation." ;
+:obligationHasEndDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:endsOn instead. The end date of a contract obligation." ;
                       rdfs:label "obligation has end date"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2310,8 +2572,9 @@ owl:ObjectProperty rdf:type owl:Class .
                                :visibleForAgent "true"^^xsd:boolean .
 
 
-:obligationHasStartDate rdfs:comment "The start date of a contract obligation." ;
+:obligationHasStartDate rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:effectiveOn instead. The start date of a contract obligation." ;
                         rdfs:label "obligation has start date"@en ;
+                        owl:deprecated "true"^^xsd:boolean ;
                         :visibleForAgent "true"^^xsd:boolean .
 
 
@@ -2373,10 +2636,36 @@ owl:ObjectProperty rdf:type owl:Class .
                       :visibleForAgent "true"^^xsd:boolean .
 
 
+:signedOn rdfs:comment "Beziehung, die das Unterzeichnungsdatum einer Entität angibt, z. B. eines Vertrags."@de ,
+                       "Relation der angiver underskriftsdatoen for en entitet, f.eks. en kontrakt."@da ,
+                       "Relation qui indique la date de signature d'une entité, par exemple un contrat."@fr ,
+                       "Relazione che indica la data di firma di un'entità, ad esempio un contratto."@it ,
+                       "Relationship that specifies the signature date of an entity such as a contract." ;
+          rdfs:label "firmato il"@it ,
+                     "signed on"@en ,
+                     "signé le"@fr ,
+                     "underskrevet den"@da ,
+                     "unterzeichnet am"@de ;
+          :visibleForAgent "true"^^xsd:boolean .
+
+
 :siteContainsBuilding rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:contains instead. Relationship that indicates that a building belongs to a site." ;
                       rdfs:label "site contains building"@en ;
                       owl:deprecated "true"^^xsd:boolean ;
                       :visibleForAgent "true"^^xsd:boolean .
+
+
+:startsOn rdfs:comment "Beziehung, die das Startdatum einer Entität in einem Prozesskontext angibt."@de ,
+                       "Relation der angiver startdatoen for en entitet i en proceskontekst."@da ,
+                       "Relation qui indique la date de début d'une entité dans un contexte de processus."@fr ,
+                       "Relazione che indica la data di inizio di un'entità in un contesto di processo."@it ,
+                       "Relationship that specifies the start date of an entity in a process context." ;
+          rdfs:label "beginnt am"@de ,
+                     "commence le"@fr ,
+                     "inizia il"@it ,
+                     "starter den"@da ,
+                     "starts on"@en ;
+          :visibleForAgent "true"^^xsd:boolean .
 
 
 :suffix rdfs:comment "The file suffix including dot (ex: \".pdf\")"@en ;
@@ -2396,13 +2685,15 @@ owl:ObjectProperty rdf:type owl:Class .
                    :visibleForAgent "true"^^xsd:boolean .
 
 
-:zoneHasAdjacentElement rdfs:comment "Relationship between a zone/element and an adjacent element." ;
+:zoneHasAdjacentElement rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:adjacentTo instead. Relationship between a zone/element and an adjacent element." ;
                         rdfs:label "zone has adjacent element"@en ;
+                        owl:deprecated "true"^^xsd:boolean ;
                         :visibleForAgent "true"^^xsd:boolean .
 
 
-:zoneHasElement rdfs:comment "Relationship between a zone and a related element." ;
+:zoneHasElement rdfs:comment "DEPRECATED: This property is outdated. Please use qcy:contains or qcy:adjacentTo instead. Relationship between a zone and a contained or adjacent element." ;
                 rdfs:label "zone has element"@en ;
+                owl:deprecated "true"^^xsd:boolean ;
                 :visibleForAgent "false"^^xsd:boolean .
 
 
