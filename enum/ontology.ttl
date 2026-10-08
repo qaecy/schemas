@@ -7,11 +7,10 @@
 @base <https://dev.qaecy.com/enum#> .
 
 <https://dev.qaecy.com/enum#> rdf:type owl:Ontology ;
-                               <http://purl.org/dc/terms/creator> "Christian Frausing" ,
-                                                                  "Mads Holten Rasmussen" ,
+                               <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" ,
                                                                   "Manos Argyris" ;
                                <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." ;
-                               <http://purl.org/dc/terms/modified> "2026-06-17T08:56:19Z"^^xsd:dateTime ;
+                               <http://purl.org/dc/terms/modified> "2026-10-08T20:38:47Z"^^xsd:dateTime ;
                                <http://purl.org/dc/terms/title> "QAECY Enumerations"@en ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 
@@ -55,24 +54,64 @@
 <http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
 
 
-###  https://dev.qaecy.com/ont#applicableContentCategories
-<https://dev.qaecy.com/ont#applicableContentCategories> rdf:type owl:AnnotationProperty .
-
-
-###  https://dev.qaecy.com/ont#classificationPrompt
-<https://dev.qaecy.com/ont#classificationPrompt> rdf:type owl:AnnotationProperty .
-
-
-###  https://dev.qaecy.com/ont#extractionPrompt
-<https://dev.qaecy.com/ont#extractionPrompt> rdf:type owl:AnnotationProperty .
-
-
-###  https://dev.qaecy.com/ont#regex
-<https://dev.qaecy.com/ont#regex> rdf:type owl:AnnotationProperty .
-
-
 ###  https://dev.qaecy.com/ont#relatedFormalClass
 <https://dev.qaecy.com/ont#relatedFormalClass> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#anonymousValue
+<https://dev.qaecy.com/template#anonymousValue> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#applicableContentCategories
+<https://dev.qaecy.com/template#applicableContentCategories> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#classificationPrompt
+<https://dev.qaecy.com/template#classificationPrompt> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#discriminatingProperty
+<https://dev.qaecy.com/template#discriminatingProperty> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#extractionPrompt
+<https://dev.qaecy.com/template#extractionPrompt> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#llmExtraction
+<https://dev.qaecy.com/template#llmExtraction> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#regex
+<https://dev.qaecy.com/template#regex> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#resolutionCanonicalizer
+<https://dev.qaecy.com/template#resolutionCanonicalizer> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#resolutionIdentity
+<https://dev.qaecy.com/template#resolutionIdentity> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#resolutionLowThreshold
+<https://dev.qaecy.com/template#resolutionLowThreshold> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#resolutionMatchThreshold
+<https://dev.qaecy.com/template#resolutionMatchThreshold> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#resolutionNeedsNeighbourhood
+<https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#resolutionNumeralRole
+<https://dev.qaecy.com/template#resolutionNumeralRole> rdf:type owl:AnnotationProperty .
+
+
+###  https://dev.qaecy.com/template#resolutionScopedBy
+<https://dev.qaecy.com/template#resolutionScopedBy> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -93,6 +132,10 @@
 
 ###  https://dev.qaecy.com/ont#MimeCategory
 <https://dev.qaecy.com/ont#MimeCategory> rdf:type owl:Class .
+
+
+###  https://dev.qaecy.com/ont#ProviderKind
+<https://dev.qaecy.com/ont#ProviderKind> rdf:type owl:Class .
 
 
 ###  https://dev.qaecy.com/ont#ProviderType
@@ -125,8 +168,8 @@
                                                           "Aktivitet"@da ,
                                                           "Aktivität"@de ,
                                                           "Attività"@it ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "An activity or process related to the construction or maintenance of a building or infrastructure."@en .
+          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ;
+          <https://dev.qaecy.com/template#extractionPrompt> "An activity or process related to the construction or maintenance of a building or infrastructure."@en .
 
 
 ###  https://dev.qaecy.com/enum#Address
@@ -143,7 +186,9 @@
                                                          "Adresse"@da ,
                                                          "Adresse"@de ,
                                                          "Adresse"@fr ,
-                                                         "Indirizzo"@it .
+                                                         "Indirizzo"@it ;
+         <https://dev.qaecy.com/template#resolutionLowThreshold> 0.70 ;
+         <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.95 .
 
 
 ###  https://dev.qaecy.com/enum#AppraisalValuationDocument
@@ -195,8 +240,8 @@
                                                               "Architecture"@en ,
                                                               "Architecture"@fr ,
                                                               "Architecture"@it ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                      :DesignDocument .
+              <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                           :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#ArchiveFileContent
@@ -279,9 +324,9 @@
                                                          "Balcony"@en ,
                                                          "Balcony"@fr ,
                                                          "Balcony"@it ;
-         <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                 :DesignDocument ;
-         <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Balcony> .
+         <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Balcony> ;
+         <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                      :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#Beam
@@ -299,9 +344,9 @@
                                                       "Beam"@en ,
                                                       "Beam"@fr ,
                                                       "Beam"@it ;
-      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                              :DesignDocument ;
-      <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Beam> .
+      <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Beam> ;
+      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#BinaryFileContent
@@ -310,6 +355,14 @@
                             <https://dev.qaecy.com/ont#MimeCategory> ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Content of a generic binary file with no more specific type."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Binary File Content"@en .
+
+
+###  https://dev.qaecy.com/enum#BrowserUpload
+:BrowserUpload rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                        <https://dev.qaecy.com/ont#ProviderKind> ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Files a user uploaded through a web browser, where the original location on disk is not known."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Browser upload"@en .
 
 
 ###  https://dev.qaecy.com/enum#BudgetEstimateDocument
@@ -344,9 +397,9 @@
                                                           "Bâtiment"@fr ,
                                                           "Edificio"@it ,
                                                           "Gebäude"@de ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                  :DesignDocument ;
-          <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Building> .
+          <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Building> ;
+          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                       :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#BuildingAutomationSystem
@@ -364,8 +417,8 @@
                                                                           "Bâtiment Automation System"@fr ,
                                                                           "Edificio Automation System"@it ,
                                                                           "Gebäude Automation System"@de ;
-                          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                                  :DesignDocument .
+                          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                       :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#BuildingElement
@@ -382,11 +435,15 @@
                                                                  "Bâtiment Element"@fr ,
                                                                  "Edificio Element"@it ,
                                                                  "Gebäude Element"@de ;
-                 <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                         :DesignDocument ;
-                 <https://dev.qaecy.com/ont#extractionPrompt> "Any tangible part of a 'Building', identified by a name or an id."@en ;
                  <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Element> ,
-                                                                <https://w3id.org/rec#BuildingElement> .
+                                                                <https://w3id.org/rec#BuildingElement> ;
+                 <https://dev.qaecy.com/template#anonymousValue> "undefined" ,
+                                                                 "unnamed element" ;
+                 <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                              :DesignDocument ;
+                 <https://dev.qaecy.com/template#extractionPrompt> "Any tangible part of a 'Building', identified by a name or an id."@en ;
+                 <https://dev.qaecy.com/template#resolutionCanonicalizer> "german_noun" ;
+                 <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 
 
 ###  https://dev.qaecy.com/enum#BuildingStoreyInterface
@@ -404,7 +461,8 @@
                                                                          "Bâtiment/Étage Interface"@fr ,
                                                                          "Edificio/Piano Interface"@it ,
                                                                          "Gebäude/Geschoss Interface"@de ;
-                         <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                         <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                         <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#BuildingZone
@@ -421,10 +479,10 @@
                                                               "Bâtiment Zone"@fr ,
                                                               "Edificio Zone"@it ,
                                                               "Gebäude Zone"@de ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                      :DesignDocument ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "Any spatial decomposition of a building project, identified by name or id."@en ;
-              <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Zone> .
+              <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Zone> ;
+              <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                           :DesignDocument ;
+              <https://dev.qaecy.com/template#extractionPrompt> "Any spatial decomposition of a building project, identified by name or id."@en .
 
 
 ###  https://dev.qaecy.com/enum#BuiltAsset
@@ -441,7 +499,7 @@
                                                             "Built Asset"@en ,
                                                             "Built Asset"@fr ,
                                                             "Built Asset"@it ;
-            <https://dev.qaecy.com/ont#extractionPrompt> "A built asset, identified by its title, name or id."@en .
+            <https://dev.qaecy.com/template#extractionPrompt> "A built asset, identified by its title, name or id."@en .
 
 
 ###  https://dev.qaecy.com/enum#CADFileContent
@@ -500,7 +558,25 @@
                                                       "Città"@it ,
                                                       "City"@en ,
                                                       "Stadt"@de ,
-                                                      "Ville"@fr .
+                                                      "Ville"@fr ;
+      <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.92 .
+
+
+###  https://dev.qaecy.com/enum#Color
+:Color rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                <https://dev.qaecy.com/ont#EntityCategory> ;
+       <http://www.w3.org/2004/02/skos/core#definition> "A color described by name or standardized code."@en ,
+                                                        "Eine Farbe, die durch einen Namen oder einen standardisierten Code beschrieben wird."@de ,
+                                                        "En farve beskrevet ved navn eller standardiseret kode."@da ,
+                                                        "Un colore descritto tramite nome o codice standardizzato."@it ,
+                                                        "Une couleur décrite par un nom ou un code normalisé."@fr ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "Color"@en ,
+                                                       "Colore"@it ,
+                                                       "Couleur"@fr ,
+                                                       "Farbe"@de ,
+                                                       "Farve"@da ;
+       <https://dev.qaecy.com/template#extractionPrompt> "A color, expressed by name or standardized code (e.g. Blau, Grün, RAL 9010)."@en .
 
 
 ###  https://dev.qaecy.com/enum#Column
@@ -518,9 +594,9 @@
                                                         "Column"@en ,
                                                         "Column"@fr ,
                                                         "Column"@it ;
-        <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                :DesignDocument ;
-        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Column> .
+        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Column> ;
+        <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                     :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#ComplianceReport
@@ -571,7 +647,7 @@
                                                                              "Construction Process & Management Document"@en ,
                                                                              "Construction Process & Management Document"@fr ,
                                                                              "Construction Process & Management Document"@it ;
-                             <https://dev.qaecy.com/ont#classificationPrompt> "Documents used to plan, monitor, and control construction activities and safety, such as project schedules, change orders, requests for information (RFIs), QA/QC reports, progress reports, and safety records."@en .
+                             <https://dev.qaecy.com/template#classificationPrompt> "Documents used to plan, monitor, and control construction activities and safety, such as project schedules, change orders, requests for information (RFIs), QA/QC reports, progress reports, and safety records."@en .
 
 
 ###  https://dev.qaecy.com/enum#Contract
@@ -588,8 +664,8 @@
                                                           "Contratto"@it ,
                                                           "Kontrakt"@da ,
                                                           "Vertrag"@de ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :ContractualDocument ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."@en .
+          <https://dev.qaecy.com/template#applicableContentCategories> :ContractualDocument ;
+          <https://dev.qaecy.com/template#extractionPrompt> "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."@en .
 
 
 ###  https://dev.qaecy.com/enum#ContractCondition
@@ -606,8 +682,8 @@
                                                                    "Contratto Condizione"@it ,
                                                                    "Kontrakt Betingelse"@da ,
                                                                    "Vertrag Bedingung"@de ;
-                   <https://dev.qaecy.com/ont#applicableContentCategories> :ContractualDocument ;
-                   <https://dev.qaecy.com/ont#extractionPrompt> "A certain condition that must be met, as part of a 'ContractObligation'."@en .
+                   <https://dev.qaecy.com/template#applicableContentCategories> :ContractualDocument ;
+                   <https://dev.qaecy.com/template#extractionPrompt> "A certain condition that must be met, as part of a 'ContractObligation'."@en .
 
 
 ###  https://dev.qaecy.com/enum#ContractObligation
@@ -624,8 +700,8 @@
                                                                     "Contratto Obligation"@it ,
                                                                     "Kontrakt Obligation"@da ,
                                                                     "Vertrag Obligation"@de ;
-                    <https://dev.qaecy.com/ont#applicableContentCategories> :ContractualDocument ;
-                    <https://dev.qaecy.com/ont#extractionPrompt> "A certain obligation that must be undertaken in the context of the 'Contract'."@en .
+                    <https://dev.qaecy.com/template#applicableContentCategories> :ContractualDocument ;
+                    <https://dev.qaecy.com/template#extractionPrompt> "A certain obligation that must be undertaken in the context of the 'Contract'."@en .
 
 
 ###  https://dev.qaecy.com/enum#ContractRole
@@ -642,8 +718,11 @@
                                                               "Contratto Role"@it ,
                                                               "Kontrakt Role"@da ,
                                                               "Vertrag Role"@de ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :ContractualDocument ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."@en .
+              <https://dev.qaecy.com/template#applicableContentCategories> :ContractualDocument ;
+              <https://dev.qaecy.com/template#extractionPrompt> "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."@en ;
+              <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^xsd:boolean ;
+              <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#associatedWith> ,
+                                                                  <https://dev.qaecy.com/ont#hasContractRole> .
 
 
 ###  https://dev.qaecy.com/enum#ContractualDocument
@@ -660,7 +739,7 @@
                                                                      "Contractual & Legal Document"@en ,
                                                                      "Contractual & Legal Document"@fr ,
                                                                      "Contractual & Legal Document"@it ;
-                     <https://dev.qaecy.com/ont#classificationPrompt> "Documents that establish obligations, rights, and responsibilities, such as purchase agreements, lease agreements, construction contracts, insurance documents, and bonds."@en .
+                     <https://dev.qaecy.com/template#classificationPrompt> "Documents that establish obligations, rights, and responsibilities, such as purchase agreements, lease agreements, construction contracts, insurance documents, and bonds."@en .
 
 
 ###  https://dev.qaecy.com/enum#CoolingSystem
@@ -678,8 +757,8 @@
                                                                "Cooling System"@en ,
                                                                "Cooling System"@fr ,
                                                                "Cooling System"@it ;
-               <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                       :DesignDocument .
+               <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                            :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#CorrespondenceDocument
@@ -713,10 +792,12 @@
                                                           "Cost Item"@en ,
                                                           "Cost Item"@fr ,
                                                           "Cost Item"@it ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                  :ContractualDocument ,
-                                                                  :FinancialAdministrativeDocument ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "A cost, expressed in currency."@en .
+          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                       :ContractualDocument ,
+                                                                       :FinancialAdministrativeDocument ;
+          <https://dev.qaecy.com/template#extractionPrompt> "A cost, expressed in currency."@en ;
+          <https://dev.qaecy.com/template#resolutionCanonicalizer> "cost" ;
+          <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 
 
 ###  https://dev.qaecy.com/enum#Country
@@ -733,7 +814,8 @@
                                                          "Land"@da ,
                                                          "Land"@de ,
                                                          "Paese"@it ,
-                                                         "Pays"@fr .
+                                                         "Pays"@fr ;
+         <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.90 .
 
 
 ###  https://dev.qaecy.com/enum#DataFileContent
@@ -758,8 +840,11 @@
                                                       "Date"@fr ,
                                                       "Dato"@da ,
                                                       "Datum"@de ;
-      <https://dev.qaecy.com/ont#extractionPrompt> "A date. Must be returned in ISO 8601 **YYYY-MM-DD** format (eg: 4/5/2005 becomes 2005-05-04, 1 July 2021 becomes 2021-07-01 etc)."@en ;
-      <https://dev.qaecy.com/ont#regex> "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .
+      <https://dev.qaecy.com/template#extractionPrompt> "A date. Must be returned in ISO 8601 **YYYY-MM-DD** format (eg: 4/5/2005 becomes 2005-05-04, 1 July 2021 becomes 2021-07-01 etc)."@en ;
+      <https://dev.qaecy.com/template#regex> "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" ;
+      <https://dev.qaecy.com/template#resolutionCanonicalizer> "iso_date" ;
+      <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" ;
+      <https://dev.qaecy.com/template#resolutionNumeralRole> "ignore" .
 
 
 ###  https://dev.qaecy.com/enum#DesignDocument
@@ -776,7 +861,7 @@
                                                                 "Design Document"@en ,
                                                                 "Design Document"@fr ,
                                                                 "Design Document"@it ;
-                <https://dev.qaecy.com/ont#classificationPrompt> "Documents that define geometry, materials, and design intent, such as architectural drawings, engineering designs, landscape or interior plans, BIM models, and renderings."@en .
+                <https://dev.qaecy.com/template#classificationPrompt> "Documents that define geometry, materials, and design intent, such as architectural drawings, engineering designs, landscape or interior plans, BIM models, and renderings."@en .
 
 
 ###  https://dev.qaecy.com/enum#DesignId
@@ -794,7 +879,7 @@
                                                           "Design Id"@en ,
                                                           "Design Id"@fr ,
                                                           "Design Id"@it ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+          <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#DesignMetadata
@@ -811,8 +896,8 @@
                                                                 "Design Metadata"@en ,
                                                                 "Design Metadata"@fr ,
                                                                 "Design Metadata"@it ;
-                <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument ;
-                <https://dev.qaecy.com/ont#extractionPrompt> "Any metadata related either to the 'DrawingSheet' or the 'DrawingEntity'. Usually found in the title block of the document."@en .
+                <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                <https://dev.qaecy.com/template#extractionPrompt> "Any metadata related either to the 'DrawingSheet' or the 'DrawingEntity'. Usually found in the title block of the document."@en .
 
 
 ###  https://dev.qaecy.com/enum#DesignRevisionId
@@ -830,7 +915,7 @@
                                                                   "Design Revision Id"@en ,
                                                                   "Design Revision Id"@fr ,
                                                                   "Design Revision Id"@it ;
-                  <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                  <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#DesignStatus
@@ -848,7 +933,7 @@
                                                               "Design Status"@en ,
                                                               "Design Status"@fr ,
                                                               "Design Status"@it ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+              <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#DesignTitle
@@ -866,7 +951,8 @@
                                                              "Design Title"@en ,
                                                              "Design Title"@fr ,
                                                              "Design Title"@it ;
-             <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+             <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+             <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 
 
 ###  https://dev.qaecy.com/enum#DetailDrawing
@@ -884,7 +970,7 @@
                                                                "Detail Drawing"@en ,
                                                                "Detail Drawing"@fr ,
                                                                "Detail Drawing"@it ;
-               <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+               <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#DiagramDrawing
@@ -902,7 +988,7 @@
                                                                 "Diagram Drawing"@en ,
                                                                 "Diagram Drawing"@fr ,
                                                                 "Diagram Drawing"@it ;
-                <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#Discipline
@@ -919,9 +1005,17 @@
                                                             "Discipline"@en ,
                                                             "Discipline"@fr ,
                                                             "Disziplin"@de ;
-            <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                    :DesignDocument ;
-            <https://dev.qaecy.com/ont#extractionPrompt> "A discipline/trade associated with a provided resource (activity, drawing etc)."@en .
+            <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                         :DesignDocument ;
+            <https://dev.qaecy.com/template#extractionPrompt> "A discipline/trade associated with a provided resource (activity, drawing etc)."@en .
+
+
+###  https://dev.qaecy.com/enum#DocumentManagementSystem
+:DocumentManagementSystem rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                   <https://dev.qaecy.com/ont#ProviderKind> ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "A shared document management system such as SharePoint or ThinkProject, synchronised into the project."@en ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Document management system"@en .
 
 
 ###  https://dev.qaecy.com/enum#Door
@@ -939,9 +1033,9 @@
                                                       "Door"@en ,
                                                       "Door"@fr ,
                                                       "Door"@it ;
-      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                              :DesignDocument ;
-      <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Door> .
+      <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Door> ;
+      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#DrawingEntity
@@ -958,9 +1052,9 @@
                                                                "Drawing Entity"@en ,
                                                                "Drawing Entity"@fr ,
                                                                "Drawing Entity"@it ;
-               <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                       :DesignDocument ;
-               <https://dev.qaecy.com/ont#extractionPrompt> "Any drawing (floor-plan, site-plan, section, P&ID diagram, detail etc), identified by name, title or id. Usually, but not necessarily, it is contained in a 'DrawingSheet'."@en .
+               <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                            :DesignDocument ;
+               <https://dev.qaecy.com/template#extractionPrompt> "Any drawing (floor-plan, site-plan, section, P&ID diagram, detail etc), identified by name, title or id. Usually, but not necessarily, it is contained in a 'DrawingSheet'."@en .
 
 
 ###  https://dev.qaecy.com/enum#DrawingOrientation
@@ -977,8 +1071,8 @@
                                                                     "Drawing Orientation"@en ,
                                                                     "Drawing Orientation"@fr ,
                                                                     "Drawing Orientation"@it ;
-                    <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument ;
-                    <https://dev.qaecy.com/ont#extractionPrompt> "The orientation of a 'DrawingEntity'."@en .
+                    <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                    <https://dev.qaecy.com/template#extractionPrompt> "The orientation of a 'DrawingEntity'."@en .
 
 
 ###  https://dev.qaecy.com/enum#DrawingScale
@@ -995,8 +1089,8 @@
                                                               "Drawing Scale"@en ,
                                                               "Drawing Scale"@fr ,
                                                               "Drawing Scale"@it ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "The scale of a 'DrawingEntity' or of a 'DrawingSheet'."@en .
+              <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+              <https://dev.qaecy.com/template#extractionPrompt> "The scale of a 'DrawingEntity' or of a 'DrawingSheet'."@en .
 
 
 ###  https://dev.qaecy.com/enum#DrawingSheet
@@ -1013,9 +1107,9 @@
                                                               "Drawing Sheet"@en ,
                                                               "Drawing Sheet"@fr ,
                                                               "Drawing Sheet"@it ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                      :DesignDocument ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "A sheet of a technical drawing, that contains one or more 'DrawingEntity'. Most often contains a title block with 'DesignMetadata'. It is identified by name, title or id."@en .
+              <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                           :DesignDocument ;
+              <https://dev.qaecy.com/template#extractionPrompt> "A sheet of a technical drawing, that contains one or more 'DrawingEntity'. Most often contains a title block with 'DesignMetadata'. It is identified by name, title or id."@en .
 
 
 ###  https://dev.qaecy.com/enum#DueDiligenceDocument
@@ -1049,8 +1143,10 @@
                                                           "Aktivitet Varighed"@da ,
                                                           "Aktivität Dauer"@de ,
                                                           "Attività Durata"@it ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "The duration of an activity, expressed in days, weeks, months or years."@en .
+          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ;
+          <https://dev.qaecy.com/template#extractionPrompt> "The duration of an activity, expressed in days, weeks, months or years."@en ;
+          <https://dev.qaecy.com/template#resolutionCanonicalizer> "duration" ;
+          <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 
 
 ###  https://dev.qaecy.com/enum#ElectricalSystem
@@ -1068,8 +1164,8 @@
                                                                   "Electrical System"@en ,
                                                                   "Electrical System"@fr ,
                                                                   "Electrical System"@it ;
-                  <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                          :DesignDocument .
+                  <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                               :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#ElementAdjacentElementInterface
@@ -1087,7 +1183,8 @@
                                                                                  "Element/Adjacent element Interface"@en ,
                                                                                  "Element/Adjacent element Interface"@fr ,
                                                                                  "Element/Adjacent element Interface"@it ;
-                                 <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                                 <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                                 <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#ElevationDrawing
@@ -1105,7 +1202,7 @@
                                                                   "Elevation Drawing"@en ,
                                                                   "Elevation Drawing"@fr ,
                                                                   "Elevation Drawing"@it ;
-                  <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                  <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#EmailAddress
@@ -1122,8 +1219,10 @@
                                                               "Email Adresse"@de ,
                                                               "Email Adresse"@fr ,
                                                               "Email Indirizzo"@it ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "An email address."@en ;
-              <https://dev.qaecy.com/ont#regex> "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" .
+              <https://dev.qaecy.com/template#extractionPrompt> "An email address."@en ;
+              <https://dev.qaecy.com/template#regex> "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" ;
+              <https://dev.qaecy.com/template#resolutionCanonicalizer> "email" ;
+              <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 
 
 ###  https://dev.qaecy.com/enum#EmailFileContent
@@ -1166,8 +1265,8 @@
                                                                           "Environmental Engineering"@en ,
                                                                           "Environmental Engineering"@fr ,
                                                                           "Environmental Engineering"@it ;
-                          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                                  :DesignDocument .
+                          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                       :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#Equipment
@@ -1184,9 +1283,9 @@
                                                            "Equipment"@en ,
                                                            "Udstyr"@da ,
                                                            "Équipement"@fr ;
-           <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ;
-           <https://dev.qaecy.com/ont#extractionPrompt> "A piece of equipment, a device, a tool or a machine used in construction or maintenance."@en ;
-           <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Equipment> .
+           <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Equipment> ;
+           <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ;
+           <https://dev.qaecy.com/template#extractionPrompt> "A piece of equipment, a device, a tool or a machine used in construction or maintenance."@en .
 
 
 ###  https://dev.qaecy.com/enum#Facade
@@ -1205,9 +1304,9 @@
                                                         "Facade"@fr ,
                                                         "Facade"@it ;
         <http://www.w3.org/2004/02/skos/core#related> :Wall ;
-        <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                :DesignDocument ;
-        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Facade> .
+        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Facade> ;
+        <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                     :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#FacilityManagement
@@ -1225,8 +1324,8 @@
                                                                     "Facility Management"@en ,
                                                                     "Facility Management"@fr ,
                                                                     "Facility Management"@it ;
-                    <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                            :DesignDocument .
+                    <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                 :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#FileReference
@@ -1243,7 +1342,9 @@
                                                                "File Reference"@en ,
                                                                "File Reference"@fr ,
                                                                "File Reference"@it ;
-               <https://dev.qaecy.com/ont#extractionPrompt> "A reference to a file by mentioning its name, id and/or path."@en .
+               <https://dev.qaecy.com/template#extractionPrompt> "A reference to a file by mentioning its name, id and/or path."@en ;
+               <https://dev.qaecy.com/template#resolutionCanonicalizer> "path" ;
+               <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 
 
 ###  https://dev.qaecy.com/enum#FinancialAdministrativeDocument
@@ -1260,7 +1361,7 @@
                                                                                  "Financial & Administrative Document"@en ,
                                                                                  "Financial & Administrative Document"@fr ,
                                                                                  "Financial & Administrative Document"@it ;
-                                 <https://dev.qaecy.com/ont#classificationPrompt> "Documents recording financial transactions, valuations, and budget control, such as cost estimates, budgets, invoices, payment applications, appraisals, and valuations."@en .
+                                 <https://dev.qaecy.com/template#classificationPrompt> "Documents recording financial transactions, valuations, and budget control, such as cost estimates, budgets, invoices, payment applications, appraisals, and valuations."@en .
 
 
 ###  https://dev.qaecy.com/enum#FireProtectionSystem
@@ -1278,8 +1379,8 @@
                                                                       "Fire Protection System"@en ,
                                                                       "Fire Protection System"@fr ,
                                                                       "Fire Protection System"@it ;
-                      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                              :DesignDocument .
+                      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#FloorPlanDrawing
@@ -1297,7 +1398,8 @@
                                                                   "Floor Plan Drawing"@en ,
                                                                   "Floor Plan Drawing"@fr ,
                                                                   "Floor Plan Drawing"@it ;
-                  <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                  <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                  <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 
 
 ###  https://dev.qaecy.com/enum#FontFileContent
@@ -1347,7 +1449,9 @@
                                                                 "Coordonnées géographiques"@fr ,
                                                                 "Geo Coordinates"@en ,
                                                                 "Geokoordinaten"@de ,
-                                                                "Geokoordinater"@da .
+                                                                "Geokoordinater"@da ;
+                <https://dev.qaecy.com/template#resolutionCanonicalizer> "geo" ;
+                <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 
 
 ###  https://dev.qaecy.com/enum#Geometry
@@ -1364,7 +1468,8 @@
                                                           "Geometry"@en ,
                                                           "Geometry"@fr ,
                                                           "Geometry"@it ;
-          <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/omg#hasGeometry> .
+          <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/omg#hasGeometry> ;
+          <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#GeospatialFileContent
@@ -1390,8 +1495,8 @@
                                                                          "Geotechnical Engineering"@en ,
                                                                          "Geotechnical Engineering"@fr ,
                                                                          "Geotechnical Engineering"@it ;
-                         <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                                 :DesignDocument .
+                         <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                      :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#HeatingSystem
@@ -1409,8 +1514,8 @@
                                                                "Heating System"@en ,
                                                                "Heating System"@fr ,
                                                                "Heating System"@it ;
-               <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                       :DesignDocument .
+               <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                            :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#HousingUnit
@@ -1418,19 +1523,26 @@
                       <http://www.w3.org/2004/02/skos/core#Concept> ,
                       <https://dev.qaecy.com/ont#EntityCategory> ;
              <http://www.w3.org/2004/02/skos/core#broader> :BuildingZone ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Either the whole building or a unit of a building or storey"@en ,
+             <http://www.w3.org/2004/02/skos/core#definition> "A self-contained dwelling within a building, such as an apartment or a house in a terrace."@en ,
+                                                              "Either the whole building or a unit of a building or storey"@en ,
                                                               "Enten hele bygningen eller en enhed i en bygning eller etage"@da ,
                                                               "Entweder das ganze Gebäude oder eine Einheit eines Gebäudes oder Stockwerks"@de ,
                                                               "O l'intero edificio o un'unità di un edificio o di un piano"@it ,
                                                               "Soit le bâtiment entier, soit une unité d'un bâtiment ou d'un étage"@fr ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Boligenhed"@da ,
+                                                             "Housing Unit"@en ,
                                                              "Housing unit"@en ,
                                                              "Unità abitativa"@it ,
                                                              "Unité d'habitation"@fr ,
                                                              "Wohneinheit"@de ;
-             <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                     :DesignDocument ;
-             <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Zone> .
+             <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Zone> ;
+             <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                          :DesignDocument ;
+             <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.90 ;
+             <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^xsd:boolean ;
+             <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#contains> ,
+                                                                 <https://dev.qaecy.com/ont#includesBuildingEntity> ,
+                                                                 <https://dev.qaecy.com/ont#zoneContainsSpace> .
 
 
 ###  https://dev.qaecy.com/enum#ImageFileContent
@@ -1456,8 +1568,8 @@
                                                                            "Infrastructure Engineering"@en ,
                                                                            "Infrastructure Engineering"@fr ,
                                                                            "Infrastructure Engineering"@it ;
-                           <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                                   :DesignDocument .
+                           <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                        :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#InspectionDocument
@@ -1516,8 +1628,9 @@
                                                            "Interface"@en ,
                                                            "Interface"@fr ,
                                                            "Interface"@it ;
-           <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument ;
-           <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Interface> .
+           <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Interface> ;
+           <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+           <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#InteriorArchitecture
@@ -1535,8 +1648,8 @@
                                                                       "Interior Architecture"@en ,
                                                                       "Interior Architecture"@fr ,
                                                                       "Interior Architecture"@it ;
-                      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                              :DesignDocument .
+                      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#InteriorDesignDocument
@@ -1588,8 +1701,8 @@
                                                                        "Landscape Architecture"@en ,
                                                                        "Landscape Architecture"@fr ,
                                                                        "Landscape Architecture"@it ;
-                       <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                               :DesignDocument .
+                       <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                    :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#LandscapeDesignDocument
@@ -1607,6 +1720,14 @@
                                                                          "Landscape Design Document"@en ,
                                                                          "Landscape Design Document"@fr ,
                                                                          "Landscape Design Document"@it .
+
+
+###  https://dev.qaecy.com/enum#LocalDevice
+:LocalDevice rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      <https://dev.qaecy.com/ont#ProviderKind> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A user's computer. Its file locations carry the absolute paths the files have on that machine."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Local device"@en .
 
 
 ###  https://dev.qaecy.com/enum#LocalProvider
@@ -1631,8 +1752,8 @@
                                                           "Location"@en ,
                                                           "Lokation"@da ,
                                                           "Ort"@de ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "A physical location, place or postal code."@en ;
-          <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Place> .
+          <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Place> ;
+          <https://dev.qaecy.com/template#extractionPrompt> "A physical location, place or postal code."@en .
 
 
 ###  https://dev.qaecy.com/enum#MaintenanceLog
@@ -1691,9 +1812,10 @@
                                                           "Materiale"@da ,
                                                           "Materiale"@it ,
                                                           "Matériau"@fr ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                  :DesignDocument ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "A mention of some material. Identified by name or id."@en .
+          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                       :DesignDocument ;
+          <https://dev.qaecy.com/template#extractionPrompt> "A mention of some material. Identified by name or id."@en ;
+          <https://dev.qaecy.com/template#resolutionCanonicalizer> "german_noun" .
 
 
 ###  https://dev.qaecy.com/enum#MiscDocument
@@ -1710,7 +1832,7 @@
                                                               "Miscellaneous Document"@en ,
                                                               "Miscellaneous Document"@fr ,
                                                               "Miscellaneous Document"@it ;
-              <https://dev.qaecy.com/ont#classificationPrompt> "Documents that do not clearly fit into other categories, serving as a fallback for unclassified materials. Examples include correspondence, marketing documents, project closeout records, due diligence reports, or other miscellaneous documents."@en .
+              <https://dev.qaecy.com/template#classificationPrompt> "Documents that do not clearly fit into other categories, serving as a fallback for unclassified materials. Examples include correspondence, marketing documents, project closeout records, due diligence reports, or other miscellaneous documents."@en .
 
 
 ###  https://dev.qaecy.com/enum#MultimediaFileContent
@@ -1735,7 +1857,8 @@
                                                           "Object Id"@en ,
                                                           "Object Id"@fr ,
                                                           "Object Id"@it ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "A special coding, classification or identifier for some physical or virtual object used in a building project."@en .
+          <https://dev.qaecy.com/template#extractionPrompt> "A special coding, classification or identifier for some physical or virtual object used in a building project."@en ;
+          <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 
 
 ###  https://dev.qaecy.com/enum#OpeningElementInterface
@@ -1753,7 +1876,8 @@
                                                                          "Opening Element Interface"@en ,
                                                                          "Opening Element Interface"@fr ,
                                                                          "Opening Element Interface"@it ;
-                         <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                         <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                         <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#OperationManual
@@ -1787,7 +1911,7 @@
                                                                                "Operations & Maintenance Document"@en ,
                                                                                "Operations & Maintenance Document"@fr ,
                                                                                "Operations & Maintenance Document"@it ;
-                               <https://dev.qaecy.com/ont#classificationPrompt> "Documents for building operation, system maintenance, and lifecycle support, such as O&M manuals, maintenance logs, warranty documents, commissioning reports, and as-built drawings."@en .
+                               <https://dev.qaecy.com/template#classificationPrompt> "Documents for building operation, system maintenance, and lifecycle support, such as O&M manuals, maintenance logs, warranty documents, commissioning reports, and as-built drawings."@en .
 
 
 ###  https://dev.qaecy.com/enum#OperationsManagement
@@ -1805,8 +1929,8 @@
                                                                       "Operations Management"@en ,
                                                                       "Operations Management"@fr ,
                                                                       "Operations Management"@it ;
-                      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                              :DesignDocument .
+                      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#Organization
@@ -1823,8 +1947,14 @@
                                                               "Organisation"@fr ,
                                                               "Organization"@en ,
                                                               "Organizzazione"@it ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "A company, organization, corporation, public authority or institution, identified by name or title."@en ;
-              <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Organization> .
+              <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Organization> ;
+              <https://dev.qaecy.com/template#discriminatingProperty> "registrationNumber" ,
+                                                                      "vatNumber" ;
+              <https://dev.qaecy.com/template#extractionPrompt> "A company, organization, corporation, public authority or institution, identified by name or title."@en ;
+              <https://dev.qaecy.com/template#resolutionCanonicalizer> "organization" ;
+              <https://dev.qaecy.com/template#resolutionLowThreshold> 0.60 ;
+              <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.93 ;
+              <https://dev.qaecy.com/template#resolutionNumeralRole> "ignore" .
 
 
 ###  https://dev.qaecy.com/enum#OtherConstructionProcessDocument
@@ -1893,8 +2023,8 @@
                                                                  "Other Discipline"@en ,
                                                                  "Other Discipline"@fr ,
                                                                  "Other Disziplin"@de ;
-                 <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                         :DesignDocument .
+                 <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                              :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#OtherDrawing
@@ -1912,7 +2042,7 @@
                                                               "Other Drawing"@en ,
                                                               "Other Drawing"@fr ,
                                                               "Other Drawing"@it ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+              <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#OtherFinancialAdministrativeDocument
@@ -1947,7 +2077,7 @@
                                                                     "Other Metadata Field"@en ,
                                                                     "Other Metadata Field"@fr ,
                                                                     "Other Metadata Field"@it ;
-                    <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                    <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#OtherMiscDocument
@@ -2066,8 +2196,31 @@
                                                         "Person"@en ,
                                                         "Persona"@it ,
                                                         "Personne"@fr ;
-        <https://dev.qaecy.com/ont#extractionPrompt> "A person, identified by name or abbreviation."@en ;
-        <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Person> .
+        <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Person> ;
+        <https://dev.qaecy.com/template#discriminatingProperty> "emailAddress" ;
+        <https://dev.qaecy.com/template#extractionPrompt> "A person, identified by name or abbreviation."@en ;
+        <https://dev.qaecy.com/template#resolutionCanonicalizer> "person_name" ;
+        <https://dev.qaecy.com/template#resolutionLowThreshold> 0.55 ;
+        <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.94 .
+
+
+###  https://dev.qaecy.com/enum#PhoneNumber
+:PhoneNumber rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      <https://dev.qaecy.com/ont#EntityCategory> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A telephone, mobile or fax number used to contact a person or organization."@en ,
+                                                              "Eine Telefon-, Mobil- oder Faxnummer, die zur Kontaktaufnahme mit einer Person oder Organisation verwendet wird."@de ,
+                                                              "Et telefon-, mobil- eller faxnummer, der bruges til at kontakte en person eller organisation."@da ,
+                                                              "Un numero di telefono, cellulare o fax utilizzato per contattare una persona o un'organizzazione."@it ,
+                                                              "Un numéro de téléphone, de mobile ou de fax utilisé pour contacter une personne ou une organisation."@fr ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Numero di telefono"@it ,
+                                                             "Numéro de téléphone"@fr ,
+                                                             "Phone Number"@en ,
+                                                             "Telefonnummer"@da ,
+                                                             "Telefonnummer"@de ;
+             <https://dev.qaecy.com/template#extractionPrompt> "A telephone, mobile or fax number used to contact a person or organization."@en ;
+             <https://dev.qaecy.com/template#resolutionCanonicalizer> "number" ;
+             <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 
 
 ###  https://dev.qaecy.com/enum#PlanningFileContent
@@ -2093,8 +2246,8 @@
                                                                 "Plumbing System"@en ,
                                                                 "Plumbing System"@fr ,
                                                                 "Plumbing System"@it ;
-                <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                        :DesignDocument .
+                <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                             :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#PostCode
@@ -2111,7 +2264,9 @@
                                                           "Codice postale"@it ,
                                                           "Post Code"@en ,
                                                           "Postleitzahl"@de ,
-                                                          "Postnummer"@da .
+                                                          "Postnummer"@da ;
+          <https://dev.qaecy.com/template#resolutionCanonicalizer> "upper_alnum" ;
+          <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 
 
 ###  https://dev.qaecy.com/enum#PresentationFileContent
@@ -2153,7 +2308,9 @@
                                                            "Project Id"@en ,
                                                            "Project Id"@fr ,
                                                            "Project Id"@it ;
-           <https://dev.qaecy.com/ont#extractionPrompt> "A construction, renovation or maintenance project, identified by its title, name or id."@en .
+           <https://dev.qaecy.com/template#extractionPrompt> "A construction, renovation or maintenance project, identified by its title, name or id."@en ;
+           <https://dev.qaecy.com/template#resolutionLowThreshold> 0.80 ;
+           <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.97 .
 
 
 ###  https://dev.qaecy.com/enum#ProjectManagement
@@ -2171,8 +2328,8 @@
                                                                    "Project Management"@en ,
                                                                    "Project Management"@fr ,
                                                                    "Project Management"@it ;
-                   <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                           :DesignDocument .
+                   <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#ProjectPhase
@@ -2189,9 +2346,9 @@
                                                               "Project Phase"@en ,
                                                               "Project Phase"@fr ,
                                                               "Project Phase"@it ;
-              <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                      :DesignDocument ;
-              <https://dev.qaecy.com/ont#extractionPrompt> "A project phase, identified by name or id."@en .
+              <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                           :DesignDocument ;
+              <https://dev.qaecy.com/template#extractionPrompt> "A project phase, identified by name or id."@en .
 
 
 ###  https://dev.qaecy.com/enum#PurchaseOrLeaseAgreement
@@ -2242,7 +2399,7 @@
                                                                               "Regulatory & Compliance Document"@en ,
                                                                               "Regulatory & Compliance Document"@fr ,
                                                                               "Regulatory & Compliance Document"@it ;
-                              <https://dev.qaecy.com/ont#classificationPrompt> "Documents required for regulatory approval and compliance, such as permits, inspection reports, compliance certifications, and environmental impact reports."@en .
+                              <https://dev.qaecy.com/template#classificationPrompt> "Documents required for regulatory approval and compliance, such as permits, inspection reports, compliance certifications, and environmental impact reports."@en .
 
 
 ###  https://dev.qaecy.com/enum#RequirementsDocument
@@ -2259,7 +2416,7 @@
                                                                       "Requirements & Scoping Document"@en ,
                                                                       "Requirements & Scoping Document"@fr ,
                                                                       "Requirements & Scoping Document"@it ;
-                      <https://dev.qaecy.com/ont#classificationPrompt> "Documents that establish scope, functional, technical, and performance requirements, such as Owner’s Project Requirements (OPR), program documents, technical specifications, performance targets, and scope of work (SOW) documents."@en .
+                      <https://dev.qaecy.com/template#classificationPrompt> "Documents that establish scope, functional, technical, and performance requirements, such as Owner’s Project Requirements (OPR), program documents, technical specifications, performance targets, and scope of work (SOW) documents."@en .
 
 
 ###  https://dev.qaecy.com/enum#Roof
@@ -2277,10 +2434,10 @@
                                                       "Roof"@en ,
                                                       "Roof"@fr ,
                                                       "Roof"@it ;
-      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                              :DesignDocument ;
       <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Roof> ,
-                                                     <https://w3id.org/rec#Roof> .
+                                                     <https://w3id.org/rec#Roof> ;
+      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#SVGPathGeometry
@@ -2297,7 +2454,8 @@
                                                                  "SVG Path Geometry"@de ,
                                                                  "SVG Path Geometry"@en ,
                                                                  "SVG Path Geometry"@fr ,
-                                                                 "SVG Path Geometry"@it .
+                                                                 "SVG Path Geometry"@it ;
+                 <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#SafetyDocument
@@ -2331,8 +2489,8 @@
                                                           "Schedule"@en ,
                                                           "Tidsplan"@da ,
                                                           "Zeitplan"@de ;
-          <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ;
-          <https://dev.qaecy.com/ont#extractionPrompt> "A whole or partial project plan / schedule expressed in some diagram, chart or table, identified by name, revision, date or id."@en .
+          <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ;
+          <https://dev.qaecy.com/template#extractionPrompt> "A whole or partial project plan / schedule expressed in some diagram, chart or table, identified by name, revision, date or id."@en .
 
 
 ###  https://dev.qaecy.com/enum#ScheduleDocument
@@ -2392,7 +2550,7 @@
                                                                 "Section Drawing"@en ,
                                                                 "Section Drawing"@fr ,
                                                                 "Section Drawing"@it ;
-                <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#SecurityAccessSystem
@@ -2410,8 +2568,8 @@
                                                                       "Security Access System"@en ,
                                                                       "Security Access System"@fr ,
                                                                       "Security Access System"@it ;
-                      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                              :DesignDocument .
+                      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#Site
@@ -2429,9 +2587,9 @@
                                                       "Site"@en ,
                                                       "Site"@fr ,
                                                       "Site"@it ;
-      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                              :DesignDocument ;
-      <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Site> .
+      <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Site> ;
+      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#SiteBuildingInterface
@@ -2449,7 +2607,8 @@
                                                                        "Site/Bâtiment Interface"@fr ,
                                                                        "Site/Edificio Interface"@it ,
                                                                        "Site/Gebäude Interface"@de ;
-                       <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                       <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                       <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#SitePlanDrawing
@@ -2467,7 +2626,7 @@
                                                                  "Site Plan Drawing"@en ,
                                                                  "Site Plan Drawing"@fr ,
                                                                  "Site Plan Drawing"@it ;
-                 <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                 <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#Slab
@@ -2485,10 +2644,27 @@
                                                       "Slab"@en ,
                                                       "Slab"@fr ,
                                                       "Slab"@it ;
-      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                              :DesignDocument ;
       <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Slab> ,
-                                                     <https://w3id.org/rec#Slab> .
+                                                     <https://w3id.org/rec#Slab> ;
+      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                   :DesignDocument .
+
+
+###  https://dev.qaecy.com/enum#Software
+:Software rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   <https://dev.qaecy.com/ont#EntityCategory> ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A named software product, application or system, such as a vendor control app, operating system, browser or communication protocol."@en ,
+                                                           "Ein benanntes Softwareprodukt, eine Anwendung oder ein System, etwa eine Hersteller-Steuerungs-App, ein Betriebssystem, ein Browser oder ein Kommunikationsprotokoll."@de ,
+                                                           "Et navngivet softwareprodukt, en applikation eller et system, såsom en leverandørs kontrol-app, et operativsystem, en browser eller en kommunikationsprotokol."@da ,
+                                                           "Un prodotto software, un'applicazione o un sistema denominato, come un'app di controllo di un fornitore, un sistema operativo, un browser o un protocollo di comunicazione."@it ,
+                                                           "Un produit logiciel, une application ou un système nommé, tel qu'une application de contrôle d'un fournisseur, un système d'exploitation, un navigateur ou un protocole de communication."@fr ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Logiciel"@fr ,
+                                                          "Software"@da ,
+                                                          "Software"@de ,
+                                                          "Software"@en ,
+                                                          "Software"@it ;
+          <https://dev.qaecy.com/template#extractionPrompt> "A named software product, application, app, operating system or communication protocol used in a building project (e.g. a vendor control app, configuration tool, browser or protocol)."@en .
 
 
 ###  https://dev.qaecy.com/enum#Space
@@ -2506,9 +2682,18 @@
                                                        "Rum"@da ,
                                                        "Space"@en ,
                                                        "Spazio"@it ;
-       <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                               :DesignDocument ;
-       <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Space> .
+       <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Space> ;
+       <https://dev.qaecy.com/template#anonymousValue> "room" ,
+                                                       "undefined" ;
+       <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                    :DesignDocument ;
+       <https://dev.qaecy.com/template#resolutionMatchThreshold> 0.90 ;
+       <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^xsd:boolean ;
+       <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" ;
+       <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#contains> ,
+                                                           <https://dev.qaecy.com/ont#includesBuildingEntity> ,
+                                                           <https://dev.qaecy.com/ont#zoneContainsSpace> ,
+                                                           <https://dev.qaecy.com/ont#zoneHasElement> .
 
 
 ###  https://dev.qaecy.com/enum#SpaceAdjacentElementInterface
@@ -2526,7 +2711,8 @@
                                                                                "Rum/Adjacent element Interface"@da ,
                                                                                "Space/Adjacent element Interface"@en ,
                                                                                "Spazio/Adjacent element Interface"@it ;
-                               <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                               <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                               <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#SpaceContainedElementInterface
@@ -2544,7 +2730,8 @@
                                                                                 "Rum/Contained element Interface"@da ,
                                                                                 "Space/Contained element Interface"@en ,
                                                                                 "Spazio/Contained element Interface"@it ;
-                                <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                                <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                                <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#SpreadsheetFileContent
@@ -2570,9 +2757,9 @@
                                                        "Stair"@en ,
                                                        "Stair"@fr ,
                                                        "Stair"@it ;
-       <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                               :DesignDocument ;
-       <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Stair> .
+       <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Stair> ;
+       <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                    :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#State
@@ -2607,9 +2794,16 @@
                                                         "Piano"@it ,
                                                         "Storey"@en ,
                                                         "Étage"@fr ;
-        <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                :DesignDocument ;
-        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Storey> .
+        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Storey> ;
+        <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                     :DesignDocument ;
+        <https://dev.qaecy.com/template#resolutionCanonicalizer> "storey_level" ;
+        <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" ;
+        <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^xsd:boolean ;
+        <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" ;
+        <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#buildingContainsStorey> ,
+                                                            <https://dev.qaecy.com/ont#contains> ,
+                                                            <https://dev.qaecy.com/ont#includesBuildingEntity> .
 
 
 ###  https://dev.qaecy.com/enum#StoreyElementInterface
@@ -2627,7 +2821,8 @@
                                                                         "Piano/Element Interface"@it ,
                                                                         "Storey/Element Interface"@en ,
                                                                         "Étage/Element Interface"@fr ;
-                        <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                        <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                        <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#StoreySpaceInterface
@@ -2645,7 +2840,8 @@
                                                                       "Piano/Spazio Interface"@it ,
                                                                       "Storey/Space Interface"@en ,
                                                                       "Étage/Espace Interface"@fr ;
-                      <https://dev.qaecy.com/ont#applicableContentCategories> :DesignDocument .
+                      <https://dev.qaecy.com/template#applicableContentCategories> :DesignDocument ;
+                      <https://dev.qaecy.com/template#llmExtraction> "false"^^xsd:boolean .
 
 
 ###  https://dev.qaecy.com/enum#StructuralEngineering
@@ -2663,8 +2859,8 @@
                                                                        "Structural Engineering"@en ,
                                                                        "Structural Engineering"@fr ,
                                                                        "Structural Engineering"@it ;
-                       <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                               :DesignDocument .
+                       <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                    :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#SurveyingEngineering
@@ -2682,8 +2878,8 @@
                                                                       "Surveying Engineering"@en ,
                                                                       "Surveying Engineering"@fr ,
                                                                       "Surveying Engineering"@it ;
-                      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                              :DesignDocument .
+                      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                   :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#TechnicalRequirementsDocument
@@ -2734,8 +2930,25 @@
                                                                            "Transportation Engineering"@en ,
                                                                            "Transportation Engineering"@fr ,
                                                                            "Transportation Engineering"@it ;
-                           <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                                   :DesignDocument .
+                           <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                        :DesignDocument .
+
+
+###  https://dev.qaecy.com/enum#URL
+:URL rdf:type owl:NamedIndividual ,
+              <http://www.w3.org/2004/02/skos/core#Concept> ,
+              <https://dev.qaecy.com/ont#EntityCategory> ;
+     <http://www.w3.org/2004/02/skos/core#definition> "A uniform resource locator (web address) pointing to an online resource."@en ,
+                                                      "Ein Uniform Resource Locator (Webadresse), der auf eine Online-Ressource verweist."@de ,
+                                                      "En uniform resource locator (webadresse), der peger på en onlineressource."@da ,
+                                                      "Un localisateur uniforme de ressource (adresse web) pointant vers une ressource en ligne."@fr ,
+                                                      "Un uniform resource locator (indirizzo web) che punta a una risorsa online."@it ;
+     <http://www.w3.org/2004/02/skos/core#prefLabel> "URL"@da ,
+                                                     "URL"@de ,
+                                                     "URL"@en ,
+                                                     "URL"@fr ,
+                                                     "URL"@it ;
+     <https://dev.qaecy.com/template#extractionPrompt> "A web address (URL) for a website or online resource, with or without the http(s):// scheme."@en .
 
 
 ###  https://dev.qaecy.com/enum#UnknownFileContent
@@ -2761,8 +2974,8 @@
                                                                    "Ventilation System"@en ,
                                                                    "Ventilation System"@fr ,
                                                                    "Ventilation System"@it ;
-                   <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                           :DesignDocument .
+                   <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                                :DesignDocument .
 
 
 ###  https://dev.qaecy.com/enum#VideoFileContent
@@ -2788,10 +3001,13 @@
                                                       "Wall"@en ,
                                                       "Wall"@fr ,
                                                       "Wall"@it ;
-      <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                              :DesignDocument ;
       <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Wall> ,
-                                                     <https://w3id.org/rec#Wall> .
+                                                     <https://w3id.org/rec#Wall> ;
+      <https://dev.qaecy.com/template#anonymousValue> "undefined" ,
+                                                      "wall" ;
+      <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                   :DesignDocument ;
+      <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 
 
 ###  https://dev.qaecy.com/enum#WarrantyDocument
@@ -2826,9 +3042,9 @@
                                                         "Window"@en ,
                                                         "Window"@fr ,
                                                         "Window"@it ;
-        <https://dev.qaecy.com/ont#applicableContentCategories> :ConstructionProcessDocument ,
-                                                                :DesignDocument ;
-        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Window> .
+        <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Window> ;
+        <https://dev.qaecy.com/template#applicableContentCategories> :ConstructionProcessDocument ,
+                                                                     :DesignDocument .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

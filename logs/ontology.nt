@@ -1,9 +1,8 @@
 <https://dev.qaecy.com/logs#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/creator> "Christian Frausing" .
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/description> "This document describes log specific terms to be used with the Cue processors and the QAECY Ontology." .
-<https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/modified> "2026-03-26T10:06:33Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/modified> "2026-10-08T20:38:55Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/logs#> <http://purl.org/dc/terms/title> "QAECY Logging Ontology"@en .
 <https://dev.qaecy.com/logs#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-l" .
 # 
@@ -103,26 +102,40 @@
 # http://www.w3.org/ns/prov#startedAtTime
 <http://www.w3.org/ns/prov#startedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
-# https://dev.qaecy.com/logs#consumedTokensIn
-<https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#LLMRequest> .
-<https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Input tokens consumed by LLM request."@en .
-<https://dev.qaecy.com/logs#consumedTokensIn> <http://www.w3.org/2000/01/rdf-schema#label> "tokens in"@en .
-# 
-# https://dev.qaecy.com/logs#consumedTokensOut
-<https://dev.qaecy.com/logs#consumedTokensOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/logs#consumedTokensOut> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#LLMRequest> .
-<https://dev.qaecy.com/logs#consumedTokensOut> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://dev.qaecy.com/logs#consumedTokensOut> <http://www.w3.org/2000/01/rdf-schema#comment> "Output tokens consumed by LLM request."@en .
-<https://dev.qaecy.com/logs#consumedTokensOut> <http://www.w3.org/2000/01/rdf-schema#label> "tokens out"@en .
-# 
 # https://dev.qaecy.com/logs#duration
 <https://dev.qaecy.com/logs#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://dev.qaecy.com/logs#duration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#Process> .
 <https://dev.qaecy.com/logs#duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://dev.qaecy.com/logs#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-readable duration string (e.g., '17.1 s')."@en .
 <https://dev.qaecy.com/logs#duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration"@en .
+# 
+# https://dev.qaecy.com/logs#embeddingsDimensions
+<https://dev.qaecy.com/logs#embeddingsDimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#embeddingsDimensions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#EmbeddingRequest> .
+<https://dev.qaecy.com/logs#embeddingsDimensions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#embeddingsDimensions> <http://www.w3.org/2000/01/rdf-schema#comment> "Dimensionality of the embedding vectors produced."@en .
+<https://dev.qaecy.com/logs#embeddingsDimensions> <http://www.w3.org/2000/01/rdf-schema#label> "embeddings dimensions"@en .
+# 
+# https://dev.qaecy.com/logs#embeddingsSize
+<https://dev.qaecy.com/logs#embeddingsSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#embeddingsSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#EmbeddingRequest> .
+<https://dev.qaecy.com/logs#embeddingsSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#embeddingsSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of inputs (e.g. text chunks) sent in the embedding request."@en .
+<https://dev.qaecy.com/logs#embeddingsSize> <http://www.w3.org/2000/01/rdf-schema#label> "embeddings size"@en .
+# 
+# https://dev.qaecy.com/logs#embeddingsTokenizer
+<https://dev.qaecy.com/logs#embeddingsTokenizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#embeddingsTokenizer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#EmbeddingRequest> .
+<https://dev.qaecy.com/logs#embeddingsTokenizer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://dev.qaecy.com/logs#embeddingsTokenizer> <http://www.w3.org/2000/01/rdf-schema#comment> "Name or identifier of the tokenizer used for the embedding request."@en .
+<https://dev.qaecy.com/logs#embeddingsTokenizer> <http://www.w3.org/2000/01/rdf-schema#label> "embeddings tokenizer"@en .
+# 
+# https://dev.qaecy.com/logs#embeddingsUnits
+<https://dev.qaecy.com/logs#embeddingsUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#embeddingsUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#EmbeddingRequest> .
+<https://dev.qaecy.com/logs#embeddingsUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#embeddingsUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of tokens processed by the embedding model."@en .
+<https://dev.qaecy.com/logs#embeddingsUnits> <http://www.w3.org/2000/01/rdf-schema#label> "embeddings units"@en .
 # 
 # https://dev.qaecy.com/logs#endTime
 <https://dev.qaecy.com/logs#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -132,12 +145,96 @@
 <https://dev.qaecy.com/logs#endTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Timestamp when the process ended."@en .
 <https://dev.qaecy.com/logs#endTime> <http://www.w3.org/2000/01/rdf-schema#label> "end time"@en .
 # 
+# https://dev.qaecy.com/logs#llmThinking
+<https://dev.qaecy.com/logs#llmThinking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#llmThinking> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#LLMRequest> .
+<https://dev.qaecy.com/logs#llmThinking> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dev.qaecy.com/logs#llmThinking> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the process used thinking."@en .
+<https://dev.qaecy.com/logs#llmThinking> <http://www.w3.org/2000/01/rdf-schema#label> "llm used thinking"@en .
+# 
+# https://dev.qaecy.com/logs#llmTokensIn
+<https://dev.qaecy.com/logs#llmTokensIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#llmTokensIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#LLMRequest> .
+<https://dev.qaecy.com/logs#llmTokensIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#llmTokensIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Input tokens consumed by LLM request."@en .
+<https://dev.qaecy.com/logs#llmTokensIn> <http://www.w3.org/2000/01/rdf-schema#label> "llm tokens in"@en .
+# 
+# https://dev.qaecy.com/logs#llmTokensOut
+<https://dev.qaecy.com/logs#llmTokensOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#llmTokensOut> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#LLMRequest> .
+<https://dev.qaecy.com/logs#llmTokensOut> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#llmTokensOut> <http://www.w3.org/2000/01/rdf-schema#comment> "Output tokens consumed by LLM request."@en .
+<https://dev.qaecy.com/logs#llmTokensOut> <http://www.w3.org/2000/01/rdf-schema#label> "llm tokens out"@en .
+# 
 # https://dev.qaecy.com/logs#message
 <https://dev.qaecy.com/logs#message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://dev.qaecy.com/logs#message> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://dev.qaecy.com/logs#message> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#Process> .
 <https://dev.qaecy.com/logs#message> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://dev.qaecy.com/logs#message> <http://www.w3.org/2000/01/rdf-schema#comment> "A message such as an error or informational message."@en .
 <https://dev.qaecy.com/logs#message> <http://www.w3.org/2000/01/rdf-schema#label> "message"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionAvgConfidence
+<https://dev.qaecy.com/logs#resolutionAvgConfidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionAvgConfidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionAvgConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/logs#resolutionAvgConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Average confidence score across all resolutions in this phase."@en .
+<https://dev.qaecy.com/logs#resolutionAvgConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "resolution average confidence"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionCategory
+<https://dev.qaecy.com/logs#resolutionCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://dev.qaecy.com/logs#resolutionCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category of entity being resolved (e.g. person, organisation)."@en .
+<https://dev.qaecy.com/logs#resolutionCategory> <http://www.w3.org/2000/01/rdf-schema#label> "resolution category"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionDurationMs
+<https://dev.qaecy.com/logs#resolutionDurationMs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionDurationMs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionDurationMs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/logs#resolutionDurationMs> <http://www.w3.org/2000/01/rdf-schema#comment> "Wall-clock duration of this resolution phase in milliseconds."@en .
+<https://dev.qaecy.com/logs#resolutionDurationMs> <http://www.w3.org/2000/01/rdf-schema#label> "resolution duration ms"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount
+<https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of pre-existing canonical entities matched during this phase."@en .
+<https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount> <http://www.w3.org/2000/01/rdf-schema#label> "resolution existing canonicals count"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionIteration
+<https://dev.qaecy.com/logs#resolutionIteration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionIteration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionIteration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#resolutionIteration> <http://www.w3.org/2000/01/rdf-schema#comment> "Iteration index of this resolution phase within the overall resolution run."@en .
+<https://dev.qaecy.com/logs#resolutionIteration> <http://www.w3.org/2000/01/rdf-schema#label> "resolution iteration"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionMentionsIn
+<https://dev.qaecy.com/logs#resolutionMentionsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionMentionsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionMentionsIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#resolutionMentionsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of mentions submitted for resolution in this phase."@en .
+<https://dev.qaecy.com/logs#resolutionMentionsIn> <http://www.w3.org/2000/01/rdf-schema#label> "resolution mentions in"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionMentionsResolved
+<https://dev.qaecy.com/logs#resolutionMentionsResolved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionMentionsResolved> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionMentionsResolved> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#resolutionMentionsResolved> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of mentions successfully resolved in this phase."@en .
+<https://dev.qaecy.com/logs#resolutionMentionsResolved> <http://www.w3.org/2000/01/rdf-schema#label> "resolution mentions resolved"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated
+<https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of new canonical entities created during this phase."@en .
+<https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated> <http://www.w3.org/2000/01/rdf-schema#label> "resolution new canonicals created"@en .
+# 
+# https://dev.qaecy.com/logs#resolutionPhaseName
+<https://dev.qaecy.com/logs#resolutionPhaseName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://dev.qaecy.com/logs#resolutionPhaseName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dev.qaecy.com/logs#ResolutionPhase> .
+<https://dev.qaecy.com/logs#resolutionPhaseName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://dev.qaecy.com/logs#resolutionPhaseName> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-readable name identifying the resolution phase."@en .
+<https://dev.qaecy.com/logs#resolutionPhaseName> <http://www.w3.org/2000/01/rdf-schema#label> "resolution phase name"@en .
 # 
 # https://dev.qaecy.com/logs#startTime
 <https://dev.qaecy.com/logs#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -188,10 +285,16 @@
 <https://dev.qaecy.com/logs#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A process represents an execution of a service within the QAECY logging system."@en .
 <https://dev.qaecy.com/logs#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
 # 
+# https://dev.qaecy.com/logs#ResolutionPhase
+<https://dev.qaecy.com/logs#ResolutionPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dev.qaecy.com/logs#ResolutionPhase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dev.qaecy.com/logs#Process> .
+<https://dev.qaecy.com/logs#ResolutionPhase> <http://www.w3.org/2000/01/rdf-schema#comment> "A process representing a certain phase within the entity resolution process."@en .
+<https://dev.qaecy.com/logs#ResolutionPhase> <http://www.w3.org/2000/01/rdf-schema#label> "Resolution Phase"@en .
+# 
 # https://dev.qaecy.com/logs#Service
 <https://dev.qaecy.com/logs#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://dev.qaecy.com/logs#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-<https://dev.qaecy.com/logs#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service or microservice that executes processes (e.g., enrichers-bim-tiles, gemini_light)."@en .
+<https://dev.qaecy.com/logs#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service or microservice that executes processes (e.g., enrichers-bim-files, gemini_light)."@en .
 <https://dev.qaecy.com/logs#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
 # 
 # https://dev.qaecy.com/ont#FileLocation

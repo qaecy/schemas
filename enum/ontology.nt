@@ -1,9 +1,8 @@
 <https://dev.qaecy.com/enum#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/creator> "Christian Frausing" .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/creator> "Manos Argyris" .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/description> "This document describes special enumerations to be used with the QAECY Ontology." .
-<https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/modified> "2026-06-17T08:56:19Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/modified> "2026-10-08T20:38:47Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://dev.qaecy.com/enum#> <http://purl.org/dc/terms/title> "QAECY Enumerations"@en .
 <https://dev.qaecy.com/enum#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-e" .
 # 
@@ -42,20 +41,50 @@
 # http://www.w3.org/2004/02/skos/core#related
 <http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# https://dev.qaecy.com/ont#applicableContentCategories
-<https://dev.qaecy.com/ont#applicableContentCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://dev.qaecy.com/ont#classificationPrompt
-<https://dev.qaecy.com/ont#classificationPrompt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://dev.qaecy.com/ont#extractionPrompt
-<https://dev.qaecy.com/ont#extractionPrompt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://dev.qaecy.com/ont#regex
-<https://dev.qaecy.com/ont#regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # https://dev.qaecy.com/ont#relatedFormalClass
 <https://dev.qaecy.com/ont#relatedFormalClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#anonymousValue
+<https://dev.qaecy.com/template#anonymousValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#applicableContentCategories
+<https://dev.qaecy.com/template#applicableContentCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#classificationPrompt
+<https://dev.qaecy.com/template#classificationPrompt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#discriminatingProperty
+<https://dev.qaecy.com/template#discriminatingProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#extractionPrompt
+<https://dev.qaecy.com/template#extractionPrompt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#llmExtraction
+<https://dev.qaecy.com/template#llmExtraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#regex
+<https://dev.qaecy.com/template#regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#resolutionCanonicalizer
+<https://dev.qaecy.com/template#resolutionCanonicalizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#resolutionIdentity
+<https://dev.qaecy.com/template#resolutionIdentity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#resolutionLowThreshold
+<https://dev.qaecy.com/template#resolutionLowThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#resolutionMatchThreshold
+<https://dev.qaecy.com/template#resolutionMatchThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#resolutionNeedsNeighbourhood
+<https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#resolutionNumeralRole
+<https://dev.qaecy.com/template#resolutionNumeralRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://dev.qaecy.com/template#resolutionScopedBy
+<https://dev.qaecy.com/template#resolutionScopedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -77,6 +106,9 @@
 # 
 # https://dev.qaecy.com/ont#MimeCategory
 <https://dev.qaecy.com/ont#MimeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://dev.qaecy.com/ont#ProviderKind
+<https://dev.qaecy.com/ont#ProviderKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://dev.qaecy.com/ont#ProviderType
 <https://dev.qaecy.com/ont#ProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -111,8 +143,8 @@
 <https://dev.qaecy.com/enum#Activity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aktivitet"@da .
 <https://dev.qaecy.com/enum#Activity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aktivität"@de .
 <https://dev.qaecy.com/enum#Activity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Attività"@it .
-<https://dev.qaecy.com/enum#Activity> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Activity> <https://dev.qaecy.com/ont#extractionPrompt> "An activity or process related to the construction or maintenance of a building or infrastructure."@en .
+<https://dev.qaecy.com/enum#Activity> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Activity> <https://dev.qaecy.com/template#extractionPrompt> "An activity or process related to the construction or maintenance of a building or infrastructure."@en .
 # 
 # https://dev.qaecy.com/enum#Address
 <https://dev.qaecy.com/enum#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -129,6 +161,8 @@
 <https://dev.qaecy.com/enum#Address> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adresse"@de .
 <https://dev.qaecy.com/enum#Address> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adresse"@fr .
 <https://dev.qaecy.com/enum#Address> <http://www.w3.org/2004/02/skos/core#prefLabel> "Indirizzo"@it .
+<https://dev.qaecy.com/enum#Address> <https://dev.qaecy.com/template#resolutionLowThreshold> "0.70"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/enum#Address> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.95"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://dev.qaecy.com/enum#AppraisalValuationDocument
 <https://dev.qaecy.com/enum#AppraisalValuationDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -177,8 +211,8 @@
 <https://dev.qaecy.com/enum#Architecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Architecture"@en .
 <https://dev.qaecy.com/enum#Architecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Architecture"@fr .
 <https://dev.qaecy.com/enum#Architecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Architecture"@it .
-<https://dev.qaecy.com/enum#Architecture> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Architecture> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#Architecture> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Architecture> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#ArchiveFileContent
 <https://dev.qaecy.com/enum#ArchiveFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -253,9 +287,9 @@
 <https://dev.qaecy.com/enum#Balcony> <http://www.w3.org/2004/02/skos/core#prefLabel> "Balcony"@en .
 <https://dev.qaecy.com/enum#Balcony> <http://www.w3.org/2004/02/skos/core#prefLabel> "Balcony"@fr .
 <https://dev.qaecy.com/enum#Balcony> <http://www.w3.org/2004/02/skos/core#prefLabel> "Balcony"@it .
-<https://dev.qaecy.com/enum#Balcony> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Balcony> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Balcony> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Balcony> .
+<https://dev.qaecy.com/enum#Balcony> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Balcony> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#Beam
 <https://dev.qaecy.com/enum#Beam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -272,9 +306,9 @@
 <https://dev.qaecy.com/enum#Beam> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beam"@en .
 <https://dev.qaecy.com/enum#Beam> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beam"@fr .
 <https://dev.qaecy.com/enum#Beam> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beam"@it .
-<https://dev.qaecy.com/enum#Beam> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Beam> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Beam> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Beam> .
+<https://dev.qaecy.com/enum#Beam> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Beam> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#BinaryFileContent
 <https://dev.qaecy.com/enum#BinaryFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -282,6 +316,13 @@
 <https://dev.qaecy.com/enum#BinaryFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#MimeCategory> .
 <https://dev.qaecy.com/enum#BinaryFileContent> <http://www.w3.org/2004/02/skos/core#definition> "Content of a generic binary file with no more specific type."@en .
 <https://dev.qaecy.com/enum#BinaryFileContent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Binary File Content"@en .
+# 
+# https://dev.qaecy.com/enum#BrowserUpload
+<https://dev.qaecy.com/enum#BrowserUpload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/enum#BrowserUpload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://dev.qaecy.com/enum#BrowserUpload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#ProviderKind> .
+<https://dev.qaecy.com/enum#BrowserUpload> <http://www.w3.org/2004/02/skos/core#definition> "Files a user uploaded through a web browser, where the original location on disk is not known."@en .
+<https://dev.qaecy.com/enum#BrowserUpload> <http://www.w3.org/2004/02/skos/core#prefLabel> "Browser upload"@en .
 # 
 # https://dev.qaecy.com/enum#BudgetEstimateDocument
 <https://dev.qaecy.com/enum#BudgetEstimateDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -314,9 +355,9 @@
 <https://dev.qaecy.com/enum#Building> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bâtiment"@fr .
 <https://dev.qaecy.com/enum#Building> <http://www.w3.org/2004/02/skos/core#prefLabel> "Edificio"@it .
 <https://dev.qaecy.com/enum#Building> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebäude"@de .
-<https://dev.qaecy.com/enum#Building> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Building> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Building> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Building> .
+<https://dev.qaecy.com/enum#Building> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Building> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#BuildingAutomationSystem
 <https://dev.qaecy.com/enum#BuildingAutomationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -333,8 +374,8 @@
 <https://dev.qaecy.com/enum#BuildingAutomationSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bâtiment Automation System"@fr .
 <https://dev.qaecy.com/enum#BuildingAutomationSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Edificio Automation System"@it .
 <https://dev.qaecy.com/enum#BuildingAutomationSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebäude Automation System"@de .
-<https://dev.qaecy.com/enum#BuildingAutomationSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#BuildingAutomationSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#BuildingAutomationSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#BuildingAutomationSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#BuildingElement
 <https://dev.qaecy.com/enum#BuildingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -350,11 +391,15 @@
 <https://dev.qaecy.com/enum#BuildingElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bâtiment Element"@fr .
 <https://dev.qaecy.com/enum#BuildingElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Edificio Element"@it .
 <https://dev.qaecy.com/enum#BuildingElement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebäude Element"@de .
-<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/ont#extractionPrompt> "Any tangible part of a 'Building', identified by a name or an id."@en .
 <https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Element> .
 <https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#BuildingElement> .
+<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/template#anonymousValue> "undefined" .
+<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/template#anonymousValue> "unnamed element" .
+<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/template#extractionPrompt> "Any tangible part of a 'Building', identified by a name or an id."@en .
+<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/template#resolutionCanonicalizer> "german_noun" .
+<https://dev.qaecy.com/enum#BuildingElement> <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 # 
 # https://dev.qaecy.com/enum#BuildingStoreyInterface
 <https://dev.qaecy.com/enum#BuildingStoreyInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -371,7 +416,8 @@
 <https://dev.qaecy.com/enum#BuildingStoreyInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bâtiment/Étage Interface"@fr .
 <https://dev.qaecy.com/enum#BuildingStoreyInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Edificio/Piano Interface"@it .
 <https://dev.qaecy.com/enum#BuildingStoreyInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebäude/Geschoss Interface"@de .
-<https://dev.qaecy.com/enum#BuildingStoreyInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#BuildingStoreyInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#BuildingStoreyInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#BuildingZone
 <https://dev.qaecy.com/enum#BuildingZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -387,10 +433,10 @@
 <https://dev.qaecy.com/enum#BuildingZone> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bâtiment Zone"@fr .
 <https://dev.qaecy.com/enum#BuildingZone> <http://www.w3.org/2004/02/skos/core#prefLabel> "Edificio Zone"@it .
 <https://dev.qaecy.com/enum#BuildingZone> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebäude Zone"@de .
-<https://dev.qaecy.com/enum#BuildingZone> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#BuildingZone> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#BuildingZone> <https://dev.qaecy.com/ont#extractionPrompt> "Any spatial decomposition of a building project, identified by name or id."@en .
 <https://dev.qaecy.com/enum#BuildingZone> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Zone> .
+<https://dev.qaecy.com/enum#BuildingZone> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#BuildingZone> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#BuildingZone> <https://dev.qaecy.com/template#extractionPrompt> "Any spatial decomposition of a building project, identified by name or id."@en .
 # 
 # https://dev.qaecy.com/enum#BuiltAsset
 <https://dev.qaecy.com/enum#BuiltAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -406,7 +452,7 @@
 <https://dev.qaecy.com/enum#BuiltAsset> <http://www.w3.org/2004/02/skos/core#prefLabel> "Built Asset"@en .
 <https://dev.qaecy.com/enum#BuiltAsset> <http://www.w3.org/2004/02/skos/core#prefLabel> "Built Asset"@fr .
 <https://dev.qaecy.com/enum#BuiltAsset> <http://www.w3.org/2004/02/skos/core#prefLabel> "Built Asset"@it .
-<https://dev.qaecy.com/enum#BuiltAsset> <https://dev.qaecy.com/ont#extractionPrompt> "A built asset, identified by its title, name or id."@en .
+<https://dev.qaecy.com/enum#BuiltAsset> <https://dev.qaecy.com/template#extractionPrompt> "A built asset, identified by its title, name or id."@en .
 # 
 # https://dev.qaecy.com/enum#CADFileContent
 <https://dev.qaecy.com/enum#CADFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -462,6 +508,23 @@
 <https://dev.qaecy.com/enum#City> <http://www.w3.org/2004/02/skos/core#prefLabel> "City"@en .
 <https://dev.qaecy.com/enum#City> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stadt"@de .
 <https://dev.qaecy.com/enum#City> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ville"@fr .
+<https://dev.qaecy.com/enum#City> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.92"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://dev.qaecy.com/enum#Color
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#definition> "A color described by name or standardized code."@en .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#definition> "Eine Farbe, die durch einen Namen oder einen standardisierten Code beschrieben wird."@de .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#definition> "En farve beskrevet ved navn eller standardiseret kode."@da .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#definition> "Un colore descritto tramite nome o codice standardizzato."@it .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#definition> "Une couleur décrite par un nom ou un code normalisé."@fr .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#prefLabel> "Color"@en .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#prefLabel> "Colore"@it .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#prefLabel> "Couleur"@fr .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#prefLabel> "Farbe"@de .
+<https://dev.qaecy.com/enum#Color> <http://www.w3.org/2004/02/skos/core#prefLabel> "Farve"@da .
+<https://dev.qaecy.com/enum#Color> <https://dev.qaecy.com/template#extractionPrompt> "A color, expressed by name or standardized code (e.g. Blau, Grün, RAL 9010)."@en .
 # 
 # https://dev.qaecy.com/enum#Column
 <https://dev.qaecy.com/enum#Column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -478,9 +541,9 @@
 <https://dev.qaecy.com/enum#Column> <http://www.w3.org/2004/02/skos/core#prefLabel> "Column"@en .
 <https://dev.qaecy.com/enum#Column> <http://www.w3.org/2004/02/skos/core#prefLabel> "Column"@fr .
 <https://dev.qaecy.com/enum#Column> <http://www.w3.org/2004/02/skos/core#prefLabel> "Column"@it .
-<https://dev.qaecy.com/enum#Column> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Column> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Column> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Column> .
+<https://dev.qaecy.com/enum#Column> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Column> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#ComplianceReport
 <https://dev.qaecy.com/enum#ComplianceReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -528,7 +591,7 @@
 <https://dev.qaecy.com/enum#ConstructionProcessDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Construction Process & Management Document"@en .
 <https://dev.qaecy.com/enum#ConstructionProcessDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Construction Process & Management Document"@fr .
 <https://dev.qaecy.com/enum#ConstructionProcessDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Construction Process & Management Document"@it .
-<https://dev.qaecy.com/enum#ConstructionProcessDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents used to plan, monitor, and control construction activities and safety, such as project schedules, change orders, requests for information (RFIs), QA/QC reports, progress reports, and safety records."@en .
+<https://dev.qaecy.com/enum#ConstructionProcessDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents used to plan, monitor, and control construction activities and safety, such as project schedules, change orders, requests for information (RFIs), QA/QC reports, progress reports, and safety records."@en .
 # 
 # https://dev.qaecy.com/enum#Contract
 <https://dev.qaecy.com/enum#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -544,8 +607,8 @@
 <https://dev.qaecy.com/enum#Contract> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contratto"@it .
 <https://dev.qaecy.com/enum#Contract> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kontrakt"@da .
 <https://dev.qaecy.com/enum#Contract> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vertrag"@de .
-<https://dev.qaecy.com/enum#Contract> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#Contract> <https://dev.qaecy.com/ont#extractionPrompt> "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."@en .
+<https://dev.qaecy.com/enum#Contract> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/enum#Contract> <https://dev.qaecy.com/template#extractionPrompt> "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."@en .
 # 
 # https://dev.qaecy.com/enum#ContractCondition
 <https://dev.qaecy.com/enum#ContractCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -561,8 +624,8 @@
 <https://dev.qaecy.com/enum#ContractCondition> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contratto Condizione"@it .
 <https://dev.qaecy.com/enum#ContractCondition> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kontrakt Betingelse"@da .
 <https://dev.qaecy.com/enum#ContractCondition> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vertrag Bedingung"@de .
-<https://dev.qaecy.com/enum#ContractCondition> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#ContractCondition> <https://dev.qaecy.com/ont#extractionPrompt> "A certain condition that must be met, as part of a 'ContractObligation'."@en .
+<https://dev.qaecy.com/enum#ContractCondition> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/enum#ContractCondition> <https://dev.qaecy.com/template#extractionPrompt> "A certain condition that must be met, as part of a 'ContractObligation'."@en .
 # 
 # https://dev.qaecy.com/enum#ContractObligation
 <https://dev.qaecy.com/enum#ContractObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -578,8 +641,8 @@
 <https://dev.qaecy.com/enum#ContractObligation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contratto Obligation"@it .
 <https://dev.qaecy.com/enum#ContractObligation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kontrakt Obligation"@da .
 <https://dev.qaecy.com/enum#ContractObligation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vertrag Obligation"@de .
-<https://dev.qaecy.com/enum#ContractObligation> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#ContractObligation> <https://dev.qaecy.com/ont#extractionPrompt> "A certain obligation that must be undertaken in the context of the 'Contract'."@en .
+<https://dev.qaecy.com/enum#ContractObligation> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/enum#ContractObligation> <https://dev.qaecy.com/template#extractionPrompt> "A certain obligation that must be undertaken in the context of the 'Contract'."@en .
 # 
 # https://dev.qaecy.com/enum#ContractRole
 <https://dev.qaecy.com/enum#ContractRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -595,8 +658,11 @@
 <https://dev.qaecy.com/enum#ContractRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contratto Role"@it .
 <https://dev.qaecy.com/enum#ContractRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kontrakt Role"@da .
 <https://dev.qaecy.com/enum#ContractRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vertrag Role"@de .
-<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/ont#extractionPrompt> "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."@en .
+<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/template#extractionPrompt> "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."@en .
+<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#associatedWith> .
+<https://dev.qaecy.com/enum#ContractRole> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#hasContractRole> .
 # 
 # https://dev.qaecy.com/enum#ContractualDocument
 <https://dev.qaecy.com/enum#ContractualDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -612,7 +678,7 @@
 <https://dev.qaecy.com/enum#ContractualDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contractual & Legal Document"@en .
 <https://dev.qaecy.com/enum#ContractualDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contractual & Legal Document"@fr .
 <https://dev.qaecy.com/enum#ContractualDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contractual & Legal Document"@it .
-<https://dev.qaecy.com/enum#ContractualDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents that establish obligations, rights, and responsibilities, such as purchase agreements, lease agreements, construction contracts, insurance documents, and bonds."@en .
+<https://dev.qaecy.com/enum#ContractualDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents that establish obligations, rights, and responsibilities, such as purchase agreements, lease agreements, construction contracts, insurance documents, and bonds."@en .
 # 
 # https://dev.qaecy.com/enum#CoolingSystem
 <https://dev.qaecy.com/enum#CoolingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -629,8 +695,8 @@
 <https://dev.qaecy.com/enum#CoolingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cooling System"@en .
 <https://dev.qaecy.com/enum#CoolingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cooling System"@fr .
 <https://dev.qaecy.com/enum#CoolingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cooling System"@it .
-<https://dev.qaecy.com/enum#CoolingSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#CoolingSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#CoolingSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#CoolingSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#CorrespondenceDocument
 <https://dev.qaecy.com/enum#CorrespondenceDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -662,10 +728,12 @@
 <https://dev.qaecy.com/enum#CostItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cost Item"@en .
 <https://dev.qaecy.com/enum#CostItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cost Item"@fr .
 <https://dev.qaecy.com/enum#CostItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cost Item"@it .
-<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
-<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#FinancialAdministrativeDocument> .
-<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/ont#extractionPrompt> "A cost, expressed in currency."@en .
+<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ContractualDocument> .
+<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#FinancialAdministrativeDocument> .
+<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/template#extractionPrompt> "A cost, expressed in currency."@en .
+<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/template#resolutionCanonicalizer> "cost" .
+<https://dev.qaecy.com/enum#CostItem> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 # 
 # https://dev.qaecy.com/enum#Country
 <https://dev.qaecy.com/enum#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -682,6 +750,7 @@
 <https://dev.qaecy.com/enum#Country> <http://www.w3.org/2004/02/skos/core#prefLabel> "Land"@de .
 <https://dev.qaecy.com/enum#Country> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paese"@it .
 <https://dev.qaecy.com/enum#Country> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pays"@fr .
+<https://dev.qaecy.com/enum#Country> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.90"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://dev.qaecy.com/enum#DataFileContent
 <https://dev.qaecy.com/enum#DataFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -704,8 +773,11 @@
 <https://dev.qaecy.com/enum#Date> <http://www.w3.org/2004/02/skos/core#prefLabel> "Date"@fr .
 <https://dev.qaecy.com/enum#Date> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dato"@da .
 <https://dev.qaecy.com/enum#Date> <http://www.w3.org/2004/02/skos/core#prefLabel> "Datum"@de .
-<https://dev.qaecy.com/enum#Date> <https://dev.qaecy.com/ont#extractionPrompt> "A date. Must be returned in ISO 8601 **YYYY-MM-DD** format (eg: 4/5/2005 becomes 2005-05-04, 1 July 2021 becomes 2021-07-01 etc)."@en .
-<https://dev.qaecy.com/enum#Date> <https://dev.qaecy.com/ont#regex> "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .
+<https://dev.qaecy.com/enum#Date> <https://dev.qaecy.com/template#extractionPrompt> "A date. Must be returned in ISO 8601 **YYYY-MM-DD** format (eg: 4/5/2005 becomes 2005-05-04, 1 July 2021 becomes 2021-07-01 etc)."@en .
+<https://dev.qaecy.com/enum#Date> <https://dev.qaecy.com/template#regex> "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" .
+<https://dev.qaecy.com/enum#Date> <https://dev.qaecy.com/template#resolutionCanonicalizer> "iso_date" .
+<https://dev.qaecy.com/enum#Date> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
+<https://dev.qaecy.com/enum#Date> <https://dev.qaecy.com/template#resolutionNumeralRole> "ignore" .
 # 
 # https://dev.qaecy.com/enum#DesignDocument
 <https://dev.qaecy.com/enum#DesignDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -721,7 +793,7 @@
 <https://dev.qaecy.com/enum#DesignDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Document"@en .
 <https://dev.qaecy.com/enum#DesignDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Document"@fr .
 <https://dev.qaecy.com/enum#DesignDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Document"@it .
-<https://dev.qaecy.com/enum#DesignDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents that define geometry, materials, and design intent, such as architectural drawings, engineering designs, landscape or interior plans, BIM models, and renderings."@en .
+<https://dev.qaecy.com/enum#DesignDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents that define geometry, materials, and design intent, such as architectural drawings, engineering designs, landscape or interior plans, BIM models, and renderings."@en .
 # 
 # https://dev.qaecy.com/enum#DesignId
 <https://dev.qaecy.com/enum#DesignId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -738,7 +810,7 @@
 <https://dev.qaecy.com/enum#DesignId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Id"@en .
 <https://dev.qaecy.com/enum#DesignId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Id"@fr .
 <https://dev.qaecy.com/enum#DesignId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Id"@it .
-<https://dev.qaecy.com/enum#DesignId> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DesignId> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#DesignMetadata
 <https://dev.qaecy.com/enum#DesignMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -754,8 +826,8 @@
 <https://dev.qaecy.com/enum#DesignMetadata> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Metadata"@en .
 <https://dev.qaecy.com/enum#DesignMetadata> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Metadata"@fr .
 <https://dev.qaecy.com/enum#DesignMetadata> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Metadata"@it .
-<https://dev.qaecy.com/enum#DesignMetadata> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#DesignMetadata> <https://dev.qaecy.com/ont#extractionPrompt> "Any metadata related either to the 'DrawingSheet' or the 'DrawingEntity'. Usually found in the title block of the document."@en .
+<https://dev.qaecy.com/enum#DesignMetadata> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DesignMetadata> <https://dev.qaecy.com/template#extractionPrompt> "Any metadata related either to the 'DrawingSheet' or the 'DrawingEntity'. Usually found in the title block of the document."@en .
 # 
 # https://dev.qaecy.com/enum#DesignRevisionId
 <https://dev.qaecy.com/enum#DesignRevisionId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -772,7 +844,7 @@
 <https://dev.qaecy.com/enum#DesignRevisionId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Revision Id"@en .
 <https://dev.qaecy.com/enum#DesignRevisionId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Revision Id"@fr .
 <https://dev.qaecy.com/enum#DesignRevisionId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Revision Id"@it .
-<https://dev.qaecy.com/enum#DesignRevisionId> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DesignRevisionId> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#DesignStatus
 <https://dev.qaecy.com/enum#DesignStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -789,7 +861,7 @@
 <https://dev.qaecy.com/enum#DesignStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Status"@en .
 <https://dev.qaecy.com/enum#DesignStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Status"@fr .
 <https://dev.qaecy.com/enum#DesignStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Status"@it .
-<https://dev.qaecy.com/enum#DesignStatus> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DesignStatus> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#DesignTitle
 <https://dev.qaecy.com/enum#DesignTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -806,7 +878,8 @@
 <https://dev.qaecy.com/enum#DesignTitle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Title"@en .
 <https://dev.qaecy.com/enum#DesignTitle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Title"@fr .
 <https://dev.qaecy.com/enum#DesignTitle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Title"@it .
-<https://dev.qaecy.com/enum#DesignTitle> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DesignTitle> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DesignTitle> <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 # 
 # https://dev.qaecy.com/enum#DetailDrawing
 <https://dev.qaecy.com/enum#DetailDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -823,7 +896,7 @@
 <https://dev.qaecy.com/enum#DetailDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Detail Drawing"@en .
 <https://dev.qaecy.com/enum#DetailDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Detail Drawing"@fr .
 <https://dev.qaecy.com/enum#DetailDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Detail Drawing"@it .
-<https://dev.qaecy.com/enum#DetailDrawing> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DetailDrawing> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#DiagramDrawing
 <https://dev.qaecy.com/enum#DiagramDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -840,7 +913,7 @@
 <https://dev.qaecy.com/enum#DiagramDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Diagram Drawing"@en .
 <https://dev.qaecy.com/enum#DiagramDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Diagram Drawing"@fr .
 <https://dev.qaecy.com/enum#DiagramDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Diagram Drawing"@it .
-<https://dev.qaecy.com/enum#DiagramDrawing> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DiagramDrawing> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#Discipline
 <https://dev.qaecy.com/enum#Discipline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -856,9 +929,16 @@
 <https://dev.qaecy.com/enum#Discipline> <http://www.w3.org/2004/02/skos/core#prefLabel> "Discipline"@en .
 <https://dev.qaecy.com/enum#Discipline> <http://www.w3.org/2004/02/skos/core#prefLabel> "Discipline"@fr .
 <https://dev.qaecy.com/enum#Discipline> <http://www.w3.org/2004/02/skos/core#prefLabel> "Disziplin"@de .
-<https://dev.qaecy.com/enum#Discipline> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Discipline> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#Discipline> <https://dev.qaecy.com/ont#extractionPrompt> "A discipline/trade associated with a provided resource (activity, drawing etc)."@en .
+<https://dev.qaecy.com/enum#Discipline> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Discipline> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#Discipline> <https://dev.qaecy.com/template#extractionPrompt> "A discipline/trade associated with a provided resource (activity, drawing etc)."@en .
+# 
+# https://dev.qaecy.com/enum#DocumentManagementSystem
+<https://dev.qaecy.com/enum#DocumentManagementSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/enum#DocumentManagementSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://dev.qaecy.com/enum#DocumentManagementSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#ProviderKind> .
+<https://dev.qaecy.com/enum#DocumentManagementSystem> <http://www.w3.org/2004/02/skos/core#definition> "A shared document management system such as SharePoint or ThinkProject, synchronised into the project."@en .
+<https://dev.qaecy.com/enum#DocumentManagementSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Document management system"@en .
 # 
 # https://dev.qaecy.com/enum#Door
 <https://dev.qaecy.com/enum#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -875,9 +955,9 @@
 <https://dev.qaecy.com/enum#Door> <http://www.w3.org/2004/02/skos/core#prefLabel> "Door"@en .
 <https://dev.qaecy.com/enum#Door> <http://www.w3.org/2004/02/skos/core#prefLabel> "Door"@fr .
 <https://dev.qaecy.com/enum#Door> <http://www.w3.org/2004/02/skos/core#prefLabel> "Door"@it .
-<https://dev.qaecy.com/enum#Door> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Door> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Door> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Door> .
+<https://dev.qaecy.com/enum#Door> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Door> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#DrawingEntity
 <https://dev.qaecy.com/enum#DrawingEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -893,9 +973,9 @@
 <https://dev.qaecy.com/enum#DrawingEntity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Entity"@en .
 <https://dev.qaecy.com/enum#DrawingEntity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Entity"@fr .
 <https://dev.qaecy.com/enum#DrawingEntity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Entity"@it .
-<https://dev.qaecy.com/enum#DrawingEntity> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#DrawingEntity> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#DrawingEntity> <https://dev.qaecy.com/ont#extractionPrompt> "Any drawing (floor-plan, site-plan, section, P&ID diagram, detail etc), identified by name, title or id. Usually, but not necessarily, it is contained in a 'DrawingSheet'."@en .
+<https://dev.qaecy.com/enum#DrawingEntity> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#DrawingEntity> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DrawingEntity> <https://dev.qaecy.com/template#extractionPrompt> "Any drawing (floor-plan, site-plan, section, P&ID diagram, detail etc), identified by name, title or id. Usually, but not necessarily, it is contained in a 'DrawingSheet'."@en .
 # 
 # https://dev.qaecy.com/enum#DrawingOrientation
 <https://dev.qaecy.com/enum#DrawingOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -911,8 +991,8 @@
 <https://dev.qaecy.com/enum#DrawingOrientation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Orientation"@en .
 <https://dev.qaecy.com/enum#DrawingOrientation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Orientation"@fr .
 <https://dev.qaecy.com/enum#DrawingOrientation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Orientation"@it .
-<https://dev.qaecy.com/enum#DrawingOrientation> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#DrawingOrientation> <https://dev.qaecy.com/ont#extractionPrompt> "The orientation of a 'DrawingEntity'."@en .
+<https://dev.qaecy.com/enum#DrawingOrientation> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DrawingOrientation> <https://dev.qaecy.com/template#extractionPrompt> "The orientation of a 'DrawingEntity'."@en .
 # 
 # https://dev.qaecy.com/enum#DrawingScale
 <https://dev.qaecy.com/enum#DrawingScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -928,8 +1008,8 @@
 <https://dev.qaecy.com/enum#DrawingScale> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Scale"@en .
 <https://dev.qaecy.com/enum#DrawingScale> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Scale"@fr .
 <https://dev.qaecy.com/enum#DrawingScale> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Scale"@it .
-<https://dev.qaecy.com/enum#DrawingScale> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#DrawingScale> <https://dev.qaecy.com/ont#extractionPrompt> "The scale of a 'DrawingEntity' or of a 'DrawingSheet'."@en .
+<https://dev.qaecy.com/enum#DrawingScale> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DrawingScale> <https://dev.qaecy.com/template#extractionPrompt> "The scale of a 'DrawingEntity' or of a 'DrawingSheet'."@en .
 # 
 # https://dev.qaecy.com/enum#DrawingSheet
 <https://dev.qaecy.com/enum#DrawingSheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -945,9 +1025,9 @@
 <https://dev.qaecy.com/enum#DrawingSheet> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Sheet"@en .
 <https://dev.qaecy.com/enum#DrawingSheet> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Sheet"@fr .
 <https://dev.qaecy.com/enum#DrawingSheet> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drawing Sheet"@it .
-<https://dev.qaecy.com/enum#DrawingSheet> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#DrawingSheet> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#DrawingSheet> <https://dev.qaecy.com/ont#extractionPrompt> "A sheet of a technical drawing, that contains one or more 'DrawingEntity'. Most often contains a title block with 'DesignMetadata'. It is identified by name, title or id."@en .
+<https://dev.qaecy.com/enum#DrawingSheet> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#DrawingSheet> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#DrawingSheet> <https://dev.qaecy.com/template#extractionPrompt> "A sheet of a technical drawing, that contains one or more 'DrawingEntity'. Most often contains a title block with 'DesignMetadata'. It is identified by name, title or id."@en .
 # 
 # https://dev.qaecy.com/enum#DueDiligenceDocument
 <https://dev.qaecy.com/enum#DueDiligenceDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -979,8 +1059,10 @@
 <https://dev.qaecy.com/enum#Duration> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aktivitet Varighed"@da .
 <https://dev.qaecy.com/enum#Duration> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aktivität Dauer"@de .
 <https://dev.qaecy.com/enum#Duration> <http://www.w3.org/2004/02/skos/core#prefLabel> "Attività Durata"@it .
-<https://dev.qaecy.com/enum#Duration> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Duration> <https://dev.qaecy.com/ont#extractionPrompt> "The duration of an activity, expressed in days, weeks, months or years."@en .
+<https://dev.qaecy.com/enum#Duration> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Duration> <https://dev.qaecy.com/template#extractionPrompt> "The duration of an activity, expressed in days, weeks, months or years."@en .
+<https://dev.qaecy.com/enum#Duration> <https://dev.qaecy.com/template#resolutionCanonicalizer> "duration" .
+<https://dev.qaecy.com/enum#Duration> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 # 
 # https://dev.qaecy.com/enum#ElectricalSystem
 <https://dev.qaecy.com/enum#ElectricalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -997,8 +1079,8 @@
 <https://dev.qaecy.com/enum#ElectricalSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Electrical System"@en .
 <https://dev.qaecy.com/enum#ElectricalSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Electrical System"@fr .
 <https://dev.qaecy.com/enum#ElectricalSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Electrical System"@it .
-<https://dev.qaecy.com/enum#ElectricalSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#ElectricalSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#ElectricalSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#ElectricalSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#ElementAdjacentElementInterface
 <https://dev.qaecy.com/enum#ElementAdjacentElementInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1015,7 +1097,8 @@
 <https://dev.qaecy.com/enum#ElementAdjacentElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Element/Adjacent element Interface"@en .
 <https://dev.qaecy.com/enum#ElementAdjacentElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Element/Adjacent element Interface"@fr .
 <https://dev.qaecy.com/enum#ElementAdjacentElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Element/Adjacent element Interface"@it .
-<https://dev.qaecy.com/enum#ElementAdjacentElementInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#ElementAdjacentElementInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#ElementAdjacentElementInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#ElevationDrawing
 <https://dev.qaecy.com/enum#ElevationDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1032,7 +1115,7 @@
 <https://dev.qaecy.com/enum#ElevationDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elevation Drawing"@en .
 <https://dev.qaecy.com/enum#ElevationDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elevation Drawing"@fr .
 <https://dev.qaecy.com/enum#ElevationDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elevation Drawing"@it .
-<https://dev.qaecy.com/enum#ElevationDrawing> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#ElevationDrawing> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#EmailAddress
 <https://dev.qaecy.com/enum#EmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1048,8 +1131,10 @@
 <https://dev.qaecy.com/enum#EmailAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Adresse"@de .
 <https://dev.qaecy.com/enum#EmailAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Adresse"@fr .
 <https://dev.qaecy.com/enum#EmailAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Indirizzo"@it .
-<https://dev.qaecy.com/enum#EmailAddress> <https://dev.qaecy.com/ont#extractionPrompt> "An email address."@en .
-<https://dev.qaecy.com/enum#EmailAddress> <https://dev.qaecy.com/ont#regex> "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" .
+<https://dev.qaecy.com/enum#EmailAddress> <https://dev.qaecy.com/template#extractionPrompt> "An email address."@en .
+<https://dev.qaecy.com/enum#EmailAddress> <https://dev.qaecy.com/template#regex> "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" .
+<https://dev.qaecy.com/enum#EmailAddress> <https://dev.qaecy.com/template#resolutionCanonicalizer> "email" .
+<https://dev.qaecy.com/enum#EmailAddress> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 # 
 # https://dev.qaecy.com/enum#EmailFileContent
 <https://dev.qaecy.com/enum#EmailFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1089,8 +1174,8 @@
 <https://dev.qaecy.com/enum#EnvironmentalEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Environmental Engineering"@en .
 <https://dev.qaecy.com/enum#EnvironmentalEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Environmental Engineering"@fr .
 <https://dev.qaecy.com/enum#EnvironmentalEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Environmental Engineering"@it .
-<https://dev.qaecy.com/enum#EnvironmentalEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#EnvironmentalEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#EnvironmentalEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#EnvironmentalEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#Equipment
 <https://dev.qaecy.com/enum#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1106,9 +1191,9 @@
 <https://dev.qaecy.com/enum#Equipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Equipment"@en .
 <https://dev.qaecy.com/enum#Equipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Udstyr"@da .
 <https://dev.qaecy.com/enum#Equipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Équipement"@fr .
-<https://dev.qaecy.com/enum#Equipment> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Equipment> <https://dev.qaecy.com/ont#extractionPrompt> "A piece of equipment, a device, a tool or a machine used in construction or maintenance."@en .
 <https://dev.qaecy.com/enum#Equipment> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Equipment> .
+<https://dev.qaecy.com/enum#Equipment> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Equipment> <https://dev.qaecy.com/template#extractionPrompt> "A piece of equipment, a device, a tool or a machine used in construction or maintenance."@en .
 # 
 # https://dev.qaecy.com/enum#Facade
 <https://dev.qaecy.com/enum#Facade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1126,9 +1211,9 @@
 <https://dev.qaecy.com/enum#Facade> <http://www.w3.org/2004/02/skos/core#prefLabel> "Facade"@fr .
 <https://dev.qaecy.com/enum#Facade> <http://www.w3.org/2004/02/skos/core#prefLabel> "Facade"@it .
 <https://dev.qaecy.com/enum#Facade> <http://www.w3.org/2004/02/skos/core#related> <https://dev.qaecy.com/enum#Wall> .
-<https://dev.qaecy.com/enum#Facade> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Facade> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Facade> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Facade> .
+<https://dev.qaecy.com/enum#Facade> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Facade> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#FacilityManagement
 <https://dev.qaecy.com/enum#FacilityManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1145,8 +1230,8 @@
 <https://dev.qaecy.com/enum#FacilityManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Facility Management"@en .
 <https://dev.qaecy.com/enum#FacilityManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Facility Management"@fr .
 <https://dev.qaecy.com/enum#FacilityManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Facility Management"@it .
-<https://dev.qaecy.com/enum#FacilityManagement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#FacilityManagement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#FacilityManagement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#FacilityManagement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#FileReference
 <https://dev.qaecy.com/enum#FileReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1162,7 +1247,9 @@
 <https://dev.qaecy.com/enum#FileReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "File Reference"@en .
 <https://dev.qaecy.com/enum#FileReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "File Reference"@fr .
 <https://dev.qaecy.com/enum#FileReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "File Reference"@it .
-<https://dev.qaecy.com/enum#FileReference> <https://dev.qaecy.com/ont#extractionPrompt> "A reference to a file by mentioning its name, id and/or path."@en .
+<https://dev.qaecy.com/enum#FileReference> <https://dev.qaecy.com/template#extractionPrompt> "A reference to a file by mentioning its name, id and/or path."@en .
+<https://dev.qaecy.com/enum#FileReference> <https://dev.qaecy.com/template#resolutionCanonicalizer> "path" .
+<https://dev.qaecy.com/enum#FileReference> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 # 
 # https://dev.qaecy.com/enum#FinancialAdministrativeDocument
 <https://dev.qaecy.com/enum#FinancialAdministrativeDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1178,7 +1265,7 @@
 <https://dev.qaecy.com/enum#FinancialAdministrativeDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial & Administrative Document"@en .
 <https://dev.qaecy.com/enum#FinancialAdministrativeDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial & Administrative Document"@fr .
 <https://dev.qaecy.com/enum#FinancialAdministrativeDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial & Administrative Document"@it .
-<https://dev.qaecy.com/enum#FinancialAdministrativeDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents recording financial transactions, valuations, and budget control, such as cost estimates, budgets, invoices, payment applications, appraisals, and valuations."@en .
+<https://dev.qaecy.com/enum#FinancialAdministrativeDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents recording financial transactions, valuations, and budget control, such as cost estimates, budgets, invoices, payment applications, appraisals, and valuations."@en .
 # 
 # https://dev.qaecy.com/enum#FireProtectionSystem
 <https://dev.qaecy.com/enum#FireProtectionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1195,8 +1282,8 @@
 <https://dev.qaecy.com/enum#FireProtectionSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fire Protection System"@en .
 <https://dev.qaecy.com/enum#FireProtectionSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fire Protection System"@fr .
 <https://dev.qaecy.com/enum#FireProtectionSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fire Protection System"@it .
-<https://dev.qaecy.com/enum#FireProtectionSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#FireProtectionSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#FireProtectionSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#FireProtectionSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#FloorPlanDrawing
 <https://dev.qaecy.com/enum#FloorPlanDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1213,7 +1300,8 @@
 <https://dev.qaecy.com/enum#FloorPlanDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Floor Plan Drawing"@en .
 <https://dev.qaecy.com/enum#FloorPlanDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Floor Plan Drawing"@fr .
 <https://dev.qaecy.com/enum#FloorPlanDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Floor Plan Drawing"@it .
-<https://dev.qaecy.com/enum#FloorPlanDrawing> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#FloorPlanDrawing> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#FloorPlanDrawing> <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 # 
 # https://dev.qaecy.com/enum#FontFileContent
 <https://dev.qaecy.com/enum#FontFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1260,6 +1348,8 @@
 <https://dev.qaecy.com/enum#GeoCoordinates> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geo Coordinates"@en .
 <https://dev.qaecy.com/enum#GeoCoordinates> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geokoordinaten"@de .
 <https://dev.qaecy.com/enum#GeoCoordinates> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geokoordinater"@da .
+<https://dev.qaecy.com/enum#GeoCoordinates> <https://dev.qaecy.com/template#resolutionCanonicalizer> "geo" .
+<https://dev.qaecy.com/enum#GeoCoordinates> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 # 
 # https://dev.qaecy.com/enum#Geometry
 <https://dev.qaecy.com/enum#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1276,6 +1366,7 @@
 <https://dev.qaecy.com/enum#Geometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@fr .
 <https://dev.qaecy.com/enum#Geometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@it .
 <https://dev.qaecy.com/enum#Geometry> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/omg#hasGeometry> .
+<https://dev.qaecy.com/enum#Geometry> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#GeospatialFileContent
 <https://dev.qaecy.com/enum#GeospatialFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1299,8 +1390,8 @@
 <https://dev.qaecy.com/enum#GeotechnicalEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geotechnical Engineering"@en .
 <https://dev.qaecy.com/enum#GeotechnicalEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geotechnical Engineering"@fr .
 <https://dev.qaecy.com/enum#GeotechnicalEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geotechnical Engineering"@it .
-<https://dev.qaecy.com/enum#GeotechnicalEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#GeotechnicalEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#GeotechnicalEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#GeotechnicalEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#HeatingSystem
 <https://dev.qaecy.com/enum#HeatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1317,27 +1408,34 @@
 <https://dev.qaecy.com/enum#HeatingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Heating System"@en .
 <https://dev.qaecy.com/enum#HeatingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Heating System"@fr .
 <https://dev.qaecy.com/enum#HeatingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Heating System"@it .
-<https://dev.qaecy.com/enum#HeatingSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#HeatingSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#HeatingSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#HeatingSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#HousingUnit
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#broader> <https://dev.qaecy.com/enum#BuildingZone> .
+<https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#definition> "A self-contained dwelling within a building, such as an apartment or a house in a terrace."@en .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#definition> "Either the whole building or a unit of a building or storey"@en .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#definition> "Enten hele bygningen eller en enhed i en bygning eller etage"@da .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#definition> "Entweder das ganze Gebäude oder eine Einheit eines Gebäudes oder Stockwerks"@de .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#definition> "O l'intero edificio o un'unità di un edificio o di un piano"@it .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#definition> "Soit le bâtiment entier, soit une unité d'un bâtiment ou d'un étage"@fr .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Boligenhed"@da .
+<https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Housing Unit"@en .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Housing unit"@en .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unità abitativa"@it .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unité d'habitation"@fr .
 <https://dev.qaecy.com/enum#HousingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wohneinheit"@de .
-<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Zone> .
+<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.90"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#contains> .
+<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#includesBuildingEntity> .
+<https://dev.qaecy.com/enum#HousingUnit> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#zoneContainsSpace> .
 # 
 # https://dev.qaecy.com/enum#ImageFileContent
 <https://dev.qaecy.com/enum#ImageFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1361,8 +1459,8 @@
 <https://dev.qaecy.com/enum#InfrastructureEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Infrastructure Engineering"@en .
 <https://dev.qaecy.com/enum#InfrastructureEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Infrastructure Engineering"@fr .
 <https://dev.qaecy.com/enum#InfrastructureEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Infrastructure Engineering"@it .
-<https://dev.qaecy.com/enum#InfrastructureEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#InfrastructureEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#InfrastructureEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#InfrastructureEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#InspectionDocument
 <https://dev.qaecy.com/enum#InspectionDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1417,8 +1515,9 @@
 <https://dev.qaecy.com/enum#Interface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interface"@en .
 <https://dev.qaecy.com/enum#Interface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interface"@fr .
 <https://dev.qaecy.com/enum#Interface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interface"@it .
-<https://dev.qaecy.com/enum#Interface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Interface> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Interface> .
+<https://dev.qaecy.com/enum#Interface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#Interface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#InteriorArchitecture
 <https://dev.qaecy.com/enum#InteriorArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1435,8 +1534,8 @@
 <https://dev.qaecy.com/enum#InteriorArchitecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interior Architecture"@en .
 <https://dev.qaecy.com/enum#InteriorArchitecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interior Architecture"@fr .
 <https://dev.qaecy.com/enum#InteriorArchitecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interior Architecture"@it .
-<https://dev.qaecy.com/enum#InteriorArchitecture> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#InteriorArchitecture> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#InteriorArchitecture> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#InteriorArchitecture> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#InteriorDesignDocument
 <https://dev.qaecy.com/enum#InteriorDesignDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1485,8 +1584,8 @@
 <https://dev.qaecy.com/enum#LandscapeArchitecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landscape Architecture"@en .
 <https://dev.qaecy.com/enum#LandscapeArchitecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landscape Architecture"@fr .
 <https://dev.qaecy.com/enum#LandscapeArchitecture> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landscape Architecture"@it .
-<https://dev.qaecy.com/enum#LandscapeArchitecture> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#LandscapeArchitecture> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#LandscapeArchitecture> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#LandscapeArchitecture> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#LandscapeDesignDocument
 <https://dev.qaecy.com/enum#LandscapeDesignDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1503,6 +1602,13 @@
 <https://dev.qaecy.com/enum#LandscapeDesignDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landscape Design Document"@en .
 <https://dev.qaecy.com/enum#LandscapeDesignDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landscape Design Document"@fr .
 <https://dev.qaecy.com/enum#LandscapeDesignDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landscape Design Document"@it .
+# 
+# https://dev.qaecy.com/enum#LocalDevice
+<https://dev.qaecy.com/enum#LocalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/enum#LocalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://dev.qaecy.com/enum#LocalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#ProviderKind> .
+<https://dev.qaecy.com/enum#LocalDevice> <http://www.w3.org/2004/02/skos/core#definition> "A user's computer. Its file locations carry the absolute paths the files have on that machine."@en .
+<https://dev.qaecy.com/enum#LocalDevice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Local device"@en .
 # 
 # https://dev.qaecy.com/enum#LocalProvider
 <https://dev.qaecy.com/enum#LocalProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1525,8 +1631,8 @@
 <https://dev.qaecy.com/enum#Location> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en .
 <https://dev.qaecy.com/enum#Location> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lokation"@da .
 <https://dev.qaecy.com/enum#Location> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ort"@de .
-<https://dev.qaecy.com/enum#Location> <https://dev.qaecy.com/ont#extractionPrompt> "A physical location, place or postal code."@en .
 <https://dev.qaecy.com/enum#Location> <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Place> .
+<https://dev.qaecy.com/enum#Location> <https://dev.qaecy.com/template#extractionPrompt> "A physical location, place or postal code."@en .
 # 
 # https://dev.qaecy.com/enum#MaintenanceLog
 <https://dev.qaecy.com/enum#MaintenanceLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1581,9 +1687,10 @@
 <https://dev.qaecy.com/enum#Material> <http://www.w3.org/2004/02/skos/core#prefLabel> "Materiale"@da .
 <https://dev.qaecy.com/enum#Material> <http://www.w3.org/2004/02/skos/core#prefLabel> "Materiale"@it .
 <https://dev.qaecy.com/enum#Material> <http://www.w3.org/2004/02/skos/core#prefLabel> "Matériau"@fr .
-<https://dev.qaecy.com/enum#Material> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Material> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#Material> <https://dev.qaecy.com/ont#extractionPrompt> "A mention of some material. Identified by name or id."@en .
+<https://dev.qaecy.com/enum#Material> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Material> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#Material> <https://dev.qaecy.com/template#extractionPrompt> "A mention of some material. Identified by name or id."@en .
+<https://dev.qaecy.com/enum#Material> <https://dev.qaecy.com/template#resolutionCanonicalizer> "german_noun" .
 # 
 # https://dev.qaecy.com/enum#MiscDocument
 <https://dev.qaecy.com/enum#MiscDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1599,7 +1706,7 @@
 <https://dev.qaecy.com/enum#MiscDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Miscellaneous Document"@en .
 <https://dev.qaecy.com/enum#MiscDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Miscellaneous Document"@fr .
 <https://dev.qaecy.com/enum#MiscDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Miscellaneous Document"@it .
-<https://dev.qaecy.com/enum#MiscDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents that do not clearly fit into other categories, serving as a fallback for unclassified materials. Examples include correspondence, marketing documents, project closeout records, due diligence reports, or other miscellaneous documents."@en .
+<https://dev.qaecy.com/enum#MiscDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents that do not clearly fit into other categories, serving as a fallback for unclassified materials. Examples include correspondence, marketing documents, project closeout records, due diligence reports, or other miscellaneous documents."@en .
 # 
 # https://dev.qaecy.com/enum#MultimediaFileContent
 <https://dev.qaecy.com/enum#MultimediaFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1622,7 +1729,8 @@
 <https://dev.qaecy.com/enum#ObjectId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Object Id"@en .
 <https://dev.qaecy.com/enum#ObjectId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Object Id"@fr .
 <https://dev.qaecy.com/enum#ObjectId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Object Id"@it .
-<https://dev.qaecy.com/enum#ObjectId> <https://dev.qaecy.com/ont#extractionPrompt> "A special coding, classification or identifier for some physical or virtual object used in a building project."@en .
+<https://dev.qaecy.com/enum#ObjectId> <https://dev.qaecy.com/template#extractionPrompt> "A special coding, classification or identifier for some physical or virtual object used in a building project."@en .
+<https://dev.qaecy.com/enum#ObjectId> <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 # 
 # https://dev.qaecy.com/enum#OpeningElementInterface
 <https://dev.qaecy.com/enum#OpeningElementInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1639,7 +1747,8 @@
 <https://dev.qaecy.com/enum#OpeningElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opening Element Interface"@en .
 <https://dev.qaecy.com/enum#OpeningElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opening Element Interface"@fr .
 <https://dev.qaecy.com/enum#OpeningElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opening Element Interface"@it .
-<https://dev.qaecy.com/enum#OpeningElementInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#OpeningElementInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#OpeningElementInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#OperationManual
 <https://dev.qaecy.com/enum#OperationManual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1671,7 +1780,7 @@
 <https://dev.qaecy.com/enum#OperationsMaintenanceDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operations & Maintenance Document"@en .
 <https://dev.qaecy.com/enum#OperationsMaintenanceDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operations & Maintenance Document"@fr .
 <https://dev.qaecy.com/enum#OperationsMaintenanceDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operations & Maintenance Document"@it .
-<https://dev.qaecy.com/enum#OperationsMaintenanceDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents for building operation, system maintenance, and lifecycle support, such as O&M manuals, maintenance logs, warranty documents, commissioning reports, and as-built drawings."@en .
+<https://dev.qaecy.com/enum#OperationsMaintenanceDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents for building operation, system maintenance, and lifecycle support, such as O&M manuals, maintenance logs, warranty documents, commissioning reports, and as-built drawings."@en .
 # 
 # https://dev.qaecy.com/enum#OperationsManagement
 <https://dev.qaecy.com/enum#OperationsManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1688,8 +1797,8 @@
 <https://dev.qaecy.com/enum#OperationsManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operations Management"@en .
 <https://dev.qaecy.com/enum#OperationsManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operations Management"@fr .
 <https://dev.qaecy.com/enum#OperationsManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operations Management"@it .
-<https://dev.qaecy.com/enum#OperationsManagement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#OperationsManagement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#OperationsManagement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#OperationsManagement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#Organization
 <https://dev.qaecy.com/enum#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1705,8 +1814,14 @@
 <https://dev.qaecy.com/enum#Organization> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisation"@fr .
 <https://dev.qaecy.com/enum#Organization> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organization"@en .
 <https://dev.qaecy.com/enum#Organization> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organizzazione"@it .
-<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/ont#extractionPrompt> "A company, organization, corporation, public authority or institution, identified by name or title."@en .
 <https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Organization> .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/template#discriminatingProperty> "registrationNumber" .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/template#discriminatingProperty> "vatNumber" .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/template#extractionPrompt> "A company, organization, corporation, public authority or institution, identified by name or title."@en .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/template#resolutionCanonicalizer> "organization" .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/template#resolutionLowThreshold> "0.60"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.93"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/enum#Organization> <https://dev.qaecy.com/template#resolutionNumeralRole> "ignore" .
 # 
 # https://dev.qaecy.com/enum#OtherConstructionProcessDocument
 <https://dev.qaecy.com/enum#OtherConstructionProcessDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1771,8 +1886,8 @@
 <https://dev.qaecy.com/enum#OtherDiscipline> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Discipline"@en .
 <https://dev.qaecy.com/enum#OtherDiscipline> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Discipline"@fr .
 <https://dev.qaecy.com/enum#OtherDiscipline> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Disziplin"@de .
-<https://dev.qaecy.com/enum#OtherDiscipline> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#OtherDiscipline> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#OtherDiscipline> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#OtherDiscipline> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#OtherDrawing
 <https://dev.qaecy.com/enum#OtherDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1789,7 +1904,7 @@
 <https://dev.qaecy.com/enum#OtherDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Drawing"@en .
 <https://dev.qaecy.com/enum#OtherDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Drawing"@fr .
 <https://dev.qaecy.com/enum#OtherDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Drawing"@it .
-<https://dev.qaecy.com/enum#OtherDrawing> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#OtherDrawing> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#OtherFinancialAdministrativeDocument
 <https://dev.qaecy.com/enum#OtherFinancialAdministrativeDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1822,7 +1937,7 @@
 <https://dev.qaecy.com/enum#OtherMetadataField> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Metadata Field"@en .
 <https://dev.qaecy.com/enum#OtherMetadataField> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Metadata Field"@fr .
 <https://dev.qaecy.com/enum#OtherMetadataField> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Metadata Field"@it .
-<https://dev.qaecy.com/enum#OtherMetadataField> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#OtherMetadataField> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#OtherMiscDocument
 <https://dev.qaecy.com/enum#OtherMiscDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1934,8 +2049,30 @@
 <https://dev.qaecy.com/enum#Person> <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@en .
 <https://dev.qaecy.com/enum#Person> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persona"@it .
 <https://dev.qaecy.com/enum#Person> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personne"@fr .
-<https://dev.qaecy.com/enum#Person> <https://dev.qaecy.com/ont#extractionPrompt> "A person, identified by name or abbreviation."@en .
 <https://dev.qaecy.com/enum#Person> <https://dev.qaecy.com/ont#relatedFormalClass> <http://schema.org/Person> .
+<https://dev.qaecy.com/enum#Person> <https://dev.qaecy.com/template#discriminatingProperty> "emailAddress" .
+<https://dev.qaecy.com/enum#Person> <https://dev.qaecy.com/template#extractionPrompt> "A person, identified by name or abbreviation."@en .
+<https://dev.qaecy.com/enum#Person> <https://dev.qaecy.com/template#resolutionCanonicalizer> "person_name" .
+<https://dev.qaecy.com/enum#Person> <https://dev.qaecy.com/template#resolutionLowThreshold> "0.55"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/enum#Person> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.94"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://dev.qaecy.com/enum#PhoneNumber
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#definition> "A telephone, mobile or fax number used to contact a person or organization."@en .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#definition> "Eine Telefon-, Mobil- oder Faxnummer, die zur Kontaktaufnahme mit einer Person oder Organisation verwendet wird."@de .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#definition> "Et telefon-, mobil- eller faxnummer, der bruges til at kontakte en person eller organisation."@da .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#definition> "Un numero di telefono, cellulare o fax utilizzato per contattare una persona o un'organizzazione."@it .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#definition> "Un numéro de téléphone, de mobile ou de fax utilisé pour contacter une personne ou une organisation."@fr .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "Numero di telefono"@it .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "Numéro de téléphone"@fr .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "Phone Number"@en .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "Telefonnummer"@da .
+<https://dev.qaecy.com/enum#PhoneNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "Telefonnummer"@de .
+<https://dev.qaecy.com/enum#PhoneNumber> <https://dev.qaecy.com/template#extractionPrompt> "A telephone, mobile or fax number used to contact a person or organization."@en .
+<https://dev.qaecy.com/enum#PhoneNumber> <https://dev.qaecy.com/template#resolutionCanonicalizer> "number" .
+<https://dev.qaecy.com/enum#PhoneNumber> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 # 
 # https://dev.qaecy.com/enum#PlanningFileContent
 <https://dev.qaecy.com/enum#PlanningFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1959,8 +2096,8 @@
 <https://dev.qaecy.com/enum#PlumbingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plumbing System"@en .
 <https://dev.qaecy.com/enum#PlumbingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plumbing System"@fr .
 <https://dev.qaecy.com/enum#PlumbingSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plumbing System"@it .
-<https://dev.qaecy.com/enum#PlumbingSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#PlumbingSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#PlumbingSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#PlumbingSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#PostCode
 <https://dev.qaecy.com/enum#PostCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1977,6 +2114,8 @@
 <https://dev.qaecy.com/enum#PostCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Post Code"@en .
 <https://dev.qaecy.com/enum#PostCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Postleitzahl"@de .
 <https://dev.qaecy.com/enum#PostCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Postnummer"@da .
+<https://dev.qaecy.com/enum#PostCode> <https://dev.qaecy.com/template#resolutionCanonicalizer> "upper_alnum" .
+<https://dev.qaecy.com/enum#PostCode> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
 # 
 # https://dev.qaecy.com/enum#PresentationFileContent
 <https://dev.qaecy.com/enum#PresentationFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2015,7 +2154,9 @@
 <https://dev.qaecy.com/enum#ProjectId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Id"@en .
 <https://dev.qaecy.com/enum#ProjectId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Id"@fr .
 <https://dev.qaecy.com/enum#ProjectId> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Id"@it .
-<https://dev.qaecy.com/enum#ProjectId> <https://dev.qaecy.com/ont#extractionPrompt> "A construction, renovation or maintenance project, identified by its title, name or id."@en .
+<https://dev.qaecy.com/enum#ProjectId> <https://dev.qaecy.com/template#extractionPrompt> "A construction, renovation or maintenance project, identified by its title, name or id."@en .
+<https://dev.qaecy.com/enum#ProjectId> <https://dev.qaecy.com/template#resolutionLowThreshold> "0.80"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/enum#ProjectId> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.97"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://dev.qaecy.com/enum#ProjectManagement
 <https://dev.qaecy.com/enum#ProjectManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2032,8 +2173,8 @@
 <https://dev.qaecy.com/enum#ProjectManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Management"@en .
 <https://dev.qaecy.com/enum#ProjectManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Management"@fr .
 <https://dev.qaecy.com/enum#ProjectManagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Management"@it .
-<https://dev.qaecy.com/enum#ProjectManagement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#ProjectManagement> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#ProjectManagement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#ProjectManagement> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#ProjectPhase
 <https://dev.qaecy.com/enum#ProjectPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2049,9 +2190,9 @@
 <https://dev.qaecy.com/enum#ProjectPhase> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Phase"@en .
 <https://dev.qaecy.com/enum#ProjectPhase> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Phase"@fr .
 <https://dev.qaecy.com/enum#ProjectPhase> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project Phase"@it .
-<https://dev.qaecy.com/enum#ProjectPhase> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#ProjectPhase> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
-<https://dev.qaecy.com/enum#ProjectPhase> <https://dev.qaecy.com/ont#extractionPrompt> "A project phase, identified by name or id."@en .
+<https://dev.qaecy.com/enum#ProjectPhase> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#ProjectPhase> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#ProjectPhase> <https://dev.qaecy.com/template#extractionPrompt> "A project phase, identified by name or id."@en .
 # 
 # https://dev.qaecy.com/enum#PurchaseOrLeaseAgreement
 <https://dev.qaecy.com/enum#PurchaseOrLeaseAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2099,7 +2240,7 @@
 <https://dev.qaecy.com/enum#RegulatoryComplianceDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulatory & Compliance Document"@en .
 <https://dev.qaecy.com/enum#RegulatoryComplianceDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulatory & Compliance Document"@fr .
 <https://dev.qaecy.com/enum#RegulatoryComplianceDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulatory & Compliance Document"@it .
-<https://dev.qaecy.com/enum#RegulatoryComplianceDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents required for regulatory approval and compliance, such as permits, inspection reports, compliance certifications, and environmental impact reports."@en .
+<https://dev.qaecy.com/enum#RegulatoryComplianceDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents required for regulatory approval and compliance, such as permits, inspection reports, compliance certifications, and environmental impact reports."@en .
 # 
 # https://dev.qaecy.com/enum#RequirementsDocument
 <https://dev.qaecy.com/enum#RequirementsDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2115,7 +2256,7 @@
 <https://dev.qaecy.com/enum#RequirementsDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Requirements & Scoping Document"@en .
 <https://dev.qaecy.com/enum#RequirementsDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Requirements & Scoping Document"@fr .
 <https://dev.qaecy.com/enum#RequirementsDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Requirements & Scoping Document"@it .
-<https://dev.qaecy.com/enum#RequirementsDocument> <https://dev.qaecy.com/ont#classificationPrompt> "Documents that establish scope, functional, technical, and performance requirements, such as Owner’s Project Requirements (OPR), program documents, technical specifications, performance targets, and scope of work (SOW) documents."@en .
+<https://dev.qaecy.com/enum#RequirementsDocument> <https://dev.qaecy.com/template#classificationPrompt> "Documents that establish scope, functional, technical, and performance requirements, such as Owner’s Project Requirements (OPR), program documents, technical specifications, performance targets, and scope of work (SOW) documents."@en .
 # 
 # https://dev.qaecy.com/enum#Roof
 <https://dev.qaecy.com/enum#Roof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2132,10 +2273,10 @@
 <https://dev.qaecy.com/enum#Roof> <http://www.w3.org/2004/02/skos/core#prefLabel> "Roof"@en .
 <https://dev.qaecy.com/enum#Roof> <http://www.w3.org/2004/02/skos/core#prefLabel> "Roof"@fr .
 <https://dev.qaecy.com/enum#Roof> <http://www.w3.org/2004/02/skos/core#prefLabel> "Roof"@it .
-<https://dev.qaecy.com/enum#Roof> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Roof> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Roof> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Roof> .
 <https://dev.qaecy.com/enum#Roof> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Roof> .
+<https://dev.qaecy.com/enum#Roof> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Roof> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#SVGPathGeometry
 <https://dev.qaecy.com/enum#SVGPathGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2152,6 +2293,7 @@
 <https://dev.qaecy.com/enum#SVGPathGeometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "SVG Path Geometry"@en .
 <https://dev.qaecy.com/enum#SVGPathGeometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "SVG Path Geometry"@fr .
 <https://dev.qaecy.com/enum#SVGPathGeometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "SVG Path Geometry"@it .
+<https://dev.qaecy.com/enum#SVGPathGeometry> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#SafetyDocument
 <https://dev.qaecy.com/enum#SafetyDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2183,8 +2325,8 @@
 <https://dev.qaecy.com/enum#Schedule> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schedule"@en .
 <https://dev.qaecy.com/enum#Schedule> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tidsplan"@da .
 <https://dev.qaecy.com/enum#Schedule> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zeitplan"@de .
-<https://dev.qaecy.com/enum#Schedule> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Schedule> <https://dev.qaecy.com/ont#extractionPrompt> "A whole or partial project plan / schedule expressed in some diagram, chart or table, identified by name, revision, date or id."@en .
+<https://dev.qaecy.com/enum#Schedule> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Schedule> <https://dev.qaecy.com/template#extractionPrompt> "A whole or partial project plan / schedule expressed in some diagram, chart or table, identified by name, revision, date or id."@en .
 # 
 # https://dev.qaecy.com/enum#ScheduleDocument
 <https://dev.qaecy.com/enum#ScheduleDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2240,7 +2382,7 @@
 <https://dev.qaecy.com/enum#SectionDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Section Drawing"@en .
 <https://dev.qaecy.com/enum#SectionDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Section Drawing"@fr .
 <https://dev.qaecy.com/enum#SectionDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Section Drawing"@it .
-<https://dev.qaecy.com/enum#SectionDrawing> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SectionDrawing> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#SecurityAccessSystem
 <https://dev.qaecy.com/enum#SecurityAccessSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2257,8 +2399,8 @@
 <https://dev.qaecy.com/enum#SecurityAccessSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Security Access System"@en .
 <https://dev.qaecy.com/enum#SecurityAccessSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Security Access System"@fr .
 <https://dev.qaecy.com/enum#SecurityAccessSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Security Access System"@it .
-<https://dev.qaecy.com/enum#SecurityAccessSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#SecurityAccessSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SecurityAccessSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#SecurityAccessSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#Site
 <https://dev.qaecy.com/enum#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2275,9 +2417,9 @@
 <https://dev.qaecy.com/enum#Site> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site"@en .
 <https://dev.qaecy.com/enum#Site> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site"@fr .
 <https://dev.qaecy.com/enum#Site> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site"@it .
-<https://dev.qaecy.com/enum#Site> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Site> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Site> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Site> .
+<https://dev.qaecy.com/enum#Site> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Site> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#SiteBuildingInterface
 <https://dev.qaecy.com/enum#SiteBuildingInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2294,7 +2436,8 @@
 <https://dev.qaecy.com/enum#SiteBuildingInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site/Bâtiment Interface"@fr .
 <https://dev.qaecy.com/enum#SiteBuildingInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site/Edificio Interface"@it .
 <https://dev.qaecy.com/enum#SiteBuildingInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site/Gebäude Interface"@de .
-<https://dev.qaecy.com/enum#SiteBuildingInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SiteBuildingInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SiteBuildingInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#SitePlanDrawing
 <https://dev.qaecy.com/enum#SitePlanDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2311,7 +2454,7 @@
 <https://dev.qaecy.com/enum#SitePlanDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site Plan Drawing"@en .
 <https://dev.qaecy.com/enum#SitePlanDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site Plan Drawing"@fr .
 <https://dev.qaecy.com/enum#SitePlanDrawing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Site Plan Drawing"@it .
-<https://dev.qaecy.com/enum#SitePlanDrawing> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SitePlanDrawing> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#Slab
 <https://dev.qaecy.com/enum#Slab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2328,10 +2471,26 @@
 <https://dev.qaecy.com/enum#Slab> <http://www.w3.org/2004/02/skos/core#prefLabel> "Slab"@en .
 <https://dev.qaecy.com/enum#Slab> <http://www.w3.org/2004/02/skos/core#prefLabel> "Slab"@fr .
 <https://dev.qaecy.com/enum#Slab> <http://www.w3.org/2004/02/skos/core#prefLabel> "Slab"@it .
-<https://dev.qaecy.com/enum#Slab> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Slab> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Slab> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Slab> .
 <https://dev.qaecy.com/enum#Slab> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Slab> .
+<https://dev.qaecy.com/enum#Slab> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Slab> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+# 
+# https://dev.qaecy.com/enum#Software
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#definition> "A named software product, application or system, such as a vendor control app, operating system, browser or communication protocol."@en .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#definition> "Ein benanntes Softwareprodukt, eine Anwendung oder ein System, etwa eine Hersteller-Steuerungs-App, ein Betriebssystem, ein Browser oder ein Kommunikationsprotokoll."@de .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#definition> "Et navngivet softwareprodukt, en applikation eller et system, såsom en leverandørs kontrol-app, et operativsystem, en browser eller en kommunikationsprotokol."@da .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#definition> "Un prodotto software, un'applicazione o un sistema denominato, come un'app di controllo di un fornitore, un sistema operativo, un browser o un protocollo di comunicazione."@it .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#definition> "Un produit logiciel, une application ou un système nommé, tel qu'une application de contrôle d'un fournisseur, un système d'exploitation, un navigateur ou un protocole de communication."@fr .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logiciel"@fr .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#prefLabel> "Software"@da .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#prefLabel> "Software"@de .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#prefLabel> "Software"@en .
+<https://dev.qaecy.com/enum#Software> <http://www.w3.org/2004/02/skos/core#prefLabel> "Software"@it .
+<https://dev.qaecy.com/enum#Software> <https://dev.qaecy.com/template#extractionPrompt> "A named software product, application, app, operating system or communication protocol used in a building project (e.g. a vendor control app, configuration tool, browser or protocol)."@en .
 # 
 # https://dev.qaecy.com/enum#Space
 <https://dev.qaecy.com/enum#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2348,9 +2507,18 @@
 <https://dev.qaecy.com/enum#Space> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rum"@da .
 <https://dev.qaecy.com/enum#Space> <http://www.w3.org/2004/02/skos/core#prefLabel> "Space"@en .
 <https://dev.qaecy.com/enum#Space> <http://www.w3.org/2004/02/skos/core#prefLabel> "Spazio"@it .
-<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Space> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#anonymousValue> "room" .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#anonymousValue> "undefined" .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#resolutionMatchThreshold> "0.90"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#contains> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#includesBuildingEntity> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#zoneContainsSpace> .
+<https://dev.qaecy.com/enum#Space> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#zoneHasElement> .
 # 
 # https://dev.qaecy.com/enum#SpaceAdjacentElementInterface
 <https://dev.qaecy.com/enum#SpaceAdjacentElementInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2367,7 +2535,8 @@
 <https://dev.qaecy.com/enum#SpaceAdjacentElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rum/Adjacent element Interface"@da .
 <https://dev.qaecy.com/enum#SpaceAdjacentElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Space/Adjacent element Interface"@en .
 <https://dev.qaecy.com/enum#SpaceAdjacentElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Spazio/Adjacent element Interface"@it .
-<https://dev.qaecy.com/enum#SpaceAdjacentElementInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SpaceAdjacentElementInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SpaceAdjacentElementInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#SpaceContainedElementInterface
 <https://dev.qaecy.com/enum#SpaceContainedElementInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2384,7 +2553,8 @@
 <https://dev.qaecy.com/enum#SpaceContainedElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rum/Contained element Interface"@da .
 <https://dev.qaecy.com/enum#SpaceContainedElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Space/Contained element Interface"@en .
 <https://dev.qaecy.com/enum#SpaceContainedElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Spazio/Contained element Interface"@it .
-<https://dev.qaecy.com/enum#SpaceContainedElementInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SpaceContainedElementInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SpaceContainedElementInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#SpreadsheetFileContent
 <https://dev.qaecy.com/enum#SpreadsheetFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2408,9 +2578,9 @@
 <https://dev.qaecy.com/enum#Stair> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stair"@en .
 <https://dev.qaecy.com/enum#Stair> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stair"@fr .
 <https://dev.qaecy.com/enum#Stair> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stair"@it .
-<https://dev.qaecy.com/enum#Stair> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Stair> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Stair> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Stair> .
+<https://dev.qaecy.com/enum#Stair> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Stair> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#State
 <https://dev.qaecy.com/enum#State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2443,9 +2613,16 @@
 <https://dev.qaecy.com/enum#Storey> <http://www.w3.org/2004/02/skos/core#prefLabel> "Piano"@it .
 <https://dev.qaecy.com/enum#Storey> <http://www.w3.org/2004/02/skos/core#prefLabel> "Storey"@en .
 <https://dev.qaecy.com/enum#Storey> <http://www.w3.org/2004/02/skos/core#prefLabel> "Étage"@fr .
-<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/bot#Storey> .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#resolutionCanonicalizer> "storey_level" .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#resolutionIdentity> "value_typed" .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#resolutionNeedsNeighbourhood> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#buildingContainsStorey> .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#contains> .
+<https://dev.qaecy.com/enum#Storey> <https://dev.qaecy.com/template#resolutionScopedBy> <https://dev.qaecy.com/ont#includesBuildingEntity> .
 # 
 # https://dev.qaecy.com/enum#StoreyElementInterface
 <https://dev.qaecy.com/enum#StoreyElementInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2462,7 +2639,8 @@
 <https://dev.qaecy.com/enum#StoreyElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Piano/Element Interface"@it .
 <https://dev.qaecy.com/enum#StoreyElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Storey/Element Interface"@en .
 <https://dev.qaecy.com/enum#StoreyElementInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Étage/Element Interface"@fr .
-<https://dev.qaecy.com/enum#StoreyElementInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#StoreyElementInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#StoreyElementInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#StoreySpaceInterface
 <https://dev.qaecy.com/enum#StoreySpaceInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2479,7 +2657,8 @@
 <https://dev.qaecy.com/enum#StoreySpaceInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Piano/Spazio Interface"@it .
 <https://dev.qaecy.com/enum#StoreySpaceInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Storey/Space Interface"@en .
 <https://dev.qaecy.com/enum#StoreySpaceInterface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Étage/Espace Interface"@fr .
-<https://dev.qaecy.com/enum#StoreySpaceInterface> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#StoreySpaceInterface> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#StoreySpaceInterface> <https://dev.qaecy.com/template#llmExtraction> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://dev.qaecy.com/enum#StructuralEngineering
 <https://dev.qaecy.com/enum#StructuralEngineering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2496,8 +2675,8 @@
 <https://dev.qaecy.com/enum#StructuralEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural Engineering"@en .
 <https://dev.qaecy.com/enum#StructuralEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural Engineering"@fr .
 <https://dev.qaecy.com/enum#StructuralEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural Engineering"@it .
-<https://dev.qaecy.com/enum#StructuralEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#StructuralEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#StructuralEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#StructuralEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#SurveyingEngineering
 <https://dev.qaecy.com/enum#SurveyingEngineering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2514,8 +2693,8 @@
 <https://dev.qaecy.com/enum#SurveyingEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Surveying Engineering"@en .
 <https://dev.qaecy.com/enum#SurveyingEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Surveying Engineering"@fr .
 <https://dev.qaecy.com/enum#SurveyingEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Surveying Engineering"@it .
-<https://dev.qaecy.com/enum#SurveyingEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#SurveyingEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#SurveyingEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#SurveyingEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#TechnicalRequirementsDocument
 <https://dev.qaecy.com/enum#TechnicalRequirementsDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2562,8 +2741,24 @@
 <https://dev.qaecy.com/enum#TransportationEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transportation Engineering"@en .
 <https://dev.qaecy.com/enum#TransportationEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transportation Engineering"@fr .
 <https://dev.qaecy.com/enum#TransportationEngineering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transportation Engineering"@it .
-<https://dev.qaecy.com/enum#TransportationEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#TransportationEngineering> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#TransportationEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#TransportationEngineering> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+# 
+# https://dev.qaecy.com/enum#URL
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dev.qaecy.com/ont#EntityCategory> .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#definition> "A uniform resource locator (web address) pointing to an online resource."@en .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#definition> "Ein Uniform Resource Locator (Webadresse), der auf eine Online-Ressource verweist."@de .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#definition> "En uniform resource locator (webadresse), der peger på en onlineressource."@da .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#definition> "Un localisateur uniforme de ressource (adresse web) pointant vers une ressource en ligne."@fr .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#definition> "Un uniform resource locator (indirizzo web) che punta a una risorsa online."@it .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#prefLabel> "URL"@da .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#prefLabel> "URL"@de .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#prefLabel> "URL"@en .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#prefLabel> "URL"@fr .
+<https://dev.qaecy.com/enum#URL> <http://www.w3.org/2004/02/skos/core#prefLabel> "URL"@it .
+<https://dev.qaecy.com/enum#URL> <https://dev.qaecy.com/template#extractionPrompt> "A web address (URL) for a website or online resource, with or without the http(s):// scheme."@en .
 # 
 # https://dev.qaecy.com/enum#UnknownFileContent
 <https://dev.qaecy.com/enum#UnknownFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2587,8 +2782,8 @@
 <https://dev.qaecy.com/enum#VentilationSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ventilation System"@en .
 <https://dev.qaecy.com/enum#VentilationSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ventilation System"@fr .
 <https://dev.qaecy.com/enum#VentilationSystem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ventilation System"@it .
-<https://dev.qaecy.com/enum#VentilationSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#VentilationSystem> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#VentilationSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#VentilationSystem> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # https://dev.qaecy.com/enum#VideoFileContent
 <https://dev.qaecy.com/enum#VideoFileContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2612,10 +2807,13 @@
 <https://dev.qaecy.com/enum#Wall> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wall"@en .
 <https://dev.qaecy.com/enum#Wall> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wall"@fr .
 <https://dev.qaecy.com/enum#Wall> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wall"@it .
-<https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Wall> .
 <https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/rec#Wall> .
+<https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/template#anonymousValue> "undefined" .
+<https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/template#anonymousValue> "wall" .
+<https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
+<https://dev.qaecy.com/enum#Wall> <https://dev.qaecy.com/template#resolutionNumeralRole> "identifier" .
 # 
 # https://dev.qaecy.com/enum#WarrantyDocument
 <https://dev.qaecy.com/enum#WarrantyDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2648,8 +2846,8 @@
 <https://dev.qaecy.com/enum#Window> <http://www.w3.org/2004/02/skos/core#prefLabel> "Window"@en .
 <https://dev.qaecy.com/enum#Window> <http://www.w3.org/2004/02/skos/core#prefLabel> "Window"@fr .
 <https://dev.qaecy.com/enum#Window> <http://www.w3.org/2004/02/skos/core#prefLabel> "Window"@it .
-<https://dev.qaecy.com/enum#Window> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
-<https://dev.qaecy.com/enum#Window> <https://dev.qaecy.com/ont#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 <https://dev.qaecy.com/enum#Window> <https://dev.qaecy.com/ont#relatedFormalClass> <https://w3id.org/beo#Window> .
+<https://dev.qaecy.com/enum#Window> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#ConstructionProcessDocument> .
+<https://dev.qaecy.com/enum#Window> <https://dev.qaecy.com/template#applicableContentCategories> <https://dev.qaecy.com/enum#DesignDocument> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

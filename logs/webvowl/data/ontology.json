@@ -7,7 +7,7 @@
       "en" : "QAECY Logging Ontology"
     },
     "iri" : "https://dev.qaecy.com/logs#",
-    "author" : [ "Mads Holten Rasmussen", "Christian Frausing", "Manos Argyris" ],
+    "author" : [ "Mads Holten Rasmussen", "Manos Argyris" ],
     "description" : {
       "undefined" : "This document describes log specific terms to be used with the Cue processors and the QAECY Ontology."
     },
@@ -15,17 +15,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Mads Holten Rasmussen",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
         "value" : "Manos Argyris",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Christian Frausing",
+        "value" : "Mads Holten Rasmussen",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -37,7 +32,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-03-26T10:06:33Z",
+        "value" : "2026-10-08T20:38:55Z",
         "type" : "label"
       } ],
       "title" : [ {
@@ -50,56 +45,101 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "3",
+    "id" : "6",
     "type" : "owl:Class"
-  }, {
-    "id" : "5",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "9",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "12",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "13",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "14",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "19",
-    "type" : "rdfs:Datatype"
   }, {
     "id" : "1",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "24",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "18",
+    "id" : "28",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "22",
-    "type" : "owl:Class"
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "4",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
-    "type" : "rdfs:Literal"
+    "id" : "26",
+    "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
     "iri" : "http://www.w3.org/ns/prov#Activity",
@@ -108,57 +148,212 @@
     "label" : {
       "IRI-based" : "Activity"
     },
-    "subClasses" : [ "4" ],
+    "subClasses" : [ "7" ],
     "attributes" : [ "external" ],
-    "id" : "3"
+    "id" : "6"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#ResolutionPhase",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResolutionPhase",
+      "en" : "Resolution Phase"
+    },
+    "comment" : {
+      "en" : "A process representing a certain phase within the entity resolution process."
+    },
+    "id" : "1",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "4",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#Process",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "en" : "Process"
+    },
+    "subClasses" : [ "1", "26", "18" ],
+    "comment" : {
+      "en" : "A process represents an execution of a service within the QAECY logging system."
+    },
+    "id" : "7",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#Service",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service",
+      "en" : "Service"
+    },
+    "comment" : {
+      "en" : "A service or microservice that executes processes (e.g., enrichers-bim-files, gemini_light)."
+    },
+    "id" : "15",
+    "superClasses" : [ "16" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "5",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "9",
+    "id" : "20",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "12",
+    "id" : "31",
     "label" : {
-      "IRI-based" : "dateTime"
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "subClasses" : [ "15" ],
+    "attributes" : [ "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "13",
+    "id" : "51",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "14",
+    "id" : "56",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "19",
+    "id" : "39",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "1",
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "integer"
     }
   }, {
     "iri" : "https://dev.qaecy.com/logs#EmbeddingRequest",
@@ -171,21 +366,21 @@
     "comment" : {
       "en" : "A process representing an embedding service request."
     },
-    "id" : "20",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "2",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
+    "id" : "18",
+    "superClasses" : [ "7" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "18",
+    "id" : "34",
     "label" : {
       "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "https://dev.qaecy.com/ont#FileLocation",
@@ -195,34 +390,7 @@
       "IRI-based" : "FileLocation"
     },
     "attributes" : [ "external" ],
-    "id" : "22"
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#Process",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Process",
-      "en" : "Process"
-    },
-    "subClasses" : [ "17", "20" ],
-    "comment" : {
-      "en" : "A process represents an execution of a service within the QAECY logging system."
-    },
-    "id" : "4",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#Service",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Service",
-      "en" : "Service"
-    },
-    "comment" : {
-      "en" : "A service or microservice that executes processes (e.g., enrichers-bim-tiles, gemini_light)."
-    },
-    "id" : "11",
-    "superClasses" : [ "34" ]
+    "id" : "12"
   }, {
     "iri" : "https://dev.qaecy.com/logs#LLMRequest",
     "baseIri" : "https://dev.qaecy.com/logs",
@@ -234,340 +402,569 @@
     "comment" : {
       "en" : "A process representing an LLM API request with token consumption tracking."
     },
-    "id" : "17",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Agent",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Agent"
-    },
-    "subClasses" : [ "11" ],
-    "attributes" : [ "external" ],
-    "id" : "34"
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "32",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
+    "id" : "26",
+    "superClasses" : [ "7" ]
   } ],
   "property" : [ {
     "id" : "0",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "6",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "10",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "15",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "16",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "21",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "24",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "25",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "27",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "28",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "29",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "30",
+    "id" : "3",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "8",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "31",
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "33",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "7",
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
     "type" : "owl:objectProperty"
   }, {
     "id" : "23",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "35",
-    "type" : "rdfs:SubClassOf"
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "36",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "26",
+    "id" : "48",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "37",
-    "type" : "rdfs:SubClassOf"
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "38",
-    "type" : "rdfs:SubClassOf"
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
+    "iri" : "https://dev.qaecy.com/logs#resolutionMentionsResolved",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "resolutionMentionsResolved",
+      "en" : "resolution mentions resolved"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Number of mentions successfully resolved in this phase."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
     "iri" : "http://www.w3.org/ns/prov#startedAtTime",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "2",
+    "range" : "5",
     "label" : {
       "IRI-based" : "startedAtTime"
     },
-    "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "0"
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "3"
   }, {
     "iri" : "http://www.w3.org/ns/prov#used",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "1",
+    "range" : "4",
     "label" : {
       "IRI-based" : "used"
     },
-    "domain" : "1",
-    "subproperty" : [ "7", "8" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "6"
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#executedBy",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "executedBy",
-      "en" : "executed by"
-    },
-    "domain" : "11",
-    "attributes" : [ "object" ],
-    "id" : "10"
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#message",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "message",
-      "en" : "message"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "A message such as an error or informational message."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "15"
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#consumedTokensIn",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "consumedTokensIn",
-      "en" : "tokens in"
-    },
-    "domain" : "17",
-    "comment" : {
-      "en" : "Input tokens consumed by LLM request."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "16"
+    "domain" : "4",
+    "subproperty" : [ "9", "10" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "8"
   }, {
     "iri" : "https://dev.qaecy.com/logs#hasTarget",
     "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "22",
+    "range" : "12",
     "label" : {
       "IRI-based" : "hasTarget",
       "en" : "has target"
     },
-    "superproperty" : [ "23" ],
-    "domain" : "4",
+    "superproperty" : [ "13" ],
+    "domain" : "7",
     "comment" : {
       "en" : "Target file location generated by this process."
     },
     "attributes" : [ "object" ],
-    "id" : "21"
+    "id" : "11"
   }, {
-    "range" : "11",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "24"
+    "range" : "16",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "7",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#resolutionPhaseName",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "resolutionPhaseName",
+      "en" : "resolution phase name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Human-readable name identifying the resolution phase."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "19"
+  }, {
+    "range" : "6",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasAssociatedWith",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "1",
+    "range" : "4",
     "label" : {
       "IRI-based" : "wasAssociatedWith"
     },
-    "domain" : "1",
-    "subproperty" : [ "26" ],
-    "attributes" : [ "external", "object" ],
+    "domain" : "4",
+    "subproperty" : [ "23" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "22"
+  }, {
+    "range" : "7",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "25"
   }, {
-    "iri" : "https://dev.qaecy.com/logs#consumedTokensOut",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "5",
-    "label" : {
-      "IRI-based" : "consumedTokensOut",
-      "en" : "tokens out"
-    },
-    "domain" : "17",
-    "comment" : {
-      "en" : "Output tokens consumed by LLM request."
-    },
-    "attributes" : [ "datatype" ],
+    "range" : "7",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "27"
   }, {
-    "iri" : "https://dev.qaecy.com/logs#endTime",
+    "iri" : "https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount",
     "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "12",
+    "range" : "31",
     "label" : {
-      "IRI-based" : "endTime",
-      "en" : "end time"
+      "IRI-based" : "resolutionExistingCanonicalsCount",
+      "en" : "resolution existing canonicals count"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
-      "en" : "Timestamp when the process ended."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "28"
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#success",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "19",
-    "label" : {
-      "IRI-based" : "success",
-      "en" : "success"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Whether the process completed successfully."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "29"
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#duration",
-    "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "duration",
-      "en" : "duration"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Human-readable duration string (e.g., '17.1 s')."
+      "en" : "Number of pre-existing canonical entities matched during this phase."
     },
     "attributes" : [ "datatype" ],
     "id" : "30"
   }, {
-    "iri" : "https://dev.qaecy.com/logs#consumed",
+    "iri" : "https://dev.qaecy.com/logs#success",
     "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "4",
+    "range" : "28",
     "label" : {
-      "IRI-based" : "consumed",
-      "en" : "consumed"
+      "IRI-based" : "success",
+      "en" : "success"
     },
-    "superproperty" : [ "6" ],
-    "domain" : "4",
+    "domain" : "7",
     "comment" : {
-      "en" : "Sub-processes or external processes consumed by this process."
+      "en" : "Whether the process completed successfully."
     },
-    "attributes" : [ "object" ],
-    "id" : "8"
+    "attributes" : [ "datatype" ],
+    "id" : "32"
   }, {
-    "iri" : "http://www.w3.org/ns/prov#endedAtTime",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "32",
-    "label" : {
-      "IRI-based" : "endedAtTime"
-    },
-    "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "31"
-  }, {
-    "iri" : "https://dev.qaecy.com/logs#startTime",
+    "iri" : "https://dev.qaecy.com/logs#llmTokensOut",
     "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "14",
+    "range" : "34",
     "label" : {
-      "IRI-based" : "startTime",
-      "en" : "start time"
+      "IRI-based" : "llmTokensOut",
+      "en" : "llm tokens out"
     },
-    "domain" : "4",
+    "domain" : "26",
     "comment" : {
-      "en" : "Timestamp when the process started."
+      "en" : "Output tokens consumed by LLM request."
     },
     "attributes" : [ "datatype" ],
     "id" : "33"
   }, {
-    "iri" : "https://dev.qaecy.com/logs#hasSource",
+    "iri" : "https://dev.qaecy.com/logs#llmTokensIn",
     "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "22",
+    "range" : "36",
     "label" : {
-      "IRI-based" : "hasSource",
-      "en" : "has source"
+      "IRI-based" : "llmTokensIn",
+      "en" : "llm tokens in"
     },
-    "superproperty" : [ "6" ],
-    "domain" : "4",
+    "domain" : "26",
     "comment" : {
-      "en" : "Source file location used by this process."
+      "en" : "Input tokens consumed by LLM request."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#consumed",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "consumed",
+      "en" : "consumed"
+    },
+    "superproperty" : [ "8" ],
+    "domain" : "7",
+    "comment" : {
+      "en" : "Sub-processes or external processes consumed by this process."
     },
     "attributes" : [ "object" ],
-    "id" : "7"
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#endedAtTime",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "endedAtTime"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#llmThinking",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "llmThinking",
+      "en" : "llm used thinking"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Indicates whether the process used thinking."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#embeddingsUnits",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "embeddingsUnits",
+      "en" : "embeddings units"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Total number of tokens processed by the embedding model."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#resolutionMentionsIn",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "resolutionMentionsIn",
+      "en" : "resolution mentions in"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Number of mentions submitted for resolution in this phase."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#resolutionAvgConfidence",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "resolutionAvgConfidence",
+      "en" : "resolution average confidence"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Average confidence score across all resolutions in this phase."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "45"
   }, {
     "iri" : "http://www.w3.org/ns/prov#generated",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "1",
+    "range" : "4",
     "label" : {
       "IRI-based" : "generated"
     },
-    "domain" : "1",
-    "subproperty" : [ "21" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "23"
-  }, {
-    "range" : "34",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "35"
-  }, {
-    "range" : "4",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "36"
+    "domain" : "4",
+    "subproperty" : [ "11" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
   }, {
     "iri" : "https://dev.qaecy.com/logs#hasService",
-    "inverse" : "10",
+    "inverse" : "48",
     "baseIri" : "https://dev.qaecy.com/logs",
-    "range" : "11",
+    "range" : "15",
     "label" : {
       "IRI-based" : "hasService",
       "en" : "has service"
     },
-    "superproperty" : [ "25" ],
-    "domain" : "4",
+    "superproperty" : [ "22" ],
+    "domain" : "7",
     "comment" : {
       "en" : "The service that executed this process."
     },
     "attributes" : [ "object" ],
-    "id" : "26"
+    "id" : "23"
   }, {
-    "range" : "4",
-    "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "37"
+    "iri" : "https://dev.qaecy.com/logs#embeddingsSize",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "embeddingsSize",
+      "en" : "embeddings size"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Number of inputs (e.g. text chunks) sent in the embedding request."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
   }, {
-    "range" : "3",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "38"
+    "iri" : "https://dev.qaecy.com/logs#executedBy",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "executedBy",
+      "en" : "executed by"
+    },
+    "domain" : "15",
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#message",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "message",
+      "en" : "message"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "A message such as an error or informational message."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#resolutionDurationMs",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "resolutionDurationMs",
+      "en" : "resolution duration ms"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Wall-clock duration of this resolution phase in milliseconds."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#embeddingsTokenizer",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "embeddingsTokenizer",
+      "en" : "embeddings tokenizer"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Name or identifier of the tokenizer used for the embedding request."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "range" : "15",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#endTime",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "endTime",
+      "en" : "end time"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Timestamp when the process ended."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#resolutionCategory",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "resolutionCategory",
+      "en" : "resolution category"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Category of entity being resolved (e.g. person, organisation)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#duration",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "duration",
+      "en" : "duration"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Human-readable duration string (e.g., '17.1 s')."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "resolutionNewCanonicalsCreated",
+      "en" : "resolution new canonicals created"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Number of new canonical entities created during this phase."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#startTime",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "startTime",
+      "en" : "start time"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Timestamp when the process started."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#embeddingsDimensions",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "embeddingsDimensions",
+      "en" : "embeddings dimensions"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Dimensionality of the embedding vectors produced."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#resolutionIteration",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "resolutionIteration",
+      "en" : "resolution iteration"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Iteration index of this resolution phase within the overall resolution run."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://dev.qaecy.com/logs#hasSource",
+    "baseIri" : "https://dev.qaecy.com/logs",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasSource",
+      "en" : "has source"
+    },
+    "superproperty" : [ "8" ],
+    "domain" : "7",
+    "comment" : {
+      "en" : "Source file location used by this process."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
   } ]
 }

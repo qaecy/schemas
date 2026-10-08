@@ -6,6 +6,7 @@ This section provides details for each class and property defined by QAECY Loggi
   <li><a href="#EmbeddingRequest" title="https://dev.qaecy.com/logs#EmbeddingRequest">Embedding Request</a></li>
   <li><a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a></li>
   <li><a href="#Process" title="https://dev.qaecy.com/logs#Process">Process</a></li>
+  <li><a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a></li>
   <li><a href="#Service" title="https://dev.qaecy.com/logs#Service">Service</a></li>
  </ul>
  <div class="entity" id="EmbeddingRequest">
@@ -20,6 +21,12 @@ This section provides details for each class and property defined by QAECY Loggi
    </dt>
    <dd>
     <a href="#Process" title="https://dev.qaecy.com/logs#Process">Process</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#embeddingsDimensions" title="https://dev.qaecy.com/logs#embeddingsDimensions">embeddings dimensions</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#embeddingsSize" title="https://dev.qaecy.com/logs#embeddingsSize">embeddings size</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#embeddingsTokenizer" title="https://dev.qaecy.com/logs#embeddingsTokenizer">embeddings tokenizer</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#embeddingsUnits" title="https://dev.qaecy.com/logs#embeddingsUnits">embeddings units</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -40,7 +47,7 @@ This section provides details for each class and property defined by QAECY Loggi
     is in domain of
    </dt>
    <dd>
-    <a href="#consumedTokensIn" title="https://dev.qaecy.com/logs#consumedTokensIn">tokens in</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#consumedTokensOut" title="https://dev.qaecy.com/logs#consumedTokensOut">tokens out</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#llmTokensIn" title="https://dev.qaecy.com/logs#llmTokensIn">llm tokens in</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#llmTokensOut" title="https://dev.qaecy.com/logs#llmTokensOut">llm tokens out</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#llmThinking" title="https://dev.qaecy.com/logs#llmThinking">llm used thinking</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -61,13 +68,13 @@ This section provides details for each class and property defined by QAECY Loggi
     has sub-classes
    </dt>
    <dd>
-    <a href="#EmbeddingRequest" title="https://dev.qaecy.com/logs#EmbeddingRequest">Embedding Request</a> <sup class="type-c" title="class">c</sup>, <a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a> <sup class="type-c" title="class">c</sup>
+    <a href="#EmbeddingRequest" title="https://dev.qaecy.com/logs#EmbeddingRequest">Embedding Request</a> <sup class="type-c" title="class">c</sup>, <a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a> <sup class="type-c" title="class">c</sup>, <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#consumed" title="https://dev.qaecy.com/logs#consumed">consumed</a> <sup class="type-op" title="object property">op</sup>, <a href="#duration" title="https://dev.qaecy.com/logs#duration">duration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#endTime" title="https://dev.qaecy.com/logs#endTime">end time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasService" title="https://dev.qaecy.com/logs#hasService">has service</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSource" title="https://dev.qaecy.com/logs#hasSource">has source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTarget" title="https://dev.qaecy.com/logs#hasTarget">has target</a> <sup class="type-op" title="object property">op</sup>, <a href="#startTime" title="https://dev.qaecy.com/logs#startTime">start time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#success" title="https://dev.qaecy.com/logs#success">success</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#consumed" title="https://dev.qaecy.com/logs#consumed">consumed</a> <sup class="type-op" title="object property">op</sup>, <a href="#duration" title="https://dev.qaecy.com/logs#duration">duration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#endTime" title="https://dev.qaecy.com/logs#endTime">end time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasService" title="https://dev.qaecy.com/logs#hasService">has service</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSource" title="https://dev.qaecy.com/logs#hasSource">has source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTarget" title="https://dev.qaecy.com/logs#hasTarget">has target</a> <sup class="type-op" title="object property">op</sup>, <a href="#message" title="https://dev.qaecy.com/logs#message">message</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#startTime" title="https://dev.qaecy.com/logs#startTime">start time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#success" title="https://dev.qaecy.com/logs#success">success</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -83,11 +90,32 @@ This section provides details for each class and property defined by QAECY Loggi
    </dd>
   </dl>
  </div>
+ <div class="entity" id="ResolutionPhase">
+  <h3>Resolution Phase<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#ResolutionPhase</p>
+  <div class="comment">
+   <span class="markdown">A process representing a certain phase within the entity resolution process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Process" title="https://dev.qaecy.com/logs#Process">Process</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#resolutionAvgConfidence" title="https://dev.qaecy.com/logs#resolutionAvgConfidence">resolution average confidence</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionCategory" title="https://dev.qaecy.com/logs#resolutionCategory">resolution category</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionDurationMs" title="https://dev.qaecy.com/logs#resolutionDurationMs">resolution duration ms</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionExistingCanonicalsCount" title="https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount">resolution existing canonicals count</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionIteration" title="https://dev.qaecy.com/logs#resolutionIteration">resolution iteration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionMentionsIn" title="https://dev.qaecy.com/logs#resolutionMentionsIn">resolution mentions in</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionMentionsResolved" title="https://dev.qaecy.com/logs#resolutionMentionsResolved">resolution mentions resolved</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionNewCanonicalsCreated" title="https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated">resolution new canonicals created</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#resolutionPhaseName" title="https://dev.qaecy.com/logs#resolutionPhaseName">resolution phase name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="Service">
   <h3>Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://dev.qaecy.com/logs#Service</p>
   <div class="comment">
-   <span class="markdown">A service or microservice that executes processes (e.g., enrichers-bim-tiles, gemini_light).</span>
+   <span class="markdown">A service or microservice that executes processes (e.g., enrichers-bim-files, gemini_light).</span>
   </div>
   <dl class="description">
    <dt>
@@ -277,12 +305,26 @@ This section provides details for each class and property defined by QAECY Loggi
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#duration" title="https://dev.qaecy.com/logs#duration">duration</a></li>
+  <li><a href="#embeddingsDimensions" title="https://dev.qaecy.com/logs#embeddingsDimensions">embeddings dimensions</a></li>
+  <li><a href="#embeddingsSize" title="https://dev.qaecy.com/logs#embeddingsSize">embeddings size</a></li>
+  <li><a href="#embeddingsTokenizer" title="https://dev.qaecy.com/logs#embeddingsTokenizer">embeddings tokenizer</a></li>
+  <li><a href="#embeddingsUnits" title="https://dev.qaecy.com/logs#embeddingsUnits">embeddings units</a></li>
   <li><a href="#endTime" title="https://dev.qaecy.com/logs#endTime">end time</a></li>
+  <li><a href="#llmTokensIn" title="https://dev.qaecy.com/logs#llmTokensIn">llm tokens in</a></li>
+  <li><a href="#llmTokensOut" title="https://dev.qaecy.com/logs#llmTokensOut">llm tokens out</a></li>
+  <li><a href="#llmThinking" title="https://dev.qaecy.com/logs#llmThinking">llm used thinking</a></li>
   <li><a href="#message" title="https://dev.qaecy.com/logs#message">message</a></li>
+  <li><a href="#resolutionAvgConfidence" title="https://dev.qaecy.com/logs#resolutionAvgConfidence">resolution average confidence</a></li>
+  <li><a href="#resolutionCategory" title="https://dev.qaecy.com/logs#resolutionCategory">resolution category</a></li>
+  <li><a href="#resolutionDurationMs" title="https://dev.qaecy.com/logs#resolutionDurationMs">resolution duration ms</a></li>
+  <li><a href="#resolutionExistingCanonicalsCount" title="https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount">resolution existing canonicals count</a></li>
+  <li><a href="#resolutionIteration" title="https://dev.qaecy.com/logs#resolutionIteration">resolution iteration</a></li>
+  <li><a href="#resolutionMentionsIn" title="https://dev.qaecy.com/logs#resolutionMentionsIn">resolution mentions in</a></li>
+  <li><a href="#resolutionMentionsResolved" title="https://dev.qaecy.com/logs#resolutionMentionsResolved">resolution mentions resolved</a></li>
+  <li><a href="#resolutionNewCanonicalsCreated" title="https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated">resolution new canonicals created</a></li>
+  <li><a href="#resolutionPhaseName" title="https://dev.qaecy.com/logs#resolutionPhaseName">resolution phase name</a></li>
   <li><a href="#startTime" title="https://dev.qaecy.com/logs#startTime">start time</a></li>
   <li><a href="#success" title="https://dev.qaecy.com/logs#success">success</a></li>
-  <li><a href="#consumedTokensIn" title="https://dev.qaecy.com/logs#consumedTokensIn">tokens in</a></li>
-  <li><a href="#consumedTokensOut" title="https://dev.qaecy.com/logs#consumedTokensOut">tokens out</a></li>
  </ul>
  <div class="entity" id="duration">
   <h3>duration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
@@ -303,6 +345,98 @@ This section provides details for each class and property defined by QAECY Loggi
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="embeddingsDimensions">
+  <h3>embeddings dimensions<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#embeddingsDimensions</p>
+  <div class="comment">
+   <span class="markdown">Dimensionality of the embedding vectors produced.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmbeddingRequest" title="https://dev.qaecy.com/logs#EmbeddingRequest">Embedding Request</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="embeddingsSize">
+  <h3>embeddings size<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#embeddingsSize</p>
+  <div class="comment">
+   <span class="markdown">Number of inputs (e.g. text chunks) sent in the embedding request.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmbeddingRequest" title="https://dev.qaecy.com/logs#EmbeddingRequest">Embedding Request</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="embeddingsTokenizer">
+  <h3>embeddings tokenizer<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#embeddingsTokenizer</p>
+  <div class="comment">
+   <span class="markdown">Name or identifier of the tokenizer used for the embedding request.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmbeddingRequest" title="https://dev.qaecy.com/logs#EmbeddingRequest">Embedding Request</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="embeddingsUnits">
+  <h3>embeddings units<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#embeddingsUnits</p>
+  <div class="comment">
+   <span class="markdown">Total number of tokens processed by the embedding model.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmbeddingRequest" title="https://dev.qaecy.com/logs#EmbeddingRequest">Embedding Request</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
     </dd>
    </dl>
   </div>
@@ -336,6 +470,75 @@ This section provides details for each class and property defined by QAECY Loggi
    </dl>
   </div>
  </div>
+ <div class="entity" id="llmTokensIn">
+  <h3>llm tokens in<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#llmTokensIn</p>
+  <div class="comment">
+   <span class="markdown">Input tokens consumed by LLM request.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="llmTokensOut">
+  <h3>llm tokens out<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#llmTokensOut</p>
+  <div class="comment">
+   <span class="markdown">Output tokens consumed by LLM request.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="llmThinking">
+  <h3>llm used thinking<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#llmThinking</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether the process used thinking.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="message">
   <h3>message<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://dev.qaecy.com/logs#message</p>
@@ -348,7 +551,214 @@ This section provides details for each class and property defined by QAECY Loggi
      has domain
     </dt>
     <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Process" title="https://dev.qaecy.com/logs#Process">Process</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionAvgConfidence">
+  <h3>resolution average confidence<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionAvgConfidence</p>
+  <div class="comment">
+   <span class="markdown">Average confidence score across all resolutions in this phase.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionCategory">
+  <h3>resolution category<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionCategory</p>
+  <div class="comment">
+   <span class="markdown">Category of entity being resolved (e.g. person, organisation).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionDurationMs">
+  <h3>resolution duration ms<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionDurationMs</p>
+  <div class="comment">
+   <span class="markdown">Wall-clock duration of this resolution phase in milliseconds.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionExistingCanonicalsCount">
+  <h3>resolution existing canonicals count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount</p>
+  <div class="comment">
+   <span class="markdown">Number of pre-existing canonical entities matched during this phase.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionIteration">
+  <h3>resolution iteration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionIteration</p>
+  <div class="comment">
+   <span class="markdown">Iteration index of this resolution phase within the overall resolution run.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionMentionsIn">
+  <h3>resolution mentions in<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionMentionsIn</p>
+  <div class="comment">
+   <span class="markdown">Number of mentions submitted for resolution in this phase.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionMentionsResolved">
+  <h3>resolution mentions resolved<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionMentionsResolved</p>
+  <div class="comment">
+   <span class="markdown">Number of mentions successfully resolved in this phase.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionNewCanonicalsCreated">
+  <h3>resolution new canonicals created<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated</p>
+  <div class="comment">
+   <span class="markdown">Number of new canonical entities created during this phase.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resolutionPhaseName">
+  <h3>resolution phase name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#resolutionPhaseName</p>
+  <div class="comment">
+   <span class="markdown">Human-readable name identifying the resolution phase.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ResolutionPhase" title="https://dev.qaecy.com/logs#ResolutionPhase">Resolution Phase</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -407,52 +817,6 @@ This section provides details for each class and property defined by QAECY Loggi
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="consumedTokensIn">
-  <h3>tokens in<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#consumedTokensIn</p>
-  <div class="comment">
-   <span class="markdown">Input tokens consumed by LLM request.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="consumedTokensOut">
-  <h3>tokens out<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://dev.qaecy.com/logs#consumedTokensOut</p>
-  <div class="comment">
-   <span class="markdown">Output tokens consumed by LLM request.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#LLMRequest" title="https://dev.qaecy.com/logs#LLMRequest">LLM Request</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
     </dd>
    </dl>
   </div>

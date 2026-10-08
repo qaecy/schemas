@@ -32,8 +32,6 @@
   "@id" : "https://dev.qaecy.com/enum#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Christian Frausing"
-  }, {
     "@value" : "Mads Holten Rasmussen"
   }, {
     "@value" : "Manos Argyris"
@@ -43,7 +41,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2026-06-17T08:56:19Z"
+    "@value" : "2026-10-08T20:38:47Z"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -108,10 +106,10 @@
     "@language" : "it",
     "@value" : "Attività"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "An activity or process related to the construction or maintenance of a building or infrastructure."
   } ]
@@ -157,6 +155,14 @@
   }, {
     "@language" : "it",
     "@value" : "Indirizzo"
+  } ],
+  "https://dev.qaecy.com/template#resolutionLowThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.70"
+  } ],
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.95"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#AppraisalValuationDocument",
@@ -287,7 +293,7 @@
     "@language" : "it",
     "@value" : "Architecture"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -474,13 +480,13 @@
     "@language" : "it",
     "@value" : "Balcony"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/rec#Balcony"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/rec#Balcony"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Beam",
@@ -525,13 +531,13 @@
     "@language" : "it",
     "@value" : "Beam"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/beo#Beam"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/beo#Beam"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#BinaryFileContent",
@@ -548,6 +554,22 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Binary File Content"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#BrowserUpload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ProviderKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Files a user uploaded through a web browser, where the original location on disk is not known."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Browser upload"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#BudgetEstimateDocument",
@@ -635,13 +657,13 @@
     "@language" : "de",
     "@value" : "Gebäude"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Building"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/bot#Building"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#BuildingAutomationSystem",
@@ -686,7 +708,7 @@
     "@language" : "de",
     "@value" : "Gebäude Automation System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -731,19 +753,30 @@
     "@language" : "de",
     "@value" : "Gebäude Element"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@language" : "en",
-    "@value" : "Any tangible part of a 'Building', identified by a name or an id."
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/bot#Element"
   }, {
     "@id" : "https://w3id.org/rec#BuildingElement"
+  } ],
+  "https://dev.qaecy.com/template#anonymousValue" : [ {
+    "@value" : "undefined"
+  }, {
+    "@value" : "unnamed element"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "Any tangible part of a 'Building', identified by a name or an id."
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "german_noun"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "identifier"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#BuildingStoreyInterface",
@@ -788,8 +821,12 @@
     "@language" : "de",
     "@value" : "Gebäude/Geschoss Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#BuildingZone",
@@ -831,17 +868,17 @@
     "@language" : "de",
     "@value" : "Gebäude Zone"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "Any spatial decomposition of a building project, identified by name or id."
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/bot#Zone"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#BuiltAsset",
@@ -883,7 +920,7 @@
     "@language" : "it",
     "@value" : "Built Asset"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A built asset, identified by its title, name or id."
   } ]
@@ -1031,6 +1068,54 @@
   }, {
     "@language" : "fr",
     "@value" : "Ville"
+  } ],
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.92"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Color",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A color described by name or standardized code."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Farbe, die durch einen Namen oder einen standardisierten Code beschrieben wird."
+  }, {
+    "@language" : "da",
+    "@value" : "En farve beskrevet ved navn eller standardiseret kode."
+  }, {
+    "@language" : "it",
+    "@value" : "Un colore descritto tramite nome o codice standardizzato."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une couleur décrite par un nom ou un code normalisé."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Color"
+  }, {
+    "@language" : "it",
+    "@value" : "Colore"
+  }, {
+    "@language" : "fr",
+    "@value" : "Couleur"
+  }, {
+    "@language" : "de",
+    "@value" : "Farbe"
+  }, {
+    "@language" : "da",
+    "@value" : "Farve"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A color, expressed by name or standardized code (e.g. Blau, Grün, RAL 9010)."
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Column",
@@ -1075,13 +1160,13 @@
     "@language" : "it",
     "@value" : "Column"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/beo#Column"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/beo#Column"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ComplianceReport",
@@ -1209,7 +1294,7 @@
     "@language" : "it",
     "@value" : "Construction Process & Management Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents used to plan, monitor, and control construction activities and safety, such as project schedules, change orders, requests for information (RFIs), QA/QC reports, progress reports, and safety records."
   } ]
@@ -1253,10 +1338,10 @@
     "@language" : "de",
     "@value" : "Vertrag"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "The contract, identified by any means (id, name, title etc). If not explicitly mentioned, a descriptive term/title *must* be used instead."
   } ]
@@ -1300,10 +1385,10 @@
     "@language" : "de",
     "@value" : "Vertrag Bedingung"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A certain condition that must be met, as part of a 'ContractObligation'."
   } ]
@@ -1347,10 +1432,10 @@
     "@language" : "de",
     "@value" : "Vertrag Obligation"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A certain obligation that must be undertaken in the context of the 'Contract'."
   } ]
@@ -1394,12 +1479,21 @@
     "@language" : "de",
     "@value" : "Vertrag Role"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A certain role undertaken by a specific party ('Organization' or 'Person') in the context of a specific 'Contract'."
+  } ],
+  "https://dev.qaecy.com/template#resolutionNeedsNeighbourhood" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://dev.qaecy.com/template#resolutionScopedBy" : [ {
+    "@id" : "https://dev.qaecy.com/ont#associatedWith"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#hasContractRole"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ContractualDocument",
@@ -1441,7 +1535,7 @@
     "@language" : "it",
     "@value" : "Contractual & Legal Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents that establish obligations, rights, and responsibilities, such as purchase agreements, lease agreements, construction contracts, insurance documents, and bonds."
   } ]
@@ -1488,7 +1582,7 @@
     "@language" : "it",
     "@value" : "Cooling System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -1576,16 +1670,22 @@
     "@language" : "it",
     "@value" : "Cost Item"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#ContractualDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#FinancialAdministrativeDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A cost, expressed in currency."
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "cost"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Country",
@@ -1629,6 +1729,10 @@
   }, {
     "@language" : "fr",
     "@value" : "Pays"
+  } ],
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.90"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#DataFileContent",
@@ -1686,12 +1790,21 @@
     "@language" : "de",
     "@value" : "Datum"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A date. Must be returned in ISO 8601 **YYYY-MM-DD** format (eg: 4/5/2005 becomes 2005-05-04, 1 July 2021 becomes 2021-07-01 etc)."
   } ],
-  "https://dev.qaecy.com/ont#regex" : [ {
+  "https://dev.qaecy.com/template#regex" : [ {
     "@value" : "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "iso_date"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "ignore"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#DesignDocument",
@@ -1733,7 +1846,7 @@
     "@language" : "it",
     "@value" : "Design Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents that define geometry, materials, and design intent, such as architectural drawings, engineering designs, landscape or interior plans, BIM models, and renderings."
   } ]
@@ -1780,7 +1893,7 @@
     "@language" : "it",
     "@value" : "Design Id"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -1823,10 +1936,10 @@
     "@language" : "it",
     "@value" : "Design Metadata"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "Any metadata related either to the 'DrawingSheet' or the 'DrawingEntity'. Usually found in the title block of the document."
   } ]
@@ -1873,7 +1986,7 @@
     "@language" : "it",
     "@value" : "Design Revision Id"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -1919,7 +2032,7 @@
     "@language" : "it",
     "@value" : "Design Status"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -1965,8 +2078,11 @@
     "@language" : "it",
     "@value" : "Design Title"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "identifier"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#DetailDrawing",
@@ -2011,7 +2127,7 @@
     "@language" : "it",
     "@value" : "Detail Drawing"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -2057,7 +2173,7 @@
     "@language" : "it",
     "@value" : "Diagram Drawing"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -2100,14 +2216,30 @@
     "@language" : "de",
     "@value" : "Disziplin"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A discipline/trade associated with a provided resource (activity, drawing etc)."
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#DocumentManagementSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ProviderKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A shared document management system such as SharePoint or ThinkProject, synchronised into the project."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Document management system"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Door",
@@ -2152,13 +2284,13 @@
     "@language" : "it",
     "@value" : "Door"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/beo#Door"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/beo#Door"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#DrawingEntity",
@@ -2200,12 +2332,12 @@
     "@language" : "it",
     "@value" : "Drawing Entity"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "Any drawing (floor-plan, site-plan, section, P&ID diagram, detail etc), identified by name, title or id. Usually, but not necessarily, it is contained in a 'DrawingSheet'."
   } ]
@@ -2249,10 +2381,10 @@
     "@language" : "it",
     "@value" : "Drawing Orientation"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "The orientation of a 'DrawingEntity'."
   } ]
@@ -2296,10 +2428,10 @@
     "@language" : "it",
     "@value" : "Drawing Scale"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "The scale of a 'DrawingEntity' or of a 'DrawingSheet'."
   } ]
@@ -2343,12 +2475,12 @@
     "@language" : "it",
     "@value" : "Drawing Sheet"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A sheet of a technical drawing, that contains one or more 'DrawingEntity'. Most often contains a title block with 'DesignMetadata'. It is identified by name, title or id."
   } ]
@@ -2435,12 +2567,18 @@
     "@language" : "it",
     "@value" : "Attività Durata"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "The duration of an activity, expressed in days, weeks, months or years."
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "duration"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ElectricalSystem",
@@ -2485,7 +2623,7 @@
     "@language" : "it",
     "@value" : "Electrical System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2533,8 +2671,12 @@
     "@language" : "it",
     "@value" : "Element/Adjacent element Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ElevationDrawing",
@@ -2579,7 +2721,7 @@
     "@language" : "it",
     "@value" : "Elevation Drawing"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -2622,12 +2764,18 @@
     "@language" : "it",
     "@value" : "Email Indirizzo"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "An email address."
   } ],
-  "https://dev.qaecy.com/ont#regex" : [ {
+  "https://dev.qaecy.com/template#regex" : [ {
     "@value" : "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "email"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#EmailFileContent",
@@ -2731,7 +2879,7 @@
     "@language" : "it",
     "@value" : "Environmental Engineering"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2776,15 +2924,15 @@
     "@language" : "fr",
     "@value" : "Équipement"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
-  } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@language" : "en",
-    "@value" : "A piece of equipment, a device, a tool or a machine used in construction or maintenance."
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/rec#Equipment"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A piece of equipment, a device, a tool or a machine used in construction or maintenance."
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Facade",
@@ -2832,13 +2980,13 @@
   "http://www.w3.org/2004/02/skos/core#related" : [ {
     "@id" : "https://dev.qaecy.com/enum#Wall"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/rec#Facade"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/rec#Facade"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#FacilityManagement",
@@ -2883,7 +3031,7 @@
     "@language" : "it",
     "@value" : "Facility Management"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -2928,9 +3076,15 @@
     "@language" : "it",
     "@value" : "File Reference"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A reference to a file by mentioning its name, id and/or path."
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "path"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#FinancialAdministrativeDocument",
@@ -2972,7 +3126,7 @@
     "@language" : "it",
     "@value" : "Financial & Administrative Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents recording financial transactions, valuations, and budget control, such as cost estimates, budgets, invoices, payment applications, appraisals, and valuations."
   } ]
@@ -3019,7 +3173,7 @@
     "@language" : "it",
     "@value" : "Fire Protection System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -3067,8 +3221,11 @@
     "@language" : "it",
     "@value" : "Floor Plan Drawing"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "identifier"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#FontFileContent",
@@ -3187,6 +3344,12 @@
   }, {
     "@language" : "da",
     "@value" : "Geokoordinater"
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "geo"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Geometry",
@@ -3230,6 +3393,10 @@
   } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/omg#hasGeometry"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#GeospatialFileContent",
@@ -3290,7 +3457,7 @@
     "@language" : "it",
     "@value" : "Geotechnical Engineering"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -3338,7 +3505,7 @@
     "@language" : "it",
     "@value" : "Heating System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -3355,6 +3522,9 @@
     "@id" : "https://dev.qaecy.com/enum#BuildingZone"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A self-contained dwelling within a building, such as an apartment or a house in a terrace."
+  }, {
     "@language" : "en",
     "@value" : "Either the whole building or a unit of a building or storey"
   }, {
@@ -3375,6 +3545,9 @@
     "@value" : "Boligenhed"
   }, {
     "@language" : "en",
+    "@value" : "Housing Unit"
+  }, {
+    "@language" : "en",
     "@value" : "Housing unit"
   }, {
     "@language" : "it",
@@ -3386,13 +3559,28 @@
     "@language" : "de",
     "@value" : "Wohneinheit"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/bot#Zone"
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.90"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNeedsNeighbourhood" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://dev.qaecy.com/template#resolutionScopedBy" : [ {
+    "@id" : "https://dev.qaecy.com/ont#contains"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#includesBuildingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#zoneContainsSpace"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ImageFileContent",
@@ -3453,7 +3641,7 @@
     "@language" : "it",
     "@value" : "Infrastructure Engineering"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -3600,11 +3788,15 @@
     "@language" : "it",
     "@value" : "Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/bot#Interface"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#InteriorArchitecture",
@@ -3649,7 +3841,7 @@
     "@language" : "it",
     "@value" : "Interior Architecture"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -3783,7 +3975,7 @@
     "@language" : "it",
     "@value" : "Landscape Architecture"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -3830,6 +4022,22 @@
   }, {
     "@language" : "it",
     "@value" : "Landscape Design Document"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#LocalDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#ProviderKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A user's computer. Its file locations carry the absolute paths the files have on that machine."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Local device"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#LocalProvider",
@@ -3887,12 +4095,12 @@
     "@language" : "de",
     "@value" : "Ort"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
-    "@language" : "en",
-    "@value" : "A physical location, place or postal code."
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "http://schema.org/Place"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A physical location, place or postal code."
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#MaintenanceLog",
@@ -4036,14 +4244,17 @@
     "@language" : "fr",
     "@value" : "Matériau"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A mention of some material. Identified by name or id."
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "german_noun"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#MiscDocument",
@@ -4085,7 +4296,7 @@
     "@language" : "it",
     "@value" : "Miscellaneous Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents that do not clearly fit into other categories, serving as a fallback for unclassified materials. Examples include correspondence, marketing documents, project closeout records, due diligence reports, or other miscellaneous documents."
   } ]
@@ -4145,9 +4356,12 @@
     "@language" : "it",
     "@value" : "Object Id"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A special coding, classification or identifier for some physical or virtual object used in a building project."
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "identifier"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#OpeningElementInterface",
@@ -4192,8 +4406,12 @@
     "@language" : "it",
     "@value" : "Opening Element Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#OperationManual",
@@ -4278,7 +4496,7 @@
     "@language" : "it",
     "@value" : "Operations & Maintenance Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents for building operation, system maintenance, and lifecycle support, such as O&M manuals, maintenance logs, warranty documents, commissioning reports, and as-built drawings."
   } ]
@@ -4325,7 +4543,7 @@
     "@language" : "it",
     "@value" : "Operations Management"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -4370,12 +4588,31 @@
     "@language" : "it",
     "@value" : "Organizzazione"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "http://schema.org/Organization"
+  } ],
+  "https://dev.qaecy.com/template#discriminatingProperty" : [ {
+    "@value" : "registrationNumber"
+  }, {
+    "@value" : "vatNumber"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A company, organization, corporation, public authority or institution, identified by name or title."
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "http://schema.org/Organization"
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "organization"
+  } ],
+  "https://dev.qaecy.com/template#resolutionLowThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.60"
+  } ],
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.93"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "ignore"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#OtherConstructionProcessDocument",
@@ -4549,7 +4786,7 @@
     "@language" : "de",
     "@value" : "Other Disziplin"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -4597,7 +4834,7 @@
     "@language" : "it",
     "@value" : "Other Drawing"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -4686,7 +4923,7 @@
     "@language" : "it",
     "@value" : "Other Metadata Field"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -4987,12 +5224,76 @@
     "@language" : "fr",
     "@value" : "Personne"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "http://schema.org/Person"
+  } ],
+  "https://dev.qaecy.com/template#discriminatingProperty" : [ {
+    "@value" : "emailAddress"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A person, identified by name or abbreviation."
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "http://schema.org/Person"
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "person_name"
+  } ],
+  "https://dev.qaecy.com/template#resolutionLowThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.55"
+  } ],
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.94"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#PhoneNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A telephone, mobile or fax number used to contact a person or organization."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Telefon-, Mobil- oder Faxnummer, die zur Kontaktaufnahme mit einer Person oder Organisation verwendet wird."
+  }, {
+    "@language" : "da",
+    "@value" : "Et telefon-, mobil- eller faxnummer, der bruges til at kontakte en person eller organisation."
+  }, {
+    "@language" : "it",
+    "@value" : "Un numero di telefono, cellulare o fax utilizzato per contattare una persona o un'organizzazione."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un numéro de téléphone, de mobile ou de fax utilisé pour contacter une personne ou une organisation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "it",
+    "@value" : "Numero di telefono"
+  }, {
+    "@language" : "fr",
+    "@value" : "Numéro de téléphone"
+  }, {
+    "@language" : "en",
+    "@value" : "Phone Number"
+  }, {
+    "@language" : "da",
+    "@value" : "Telefonnummer"
+  }, {
+    "@language" : "de",
+    "@value" : "Telefonnummer"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A telephone, mobile or fax number used to contact a person or organization."
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "number"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#PlanningFileContent",
@@ -5053,7 +5354,7 @@
     "@language" : "it",
     "@value" : "Plumbing System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -5100,6 +5401,12 @@
   }, {
     "@language" : "da",
     "@value" : "Postnummer"
+  } ],
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "upper_alnum"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#PresentationFileContent",
@@ -5200,9 +5507,17 @@
     "@language" : "it",
     "@value" : "Project Id"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A construction, renovation or maintenance project, identified by its title, name or id."
+  } ],
+  "https://dev.qaecy.com/template#resolutionLowThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.80"
+  } ],
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.97"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#ProjectManagement",
@@ -5247,7 +5562,7 @@
     "@language" : "it",
     "@value" : "Project Management"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -5292,12 +5607,12 @@
     "@language" : "it",
     "@value" : "Project Phase"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A project phase, identified by name or id."
   } ]
@@ -5427,7 +5742,7 @@
     "@language" : "it",
     "@value" : "Regulatory & Compliance Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents required for regulatory approval and compliance, such as permits, inspection reports, compliance certifications, and environmental impact reports."
   } ]
@@ -5471,7 +5786,7 @@
     "@language" : "it",
     "@value" : "Requirements & Scoping Document"
   } ],
-  "https://dev.qaecy.com/ont#classificationPrompt" : [ {
+  "https://dev.qaecy.com/template#classificationPrompt" : [ {
     "@language" : "en",
     "@value" : "Documents that establish scope, functional, technical, and performance requirements, such as Owner’s Project Requirements (OPR), program documents, technical specifications, performance targets, and scope of work (SOW) documents."
   } ]
@@ -5518,15 +5833,15 @@
     "@language" : "it",
     "@value" : "Roof"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Roof"
   }, {
     "@id" : "https://w3id.org/rec#Roof"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#SVGPathGeometry",
@@ -5570,6 +5885,10 @@
   }, {
     "@language" : "it",
     "@value" : "SVG Path Geometry"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#SafetyDocument",
@@ -5654,10 +5973,10 @@
     "@language" : "de",
     "@value" : "Zeitplan"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   } ],
-  "https://dev.qaecy.com/ont#extractionPrompt" : [ {
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
     "@language" : "en",
     "@value" : "A whole or partial project plan / schedule expressed in some diagram, chart or table, identified by name, revision, date or id."
   } ]
@@ -5806,7 +6125,7 @@
     "@language" : "it",
     "@value" : "Section Drawing"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -5852,7 +6171,7 @@
     "@language" : "it",
     "@value" : "Security Access System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -5900,13 +6219,13 @@
     "@language" : "it",
     "@value" : "Site"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Site"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/bot#Site"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#SiteBuildingInterface",
@@ -5951,8 +6270,12 @@
     "@language" : "de",
     "@value" : "Site/Gebäude Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#SitePlanDrawing",
@@ -5997,7 +6320,7 @@
     "@language" : "it",
     "@value" : "Site Plan Drawing"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ]
 }, {
@@ -6043,15 +6366,59 @@
     "@language" : "it",
     "@value" : "Slab"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Slab"
   }, {
     "@id" : "https://w3id.org/rec#Slab"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#Software",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A named software product, application or system, such as a vendor control app, operating system, browser or communication protocol."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein benanntes Softwareprodukt, eine Anwendung oder ein System, etwa eine Hersteller-Steuerungs-App, ein Betriebssystem, ein Browser oder ein Kommunikationsprotokoll."
+  }, {
+    "@language" : "da",
+    "@value" : "Et navngivet softwareprodukt, en applikation eller et system, såsom en leverandørs kontrol-app, et operativsystem, en browser eller en kommunikationsprotokol."
+  }, {
+    "@language" : "it",
+    "@value" : "Un prodotto software, un'applicazione o un sistema denominato, come un'app di controllo di un fornitore, un sistema operativo, un browser o un protocollo di comunicazione."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un produit logiciel, une application ou un système nommé, tel qu'une application de contrôle d'un fournisseur, un système d'exploitation, un navigateur ou un protocole de communication."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Logiciel"
+  }, {
+    "@language" : "da",
+    "@value" : "Software"
+  }, {
+    "@language" : "de",
+    "@value" : "Software"
+  }, {
+    "@language" : "en",
+    "@value" : "Software"
+  }, {
+    "@language" : "it",
+    "@value" : "Software"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A named software product, application, app, operating system or communication protocol used in a building project (e.g. a vendor control app, configuration tool, browser or protocol)."
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#Space",
@@ -6096,13 +6463,38 @@
     "@language" : "it",
     "@value" : "Spazio"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Space"
+  } ],
+  "https://dev.qaecy.com/template#anonymousValue" : [ {
+    "@value" : "room"
+  }, {
+    "@value" : "undefined"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/bot#Space"
+  "https://dev.qaecy.com/template#resolutionMatchThreshold" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.90"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNeedsNeighbourhood" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "identifier"
+  } ],
+  "https://dev.qaecy.com/template#resolutionScopedBy" : [ {
+    "@id" : "https://dev.qaecy.com/ont#contains"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#includesBuildingEntity"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#zoneContainsSpace"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#zoneHasElement"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#SpaceAdjacentElementInterface",
@@ -6147,8 +6539,12 @@
     "@language" : "it",
     "@value" : "Spazio/Adjacent element Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#SpaceContainedElementInterface",
@@ -6193,8 +6589,12 @@
     "@language" : "it",
     "@value" : "Spazio/Contained element Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#SpreadsheetFileContent",
@@ -6255,13 +6655,13 @@
     "@language" : "it",
     "@value" : "Stair"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/beo#Stair"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/beo#Stair"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#State",
@@ -6349,13 +6749,33 @@
     "@language" : "fr",
     "@value" : "Étage"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/bot#Storey"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
   } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/bot#Storey"
+  "https://dev.qaecy.com/template#resolutionCanonicalizer" : [ {
+    "@value" : "storey_level"
+  } ],
+  "https://dev.qaecy.com/template#resolutionIdentity" : [ {
+    "@value" : "value_typed"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNeedsNeighbourhood" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "identifier"
+  } ],
+  "https://dev.qaecy.com/template#resolutionScopedBy" : [ {
+    "@id" : "https://dev.qaecy.com/ont#buildingContainsStorey"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#contains"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#includesBuildingEntity"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#StoreyElementInterface",
@@ -6400,8 +6820,12 @@
     "@language" : "fr",
     "@value" : "Étage/Element Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#StoreySpaceInterface",
@@ -6446,8 +6870,12 @@
     "@language" : "fr",
     "@value" : "Étage/Espace Interface"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#llmExtraction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#StructuralEngineering",
@@ -6492,7 +6920,7 @@
     "@language" : "it",
     "@value" : "Structural Engineering"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -6540,7 +6968,7 @@
     "@language" : "it",
     "@value" : "Surveying Engineering"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -6663,10 +7091,54 @@
     "@language" : "it",
     "@value" : "Transportation Engineering"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ]
+}, {
+  "@id" : "https://dev.qaecy.com/enum#URL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://dev.qaecy.com/ont#EntityCategory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A uniform resource locator (web address) pointing to an online resource."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Uniform Resource Locator (Webadresse), der auf eine Online-Ressource verweist."
+  }, {
+    "@language" : "da",
+    "@value" : "En uniform resource locator (webadresse), der peger på en onlineressource."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un localisateur uniforme de ressource (adresse web) pointant vers une ressource en ligne."
+  }, {
+    "@language" : "it",
+    "@value" : "Un uniform resource locator (indirizzo web) che punta a una risorsa online."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "da",
+    "@value" : "URL"
+  }, {
+    "@language" : "de",
+    "@value" : "URL"
+  }, {
+    "@language" : "en",
+    "@value" : "URL"
+  }, {
+    "@language" : "fr",
+    "@value" : "URL"
+  }, {
+    "@language" : "it",
+    "@value" : "URL"
+  } ],
+  "https://dev.qaecy.com/template#extractionPrompt" : [ {
+    "@language" : "en",
+    "@value" : "A web address (URL) for a website or online resource, with or without the http(s):// scheme."
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#UnknownFileContent",
@@ -6727,7 +7199,7 @@
     "@language" : "it",
     "@value" : "Ventilation System"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
@@ -6791,15 +7263,23 @@
     "@language" : "it",
     "@value" : "Wall"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
-    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
-  }, {
-    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
   "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
     "@id" : "https://w3id.org/beo#Wall"
   }, {
     "@id" : "https://w3id.org/rec#Wall"
+  } ],
+  "https://dev.qaecy.com/template#anonymousValue" : [ {
+    "@value" : "undefined"
+  }, {
+    "@value" : "wall"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
+    "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
+  }, {
+    "@id" : "https://dev.qaecy.com/enum#DesignDocument"
+  } ],
+  "https://dev.qaecy.com/template#resolutionNumeralRole" : [ {
+    "@value" : "identifier"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/enum#WarrantyDocument",
@@ -6887,13 +7367,13 @@
     "@language" : "it",
     "@value" : "Window"
   } ],
-  "https://dev.qaecy.com/ont#applicableContentCategories" : [ {
+  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
+    "@id" : "https://w3id.org/beo#Window"
+  } ],
+  "https://dev.qaecy.com/template#applicableContentCategories" : [ {
     "@id" : "https://dev.qaecy.com/enum#ConstructionProcessDocument"
   }, {
     "@id" : "https://dev.qaecy.com/enum#DesignDocument"
-  } ],
-  "https://dev.qaecy.com/ont#relatedFormalClass" : [ {
-    "@id" : "https://w3id.org/beo#Window"
   } ]
 }, {
   "@id" : "https://dev.qaecy.com/ont#ContentCategory",
@@ -6905,21 +7385,54 @@
   "@id" : "https://dev.qaecy.com/ont#MimeCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "https://dev.qaecy.com/ont#ProviderKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://dev.qaecy.com/ont#ProviderType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://dev.qaecy.com/ont#applicableContentCategories",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://dev.qaecy.com/ont#classificationPrompt",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://dev.qaecy.com/ont#extractionPrompt",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://dev.qaecy.com/ont#regex",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "https://dev.qaecy.com/ont#relatedFormalClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#anonymousValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#applicableContentCategories",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#classificationPrompt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#discriminatingProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#extractionPrompt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#llmExtraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#regex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#resolutionCanonicalizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#resolutionIdentity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#resolutionLowThreshold",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#resolutionMatchThreshold",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#resolutionNeedsNeighbourhood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#resolutionNumeralRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dev.qaecy.com/template#resolutionScopedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

@@ -7,11 +7,10 @@
 @base <https://dev.qaecy.com/logs#> .
 
 <https://dev.qaecy.com/logs#> rdf:type owl:Ontology ;
-                               <http://purl.org/dc/terms/creator> "Christian Frausing" ,
-                                                                  "Mads Holten Rasmussen" ,
+                               <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" ,
                                                                   "Manos Argyris" ;
                                <http://purl.org/dc/terms/description> "This document describes log specific terms to be used with the Cue processors and the QAECY Ontology." ;
-                               <http://purl.org/dc/terms/modified> "2026-03-26T10:06:33Z"^^xsd:dateTime ;
+                               <http://purl.org/dc/terms/modified> "2026-10-08T20:38:55Z"^^xsd:dateTime ;
                                <http://purl.org/dc/terms/title> "QAECY Logging Ontology"@en ;
                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "qcy-l" .
 
@@ -111,28 +110,44 @@
 <http://www.w3.org/ns/prov#startedAtTime> rdf:type owl:DatatypeProperty .
 
 
-###  https://dev.qaecy.com/logs#consumedTokensIn
-:consumedTokensIn rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :LLMRequest ;
-                  rdfs:range xsd:integer ;
-                  rdfs:comment "Input tokens consumed by LLM request."@en ;
-                  rdfs:label "tokens in"@en .
-
-
-###  https://dev.qaecy.com/logs#consumedTokensOut
-:consumedTokensOut rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :LLMRequest ;
-                   rdfs:range xsd:integer ;
-                   rdfs:comment "Output tokens consumed by LLM request."@en ;
-                   rdfs:label "tokens out"@en .
-
-
 ###  https://dev.qaecy.com/logs#duration
 :duration rdf:type owl:DatatypeProperty ;
           rdfs:domain :Process ;
           rdfs:range xsd:string ;
           rdfs:comment "Human-readable duration string (e.g., '17.1 s')."@en ;
           rdfs:label "duration"@en .
+
+
+###  https://dev.qaecy.com/logs#embeddingsDimensions
+:embeddingsDimensions rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :EmbeddingRequest ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Dimensionality of the embedding vectors produced."@en ;
+                      rdfs:label "embeddings dimensions"@en .
+
+
+###  https://dev.qaecy.com/logs#embeddingsSize
+:embeddingsSize rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EmbeddingRequest ;
+                rdfs:range xsd:integer ;
+                rdfs:comment "Number of inputs (e.g. text chunks) sent in the embedding request."@en ;
+                rdfs:label "embeddings size"@en .
+
+
+###  https://dev.qaecy.com/logs#embeddingsTokenizer
+:embeddingsTokenizer rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :EmbeddingRequest ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Name or identifier of the tokenizer used for the embedding request."@en ;
+                     rdfs:label "embeddings tokenizer"@en .
+
+
+###  https://dev.qaecy.com/logs#embeddingsUnits
+:embeddingsUnits rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :EmbeddingRequest ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "Total number of tokens processed by the embedding model."@en ;
+                 rdfs:label "embeddings units"@en .
 
 
 ###  https://dev.qaecy.com/logs#endTime
@@ -144,12 +159,108 @@
          rdfs:label "end time"@en .
 
 
+###  https://dev.qaecy.com/logs#llmThinking
+:llmThinking rdf:type owl:DatatypeProperty ;
+             rdfs:domain :LLMRequest ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Indicates whether the process used thinking."@en ;
+             rdfs:label "llm used thinking"@en .
+
+
+###  https://dev.qaecy.com/logs#llmTokensIn
+:llmTokensIn rdf:type owl:DatatypeProperty ;
+             rdfs:domain :LLMRequest ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "Input tokens consumed by LLM request."@en ;
+             rdfs:label "llm tokens in"@en .
+
+
+###  https://dev.qaecy.com/logs#llmTokensOut
+:llmTokensOut rdf:type owl:DatatypeProperty ;
+              rdfs:domain :LLMRequest ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Output tokens consumed by LLM request."@en ;
+              rdfs:label "llm tokens out"@en .
+
+
 ###  https://dev.qaecy.com/logs#message
 :message rdf:type owl:DatatypeProperty ;
-         rdfs:domain owl:Thing ;
+         rdfs:domain :Process ;
          rdfs:range xsd:string ;
          rdfs:comment "A message such as an error or informational message."@en ;
          rdfs:label "message"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionAvgConfidence
+:resolutionAvgConfidence rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :ResolutionPhase ;
+                         rdfs:range xsd:decimal ;
+                         rdfs:comment "Average confidence score across all resolutions in this phase."@en ;
+                         rdfs:label "resolution average confidence"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionCategory
+:resolutionCategory rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ResolutionPhase ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Category of entity being resolved (e.g. person, organisation)."@en ;
+                    rdfs:label "resolution category"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionDurationMs
+:resolutionDurationMs rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :ResolutionPhase ;
+                      rdfs:range xsd:decimal ;
+                      rdfs:comment "Wall-clock duration of this resolution phase in milliseconds."@en ;
+                      rdfs:label "resolution duration ms"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount
+:resolutionExistingCanonicalsCount rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :ResolutionPhase ;
+                                   rdfs:range xsd:integer ;
+                                   rdfs:comment "Number of pre-existing canonical entities matched during this phase."@en ;
+                                   rdfs:label "resolution existing canonicals count"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionIteration
+:resolutionIteration rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ResolutionPhase ;
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "Iteration index of this resolution phase within the overall resolution run."@en ;
+                     rdfs:label "resolution iteration"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionMentionsIn
+:resolutionMentionsIn rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :ResolutionPhase ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Number of mentions submitted for resolution in this phase."@en ;
+                      rdfs:label "resolution mentions in"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionMentionsResolved
+:resolutionMentionsResolved rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :ResolutionPhase ;
+                            rdfs:range xsd:integer ;
+                            rdfs:comment "Number of mentions successfully resolved in this phase."@en ;
+                            rdfs:label "resolution mentions resolved"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated
+:resolutionNewCanonicalsCreated rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :ResolutionPhase ;
+                                rdfs:range xsd:integer ;
+                                rdfs:comment "Number of new canonical entities created during this phase."@en ;
+                                rdfs:label "resolution new canonicals created"@en .
+
+
+###  https://dev.qaecy.com/logs#resolutionPhaseName
+:resolutionPhaseName rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ResolutionPhase ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Human-readable name identifying the resolution phase."@en ;
+                     rdfs:label "resolution phase name"@en .
 
 
 ###  https://dev.qaecy.com/logs#startTime
@@ -203,10 +314,17 @@
          rdfs:label "Process"@en .
 
 
+###  https://dev.qaecy.com/logs#ResolutionPhase
+:ResolutionPhase rdf:type owl:Class ;
+                 rdfs:subClassOf :Process ;
+                 rdfs:comment "A process representing a certain phase within the entity resolution process."@en ;
+                 rdfs:label "Resolution Phase"@en .
+
+
 ###  https://dev.qaecy.com/logs#Service
 :Service rdf:type owl:Class ;
          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
-         rdfs:comment "A service or microservice that executes processes (e.g., enrichers-bim-tiles, gemini_light)."@en ;
+         rdfs:comment "A service or microservice that executes processes (e.g., enrichers-bim-files, gemini_light)."@en ;
          rdfs:label "Service"@en .
 
 

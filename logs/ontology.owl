@@ -9,11 +9,10 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://dev.qaecy.com/logs#">
-        <terms:creator>Christian Frausing</terms:creator>
         <terms:creator>Mads Holten Rasmussen</terms:creator>
         <terms:creator>Manos Argyris</terms:creator>
         <terms:description>This document describes log specific terms to be used with the Cue processors and the QAECY Ontology.</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-26T10:06:33Z</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-08T20:38:55Z</terms:modified>
         <terms:title xml:lang="en">QAECY Logging Ontology</terms:title>
         <vann:preferredNamespacePrefix>qcy-l</vann:preferredNamespacePrefix>
     </owl:Ontology>
@@ -190,30 +189,6 @@
     
 
 
-    <!-- https://dev.qaecy.com/logs#consumedTokensIn -->
-
-
-    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#consumedTokensIn">
-        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#LLMRequest"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Input tokens consumed by LLM request.</rdfs:comment>
-        <rdfs:label xml:lang="en">tokens in</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://dev.qaecy.com/logs#consumedTokensOut -->
-
-
-    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#consumedTokensOut">
-        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#LLMRequest"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Output tokens consumed by LLM request.</rdfs:comment>
-        <rdfs:label xml:lang="en">tokens out</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://dev.qaecy.com/logs#duration -->
 
 
@@ -222,6 +197,54 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Human-readable duration string (e.g., &apos;17.1 s&apos;).</rdfs:comment>
         <rdfs:label xml:lang="en">duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#embeddingsDimensions -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#embeddingsDimensions">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#EmbeddingRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Dimensionality of the embedding vectors produced.</rdfs:comment>
+        <rdfs:label xml:lang="en">embeddings dimensions</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#embeddingsSize -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#embeddingsSize">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#EmbeddingRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of inputs (e.g. text chunks) sent in the embedding request.</rdfs:comment>
+        <rdfs:label xml:lang="en">embeddings size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#embeddingsTokenizer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#embeddingsTokenizer">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#EmbeddingRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name or identifier of the tokenizer used for the embedding request.</rdfs:comment>
+        <rdfs:label xml:lang="en">embeddings tokenizer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#embeddingsUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#embeddingsUnits">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#EmbeddingRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Total number of tokens processed by the embedding model.</rdfs:comment>
+        <rdfs:label xml:lang="en">embeddings units</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -239,14 +262,158 @@
     
 
 
+    <!-- https://dev.qaecy.com/logs#llmThinking -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#llmThinking">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#LLMRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the process used thinking.</rdfs:comment>
+        <rdfs:label xml:lang="en">llm used thinking</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#llmTokensIn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#llmTokensIn">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#LLMRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Input tokens consumed by LLM request.</rdfs:comment>
+        <rdfs:label xml:lang="en">llm tokens in</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#llmTokensOut -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#llmTokensOut">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#LLMRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Output tokens consumed by LLM request.</rdfs:comment>
+        <rdfs:label xml:lang="en">llm tokens out</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://dev.qaecy.com/logs#message -->
 
 
     <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#message">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#Process"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A message such as an error or informational message.</rdfs:comment>
         <rdfs:label xml:lang="en">message</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionAvgConfidence -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionAvgConfidence">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Average confidence score across all resolutions in this phase.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution average confidence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionCategory -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionCategory">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Category of entity being resolved (e.g. person, organisation).</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution category</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionDurationMs -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionDurationMs">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Wall-clock duration of this resolution phase in milliseconds.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution duration ms</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionExistingCanonicalsCount">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of pre-existing canonical entities matched during this phase.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution existing canonicals count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionIteration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionIteration">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Iteration index of this resolution phase within the overall resolution run.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution iteration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionMentionsIn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionMentionsIn">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of mentions submitted for resolution in this phase.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution mentions in</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionMentionsResolved -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionMentionsResolved">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of mentions successfully resolved in this phase.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution mentions resolved</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionNewCanonicalsCreated">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of new canonical entities created during this phase.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution new canonicals created</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.qaecy.com/logs#resolutionPhaseName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://dev.qaecy.com/logs#resolutionPhaseName">
+        <rdfs:domain rdf:resource="https://dev.qaecy.com/logs#ResolutionPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Human-readable name identifying the resolution phase.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution phase name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -336,12 +503,23 @@
     
 
 
+    <!-- https://dev.qaecy.com/logs#ResolutionPhase -->
+
+
+    <owl:Class rdf:about="https://dev.qaecy.com/logs#ResolutionPhase">
+        <rdfs:subClassOf rdf:resource="https://dev.qaecy.com/logs#Process"/>
+        <rdfs:comment xml:lang="en">A process representing a certain phase within the entity resolution process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resolution Phase</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://dev.qaecy.com/logs#Service -->
 
 
     <owl:Class rdf:about="https://dev.qaecy.com/logs#Service">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <rdfs:comment xml:lang="en">A service or microservice that executes processes (e.g., enrichers-bim-tiles, gemini_light).</rdfs:comment>
+        <rdfs:comment xml:lang="en">A service or microservice that executes processes (e.g., enrichers-bim-files, gemini_light).</rdfs:comment>
         <rdfs:label xml:lang="en">Service</rdfs:label>
     </owl:Class>
     
